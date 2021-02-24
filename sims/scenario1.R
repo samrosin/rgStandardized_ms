@@ -5,14 +5,15 @@ library(tidyverse)
 library(looplot) #install with devtools::install_github("matherealize/looplot")
 library(here)
 
-source("estimation_fns.R")
+source(here("estimation_fns.R"))
+source(here("sims/sim_param_values.R")) #load sim parameter values common across scenarios
 output_file <- here("sims/results/scenario1_results.csv")
 
 # sim parameter values
 set.seed(2021)
 n_sims <- 5 #number of simulations
-sigma_e <- c(.7,.95) #true sensitivity
-sigma_p <- c(.7,.95) #true specificity
+sigma_e <- c(.7,.95,1) #true sensitivity
+sigma_p <- c(.7,.95,1) #true specificity
 prev <- c(.005,.05,.3) #true prevalence 
 n_1 <- c(30,300) #sensitivity study sample size
 n_2 <- c(30,300) #specificity study sample size
