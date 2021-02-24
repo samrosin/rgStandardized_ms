@@ -12,12 +12,7 @@ output_file <- here("sims/results/scenario1_results.csv")
 # sim parameter values
 set.seed(2021)
 n_sims <- 5 #number of simulations
-sigma_e <- c(.7,.95,1) #true sensitivity
-sigma_p <- c(.7,.95,1) #true specificity
 prev <- c(.005,.05,.3) #true prevalence 
-n_1 <- c(30,300) #sensitivity study sample size
-n_2 <- c(30,300) #specificity study sample size
-n_3 <- c(500,5000) #main study sample size 
 
 # fully factorial combination of sample sizes and parameters
 # each row is a sub-scenario
