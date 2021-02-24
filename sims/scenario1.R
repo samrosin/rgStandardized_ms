@@ -45,9 +45,3 @@ for(i in 1:nrow(sim_conditions)){
 # since the above simulation can take some time, 
 # write results to an output file to analyse in a separate script
 write_csv(sim_conditions, output_file)
-
-# plot results in a nested loop plot.
-# for each scenario and set of simulation parameters,
-# the plotting parameters should be tweaked significantly,
-# so that the plot is legible and conveys information well. 
-
