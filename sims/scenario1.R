@@ -9,7 +9,7 @@ library(tidyverse)
 library(looplot) #install with devtools::install_github("matherealize/looplot")
 library(here)
 
-source("sim_estimation.R")
+source("estimation_fns.R")
 output_file <- here("sims/results/scenario1_results.csv")
 
 # sim parameter values
@@ -47,9 +47,10 @@ for(i in 1:nrow(sim_conditions)){
 
 # since the above simulation can take some time, 
 # write results to an output file to analyse in a separate script
-write_csv(sim_conditions, output_file, row.names = FALSE )
+write_csv(sim_conditions, output_file)
 
 # plot results in a nested loop plot.
 # for each scenario and set of simulation parameters,
 # the plotting parameters should be tweaked significantly,
 # so that the plot is legible and conveys information well. 
+
