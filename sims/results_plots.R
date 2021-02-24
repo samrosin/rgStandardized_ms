@@ -37,6 +37,7 @@ p1_2x2 <- nested_loop_plot(resdf = res1_2x2,
             )
         )
 
+#send plot to pdf 
 pdf(here("sims/plots/p1_2x2.pdf"))
 print(p1_2x2)
 dev.off()
