@@ -1,5 +1,5 @@
-# author: Sam Rosin
-# implements the estimators
+########
+# Implements the estimators proposed in the manuscript
 
 #' Compute a Rogan-Gladen estimate. Corresponds to \hat \pi in the manuscript, 
 #' and the point and variance estimators from Rogan and Gladen (1978)
