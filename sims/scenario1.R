@@ -1,9 +1,5 @@
 ##########
-# Author: Samuel Rosin
-# Date of last revision: Feb 24, 2021
-# Manuscript: Estimating Seroprevalence of SARS-CoV-2
-# 
-# Simulation scenario 1 
+# Conducts simulation scenario 1 
 
 library(tidyverse)
 library(looplot) #install with devtools::install_github("matherealize/looplot")
