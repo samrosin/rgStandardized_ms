@@ -61,15 +61,15 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
   #the formula is std_est = \hat \rho_j * \gamma_j 
   strata <- dplyr::inner_join(strata, strata_npos, by = vars_std)
   
-  strata$std_est <- (cells$n_pos / cells$n) * cells$stratum_prop
+  strata$std_est <- (strata$n_pos / strata$n) * strata$stratum_prop
   pi_hat_st <- (sum(strata$std_est) - (1-sigma_p_hat))/(sigma_e_hat - (1-sigma_p_hat)) #point estimate
   
   if(variance == TRUE){
     return(c(pi_hat_st, nrow(strata))) #include number of strata in return vector
   } else{ 
     # compute variance estimator by summing the three components. compare to formula in manuscript. 
-    a <- pi_hat_std^2 * sigma_e_hat * (1 - sigma_e_hat) / n_1
-    b <- (1 - pi_hat_std)^2 * sigma_p_hat * (1 - sigma_p_hat) / n_2
+    a <- pi_hat_st^2 * sigma_e_hat * (1 - sigma_e_hat) / n_1
+    b <- (1 - pi_hat_st)^2 * sigma_p_hat * (1 - sigma_p_hat) / n_2
     # c is the third component of the variance estimator. c = (gamma_j^2*\hat \rho_j * (1- \hat \rho_j))/(n_{z_j})
     strata <- strata %>% mutate(
       c = stratum_prop^2 * (n_pos / n) * (1 - (n_pos / n) ) / n
