@@ -58,3 +58,6 @@ gen_data_scenario2 <- function(n_1, sigma_e, n_2, sigma_p, n_3, stratum_props){
                rho_hat = rho_hat, sample = sample)
   data
 }
+
+# The inverse logit function 
+inv.logit <- function(x){1/(1 + exp(-x))} 
