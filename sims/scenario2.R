@@ -6,7 +6,7 @@ library(looplot) #install with devtools::install_github("matherealize/looplot")
 library(here)
 
 source(here("estimation_fns.R"))
-source(here("sims/sim_param_values.R")) #load sim parameter values common across scenarios
+source(here("sims/input_files/sim_param_values.R")) #load sim parameter values common across scenarios
 source(here("sims/sim_fns.R"))
 output_file <- here("sims/results/scenario2_results.csv")
 
