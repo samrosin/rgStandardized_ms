@@ -64,7 +64,7 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
   strata$std_est <- (strata$n_pos / strata$n) * strata$stratum_prop
   pi_hat_st <- (sum(strata$std_est) - (1-sigma_p_hat))/(sigma_e_hat - (1-sigma_p_hat)) #point estimate
   
-  if(variance == TRUE){
+  if(variance == FALSE){
     return(c(pi_hat_st, nrow(strata))) #include number of strata in return vector
   } else{ 
     # compute variance estimator by summing the three components. compare to formula in manuscript. 
@@ -81,4 +81,5 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
   #return point and variance estimates
   c(pi_hat_st, var_pi_hat_st, nrow(strata)) #include number of strata in return vector
 }
+
 
