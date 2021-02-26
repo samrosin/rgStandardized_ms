@@ -3,5 +3,9 @@
 .RData
 .Ruserdata
 sims/plots/
-sims/results_draft/
-sims/results_final/
+sims/results_draft/scenario1_results.csv
+sims/results_draft/scenario2_results.csv
+sims/results_draft/scenario3_results.csv
+sims/results_final/scenario1_results.csv
+sims/results_final/scenario2_results.csv
+sims/results_final/scenario3_results.csv
