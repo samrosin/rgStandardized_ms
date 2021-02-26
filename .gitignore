@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-plots/
-results_draft/
-results_final/
+sims/plots/
+sims/results_draft/
+sims/results_final/
