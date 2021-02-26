@@ -1,3 +1,7 @@
+# The inverse logit function 
+inv.logit <- function(x){1/(1 + exp(-x))} 
+
+
 ########
 # Implements the estimators proposed in the manuscript
 
