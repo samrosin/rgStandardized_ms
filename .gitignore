@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+plots/
+results_draft/
+results_final/
