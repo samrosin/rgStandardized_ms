@@ -18,7 +18,7 @@ n_3 <- c(500,5000) #main study sample size
 # Note that the intercept alpha_0 is a vector of 3 values, 
 # corresponding to the three desired marginal prevalences. 
 
-alpha_0 <- c(-5,-2.6375,-0.31) ### these lead to marginal prevalences of .005, .05, and .3
+alpha_0 <- c(-5.268616,-2.8805525,-.5830585) ### these lead to marginal prevalences of .005, .05, and .3
 alpha_1 <- -1
 alpha_2 <- -.6
 alpha_3 <- .8
