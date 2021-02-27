@@ -1,5 +1,5 @@
 ##########
-# Conducts simulation scenario 3
+# Conducts simulation scenario 4
 
 library(tidyverse)
 library(looplot) #install with devtools::install_github("matherealize/looplot")
