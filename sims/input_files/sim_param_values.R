@@ -30,7 +30,7 @@ alpha_5 <- .4
 # Note that the intercept nu_0 is a vector of 3 values, 
 # corresponding to the three desired marginal prevalences. 
 
-nu_0 <- c(-5,-2.6375,-0.31) ### these lead to marginal prevalences of .005, .05, and .3
+nu_0 <- c(-5.3445212,-2.9563234,-0.658353) ### these lead to marginal prevalences of .005, .05, and .3
 nu_1 <- -1
 nu_2 <- -.6
 nu_3 <- .8
