@@ -1,5 +1,6 @@
 ##########
 # Conducts simulation scenario 3
+time1 <- Sys.time() 
 
 library(tidyverse)
 library(looplot) #install with devtools::install_github("matherealize/looplot")
@@ -44,7 +45,7 @@ s2 <- gammas %>% dplyr::mutate(
   prev = inv.logit(alpha_0[2]+alpha_1*(gammas$z1=="z11")+
                      alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
                      alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
-  )
+  ) 
 s3 <- gammas %>% dplyr::mutate(
   prev = inv.logit(alpha_0[3]+alpha_1*(gammas$z1=="z11")+
                      alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
@@ -123,3 +124,6 @@ for(i in 1:nrow(sim_conditions)){
 # write results to an output file to analyse in a separate script
 sim_results <- sim_conditions %>% select(-c(stratum_props))
 write_csv(sim_results, output_file)
+
+#time2 <- Sys.time()
+#print(time2 - time1)

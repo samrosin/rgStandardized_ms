@@ -1,5 +1,6 @@
 ##########
 # Conducts simulation scenario 4
+time1 <- Sys.time() 
 
 library(tidyverse)
 library(looplot) #install with devtools::install_github("matherealize/looplot")
@@ -129,3 +130,6 @@ for(i in 1:nrow(sim_conditions)){
 # write results to an output file to analyse in a separate script
 sim_results <- sim_conditions %>% select(-c(stratum_props))
 write_csv(sim_results, output_file)
+
+#time2 <- Sys.time()
+#print(time2 - time1)
