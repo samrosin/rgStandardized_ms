@@ -151,11 +151,19 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     c <- matrix(c(0, pi_hat_mst, 0, -1 + pi_hat_mst), nrow = 2, ncol = 2) # estimate C
     
     # estimate D
-    #model.matrix(~ strata$z1 + strata$z2 + strata$z3)
-    
+
     #unique covariate strata in the sample data
     strata <- unique(sample[,c(vars_std,"stratum_prop")])
-    mat_strat <- model.matrix(~ strata$z1 + strata$z2 + strata$z3) #model matrix for *all* strata, even those not in sample support
+    covariate_names <- colnames(stratum_props)[1:length(vars_std)]
+    
+    # create only the RHS of the regression formula, for application to *all* strata, 
+    model_mat_formula <- "~"
+    for(cov_name in covariate_names){
+      model_mat_formula <- paste(model_mat_formula, "strata$",cov_name,"+",sep="")
+    }
+    model_mat_formula <- formula(substr(model_mat_formula,1,nchar(model_mat_formula)-1)) # remove final "+"
+    mat_strat <- model.matrix(model_mat_formula) # model matrix for *all* strata, even those not in sample support
+    
     d <- matrix(0, nrow = 2, ncol = nrow(coef)) # declare D as 2 * p matrix of 0s (convenient since the 2nd row is 0)
     for(l in 1:nrow(coef)){
       stratum_contrib <- rep(NA, nrow(mat_strat)) # contribution of the jth stratum to the sum
