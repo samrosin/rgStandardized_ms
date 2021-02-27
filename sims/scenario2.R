@@ -8,7 +8,11 @@ library(here)
 source(here("estimation_fns.R"))
 source(here("sims/input_files/sim_param_values.R")) #load sim parameter values common across scenarios
 source(here("sims/sim_fns.R"))
-output_file <- here("sims/results/scenario2_results.csv")
+
+# Note that the final simulation results are placed in the 
+# results_final subdirectory, but as the simulations are conducted
+# results are placed in the results_draft subdirectory
+output_file <- here("sims/results_draft/scenario2_results.csv")
 
 # sim parameter values
 set.seed(2021)
@@ -52,7 +56,7 @@ sim_conditions <- tidyr::crossing(
 
 # conduct the simulation, iterating through the subscenarios
 for(i in 1:nrow(sim_conditions)){
-  print(i)
+  #print(i)
   row <- sim_conditions[i,]
   hat_pi <- rep(NA, n_sims)
   hat_pi_st <- rep(NA, n_sims)
