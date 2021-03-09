@@ -46,6 +46,7 @@ gammas_3 <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
 results_4 <- read_csv(here("sims/results_final/scenario4_results.csv"),
                       col_types = cols(.default = col_double())
 )
+
 gammas_4 <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
                      col_types = cols(
                        z1 = col_character(), 
@@ -63,33 +64,39 @@ gammas_4 <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
 res1_2x2 <- results_1 %>% filter(sigma_e > .75 & sigma_p > .75)
 
 p1_2x2 <- nested_loop_plot(resdf = res1_2x2,
-            x = "prev", steps = c("n_3","n_2","n_1"),
-            grid_rows = "sigma_e", grid_cols = "sigma_p",
-            steps_y_base = -150, steps_y_height = 5,
-            steps_y_shift = 40,
-            steps_values_annotate = TRUE, steps_annotation_size = 3,
-            x_name = "Prevalence", y_name = "Relative Bias (%)",
-            methods = c("hat_pi"),
-            spu_x_shift = .6,
-            parameter_decreasing = TRUE,
-            #steps_values_annotate = TRUE,
-            hline_intercept = 0,
-            y_expand_add = c(20, NULL),
-            post_processing = list(
-              add_custom_theme = list(
-                axis.text.x = element_text(angle = 45,
-                                           vjust = 0.5,
-                                           hjust = 1,
-                                           size = 7)
-              )
-            )
-        ) 
+                           x = "prev", steps = c("n_1","n_2","n_3"),
+                           grid_rows = "sigma_e", grid_cols = "sigma_p",
+                           steps_y_base = -75, 
+                           steps_y_height = 10,
+                           steps_y_shift = 60,
+                           steps_values_annotate = TRUE, 
+                           steps_annotation_size = 2.5,
+                           x_name = "Prevalence in Loops of {.005, .05, .3}", 
+                           y_name = "Relative Bias (%)",
+                           methods = c("hat_pi"),
+                           spu_x_shift = .2,
+                           parameter_decreasing = FALSE,
+                           steps_annotation_nudge = 1,
+                           #steps_values_annotate = TRUE,
+                           hline_intercept = 0,
+                           x_labels = NULL,
+                           y_expand_add = c(50, NULL),
+                           post_processing = list(
+                             add_custom_theme = list(
+                               axis.text.x = element_text(angle = -90,
+                                                          vjust = 0.5,
+                                                          size = 8))
+                             
+                             
+                           )
+) + ggtitle("Scenario 1 Results") + 
+  theme( plot.title = element_text(hjust = 0.5))
+
+#send plot to pdf
+pdf(here("sims/plots/scenario1_2x2.pdf"),
+    paper = "USr",width=11,height=9)
 print(p1_2x2)
-# #send plot to pdf 
-# pdf(here("sims/plots/scenario1_2x2.pdf"), 
-#     paper = "USr",width=9,height=7)
-# print(p1_2x2)
-# dev.off()
+dev.off()
 
 
 # Scenario 2 Plots --------------------------------------------------------
@@ -103,7 +110,7 @@ p2_2x2 <- nested_loop_plot(resdf = res2_2x2,
                            steps_y_height = 10,
                            steps_y_shift = 60,
                            steps_values_annotate = TRUE, 
-                           steps_annotation_size = 2.6,
+                           steps_annotation_size = 2.5,
                            x_name = "Prevalence in Loops of {.005, .05, .3}", 
                            y_name = "Relative Bias (%)",
                            methods = c("hat_pi","hat_pi_st"),
@@ -127,12 +134,57 @@ p2_2x2 <- nested_loop_plot(resdf = res2_2x2,
 
 print(p2_2x2)
 
-# #send plot to pdf 
+# send plot to pdf 
 pdf(here("sims/plots/scenario2_2x2.pdf"),
     paper = "USr", width = 11, height = 9)
 print(p2_2x2)
 dev.off()
 
+# additional smaller plot for a specific scenario
+# where sigma_e = .95, sigma_p in {.95, 1}, etc.
+
+results2_small <- results_2 %>% 
+  filter(sigma_e == .95 & sigma_p > .75 & 
+         prev < .2 & n_3 == 5000 & n_1 < 1000) %>% 
+  rename(Specificity = sigma_p, Sensitivity = sigma_e)
+
+p2_small <- nested_loop_plot(resdf = results2_small,
+                           x = "prev", 
+                           steps = c("n_1","n_2"),
+                           #steps = c("n_1","n_2","n_3"),
+                           grid_rows = "Specificity", 
+                           grid_cols = "Sensitivity",
+                           steps_y_base = -75, 
+                           steps_y_height = 10,
+                           steps_y_shift = 60,
+                           steps_values_annotate = TRUE, 
+                           steps_annotation_size = 2.5,
+                           x_name = "Prevalence", 
+                           y_name = "Relative Bias (%)",
+                           methods = c("hat_pi","hat_pi_st"),
+                           spu_x_shift = .1,
+                           parameter_decreasing = FALSE,
+                           steps_annotation_nudge = 1,
+                           #steps_values_annotate = TRUE,
+                           hline_intercept = 0,
+                           # x_labels = NULL,
+                           y_expand_add = c(50, NULL),
+                           post_processing = list(
+                             add_custom_theme = list(
+                               axis.text.x = element_text(angle = -90,
+                                                          vjust = 0.5,
+                                                          size = 8))
+                             
+                             
+                           )
+) 
+
+print(p2_small)
+
+# send plot to pdf 
+pdf(here("sims/plots/scenario2_small.pdf"))
+print(p2_small)
+dev.off()
 
 
 # Scenario 3 Plots --------------------------------------------------------
@@ -178,10 +230,10 @@ p3_2x2 <- nested_loop_plot(resdf = res3_2x2,
                            steps_y_height = 10,
                            steps_y_shift = 60,
                            steps_values_annotate = TRUE, 
-                           steps_annotation_size = 3,
+                           steps_annotation_size = 2.5,
                            x_name = "Prevalence in Loops of {.005, .05, .3}", 
                            y_name = "Relative Bias (%)",
-                           methods = c("hat_pi","hat_pi_mst"),
+                           methods = c("hat_pi","hat_pi_st","hat_pi_mst"),
                            spu_x_shift = .2,
                            parameter_decreasing = FALSE,
                            steps_annotation_nudge = 1,
@@ -198,7 +250,7 @@ p3_2x2 <- nested_loop_plot(resdf = res3_2x2,
                              
                            )
 ) + ggtitle("Scenario 3 Results") + 
-  theme( plot.title = element_text(hjust = 0.5))
+  theme( plot.title = element_text(hjust = 0.5)) 
 
 print(p3_2x2)
 
@@ -248,14 +300,14 @@ res4_2x2 <- results_4 %>% filter(sigma_e > .75 & sigma_p > .75)
 p4_2x2 <- nested_loop_plot(resdf = res4_2x2,
                            x = "prev", steps = c("n_1","n_2","n_3"),
                            grid_rows = "sigma_e", grid_cols = "sigma_p",
-                           steps_y_base = -75, 
+                           steps_y_base = -75,
                            steps_y_height = 10,
                            steps_y_shift = 60,
-                           steps_values_annotate = TRUE, 
-                           steps_annotation_size = 3,
-                           x_name = "Prevalence in Loops of {.005, .05, .3}", 
+                           steps_values_annotate = TRUE,
+                           steps_annotation_size = 2.5,
+                           x_name = "Prevalence in Loops of {.005, .05, .3}",
                            y_name = "Relative Bias (%)",
-                           methods = c("hat_pi","hat_pi_mst"),
+                           methods = c("hat_pi","hat_pi_mst","hat_pi_st"),
                            spu_x_shift = .2,
                            parameter_decreasing = FALSE,
                            steps_annotation_nudge = 1,
@@ -268,15 +320,15 @@ p4_2x2 <- nested_loop_plot(resdf = res4_2x2,
                                axis.text.x = element_text(angle = -90,
                                                           vjust = 0.5,
                                                           size = 8))
-                             
-                             
+
+
                            )
-) + ggtitle("Scenario 4 Results") + 
+) + ggtitle("Scenario 4 Results") +
   theme( plot.title = element_text(hjust = 0.5))
 
 print(p4_2x2)
 
-# send plot to pdf 
+# # send plot to pdf 
 pdf(here("sims/plots/scenario4_2x2.pdf"),
     paper = "USr", width = 11, height = 9)
 print(p4_2x2)
