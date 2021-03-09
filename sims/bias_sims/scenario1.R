@@ -17,7 +17,7 @@ output_file <- here("sims/results_draft/scenario1_results.csv")
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 100 #number of simulations
+n_sims <- 5 #number of simulations
 prev <- c(.005,.05,.3) #true prevalence 
 
 # fully factorial combination of sample sizes and parameters
@@ -46,5 +46,6 @@ for(i in 1:nrow(sim_conditions)){
 # since the above simulation can take some time, 
 # write results to an output file to analyse in a separate script
 write_csv(sim_conditions, output_file)
-time2 <- Sys.time()
-print(time2 - time1)
+#time2 <- Sys.time()
+#print(time2 - time1)
+

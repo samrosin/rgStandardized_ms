@@ -28,7 +28,7 @@ gammas <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 5 # number of simulations
+n_sims <- 6 # number of simulations
 n_strata <- 40 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3")
 
@@ -92,7 +92,8 @@ for(i in 1:nrow(sim_conditions)){
                          row$n_1, row$n_2, row$n_3, variance = FALSE)
     hat_pi_st_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat, 
                               row$n_1, row$n_2, row$n_3, vars_std, variance = FALSE)
-    hat_pi_st[j] <- hat_pi_st_vec[1]
+    # set standardized estimator to NA if there is nonpositivity
+    hat_pi_st[j] <- ifelse(hat_pi_st_vec[2] < n_strata, NA, hat_pi_st_vec[1]) 
     strata_obs[j] <- hat_pi_st_vec[2] # Note we can get this info from either standardization estimator,
                                       # hat_pi_st or hat_pi_mst; here I take it from hat_pi_st
     hat_pi_mst[j] <- ests_std_model(
@@ -110,7 +111,7 @@ for(i in 1:nrow(sim_conditions)){
   sim_conditions[i,"num_infinite_pi"] <- sum(!is.finite(hat_pi))
   
   sim_conditions[i,"hat_pi_st"] <- 100 * (
-    mean(hat_pi_st[is.finite(hat_pi_st)]) - row$prev) / row$prev 
+    mean(hat_pi_st[is.finite(hat_pi_st)], na.rm = TRUE) - row$prev) / row$prev 
   sim_conditions[i,"num_infinite_pi_st"] <- sum(!is.finite(hat_pi_st))
   
   sim_conditions[i,"hat_pi_mst"] <- 100 * (
