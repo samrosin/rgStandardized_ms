@@ -17,7 +17,7 @@ output_file <- here("sims/results_draft/scenario2_var_results.csv")
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 5 # number of simulations
+n_sims <- 15 # number of simulations
 n_strata <- 2 # number of strata for this scenario
 
 # The known stratum proportions (the gamma_js) must be prespecified. 
@@ -49,13 +49,13 @@ sim_conditions <- tidyr::crossing(
   rowwise() %>% 
   mutate(prev = sum(stratum_props$stratum_prop*stratum_props$prev),
          hat_pi = NA_real_, #mean relative bias of hat_pi
-         ESE_hat_var_pi = NA_real_, # empirical SE of hat_var_pi
-         ASE_hat_var_pi = NA_real_, # mean asymptotic SE of hat_var_pi
+         ESE_hat_pi = NA_real_, # empirical SE of hat_pi
+         ASE_hat_pi = NA_real_, # mean asymptotic SE of hat_pi (mean of hat_var_pi)
          covers_pi = NA_real_, # coverage proporation for hat_var_pi
          
          hat_pi_st = NA_real_, #mean relative bias of hat_pi_st 
-         ESE_hat_var_pi_st = NA_real_, # empirical SE of hat_var_pi_st
-         ASE_hat_var_pi_st = NA_real_, # mean asymptotic SE of hat_var_pi_st
+         ESE_hat_pi_st = NA_real_, # empirical SE of hat_pi_st
+         ASE_hat_pi_st = NA_real_, # mean asymptotic SE of hat_pi_st
          covers_pi_st = NA_real_, # coverage proporation for hat_var_pi_st
          
          num_infinite_pi = NA_real_, # number of infinite estimates \hat \pi
@@ -89,19 +89,23 @@ for(i in 1:nrow(sim_conditions)){
                          row$n_1, row$n_2, row$n_3, variance = TRUE)
     hat_pi[j] <- hat_pi_vec[1]
     hat_var_pi[j] <- hat_pi_vec[2]
-    ci_lower_pi[j] <- hat_pi_vec[1] - qnorm(1 - alpha_level / 2) * hat_pi_vec[2]
-    ci_upper_pi[j] <- hat_pi_vec[1] + qnorm(1 - alpha_level / 2) * hat_pi_vec[2]
+    ci_lower_pi[j] <- hat_pi_vec[1] - 
+                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_vec[2])
+    ci_upper_pi[j] <- hat_pi_vec[1] + 
+                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_vec[2])
     covers_pi[j] <- ifelse(
-      (ci_lower_pi[j] < row$prev) && (ci_upper_pi > row$prev), 1, 0)
+      (ci_lower_pi[j] < row$prev) && (ci_upper_pi[j] > row$prev), 1, 0)
     
     hat_pi_st_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat, 
                   row$n_1, row$n_2, row$n_3, vars_std, variance = TRUE)
     hat_pi_st[j] <- hat_pi_st_vec[1]
     hat_var_pi_st[j] <- hat_pi_st_vec[2]
-    ci_lower_pi_st[j] <- hat_pi_st_vec[1] - qnorm(1 - alpha_level / 2) * hat_pi_st_vec[2]
-    ci_upper_pi_st[j] <- hat_pi_st_vec[1] + qnorm(1 - alpha_level / 2) * hat_pi_st_vec[2]
+    ci_lower_pi_st[j] <- hat_pi_st_vec[1] - 
+      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_st_vec[2])
+    ci_upper_pi_st[j] <- hat_pi_st_vec[1] + 
+      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_st_vec[2])
     covers_pi_st[j] <- ifelse(
-      (ci_lower_pi_st[j] < row$prev) && (ci_upper_pi_st > row$prev), 1, 0)
+      (ci_lower_pi_st[j] < row$prev) && (ci_upper_pi_st[j] > row$prev), 1, 0)
     
     strata_obs[j] <- hat_pi_st_vec[3]
   }
@@ -111,16 +115,16 @@ for(i in 1:nrow(sim_conditions)){
   # and compute the other data of interest
   sim_conditions[i, "hat_pi"] <- 100 * ( 
     mean(hat_pi[is.finite(hat_pi)]) - row$prev ) / row$prev 
-  sim_conditions[i, "ESE_hat_var_pi"] <- sd(hat_var_pi[is.finite(hat_var_pi)])
-  sim_conditions[i, "ASE_hat_var_pi"] <- mean(hat_var_pi[is.finite(hat_var_pi)])
+  sim_conditions[i, "ESE_hat_pi"] <- sd(hat_pi[is.finite(hat_pi)])
+  sim_conditions[i, "ASE_hat_pi"] <- mean(hat_var_pi[is.finite(hat_var_pi)])
   sim_conditions[i, "covers_pi"] <- mean(covers_pi)
   sim_conditions[i, "num_infinite_pi"] <- sum(!is.finite(hat_pi))
   
   # results for standardized estimator 
   sim_conditions[i, "hat_pi_st"] <- 100 * (
     mean(hat_pi_st[is.finite(hat_pi_st)]) - row$prev) / row$prev 
-  sim_conditions[i, "ESE_hat_var_pi_st"] <- sd(hat_var_pi_st[is.finite(hat_var_pi_st)])
-  sim_conditions[i, "ASE_hat_var_pi_st"] <- mean(hat_var_pi_st[is.finite(hat_var_pi_st)])
+  sim_conditions[i, "ESE_hat_pi_st"] <- sd(hat_pi_st[is.finite(hat_pi_st)])
+  sim_conditions[i, "ASE_hat_pi_st"] <- mean(hat_var_pi_st[is.finite(hat_var_pi_st)])
   sim_conditions[i, "covers_pi_st"] <- mean(covers_pi_st)
   sim_conditions[i, "num_infinite_pi_st"] <- sum(!is.finite(hat_pi_st))
   sim_conditions[i, "n_strata_obs_full"] <- sum(strata_obs == n_strata)
@@ -129,7 +133,7 @@ for(i in 1:nrow(sim_conditions)){
 # since the above simulation can take some time, 
 # write results to an output file to analyse in a separate script
 sim_results <- sim_conditions %>% select(-c(stratum_props))
-write_csv(sim_results, output_file)
+#write_csv(sim_results, output_file)
 
 time2 <- Sys.time()
 print(time2 - time1)
