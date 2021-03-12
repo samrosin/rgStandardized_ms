@@ -116,7 +116,7 @@ for(i in 1:nrow(sim_conditions)){
   sim_conditions[i, "hat_pi"] <- 100 * ( 
     mean(hat_pi[is.finite(hat_pi)]) - row$prev ) / row$prev 
   sim_conditions[i, "ESE_hat_pi"] <- sd(hat_pi[is.finite(hat_pi)])
-  sim_conditions[i, "ASE_hat_pi"] <- mean(hat_var_pi[is.finite(hat_var_pi)])
+  sim_conditions[i, "ASE_hat_pi"] <- mean(sqrt(hat_var_pi[is.finite(hat_var_pi)]))
   sim_conditions[i, "covers_pi"] <- mean(covers_pi)
   sim_conditions[i, "num_infinite_pi"] <- sum(!is.finite(hat_pi))
   
@@ -124,7 +124,7 @@ for(i in 1:nrow(sim_conditions)){
   sim_conditions[i, "hat_pi_st"] <- 100 * (
     mean(hat_pi_st[is.finite(hat_pi_st)]) - row$prev) / row$prev 
   sim_conditions[i, "ESE_hat_pi_st"] <- sd(hat_pi_st[is.finite(hat_pi_st)])
-  sim_conditions[i, "ASE_hat_pi_st"] <- mean(hat_var_pi_st[is.finite(hat_var_pi_st)])
+  sim_conditions[i, "ASE_hat_pi_st"] <- mean(sqrt(hat_var_pi_st[is.finite(hat_var_pi_st)]))
   sim_conditions[i, "covers_pi_st"] <- mean(covers_pi_st)
   sim_conditions[i, "num_infinite_pi_st"] <- sum(!is.finite(hat_pi_st))
   sim_conditions[i, "n_strata_obs_full"] <- sum(strata_obs == n_strata)

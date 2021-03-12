@@ -59,7 +59,7 @@ for(i in 1:nrow(sim_conditions)){
   sim_conditions[i,"hat_pi"] <- 100 * ( 
     mean(hat_pi[is.finite(hat_pi)]) - row$prev ) / row$prev 
   sim_conditions[i, "ESE_hat_pi"] <- sd(hat_pi[is.finite(hat_pi)])
-  sim_conditions[i, "ASE_hat_pi"] <- mean(hat_var_pi[is.finite(hat_var_pi)])
+  sim_conditions[i, "ASE_hat_pi"] <- mean(sqrt(hat_var_pi[is.finite(hat_var_pi)]))
   sim_conditions[i, "covers_pi"] <- mean(covers_pi)
   
 }
