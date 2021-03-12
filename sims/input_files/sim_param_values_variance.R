@@ -8,6 +8,14 @@ n_1 <- c(30,300) #sensitivity study sample size
 n_2 <- c(30,300,3000) #specificity study sample size
 n_3 <- c(500,5000) #main study sample size
 
+### TESTING
+# sigma_e <- c(.95) #true sensitivity
+# sigma_p <- c(.95) #true specificity
+# n_1 <- c(300) #sensitivity study sample size
+# n_2 <- c(300,3000) #specificity study sample size
+# n_3 <- c(5000) #main study sample size
+
+
 # 
 alpha_level <- .05 # alpha level; 1-alpha = confidence level
 
