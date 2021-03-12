@@ -56,7 +56,7 @@ sim_conditions <- tidyr::crossing(
          hat_pi_st = NA_real_, #mean relative bias of hat_pi_st 
          ESE_hat_pi_st = NA_real_, # empirical SE of hat_pi_st
          ASE_hat_pi_st = NA_real_, # mean asymptotic SE of hat_pi_st
-         covers_pi_st = NA_real_, # coverage proporation for hat_var_pi_st
+         covers_pi_st = NA_real_, # coverage proportion for hat_var_pi_st
          
          num_infinite_pi = NA_real_, # number of infinite estimates \hat \pi
          num_infinite_pi_st = NA_real_, # number of infinite estimates \hat \pi_st
