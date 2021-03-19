@@ -108,8 +108,7 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
 #'
 #' @examples ests_std(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
 #'                    mod_formula = formula("x ~ z1 + z2 + z3"), variance = TRUE)
-
-ests_std_model <- function(sample, stratum_props, sigma_e_hat, 
+ests_std_model <- function(sample, stratum_props, sigma_e_hat,
                            sigma_p_hat, n_1, n_2, n_3, vars_std,
                            mod_formula, variance = FALSE){
   
@@ -143,8 +142,8 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
       for(k in 1:nrow(coef)){
         unit_contrib_b <- rep(NA, nrow(mat)) # each unit's contribution to this jkth element of B
         for(i in 1:nrow(mat)){
-          unit_contrib_b[i] <- mat[i,j] * mat[i,k] * exp(t(coef) %*% as.matrix(mat[i,])) / 
-            (1 + exp(t(coef) %*% as.matrix(mat[i,])))^2
+          unit_contrib_b[i] <- mat[i,j] * mat[i,k] * exp(crossprod(coef, mat[i,]))/ 
+            (1 + exp(crossprod(coef, mat[i,])))^2
         }
         b[j,k] <- (n_3 / n) * mean(unit_contrib_b)
       }
@@ -153,8 +152,7 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     c <- matrix(c(0, pi_hat_mst, 0, -1 + pi_hat_mst), nrow = 2, ncol = 2) # estimate C
     
     # estimate D
-
-    #unique covariate strata in the sample data
+    # unique covariate strata in the sample data
     strata <- unique(sample[,c(vars_std,"stratum_prop")])
     covariate_names <- colnames(stratum_props)[1:length(vars_std)]
     
@@ -163,15 +161,15 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     for(cov_name in covariate_names){
       model_mat_formula <- paste(model_mat_formula, "strata$",cov_name,"+",sep="")
     }
-    model_mat_formula <- formula(substr(model_mat_formula,1,nchar(model_mat_formula)-1)) # remove final "+"
+    model_mat_formula <- formula(substr(model_mat_formula,1,nchar(model_mat_formula)-1)) # remove final "+" from formula
     mat_strat <- model.matrix(model_mat_formula) # model matrix for *all* strata, even those not in sample support
     
     d <- matrix(0, nrow = 2, ncol = nrow(coef)) # declare D as 2 * p matrix of 0s (convenient since the 2nd row is 0)
     for(l in 1:nrow(coef)){
       stratum_contrib <- rep(NA, nrow(mat_strat)) # contribution of the jth stratum to the sum
       for(j in 1:nrow(mat_strat)){
-        stratum_contrib[j] <- as.matrix(mat_strat[j,l]) * exp(t(coef) %*% as.matrix(mat_strat[j,])) /
-          (1 + exp(t(coef) %*% as.matrix(mat_strat[j,])))^2 * strata$stratum_prop[j]
+        stratum_contrib[j] <- as.matrix(mat_strat[j,l]) * exp(crossprod(coef, mat_strat[j,])) / 
+          (1 + exp(crossprod(coef, mat_strat[j,])))^2 * strata$stratum_prop[j]
       }
       d[1,l] <- -1 * sum(stratum_contrib)
     }
@@ -187,7 +185,7 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
         unit_contrib_g <- rep(NA, nrow(mat)) # each unit's contribution to this jkth element of B
         for(i in 1:nrow(mat)){
           unit_contrib_g[i] <- mat[i,j] * mat[i,k] * 
-            (x_model$y[i] - inv.logit(t(coef) %*% as.matrix(mat[i,])))^2 #note that x_model$y is the model outcome, which is in our model denoted x
+            (x_model$y[i] - inv.logit(crossprod(coef, mat[i,])))^2 # note that x_model$y is the model outcome, which is in our model denoted x
         }
         g[j,k] <- (n_3 / n) * mean(unit_contrib_g)
       }
@@ -196,11 +194,13 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     pt1 <- solve(e) %*% c %*% solve(a) %*% f %*% solve(a) %*% t(c) %*% t(solve(e)) 
     pt2 <- solve(e) %*% d %*% solve(b) %*% g %*% solve(b) %*% t(d) %*% t(solve(e))
     final <- pt1 + pt2
-    var_hat_pi_mst <- final[2,2]/n # the lower-right element divided by n is the variance estimator of interest
+    var_hat_pi_mst <- final[2,2] / n # the lower-right element divided by n is the variance estimator of interest
     
+    print(t2-t1)
+    print(t3-t2) 
+    print(t4-t3)
     c(pi_hat_mst_trunc, var_hat_pi_mst)
   }
-  
 }
 
 
