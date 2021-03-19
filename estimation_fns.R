@@ -196,9 +196,6 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     final <- pt1 + pt2
     var_hat_pi_mst <- final[2,2] / n # the lower-right element divided by n is the variance estimator of interest
     
-    print(t2-t1)
-    print(t3-t2) 
-    print(t4-t3)
     c(pi_hat_mst_trunc, var_hat_pi_mst)
   }
 }
