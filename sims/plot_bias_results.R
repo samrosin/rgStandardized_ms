@@ -11,7 +11,6 @@
 
 
 # Setup -------------------------------------------------------------------
-
 library(tidyverse)
 library(looplot) # install with devtools::install_github("matherealize/looplot")
 library(here)
@@ -64,7 +63,7 @@ gammas_4 <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
 res1_2x2 <- results_1 %>% filter(sigma_e > .75 & sigma_p > .75)
 
 p1_2x2 <- nested_loop_plot(resdf = res1_2x2,
-                           x = "prev", steps = c("n_1","n_2","n_3"),
+                           x = "pi", steps = c("n_1","n_2","n_3"),
                            grid_rows = "sigma_e", grid_cols = "sigma_p",
                            steps_y_base = -75, 
                            steps_y_height = 10,
@@ -92,11 +91,204 @@ p1_2x2 <- nested_loop_plot(resdf = res1_2x2,
 ) + ggtitle("Scenario 1 Results") + 
   theme( plot.title = element_text(hjust = 0.5))
 
-#send plot to pdf
+
+
+# send plot to pdf
 pdf(here("sims/plots/scenario1_2x2.pdf"),
     paper = "USr",width=11,height=9)
 print(p1_2x2)
 dev.off()
+
+# plot for results with sigma_p = 1
+res1_sp100 <- results_1 %>% filter(sigma_p == 1)
+
+res1_sp100_nlp <- nested_loop_plot(resdf = res1_sp100,
+                                  x = "pi", steps = c("n_1","n_2","n_3"),
+                                  grid_rows = "sigma_e", grid_cols = "sigma_p",
+                                  steps_y_base = -8, 
+                                  steps_y_height = 1,
+                                  steps_y_shift = 5,
+                                  steps_values_annotate = TRUE, 
+                                  steps_annotation_size = 2.5,
+                                  x_name = "Prevalence in Loops of {.005, .05, .3}", 
+                                  y_name = "Relative Bias (%)",
+                                  methods = c("hat_pi_RG"),
+                                  spu_x_shift = .2,
+                                  parameter_decreasing = FALSE,
+                                  steps_annotation_nudge = 1,
+                                  #steps_values_annotate = TRUE,
+                                  hline_intercept = 0,
+                                  x_labels = NULL,
+                                  # y_labels = c(-20,20),
+                                  y_expand_add = c(3, NULL),
+                                  post_processing = list(
+                                    add_custom_theme = list(
+                                      axis.text.x = element_text(angle = -90,
+                                                                 vjust = 0.5,
+                                                                 size = 8))
+                                  )
+) + ggtitle(expression(paste(
+  "Scenario 1 Results: ", sigma[p], " = 1", sep = ""))) + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+res1_sp100_nlp
+
+# send plot to pdf
+pdf(here("sims/bias_plots/scenario1_sp100.pdf"),
+    paper = "USr",width=11,height=9)
+print(res1_sp100_nlp)
+dev.off()
+
+# plot for results with sigma_p = .95
+res1_sp95 <- results_1 %>% filter(sigma_p == .95)
+
+res1_sp95_nlp <- nested_loop_plot(resdf = res1_sp95,
+                            x = "pi", steps = c("n_1","n_2","n_3"),
+                            grid_rows = "sigma_e", grid_cols = "sigma_p",
+                            steps_y_base = -75, 
+                            steps_y_height = 10,
+                            steps_y_shift = 70,
+                            steps_values_annotate = TRUE, 
+                            steps_annotation_size = 2.5,
+                            x_name = "Prevalence in Loops of {.005, .05, .3}", 
+                            y_name = "Relative Bias (%)",
+                            methods = c("hat_pi_RG"),
+                            spu_x_shift = .2,
+                            parameter_decreasing = FALSE,
+                            steps_annotation_nudge = 1,
+                            #steps_values_annotate = TRUE,
+                            hline_intercept = 0,
+                            x_labels = NULL,
+                          # y_labels = c(-20,20),
+                            y_expand_add = c(100, NULL),
+                            post_processing = list(
+                              add_custom_theme = list(
+                                axis.text.x = element_text(angle = -90,
+                                                           vjust = 0.5,
+                                                           size = 8))
+                              
+                              
+                            )
+) + ggtitle(expression(paste(
+  "Scenario 1 Results: ", sigma[p], " = 0.95", sep = ""))) + 
+  theme( plot.title = element_text(hjust = 0.5))
+
+# send plot to pdf
+pdf(here("sims/bias_plots/scenario1_sp95.pdf"),
+    paper = "USr",width=11,height=9)
+print(res1_sp95_nlp)
+dev.off()
+
+# plot for results with sigma_p = .70
+res1_sp70 <- results_1 %>% filter(sigma_p == .70)
+
+res1_sp70_nlp <- nested_loop_plot(resdf = res1_sp70,
+                                  x = "pi", steps = c("n_1","n_2","n_3"),
+                                  grid_rows = "sigma_e", grid_cols = "sigma_p",
+                                  steps_y_base = -150, 
+                                  steps_y_height = 20,
+                                  steps_y_shift = 200,
+                                  steps_values_annotate = TRUE, 
+                                  steps_annotation_size = 2.5,
+                                  x_name = "Prevalence in Loops of {.005, .05, .3}", 
+                                  y_name = "Relative Bias (%)",
+                                  methods = c("hat_pi_RG"),
+                                  spu_x_shift = .2,
+                                  parameter_decreasing = FALSE,
+                                  steps_annotation_nudge = 1,
+                                  #steps_values_annotate = TRUE,
+                                  hline_intercept = 0,
+                                  x_labels = NULL,
+                                  # y_labels = c(-20,20),
+                                  y_expand_add = c(175, NULL),
+                                  post_processing = list(
+                                    add_custom_theme = list(
+                                      axis.text.x = element_text(angle = -90,
+                                                                 vjust = 0.5,
+                                                                 size = 8))
+                                  )
+  ) + ggtitle(expression(paste(
+  "Scenario 1 Results: ", sigma[p], " = 0.70", sep = ""))) + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+res1_sp70_nlp
+
+# send plot to pdf
+pdf(here("sims/bias_plots/scenario1_sp70.pdf"),
+    paper = "USr",width=11,height=9)
+print(res1_sp70_nlp)
+dev.off()
+
+
+# Scenario 1, without Prevalence .005, and with sigma_e=.7 -------------------------------------
+
+results1_filtered <- results_1 %>% filter(pi > .01 & sigma_e == .7) %>%
+                          mutate(n_2 = as.factor(n_2))
+
+results1_filt_nlp <- nested_loop_plot(resdf = results1_filtered,
+                                  x = "n_2", steps = c("n_1","n_3"),
+                                  grid_rows = "sigma_p", grid_cols = "pi",
+                                  steps_y_base = -25, 
+                                  steps_y_height = 5,
+                                  steps_y_shift = 30,
+                                  steps_values_annotate = TRUE, 
+                                  steps_annotation_size = 2.5,
+                                  x_name = expression(paste(n[2], " in Loops of {30, 300, 3000}")),
+                                  y_name = "Relative Bias (%)",
+                                  methods = c("hat_pi_RG"),
+                                  spu_x_shift = 1,
+                                  parameter_decreasing = FALSE,
+                                  steps_annotation_nudge = 1,
+                                  #steps_values_annotate = TRUE,
+                                  hline_intercept = 0,
+                                 # x_labels = NULL,
+                                  # y_labels = c(-20,20),
+                                  y_expand_add = c(20, NULL),
+                                  post_processing = list(
+                                    add_custom_theme = list(
+                                      axis.text.x = element_text(angle = -90,
+                                                                 vjust = 0.5,
+                                                                 size = 8))
+                                  )
+) + ggtitle(expression(paste(
+  "Scenario 1 Results where ", sigma[e], " = 0.70", sep = ""))) + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+results1_filt_nlp
+
+results1_filt2 <- results1_filtered %>% filter(n_2 != 30)
+
+results1_filt2_nlp <- nested_loop_plot(resdf = results1_filt2,
+                                      x = "n_2", steps = c("n_1","n_3"),
+                                      grid_rows = "sigma_p", grid_cols = "pi",
+                                      steps_y_base = -10, 
+                                      steps_y_height = 2,
+                                      steps_y_shift = 15,
+                                      steps_values_annotate = TRUE, 
+                                      steps_annotation_size = 2.5,
+                                      x_name = expression(paste(n[2], " in Loops of {300, 3000}")),
+                                      y_name = "Relative Bias (%)",
+                                      methods = c("hat_pi_RG"),
+                                      spu_x_shift = 1,
+                                      parameter_decreasing = FALSE,
+                                      steps_annotation_nudge = 1,
+                                      #steps_values_annotate = TRUE,
+                                      hline_intercept = 0,
+                                      # x_labels = NULL,
+                                      # y_labels = c(-20,20),
+                                      y_expand_add = c(15, NULL),
+                                      post_processing = list(
+                                        add_custom_theme = list(
+                                          axis.text.x = element_text(angle = -90,
+                                                                     vjust = 0.5,
+                                                                     size = 8))
+                                      )
+) + ggtitle(expression(paste(
+  "Scenario 1 Results where ", sigma[e], " = 0.70", sep = ""))) + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+results1_filt2_nlp
+
 
 
 # Scenario 2 Plots --------------------------------------------------------
@@ -104,7 +296,7 @@ dev.off()
 res2_2x2 <- results_2 %>% filter(sigma_e > .75 & sigma_p > .75)
 
 p2_2x2 <- nested_loop_plot(resdf = res2_2x2,
-                           x = "prev", steps = c("n_1","n_2","n_3"),
+                           x = "pi", steps = c("n_1","n_2","n_3"),
                            grid_rows = "sigma_e", grid_cols = "sigma_p",
                            steps_y_base = -75, 
                            steps_y_height = 10,
@@ -145,11 +337,11 @@ dev.off()
 
 results2_small <- results_2 %>% 
   filter(sigma_e == .95 & sigma_p > .75 & 
-         prev < .2 & n_3 == 5000 & n_1 < 1000) %>% 
+         pi < .2 & n_3 == 5000 & n_1 < 1000) %>% 
   rename(Specificity = sigma_p, Sensitivity = sigma_e)
 
 p2_small <- nested_loop_plot(resdf = results2_small,
-                           x = "prev", 
+                           x = "pi", 
                            steps = c("n_1","n_2"),
                            #steps = c("n_1","n_2","n_3"),
                            grid_rows = "Specificity", 
@@ -186,6 +378,68 @@ pdf(here("sims/plots/scenario2_small.pdf"))
 print(p2_small)
 dev.off()
 
+# another one - for ENAR
+
+results2_small_v2 <- results_2 %>% 
+  filter(sigma_e == .95 & sigma_p == .95 & 
+           pi < .2 & n_3 == 5000 & n_1 < 1000) %>% 
+  rename(Specificity = sigma_p, Sensitivity = sigma_e,
+         hat_pi_RG = hat_pi, hat_pi_SRG = hat_pi_st) %>% 
+  mutate(pi = as.factor(pi))
+
+p2_small_v2 <- nested_loop_plot(resdf = results2_small_v2,
+                             x = "pi", 
+                             steps = c("n_1","n_2"),
+                             line_size = 2,
+                             point_size = 5,
+                             grid_rows = "Specificity", 
+                             grid_cols = "Sensitivity",
+                            # grid_scales = "free_x",
+                             steps_y_base = -170, 
+                             steps_y_height = 30,
+                             steps_y_shift = 140,
+                             steps_color = "gray2",
+                             steps_values_annotate = TRUE, 
+                             steps_annotation_size = 9,
+                             steps_annotation_nudge = 1,
+                             steps_annotation_color = "gray2",
+                             x_name = "Prevalence", 
+                             y_name = "Mean Relative Bias (%)",
+                             methods = c("hat_pi_RG","hat_pi_SRG"),
+                             spu_x_shift = 1,
+                             parameter_decreasing = FALSE,
+                             hline_intercept = 0,
+                             hline_size = 2.5,
+                            hline_linetype = "dashed",
+                             # x_labels = NULL,
+                             y_expand_add = c(120, NULL),
+                             base_size = 36,
+                             post_processing = list(
+                               add_custom_theme = list(
+                                 axis.text.x = element_text(angle = -90,
+                                                            vjust = 0.5,
+                                                            size = 30,
+                                                            color = "gray2"),
+                                 axis.text.y = element_text(size = 36, 
+                                                            color = "gray2"),
+                                 axis.title = element_text(size = 40),
+                               strip.text = element_text(size = 36),
+                               legend.text = element_text(size = 30),
+                               legend.title = element_text(size = 30),#,
+                              legend.position = c(8,350))
+                                # axis.title.y = element_text(size = 30))
+                               
+                               
+                             )
+) 
+
+print(p2_small_v2)
+
+# send plot to pdf 
+pdf(here("sims/plots/scenario2_small_ENAR_nolegend.pdf"),
+    paper = "USr", width = 11, height = 9)
+print(p2_small_v2)
+dev.off()
 
 # Scenario 3 Plots --------------------------------------------------------
 
@@ -193,20 +447,20 @@ dev.off()
 # the amount of sampling bias in each 
 sp <- gammas_3
   
-# Under prev \approx .005, assign the stratum-specific prevalences
+# Under pi \approx .005, assign the stratum-specific prevalences
 # and then plot them. 
 # Note that this plot will look the same under *any* of the marginal 
 # prevalences, because of the way that we are varying marginal prevalence 
 # by only varying the intercept of the logistic model .
 sp_005 <- sp %>% dplyr::mutate(
-  prev = inv.logit(alpha_0[1]+alpha_1*(gammas_3$z1=="z11")+
+  pi = inv.logit(alpha_0[1]+alpha_1*(gammas_3$z1=="z11")+
                      alpha_2*(gammas_3$z2=="z20")+alpha_3*(gammas_3$z2=="z21")+
                      alpha_4*(gammas_3$z3=="z30")+alpha_5*(gammas_3$z3=="z31"))
 )
 
 # plot gamma_j vs s_j
 scenario3_selectionbias_plot <- ggplot(data = sp_005, aes(x=stratum_prop, y = sampling_prob)) + 
-  geom_point(aes(size=prev), alpha = .8) + 
+  geom_point(aes(size=pi), alpha = .8) + 
   labs(size = "Prevalence") + 
   geom_abline(colour = "grey50", size = 2) + 
   xlab(expression(paste(gamma[j]," (Stratum proportion)",sep=""))) + 
@@ -224,7 +478,7 @@ dev.off()
 res3_2x2 <- results_3 %>% filter(sigma_e > .75 & sigma_p > .75)
 
 p3_2x2 <- nested_loop_plot(resdf = res3_2x2,
-                           x = "prev", steps = c("n_1","n_2","n_3"),
+                           x = "pi", steps = c("n_1","n_2","n_3"),
                            grid_rows = "sigma_e", grid_cols = "sigma_p",
                            steps_y_base = -75, 
                            steps_y_height = 10,
@@ -260,6 +514,47 @@ pdf(here("sims/plots/scenario3_2x2.pdf"),
 print(p3_2x2)
 dev.off()
 
+# the same plot, but not examining pi of .005
+res3_no005_2x2<- res3_2x2 %>% filter(pi > .005)
+
+p3_no005_2x2 <- nested_loop_plot(resdf = res3_no005_2x2,
+                           x = "pi", steps = c("n_1","n_2","n_3"),
+                           grid_rows = "sigma_e", grid_cols = "sigma_p",
+                           steps_y_base = -75, 
+                           steps_y_height = 10,
+                           steps_y_shift = 60,
+                           steps_values_annotate = TRUE, 
+                           steps_annotation_size = 2.5,
+                           grid_scales = "free_x",
+                           x_name = "Prevalence in Loops of {.005, .05, .3}", 
+                           y_name = "Relative Bias (%)",
+                           methods = c("hat_pi","hat_pi_st","hat_pi_mst"),
+                           spu_x_shift = .2,
+                           parameter_decreasing = FALSE,
+                           steps_annotation_nudge = 1,
+                           #steps_values_annotate = TRUE,
+                           hline_intercept = 0,
+                           x_labels = NULL,
+                           y_expand_add = c(50, NULL),
+                           post_processing = list(
+                             add_custom_theme = list(
+                               axis.text.x = element_text(angle = -90,
+                                                          vjust = 0.5,
+                                                          size = 8))
+                             
+                             
+                           )
+) + ggtitle("Scenario 3 Results") + 
+  theme( plot.title = element_text(hjust = 0.5)) 
+
+print(p3_no005_2x2)
+
+foo <- res3_no005_2x2 %>% filter(pi < .25 & 
+                  sigma_e == .95 & sigma_p == .95 
+                    )
+bar <- foo %>% filter(n_1 < 3000 & n_3 == 5000)
+res3_no005_2x2<- res3_2x2 %>% filter(pi > .005)
+
 
 # Scenario 4 Plots --------------------------------------------------------
 
@@ -267,13 +562,13 @@ dev.off()
 # the amount of sampling bias in each 
 sp4 <- gammas_4
 
-# Under prev \approx .005, assign the stratum-specific prevalences
+# Under pi \approx .005, assign the stratum-specific prevalences
 # and then plot them. 
 # Note that this plot will look the same under *any* of the marginal 
 # prevalences, because of the way that we are varying marginal prevalence 
 # by only varying the intercept of the logistic model .
 sp_005 <- sp4 %>% dplyr::mutate(
-  prev = inv.logit(nu_0[1] + nu_1*(gammas_4$z1 == "z11") +
+  pi = inv.logit(nu_0[1] + nu_1*(gammas_4$z1 == "z11") +
                      nu_2 * (gammas_4$z2 == "z20") + nu_3 * (gammas_4$z2 == "z21") +
                      nu_4 * (gammas_4$z3 == "z30") + nu_5 * (gammas_4$z3 == "z31") +
                      nu_6 * (gammas_4$z4 == "z41"))
@@ -282,7 +577,7 @@ sp_005 <- sp4 %>% dplyr::mutate(
 # plot gamma_j vs s_j
 scenario4_selectionbias_plot <- ggplot(data = sp_005, 
   aes(x=stratum_prop, y = sampling_prob)) + 
-  geom_point(aes(size=prev), alpha = .8) + 
+  geom_point(aes(size=pi), alpha = .8) + 
   labs(size = "Prevalence") + 
   geom_abline(colour = "grey50", size = 2) + 
   xlab(expression(paste(gamma[j]," (Stratum proportion)",sep=""))) + 
@@ -298,7 +593,7 @@ dev.off()
 res4_2x2 <- results_4 %>% filter(sigma_e > .75 & sigma_p > .75)
 
 p4_2x2 <- nested_loop_plot(resdf = res4_2x2,
-                           x = "prev", steps = c("n_1","n_2","n_3"),
+                           x = "pi", steps = c("n_1","n_2","n_3"),
                            grid_rows = "sigma_e", grid_cols = "sigma_p",
                            steps_y_base = -75,
                            steps_y_height = 10,
