@@ -17,6 +17,8 @@ library(here)
 source(here("sims/input_files/sim_param_values.R")) #load sim parameter values common across scenarios
 source(here("sims/sim_fns.R"))
 
+color_scheme <- "Set2"
+
 # Read in results files and stratum_proportion files.
 # Note that the results are read in from the results_final subdirectory,
 # not the results_draft subdirectory. 
@@ -73,6 +75,7 @@ res1_sp100_nlp <- nested_loop_plot(resdf = res1_sp100,
                                   x_name = "Prevalence in Loops of {.005, .05, .3}", 
                                   y_name = "Relative Bias (%)",
                                   methods = c("hat_pi_RG"),
+                                  colors = scales::brewer_pal(palette = color_scheme),
                                   spu_x_shift = .2,
                                   steps_annotation_nudge = 1,
                                   hline_intercept = 0,
@@ -106,6 +109,7 @@ res1_sp95_nlp <- nested_loop_plot(resdf = res1_sp95,
                             x_name = "Prevalence in Loops of {.005, .05, .3}", 
                             y_name = "Relative Bias (%)",
                             methods = c("hat_pi_RG"),
+                            colors = scales::brewer_pal(palette = color_scheme),
                             spu_x_shift = .2,
                             steps_annotation_nudge = 1,
                             hline_intercept = 0,
@@ -137,6 +141,7 @@ res1_sp70_nlp <- nested_loop_plot(resdf = res1_sp70,
                                   x_name = "Prevalence in Loops of {.005, .05, .3}", 
                                   y_name = "Relative Bias (%)",
                                   methods = c("hat_pi_RG"),
+                                  colors = scales::brewer_pal(palette = color_scheme),
                                   spu_x_shift = .2,
                                   steps_annotation_nudge = 1,
                                   hline_intercept = 0,
@@ -172,6 +177,7 @@ results1_filt_nlp <- nested_loop_plot(resdf = results1_filtered,
                                   x_name = expression(paste(n[2], " in Loops of {30, 300, 3000}")),
                                   y_name = "Relative Bias (%)",
                                   methods = c("hat_pi_RG"),
+                                  colors = scales::brewer_pal(palette = color_scheme),
                                   spu_x_shift = 1,
                                   steps_annotation_nudge = 1,
                                   hline_intercept = 0,
@@ -198,13 +204,11 @@ results1_filt2_nlp <- nested_loop_plot(resdf = results1_filt2,
                                       x_name = expression(paste(n[2], " in Loops of {300, 3000}")),
                                       y_name = "Relative Bias (%)",
                                       methods = c("hat_pi_RG"),
+                                      colors = scales::brewer_pal(palette = color_scheme),
                                       spu_x_shift = 1,
                                       parameter_decreasing = FALSE,
                                       steps_annotation_nudge = 1,
-                                      #steps_values_annotate = TRUE,
                                       hline_intercept = 0,
-                                      # x_labels = NULL,
-                                      # y_labels = c(-20,20),
                                       y_expand_add = c(15, NULL),
                                       post_processing = list(
                                         add_custom_theme = list(
@@ -218,10 +222,46 @@ results1_filt2_nlp <- nested_loop_plot(resdf = results1_filt2,
 
 results1_filt2_nlp
 
-
+pdf(here("sims/bias_plots/scenario1_filtered.pdf"),
+    paper = "USr",width=11,height=9)
+print(results1_filt2_nlp)
+dev.off()
 
 # Scenario 2 Plots --------------------------------------------------------
+res2_filtered <- results_2 %>% filter(sigma_e == .7 & n_2 != 30 & pi > .01) %>% 
+                               mutate(n_2 = as.factor(n_2)) 
 
+res2_filtered_nlp <- nested_loop_plot(resdf = res2_filtered,
+                                       x = "n_2", steps = c("n_1","n_3"),
+                                       grid_rows = "sigma_p", grid_cols = "pi",
+                                       steps_y_base = -70, 
+                                       steps_y_height = 5,
+                                       steps_y_shift = 30,
+                                       steps_values_annotate = TRUE, 
+                                       steps_annotation_size = 2.5,
+                                       x_name = expression(paste(n[2], " in Loops of {300, 3000}")),
+                                       y_name = "Relative Bias (%)",
+                                       methods = c("hat_pi_RG","hat_pi_SRG"),
+                                       colors = scales::brewer_pal(palette = color_scheme),                                       spu_x_shift = 1,
+                                       parameter_decreasing = FALSE,
+                                       steps_annotation_nudge = 1,
+                                       hline_intercept = 0,
+                                       y_expand_add = c(25, NULL),
+                                       post_processing = list(
+                                         add_custom_theme = list(
+                                           axis.text.x = element_text(angle = -90,
+                                                                      vjust = 0.5,
+                                                                      size = 8))
+                                       )
+) + ggtitle("Scenario 2 Results") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+res2_filtered_nlp
+
+pdf(here("sims/bias_plots/scenario2.pdf"),
+    paper = "USr",width=11,height=9)
+print(res2_filtered_nlp)
+dev.off()
 
 # Scenario 3 Plots --------------------------------------------------------
 
@@ -242,21 +282,55 @@ sp_005 <- sp %>% dplyr::mutate(
 
 # plot gamma_j vs s_j
 scenario3_selectionbias_plot <- ggplot(data = sp_005, aes(x=stratum_prop, y = sampling_prob)) + 
-  geom_point(aes(size=pi), alpha = .8) + 
+  geom_point(aes(size=pi), alpha = .8, 
+             color = "purple") + 
   labs(size = "Prevalence") + 
   geom_abline(colour = "grey50", size = 2) + 
   xlab(expression(paste(gamma[j]," (Stratum proportion)",sep=""))) + 
   ylab(expression(paste(s[j]," (Sampling probability)", sep=""))) + 
   ggtitle("Selection bias in Scenario 3") + 
-  theme( plot.title = element_text(hjust = 0.5),
+  theme(plot.title = element_text(hjust = 0.5),
          text = element_text(size=14))
 
-pdf(here("sims/plots/scenario3_selectionbias.pdf"))
+scenario3_selectionbias_plot
+
+pdf(here("sims/bias_plots/scenario3_selectionbias.pdf"))
 print(scenario3_selectionbias_plot)
 dev.off()
 
 # plot scenario 3 results
+res3_filtered <- results_3 %>% filter(sigma_e == .95 & n_2 != 30 & pi > .01) %>% 
+  mutate(n_2 = as.factor(n_2),
+         pi = round(pi, digits = 2)) 
 
+res3_filtered_nlp <- nested_loop_plot(resdf = res3_filtered,
+                                      x = "n_2", steps = c("n_1","n_3"),
+                                      grid_rows = "sigma_p", grid_cols = "pi",
+                                      steps_y_base = -70, 
+                                      steps_y_height = 5,
+                                      steps_y_shift = 30,
+                                      steps_values_annotate = TRUE, 
+                                      steps_annotation_size = 2.5,
+                                      x_name = expression(paste(n[2], " in Loops of {300, 3000}")),
+                                      y_name = "Relative Bias (%)",
+                                      methods = c("hat_pi_RG","hat_pi_SRG","hat_pi_SRGM"),
+                                      colors = scales::brewer_pal(palette = color_scheme),                                       spu_x_shift = 1,
+                                      parameter_decreasing = FALSE,
+                                      steps_annotation_nudge = 1,
+                                      hline_intercept = 0,
+                                      y_expand_add = c(25, NULL),
+                                      post_processing = list(
+                                        add_custom_theme = list(
+                                          axis.text.x = element_text(angle = -90, vjust = 0.5, size = 8)))
+  ) + ggtitle("Scenario 3 Results") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+res3_filtered_nlp
+
+pdf(here("sims/bias_plots/scenario3.pdf"),
+    paper = "USr",width=11,height=9)
+print(res3_filtered_nlp)
+dev.off()
 
 # Scenario 4 Plots --------------------------------------------------------
 
@@ -279,7 +353,7 @@ sp_005 <- sp4 %>% dplyr::mutate(
 # plot gamma_j vs s_j
 scenario4_selectionbias_plot <- ggplot(data = sp_005, 
   aes(x=stratum_prop, y = sampling_prob)) + 
-  geom_point(aes(size=pi), alpha = .8) + 
+  geom_point(aes(size=pi), alpha = .8, color = "slateblue") + 
   labs(size = "Prevalence") + 
   geom_abline(colour = "grey50", size = 2) + 
   xlab(expression(paste(gamma[j]," (Stratum proportion)",sep=""))) + 
@@ -291,3 +365,41 @@ scenario4_selectionbias_plot <- ggplot(data = sp_005,
 pdf(here("sims/plots/scenario4_selectionbias.pdf"))
 print(scenario4_selectionbias_plot)
 dev.off()
+
+# plot scenario 4 results
+res4_filtered <- results_4 %>% filter(sigma_e == .95 & n_2 != 30 & pi > .01) %>% 
+  mutate(n_2 = as.factor(n_2),
+         pi = round(pi, digits = 2)) 
+
+res4_filtered_nlp <- nested_loop_plot(resdf = res4_filtered,
+                                      x = "n_2", steps = c("n_1","n_3"),
+                                      grid_rows = "sigma_p", grid_cols = "pi",
+                                      line_alpha = .7, 
+                                      point_alpha = .7,
+                                      steps_y_base = -2, 
+                                      steps_y_height = 0.5,
+                                      steps_y_shift = 1.5,
+                                      steps_values_annotate = TRUE, 
+                                      steps_annotation_size = 2.5,
+                                      x_name = expression(paste(n[2], " in Loops of {300, 3000}")),
+                                      y_name = "Relative Bias (%)",
+                                     # methods = c("hat_pi_RG","hat_pi_SRG","hat_pi_SRGM"),
+                                     methods = c("hat_pi_SRG","hat_pi_SRGM"),
+                                      colors = scales::brewer_pal(palette = color_scheme),                                       spu_x_shift = 1,
+                                      parameter_decreasing = FALSE,
+                                      steps_annotation_nudge = 1,
+                                      hline_intercept = 0,
+                                      y_expand_add = c(2, NULL),
+                                      post_processing = list(
+                                        add_custom_theme = list(
+                                          axis.text.x = element_text(angle = -90, vjust = 0.5, size = 8)))
+) + ggtitle("Scenario 4 Results") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+res4_filtered_nlp
+
+pdf(here("sims/bias_plots/scenario4.pdf"),
+    paper = "USr",width=11,height=9)
+print(res4_filtered_nlp)
+dev.off()
+
