@@ -65,12 +65,12 @@ sim_conditions <- tidyr::crossing(
   n_1, n_2, n_3, sigma_e, sigma_p, stratum_props) %>% 
   rowwise() %>% 
   mutate(prev = sum(stratum_props$stratum_prop * stratum_props$prev),
-         hat_pi = NA_real_,
-         hat_pi_st = NA_real_, 
-         hat_pi_mst = NA_real_,
-         num_infinite_pi = NA_real_, # number of infinite estimates \hat \pi
-         num_infinite_pi_st = NA_real_, # number of infinite estimates \hat \pi_st
-         num_infinite_pi_mst = NA_real_, # number of infinite estimates \hat \pi_mst
+         hat_pi_RG = NA_real_,
+         hat_pi_SRG = NA_real_, 
+         hat_pi_SRGM = NA_real_,
+         num_infinite_pi_RG = NA_real_, # number of infinite estimates \hat \pi_RG
+         num_infinite_pi_SRG = NA_real_, # number of infinite estimates \hat \pi_SRG
+         num_infinite_pi_SRGM = NA_real_, # number of infinite estimates \hat \pi_SRGM
          n_strata_obs_full = NA_real_ # number of simulations with positivity (all strata observed)
   )
 
@@ -79,24 +79,24 @@ sim_conditions <- tidyr::crossing(
 for(i in 1:nrow(sim_conditions)){
   print(i)
   row <- sim_conditions[i,]
-  hat_pi <- rep(NA, n_sims)
-  hat_pi_st <- rep(NA, n_sims)
-  hat_pi_mst <- rep(NA, n_sims)
+  hat_pi_RG <- rep(NA, n_sims)
+  hat_pi_SRG <- rep(NA, n_sims)
+  hat_pi_SRGM <- rep(NA, n_sims)
   strata_obs <- rep(NA, n_sims) # number of observed strata in a sim
   
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
     dat <- gen_data_scenario3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
                               row$n_3, as.data.frame(row$stratum_props), vars_std)
-    hat_pi[j] <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
+    hat_pi_RG[j] <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
                          row$n_1, row$n_2, row$n_3, variance = FALSE)
-    hat_pi_st_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat, 
+    hat_pi_SRG_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat, 
                               row$n_1, row$n_2, row$n_3, vars_std, variance = FALSE)
     # set standardized estimator to NA if there is nonpositivity
-    hat_pi_st[j] <- ifelse(hat_pi_st_vec[2] < n_strata, NA, hat_pi_st_vec[1]) 
-    strata_obs[j] <- hat_pi_st_vec[2] # Note we can get this info from either standardization estimator,
-                                      # hat_pi_st or hat_pi_mst; here I take it from hat_pi_st
-    hat_pi_mst[j] <- ests_std_model(
+    hat_pi_SRG[j] <- ifelse(hat_pi_SRG_vec[2] < n_strata, NA, hat_pi_SRG_vec[1]) 
+    strata_obs[j] <- hat_pi_SRG_vec[2] # Note we can get this info from either standardization estimator,
+                                      # hat_pi_SRG or hat_pi_SRGM; here I take it from hat_pi_SRG
+    hat_pi_SRGM[j] <- ests_std_model(
               dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat, 
               dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, vars_std, 
               mod_formula = formula("x ~ z1 + z2 + z3"), variance = FALSE
@@ -106,25 +106,26 @@ for(i in 1:nrow(sim_conditions)){
   
   # compute mean relative bias of the finite estimates for the sub-scenario,
   # and compute the other results of interest
-  sim_conditions[i,"hat_pi"] <- 100 * ( 
-    mean(hat_pi[is.finite(hat_pi)]) - row$prev ) / row$prev 
-  sim_conditions[i,"num_infinite_pi"] <- sum(!is.finite(hat_pi))
+  sim_conditions[i,"hat_pi_RG"] <- 100 * ( 
+    mean(hat_pi_RG[is.finite(hat_pi_RG)]) - row$prev ) / row$prev 
+  sim_conditions[i,"num_infinite_pi_RG"] <- sum(!is.finite(hat_pi_RG))
   
-  sim_conditions[i,"hat_pi_st"] <- 100 * (
-    mean(hat_pi_st[is.finite(hat_pi_st)], na.rm = TRUE) - row$prev) / row$prev 
-  sim_conditions[i,"num_infinite_pi_st"] <- sum(!is.finite(hat_pi_st))
+  sim_conditions[i,"hat_pi_SRG"] <- 100 * (
+    mean(hat_pi_SRG[is.finite(hat_pi_SRG)], na.rm = TRUE) - row$prev) / row$prev 
+  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
   
-  sim_conditions[i,"hat_pi_mst"] <- 100 * (
-    mean(hat_pi_mst[is.finite(hat_pi_mst)]) - row$prev) / row$prev 
-  sim_conditions[i,"num_infinite_pi_mst"] <- sum(!is.finite(hat_pi_mst))
+  sim_conditions[i,"hat_pi_SRGM"] <- 100 * (
+    mean(hat_pi_SRGM[is.finite(hat_pi_SRGM)]) - row$prev) / row$prev 
+  sim_conditions[i,"num_infinite_pi_SRGM"] <- sum(!is.finite(hat_pi_SRGM))
   
   sim_conditions[i,"n_strata_obs_full"] <- sum(strata_obs == n_strata)
 }
 
 # since the above simulation can take some time, 
 # write results to an output file to analyse in a separate script
-sim_results <- sim_conditions %>% select(-c(stratum_props))
-write_csv(sim_results, output_file)
+sim_results <- sim_conditions %>% dplyr::select(-c(stratum_props)) %>% 
+                                  dplyr::rename(pi = prev)
+#write_csv(sim_results, output_file)
 
-#time2 <- Sys.time()
-#print(time2 - time1)
+time2 <- Sys.time()
+print(time2 - time1)
