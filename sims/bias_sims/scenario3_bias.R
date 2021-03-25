@@ -125,6 +125,8 @@ for(i in 1:nrow(sim_conditions)){
 # write results to an output file to analyse in a separate script
 sim_results <- sim_conditions %>% dplyr::select(-c(stratum_props)) %>% 
                                   dplyr::rename(pi = prev)
+sim_results$n_sims <- NA_real_
+sim_results[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, but it is useful to store this value somewhere)
 #write_csv(sim_results, output_file)
 
 time2 <- Sys.time()

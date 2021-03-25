@@ -47,7 +47,11 @@ for(i in 1:nrow(sim_conditions)){
 
 # write results to an output file 
 sim_conditions <- sim_conditions %>% dplyr::rename(pi = prev)
+sim_conditions$n_sims <- NA_real_
+sim_conditions[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, but it is useful to store this value somewhere)
 #write_csv(sim_conditions, output_file)
+
+print(sim_conditions)
 time2 <- Sys.time()
 print(time2 - time1)
 
