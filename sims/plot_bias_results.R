@@ -67,11 +67,11 @@ res1_sp100 <- results_1 %>% filter(sigma_p == 1)
 res1_sp100_nlp <- nested_loop_plot(resdf = res1_sp100,
                                   x = "pi", steps = c("n_1","n_2","n_3"),
                                   grid_rows = "sigma_e", grid_cols = "sigma_p",
-                                  steps_y_base = -8, 
-                                  steps_y_height = 1,
-                                  steps_y_shift = 5,
+                                  steps_y_base = -2, 
+                                  steps_y_height = 0.25,
+                                  steps_y_shift = 3,
                                   steps_values_annotate = TRUE, 
-                                  steps_annotation_size = 2.5,
+                                  steps_annotation_size = 4,
                                   x_name = "Prevalence in Loops of {.005, .05, .3}", 
                                   y_name = "Relative Bias (%)",
                                   methods = c("hat_pi_RG"),
@@ -80,12 +80,16 @@ res1_sp100_nlp <- nested_loop_plot(resdf = res1_sp100,
                                   steps_annotation_nudge = 1,
                                   hline_intercept = 0,
                                   x_labels = NULL,
-                                  y_expand_add = c(3, NULL),
+                                  y_expand_add = c(2.5, NULL),
                                   post_processing = list(add_custom_theme = list(
-                                      axis.text.x = element_text(angle = -90, vjust = 0.5, size = 8)))
+                                      axis.text = element_text(size = 12),
+                                      axis.title = element_text(size = 16),
+                                      legend.title = element_text(size = 16),
+                                      legend.text = element_text(size = 14),
+                                      strip.text = element_text(size = 14)))
   ) + ggtitle(expression(paste(
-        "Scenario 1 Results: ", sigma[p], " = 1", sep = ""))) + 
-      theme(plot.title = element_text(hjust = 0.5))
+        "DGP 1 Results where ", sigma[p], " = 1", sep = ""))) + 
+      theme(plot.title = element_text(hjust = 0.5, size = 22))
 
 res1_sp100_nlp
 
@@ -101,11 +105,11 @@ res1_sp95 <- results_1 %>% filter(sigma_p == .95)
 res1_sp95_nlp <- nested_loop_plot(resdf = res1_sp95,
                             x = "pi", steps = c("n_1","n_2","n_3"),
                             grid_rows = "sigma_e", grid_cols = "sigma_p",
-                            steps_y_base = -75, 
+                            steps_y_base = -100, 
                             steps_y_height = 10,
-                            steps_y_shift = 70,
+                            steps_y_shift = 165,
                             steps_values_annotate = TRUE, 
-                            steps_annotation_size = 2.5,
+                            steps_annotation_size = 3.5,
                             x_name = "Prevalence in Loops of {.005, .05, .3}", 
                             y_name = "Relative Bias (%)",
                             methods = c("hat_pi_RG"),
@@ -114,12 +118,18 @@ res1_sp95_nlp <- nested_loop_plot(resdf = res1_sp95,
                             steps_annotation_nudge = 1,
                             hline_intercept = 0,
                             x_labels = NULL,
-                            y_expand_add = c(100, NULL),
+                            y_expand_add = c(120, NULL),
                             post_processing = list(add_custom_theme = list(
-                                axis.text.x = element_text(angle = -90, vjust = 0.5, size = 8)))
+                              axis.text = element_text(size = 10),
+                              axis.title = element_text(size = 16),
+                              legend.title = element_text(size = 16),
+                              legend.text = element_text(size = 14),
+                              strip.text = element_text(size = 12)))
   ) + ggtitle(expression(paste(
-         "Scenario 1 Results: ", sigma[p], " = 0.95", sep = ""))) + 
-      theme(plot.title = element_text(hjust = 0.5))
+         "DGP 1 Results where ", sigma[p], " = 0.95", sep = ""))) + 
+      theme(plot.title = element_text(hjust = 0.5, size = 22))
+
+res1_sp95_nlp
 
 # send plot to pdf
 pdf(here("sims/bias_plots/scenario1_sp95.pdf"),
@@ -133,25 +143,29 @@ res1_sp70 <- results_1 %>% filter(sigma_p == .70)
 res1_sp70_nlp <- nested_loop_plot(resdf = res1_sp70,
                                   x = "pi", steps = c("n_1","n_2","n_3"),
                                   grid_rows = "sigma_e", grid_cols = "sigma_p",
-                                  steps_y_base = -150, 
-                                  steps_y_height = 20,
-                                  steps_y_shift = 200,
+                                  steps_y_base = -300, 
+                                  steps_y_height = 25,
+                                  steps_y_shift = 500,
                                   steps_values_annotate = TRUE, 
-                                  steps_annotation_size = 2.5,
+                                  steps_annotation_size = 4,
                                   x_name = "Prevalence in Loops of {.005, .05, .3}", 
                                   y_name = "Relative Bias (%)",
                                   methods = c("hat_pi_RG"),
                                   colors = scales::brewer_pal(palette = color_scheme),
                                   spu_x_shift = .2,
-                                  steps_annotation_nudge = 1,
+                                  steps_annotation_nudge = 2,
                                   hline_intercept = 0,
                                   x_labels = NULL,
-                                  y_expand_add = c(175, NULL),
+                                  y_expand_add = c(350, NULL),
                                   post_processing = list(add_custom_theme = list(
-                                      axis.text.x = element_text(angle = -90, size = 8)))
+                                    axis.text = element_text(size = 10),
+                                    axis.title = element_text(size = 16),
+                                    legend.title = element_text(size = 16),
+                                    legend.text = element_text(size = 14),
+                                    strip.text = element_text(size = 12)))
   ) + ggtitle(expression(paste(
-        "Scenario 1 Results: ", sigma[p], " = 0.70", sep = ""))) + 
-      theme(plot.title = element_text(hjust = 0.5))
+        "DGP 1 Results where ", sigma[p], " = 0.70", sep = ""))) + 
+      theme(plot.title = element_text(hjust = 0.5, size = 22))
 
 res1_sp70_nlp
 
@@ -169,63 +183,73 @@ results1_filtered <- results_1 %>% filter(pi > .01 & sigma_e == .7) %>%
 results1_filt_nlp <- nested_loop_plot(resdf = results1_filtered,
                                   x = "n_2", steps = c("n_1","n_3"),
                                   grid_rows = "sigma_p", grid_cols = "pi",
-                                  steps_y_base = -25, 
+                                  steps_y_base = -35, 
                                   steps_y_height = 5,
-                                  steps_y_shift = 30,
+                                  steps_y_shift = 45,
                                   steps_values_annotate = TRUE, 
-                                  steps_annotation_size = 2.5,
+                                  steps_annotation_size = 4,
                                   x_name = expression(paste(n[2], " in Loops of {30, 300, 3000}")),
                                   y_name = "Relative Bias (%)",
                                   methods = c("hat_pi_RG"),
                                   colors = scales::brewer_pal(palette = color_scheme),
                                   spu_x_shift = 1,
+                                  x_labels = NULL,
                                   steps_annotation_nudge = 1,
                                   hline_intercept = 0,
-                                  y_expand_add = c(20, NULL),
+                                  y_expand_add = c(30, NULL),
                                   post_processing = list(add_custom_theme = list(
-                                      axis.text.x = element_text(angle = -90, vjust = 0.5, size = 8)))
+                                    axis.text = element_text(size = 12),
+                                    axis.title = element_text(size = 16),
+                                    legend.title = element_text(size = 16),
+                                    legend.text = element_text(size = 14),
+                                    strip.text = element_text(size = 12)))
   ) + ggtitle(expression(paste(
-         "Scenario 1 Results where ", sigma[e], " = 0.70", sep = ""))) + 
-      theme(plot.title = element_text(hjust = 0.5))
+         "DGP 1 Results where ", sigma[e], " = 0.70", sep = ""))) + 
+      theme(plot.title = element_text(hjust = 0.5, size = 22))
 
 results1_filt_nlp
 
-# based on those results, filter down to cases where n_2 \in {300, 3000}
-results1_filt2 <- results1_filtered %>% filter(n_2 != 30)
-
-results1_filt2_nlp <- nested_loop_plot(resdf = results1_filt2,
-                                      x = "n_2", steps = c("n_1","n_3"),
-                                      grid_rows = "sigma_p", grid_cols = "pi",
-                                      steps_y_base = -10, 
-                                      steps_y_height = 2,
-                                      steps_y_shift = 15,
-                                      steps_values_annotate = TRUE, 
-                                      steps_annotation_size = 2.5,
-                                      x_name = expression(paste(n[2], " in Loops of {300, 3000}")),
-                                      y_name = "Relative Bias (%)",
-                                      methods = c("hat_pi_RG"),
-                                      colors = scales::brewer_pal(palette = color_scheme),
-                                      spu_x_shift = 1,
-                                      parameter_decreasing = FALSE,
-                                      steps_annotation_nudge = 1,
-                                      hline_intercept = 0,
-                                      y_expand_add = c(15, NULL),
-                                      post_processing = list(
-                                        add_custom_theme = list(
-                                          axis.text.x = element_text(angle = -90,
-                                                                     vjust = 0.5,
-                                                                     size = 8))
-                                      )
-) + ggtitle(expression(paste(
-  "Scenario 1 Results where ", sigma[e], " = 0.70", sep = ""))) + 
-  theme(plot.title = element_text(hjust = 0.5))
-
-results1_filt2_nlp
-
 pdf(here("sims/bias_plots/scenario1_filtered.pdf"),
     paper = "USr",width=11,height=9)
-print(results1_filt2_nlp)
+print(results1_filt_nlp)
 dev.off()
+
+# based on those results, filter down to cases where n_2 \in {300, 3000}
+# results1_filt2 <- results1_filtered %>% filter(n_2 != 30)
+# 
+# results1_filt2_nlp <- nested_loop_plot(resdf = results1_filt2,
+#                                       x = "n_2", steps = c("n_1","n_3"),
+#                                       grid_rows = "sigma_p", grid_cols = "pi",
+#                                       steps_y_base = -10, 
+#                                       steps_y_height = 2,
+#                                       steps_y_shift = 15,
+#                                       steps_values_annotate = TRUE, 
+#                                       steps_annotation_size = 2.5,
+#                                       x_name = expression(paste(n[2], " in Loops of {300, 3000}")),
+#                                       y_name = "Relative Bias (%)",
+#                                       methods = c("hat_pi_RG"),
+#                                       colors = scales::brewer_pal(palette = color_scheme),
+#                                       spu_x_shift = 1,
+#                                       parameter_decreasing = FALSE,
+#                                       steps_annotation_nudge = 1,
+#                                       hline_intercept = 0,
+#                                       y_expand_add = c(15, NULL),
+#                                       post_processing = list(
+#                                         add_custom_theme = list(
+#                                           axis.text.x = element_text(angle = -90,
+#                                                                      vjust = 0.5,
+#                                                                      size = 8))
+#                                       )
+# ) + ggtitle(expression(paste(
+#   "Scenario 1 Results where ", sigma[e], " = 0.70", sep = ""))) + 
+#   theme(plot.title = element_text(hjust = 0.5))
+# 
+# results1_filt2_nlp
+
+# pdf(here("sims/bias_plots/scenario1_filtered.pdf"),
+#     paper = "USr",width=11,height=9)
+# print(results1_filt2_nlp)
+# dev.off()
 
 # Scenario 2 Plots --------------------------------------------------------
 res2_filtered <- results_2 %>% filter(sigma_e == .7 & n_2 != 30 & pi > .01) %>% 
