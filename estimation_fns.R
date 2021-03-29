@@ -138,12 +138,13 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     
     # estimate B
     b <- matrix(NA, nrow = nrow(coef), ncol = nrow(coef)) # declare B-hat as an empty p * p matrix 
+    exp_coef_times_mat <- exp(crossprod(coef, t(mat))) # this is a 1 by n matrix with ith element exp(hat beta ^T %*% h(Z_i))
     for(j in 1:nrow(coef)){
       for(k in 1:nrow(coef)){
         unit_contrib_b <- rep(NA, nrow(mat)) # each unit's contribution to this jkth element of B
-        for(i in 1:nrow(mat)){
-          unit_contrib_b[i] <- mat[i,j] * mat[i,k] * exp(crossprod(coef, mat[i,]))/ 
-            (1 + exp(crossprod(coef, mat[i,])))^2
+        for(i in 1:ncol(exp_coef_times_mat)){
+          unit_contrib_b[i] <- mat[i,j] * mat[i,k] * exp_coef_times_mat[1,i] / 
+            (1 + exp_coef_times_mat[1,i])^2
         }
         b[j,k] <- (n_3 / n) * mean(unit_contrib_b)
       }
@@ -167,9 +168,10 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     d <- matrix(0, nrow = 2, ncol = nrow(coef)) # declare D as 2 * p matrix of 0s (convenient since the 2nd row is 0)
     for(l in 1:nrow(coef)){
       stratum_contrib <- rep(NA, nrow(mat_strat)) # contribution of the jth stratum to the sum
+      exp_coef_times_mat_strat <- exp(crossprod(coef, t(mat_strat))) # this is a row vector with ith element exp(hat beta ^T %*% h(Z_i))
       for(j in 1:nrow(mat_strat)){
-        stratum_contrib[j] <- as.matrix(mat_strat[j,l]) * exp(crossprod(coef, mat_strat[j,])) / 
-          (1 + exp(crossprod(coef, mat_strat[j,])))^2 * strata$stratum_prop[j]
+        stratum_contrib[j] <- as.matrix(mat_strat[j,l]) * exp_coef_times_mat_strat[1,j] / 
+          (1 + exp_coef_times_mat_strat[1,j])^2 * strata$stratum_prop[j]
       }
       d[1,l] <- -1 * sum(stratum_contrib)
     }
@@ -180,12 +182,13 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     
     # estimate G 
     g <- matrix(NA, nrow = nrow(coef), ncol = nrow(coef)) #declare G as an empty p * p matrix 
+    invlogit_coef_times_mat <- inv.logit(crossprod(coef, t(mat))) # 1 times n row vector
     for(j in 1:nrow(coef)){
       for(k in 1:nrow(coef)){
         unit_contrib_g <- rep(NA, nrow(mat)) # each unit's contribution to this jkth element of B
-        for(i in 1:nrow(mat)){
+        for(i in 1:ncol(invlogit_coef_times_mat)){
           unit_contrib_g[i] <- mat[i,j] * mat[i,k] * 
-            (x_model$y[i] - inv.logit(crossprod(coef, mat[i,])))^2 # note that x_model$y is the model outcome, which is in our model denoted x
+            (x_model$y[i] - invlogit_coef_times_mat[1,i])^2 # note that x_model$y is the model outcome, which is in our model denoted x
         }
         g[j,k] <- (n_3 / n) * mean(unit_contrib_g)
       }
