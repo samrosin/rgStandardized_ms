@@ -9,3 +9,5 @@ sims/results_draft/scenario3_results.csv
 sims/results_final/scenario1_results.csv
 sims/results_final/scenario2_results.csv
 sims/results_final/scenario3_results.csv
+sims/improving_logistic_regression.R
+sims/improving_logistic_regression_2.R
