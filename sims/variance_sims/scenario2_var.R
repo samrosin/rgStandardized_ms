@@ -48,18 +48,18 @@ sim_conditions <- tidyr::crossing(
   n_1, n_2, n_3, sigma_e, sigma_p, stratum_props) %>% 
   rowwise() %>% 
   mutate(prev = sum(stratum_props$stratum_prop*stratum_props$prev),
-         hat_pi = NA_real_, #mean relative bias of hat_pi
-         ESE_hat_pi = NA_real_, # empirical SE of hat_pi
-         ASE_hat_pi = NA_real_, # mean asymptotic SE of hat_pi (mean of hat_var_pi)
-         covers_pi = NA_real_, # coverage proporation for hat_var_pi
+         hat_pi_RG = NA_real_, #mean relative bias of hat_pi
+         ESE_hat_pi_RG = NA_real_, # empirical SE of hat_pi
+         ASE_hat_pi_RG = NA_real_, # mean asymptotic SE of hat_pi_RG (mean of hat_var_pi)
+         covers_pi_RG = NA_real_, # coverage proporation for hat_var_pi
          
-         hat_pi_st = NA_real_, #mean relative bias of hat_pi_st 
-         ESE_hat_pi_st = NA_real_, # empirical SE of hat_pi_st
-         ASE_hat_pi_st = NA_real_, # mean asymptotic SE of hat_pi_st
-         covers_pi_st = NA_real_, # coverage proportion for hat_var_pi_st
+         hat_pi_SRG = NA_real_, #mean relative bias of hat_pi_SRG 
+         ESE_hat_pi_SRG = NA_real_, # empirical SE of hat_pi_SRG
+         ASE_hat_pi_SRG = NA_real_, # mean asymptotic SE of hat_pi_SRG
+         covers_pi_SRG = NA_real_, # coverage proportion for hat_var_pi_SRG
          
-         num_infinite_pi = NA_real_, # number of infinite estimates \hat \pi
-         num_infinite_pi_st = NA_real_, # number of infinite estimates \hat \pi_st
+         num_infinite_pi_RG = NA_real_, # number of infinite estimates \hat \pi
+         num_infinite_pi_SRG = NA_real_, # number of infinite estimates \hat \pi_SRG
          n_strata_obs_full = NA_real_ # number of simulations with positivity (all strata observed)
   )
 
@@ -67,17 +67,17 @@ sim_conditions <- tidyr::crossing(
 for(i in 1:nrow(sim_conditions)){
   print(i)
   row <- sim_conditions[i,]
-  hat_pi <- rep(NA, n_sims)
-  hat_var_pi <- rep(NA, n_sims)
-  ci_lower_pi <- rep(NA, n_sims)
-  ci_upper_pi <- rep(NA, n_sims)
-  covers_pi <- rep(NA, n_sims)
+  hat_pi_RG <- rep(NA, n_sims)
+  hat_var_pi_RG <- rep(NA, n_sims)
+  ci_lower_pi_RG <- rep(NA, n_sims)
+  ci_upper_pi_RG <- rep(NA, n_sims)
+  covers_pi_RG <- rep(NA, n_sims)
   
-  hat_pi_st <- rep(NA, n_sims)
-  hat_var_pi_st <- rep(NA, n_sims)
-  ci_lower_pi_st <- rep(NA, n_sims)
-  ci_upper_pi_st <- rep(NA, n_sims)
-  covers_pi_st <- rep(NA, n_sims)
+  hat_pi_SRG <- rep(NA, n_sims)
+  hat_var_pi_SRG <- rep(NA, n_sims)
+  ci_lower_pi_SRG <- rep(NA, n_sims)
+  ci_upper_pi_SRG <- rep(NA, n_sims)
+  covers_pi_SRG <- rep(NA, n_sims)
   strata_obs <- rep(NA, n_sims) # number of observed strata in a sim
   
   # iterate through each of the n_sims simulations per sub-scenario
@@ -85,48 +85,48 @@ for(i in 1:nrow(sim_conditions)){
     print(j)
     dat <- gen_data_scenario2(row$n_1, row$sigma_e, row$n_2, 
                        row$sigma_p, row$n_3, as.data.frame(row$stratum_props))
-    hat_pi_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
+    hat_pi_RG_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
                          row$n_1, row$n_2, row$n_3, variance = TRUE)
-    hat_pi[j] <- hat_pi_vec[1]
-    hat_var_pi[j] <- hat_pi_vec[2]
-    ci_lower_pi[j] <- hat_pi_vec[1] - 
-                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_vec[2])
-    ci_upper_pi[j] <- hat_pi_vec[1] + 
-                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_vec[2])
-    covers_pi[j] <- ifelse(
-      (ci_lower_pi[j] < row$prev) && (ci_upper_pi[j] > row$prev), 1, 0)
+    hat_pi_RG[j] <- hat_pi_RG_vec[1]
+    hat_var_pi_RG[j] <- hat_pi_RG_vec[2]
+    ci_lower_pi_RG[j] <- hat_pi_RG_vec[1] - 
+                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2])
+    ci_upper_pi_RG[j] <- hat_pi_RG_vec[1] + 
+                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2])
+    covers_pi_RG[j] <- ifelse(
+      (ci_lower_pi_RG[j] < row$prev) && (ci_upper_pi_RG[j] > row$prev), 1, 0)
     
-    hat_pi_st_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat, 
+    hat_pi_SRG_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat, 
                   row$n_1, row$n_2, row$n_3, vars_std, variance = TRUE)
-    hat_pi_st[j] <- hat_pi_st_vec[1]
-    hat_var_pi_st[j] <- hat_pi_st_vec[2]
-    ci_lower_pi_st[j] <- hat_pi_st_vec[1] - 
-      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_st_vec[2])
-    ci_upper_pi_st[j] <- hat_pi_st_vec[1] + 
-      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_st_vec[2])
-    covers_pi_st[j] <- ifelse(
-      (ci_lower_pi_st[j] < row$prev) && (ci_upper_pi_st[j] > row$prev), 1, 0)
+    hat_pi_SRG[j] <- hat_pi_SRG_vec[1]
+    hat_var_pi_SRG[j] <- hat_pi_SRG_vec[2]
+    ci_lower_pi_SRG[j] <- hat_pi_SRG_vec[1] - 
+      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRG_vec[2])
+    ci_upper_pi_SRG[j] <- hat_pi_SRG_vec[1] + 
+      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRG_vec[2])
+    covers_pi_SRG[j] <- ifelse(
+      (ci_lower_pi_SRG[j] < row$prev) && (ci_upper_pi_SRG[j] > row$prev), 1, 0)
     
-    strata_obs[j] <- hat_pi_st_vec[3]
+    strata_obs[j] <- hat_pi_SRG_vec[3]
   }
   
   # compute mean relative bias of the finite estimates for the sub-scenario,
   # ESE and ASE, 
   # and compute the other data of interest
-  sim_conditions[i, "hat_pi"] <- 100 * ( 
-    mean(hat_pi[is.finite(hat_pi)]) - row$prev ) / row$prev 
-  sim_conditions[i, "ESE_hat_pi"] <- sd(hat_pi[is.finite(hat_pi)])
-  sim_conditions[i, "ASE_hat_pi"] <- mean(sqrt(hat_var_pi[is.finite(hat_var_pi)]))
-  sim_conditions[i, "covers_pi"] <- mean(covers_pi)
-  sim_conditions[i, "num_infinite_pi"] <- sum(!is.finite(hat_pi))
+  sim_conditions[i, "hat_pi_RG"] <- 100 * ( 
+    mean(hat_pi_RG[is.finite(hat_pi_RG)]) - row$prev ) / row$prev 
+  sim_conditions[i, "ESE_hat_pi_RG"] <- sd(hat_pi_RG[is.finite(hat_pi_RG)])
+  sim_conditions[i, "ASE_hat_pi_RG"] <- mean(sqrt(hat_var_pi_RG[is.finite(hat_var_pi_RG)]))
+  sim_conditions[i, "covers_pi_RG"] <- mean(covers_pi_RG)
+  sim_conditions[i, "num_infinite_pi_RG"] <- sum(!is.finite(hat_pi_RG))
   
   # results for standardized estimator 
-  sim_conditions[i, "hat_pi_st"] <- 100 * (
-    mean(hat_pi_st[is.finite(hat_pi_st)]) - row$prev) / row$prev 
-  sim_conditions[i, "ESE_hat_pi_st"] <- sd(hat_pi_st[is.finite(hat_pi_st)])
-  sim_conditions[i, "ASE_hat_pi_st"] <- mean(sqrt(hat_var_pi_st[is.finite(hat_var_pi_st)]))
-  sim_conditions[i, "covers_pi_st"] <- mean(covers_pi_st)
-  sim_conditions[i, "num_infinite_pi_st"] <- sum(!is.finite(hat_pi_st))
+  sim_conditions[i, "hat_pi_SRG"] <- 100 * (
+    mean(hat_pi_SRG[is.finite(hat_pi_SRG)]) - row$prev) / row$prev 
+  sim_conditions[i, "ESE_hat_pi_SRG"] <- sd(hat_pi_SRG[is.finite(hat_pi_SRG)])
+  sim_conditions[i, "ASE_hat_pi_SRG"] <- mean(sqrt(hat_var_pi_SRG[is.finite(hat_var_pi_SRG)]))
+  sim_conditions[i, "covers_pi_SRG"] <- mean(covers_pi_SRG)
+  sim_conditions[i, "num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
   sim_conditions[i, "n_strata_obs_full"] <- sum(strata_obs == n_strata)
 }
 
