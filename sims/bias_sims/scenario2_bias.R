@@ -17,7 +17,7 @@ output_file <- here("sims/results_draft/scenario2_results.csv")
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 5 # number of simulations
+n_sims <- 200 # number of simulations
 n_strata <- 2 # number of strata for this scenario
 
 # The known stratum proportions (the gamma_js) must be prespecified. 
@@ -25,22 +25,29 @@ n_strata <- 2 # number of strata for this scenario
 # but the sampling probabilities are different, s_1 = .2 and s_2 = .8. 
 # 
 # The stratum-specific prevalences are defined to match the 
-# true prevalences of .005, .05, and .30. 
-stratum_props <- list(data.frame(z = c("z1","z2"), 
-                                 stratum_prop = c(.5,.5),
-                                 prev = c(.075, .025),
-                                 sampling_prob = c(.2,.8)),
-                      data.frame(z = c("z1","z2"),
-                                 stratum_prop = c(.5,.5),
-                                 prev = c(.5, .1),
-                                 sampling_prob = c(.2,.8)),
-                      data.frame(z = c("z1","z2"),
-                                 stratum_prop = c(.5,.5),
-                                 prev = c(.0075, .0025),
-                                 sampling_prob = c(.2,.8))
-                      )
-vars_std <- c("z")
+# true prevalences of .01, .04, .07, ..., .34, 
+# where the first stratum has 1.5*pi and the second stratum 0.5*pi as their prevalences
+prevs <- seq(.01, .12, by = .01) 
+prev_mat <- matrix(NA, nrow = length(prevs), ncol = 2) # create matrix of prevalences using common ratio
+i <- 1
+for(p in prevs){
+  prev_mat[i,] <- c(1.5*p, 0.5*p) # common ratio for each stratum
+  i <- i + 1
+}
 
+stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
+d <- 1
+for(p in 1:length(prevs)){
+  prev <- prev_mat[p,]
+  dat <- data.frame(z = c("z1", "z2"),
+                    stratum_prop = c(.5, .5),
+                    prev = prev,
+                    sampling_prob = c(.2, .8))
+  stratum_props[[d]] <- dat
+  d <- d + 1
+}
+
+vars_std <- c("z")
 
 # fully factorial combination of sample sizes and parameters, 
 # where each row is a sub-scenario
@@ -93,6 +100,7 @@ sim_results <- sim_conditions %>% dplyr::select(-c(stratum_props)) %>%
 sim_results$n_sims <- NA_real_
 sim_results[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, but it is useful to store this value somewhere)
 #write_csv(sim_results, output_file)
+sim_results
+time2 <- Sys.time()
+print(time2 - time1)
 
-#time2 <- Sys.time()
-#print(time2 - time1)
