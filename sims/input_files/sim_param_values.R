@@ -2,13 +2,17 @@
 # If desired, these parameter values could vary across scenarios. 
 
 set.seed(2021)
-sigma_e <- c(.95,1) #true sensitivity
-#sigma_e <- c(.7, .95, 1)
-sigma_p <- c(.95,1)
-#sigma_p <- c(.7, .95, 1)
-n_1 <- c(30,300)
-n_2 <- c(30,300)
-n_3 <- c(500,5000) #main study sample size
+#sigma_e <- c(.6, .8, .99) 
+sigma_p <- c(.8, .95, .99)
+sigma_e <- c(.6, .8, .99)
+#sigma_p <- .98
+n_1 <- c(40, 250)
+#n_1 <- c(40, 250)
+n_2 <- 250
+n_3 <- 2500
+#n_1 <- c(30,300)
+#n_2 <- c(30,300)
+#n_3 <- c(500,5000) #main study sample size
 # n_1 <- c(30,300,3000) #sensitivity study sample size
 # n_2 <- c(30,300,3000) #specificity study sample size
 # n_3 <- c(500,5000,20000) #main study sample size 
@@ -17,6 +21,7 @@ n_3 <- c(500,5000) #main study sample size
 # stratum-specific prevalence in scenario 3.
 # Note that the intercept alpha_0 is a vector of 3 values, 
 # corresponding to the three desired marginal prevalences. 
+# Also note these are denoted "beta" in the manuscript. 
 
 alpha_0 <- c(-5.268616,-2.8805525,-.5830585) ### these lead to marginal prevalences of .005, .05, and .3
 alpha_1 <- -1

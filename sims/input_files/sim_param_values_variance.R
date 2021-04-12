@@ -2,11 +2,13 @@
 # If desired, these parameter values could vary across scenarios. 
 
 set.seed(2021)
-sigma_e <- c(.95) #true sensitivity
-sigma_p <- c(.95,1) #true specificity
-n_1 <- c(30,300) #sensitivity study sample size
-n_2 <- c(30,300,3000) #specificity study sample size
-n_3 <- c(500,5000) #main study sample size
+sigma_e <- c(.8) #true sensitivity
+sigma_p <- .8; n_1 <- c(300, 1000); n_2 <- 300; n_3 <- 5000
+#sigma_p <- c(.8,.95,1); n_1 <- c(300,1000); n_2 <- c(300,1000); n_3 <- 5000
+# sigma_p <- c(.7, .95, 1) #true specificity
+# n_1 <- c(30,300, 3000) #sensitivity study sample size
+# n_2 <- c(30,300,3000) #specificity study sample size
+# n_3 <- c(500, 5000,20000) #main study sample size
 
 ### TESTING
 # sigma_e <- c(.95) #true sensitivity
@@ -15,8 +17,6 @@ n_3 <- c(500,5000) #main study sample size
 # n_2 <- c(300,3000) #specificity study sample size
 # n_3 <- c(5000) #main study sample size
 
-
-# 
 alpha_level <- .05 # alpha level; 1-alpha = confidence level
 
 # Parameters for the logistic model that determines 
