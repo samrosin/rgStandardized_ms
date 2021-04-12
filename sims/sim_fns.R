@@ -62,7 +62,8 @@ gen_data_scenario2 <- function(n_1, sigma_e, n_2, sigma_p, n_3, stratum_props){
 # The inverse logit function 
 inv.logit <- function(x){1/(1 + exp(-x))} 
 
-# based on true parameters, generates data and returns data neeeded for analysis
+# based on true parameters, generates data and returns data needed for analysis.
+# relevant for both DGPs 3 and 4. 
 gen_data_scenario3 <- function(n_1, sigma_e, n_2, sigma_p, 
             n_3, stratum_props, vars_std){
   
