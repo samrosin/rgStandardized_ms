@@ -12,3 +12,4 @@ sims/results_final/scenario3_results.csv
 sims/improving_logistic_regression.R
 sims/improving_logistic_regression_2.R
 sims/variance_sims/scenario4_var_datagen_cluster_local.R
+sims/results_old/
