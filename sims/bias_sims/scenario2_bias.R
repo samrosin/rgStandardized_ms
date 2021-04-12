@@ -36,15 +36,13 @@ for(p in prevs){
 }
 
 stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
-d <- 1
 for(p in 1:length(prevs)){
   prev <- prev_mat[p,]
   dat <- data.frame(z = c("z1", "z2"),
                     stratum_prop = c(.5, .5),
                     prev = prev,
                     sampling_prob = c(.2, .8))
-  stratum_props[[d]] <- dat
-  d <- d + 1
+  stratum_props[[p]] <- dat
 }
 
 vars_std <- c("z")
