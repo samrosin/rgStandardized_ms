@@ -155,7 +155,7 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     # estimate D
     # unique covariate strata in the sample data
     strata <- unique(sample[,c(vars_std,"stratum_prop")])
-    covariate_names <- colnames(stratum_props)[1:length(vars_std)]
+    covariate_names <- colnames(strata)[1:length(vars_std)]
     
     # create only the RHS of the regression formula, for application to *all* strata, 
     model_mat_formula <- "~"
