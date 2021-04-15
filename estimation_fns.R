@@ -204,4 +204,3 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
 }
 
 
-
