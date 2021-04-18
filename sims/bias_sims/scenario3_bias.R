@@ -3,8 +3,8 @@
 time1 <- Sys.time() 
 
 library(tidyverse)
-library(looplot) #install with devtools::install_github("matherealize/looplot")
 library(here)
+library(fastDummies) # indicator variable coding
 
 source(here("estimation_fns.R"))
 source(here("sims/input_files/sim_param_values.R")) #load sim parameter values common across scenarios
@@ -28,36 +28,31 @@ gammas <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 6 # number of simulations
+n_sims <- 100 # number of simulations
 n_strata <- 40 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3")
 
-# Create three copies of the gamma (stratum_prop) dataframe,
+# Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
-# The intercept of the logistic model varies, so that the marginal prevalence is
-# .005, .05, and .30 in the three dataframes
-s1 <- gammas %>% dplyr::mutate(
-  prev = inv.logit(alpha_0[1]+alpha_1*(gammas$z1=="z11")+
-                     alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
-                     alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
+# The intercept of the logistic model varies to vary the marginal prevalence
+prevs <- seq(.01, .20, by = .01)
+stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
+for(p in 1:length(prevs)){
+  s <- gammas %>% dplyr::mutate(
+    prev = inv.logit(alpha_0[p]+alpha_1*(gammas$z1=="z11")+
+                       alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
+                       alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
   )
-s2 <- gammas %>% dplyr::mutate(
-  prev = inv.logit(alpha_0[2]+alpha_1*(gammas$z1=="z11")+
-                     alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
-                     alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
-  ) 
-s3 <- gammas %>% dplyr::mutate(
-  prev = inv.logit(alpha_0[3]+alpha_1*(gammas$z1=="z11")+
-                     alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
-                     alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
-)
+  # make indicator variables for z1, z2, z3
+  s <- fastDummies::dummy_cols(s, select_columns = c("z1", "z2", "z3")) %>% 
+    #dplyr::select(-c("z1", "z2", "z3")) %>% # now remove z1, z2, z3
+    dplyr::relocate(c(stratum_prop, sampling_prob, prev), .after = z3_z34) # rearrange columns
+  stratum_props[[p]] <- s
+}
 
-stratum_props <- list(s1, s2, s3)
-
-# Uncomment to print prevalences, checking that they are, e.g., {.005, .05, .3}
-# for(s in 1:length(stratum_props)){
-#   print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
-# }
+for(s in 1:length(stratum_props)){
+  print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
+}
 
 # fully factorial combination of sample sizes and parameters, 
 # where each row is a sub-scenario
@@ -97,11 +92,12 @@ for(i in 1:nrow(sim_conditions)){
     strata_obs[j] <- hat_pi_SRG_vec[2] # Note we can get this info from either standardization estimator,
                                       # hat_pi_SRG or hat_pi_SRGM; here I take it from hat_pi_SRG
     hat_pi_SRGM[j] <- ests_std_model(
-              dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat, 
-              dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, vars_std, 
-              mod_formula = formula("x ~ z1 + z2 + z3"), variance = FALSE
+      dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat,
+      dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
+      vars_std = c("z1_z11", "z2_z20", "z2_z21", "z3_z30", "z3_z31"),
+      mod_formula = formula("x ~ z1_z11 + z2_z20 + z2_z21 + z3_z30 + z3_z31"), 
+      variance = FALSE
     )
-    
   }
   
   # compute mean relative bias of the finite estimates for the sub-scenario,
