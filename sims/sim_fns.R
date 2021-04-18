@@ -72,15 +72,6 @@ gen_data_scenario3 <- function(n_1, sigma_e, n_2, sigma_p,
   sigma_p_hat <- 1 - rbinom(1, n_2, 1 - sigma_p) / n_2 #estimated specificity
   
   # (2) Create main study sample based on sampling probs s_js 
-  
-  # Get covariate names from stratum_props, noting that the number of 
-  # covariates is equal to length(vars_std) . 
-  covariate_names <- colnames(stratum_props[[1]])[1:length(vars_std)]
-  
-  # Create empty sample dataframe, then fill it based on s_js
-  sample <- data.frame(matrix(ncol = length(vars_std), nrow = n_3))
-  colnames(sample) <- c(covariate_names)
-  
   sample <- stratum_props[sample(nrow(stratum_props), n_3, 
                     replace = T, prob = stratum_props$sampling_prob),]
   
