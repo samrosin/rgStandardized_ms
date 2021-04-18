@@ -79,7 +79,7 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
     # c is the third component of the variance estimator. c = (gamma_j^2*\hat \rho_j * (1- \hat \rho_j))/(n_{z_j})
     strata <- strata %>% mutate(
       c = stratum_prop^2 * (n_pos / n) * (1 - (n_pos / n) ) / n
-      )
+    )
     c <- sum(strata$c)
     var_pi_hat_st <- (a + b + c) * (sigma_e_hat + sigma_p_hat - 1)^(-2)
   }
