@@ -45,7 +45,6 @@ for(p in 1:length(prevs)){
   )
   # make indicator variables for z1, z2, z3
   s <- fastDummies::dummy_cols(s, select_columns = c("z1", "z2", "z3")) %>% 
-    #dplyr::select(-c("z1", "z2", "z3")) %>% # now remove z1, z2, z3
     dplyr::relocate(c(stratum_prop, sampling_prob, prev), .after = z3_z34) # rearrange columns
   stratum_props[[p]] <- s
 }
@@ -68,7 +67,6 @@ sim_conditions <- tidyr::crossing(
          num_infinite_pi_SRGM = NA_real_, # number of infinite estimates \hat \pi_SRGM
          n_strata_obs_full = NA_real_ # number of simulations with positivity (all strata observed)
   )
-
 
 # conduct the simulation, iterating through the subscenarios
 for(i in 1:nrow(sim_conditions)){
