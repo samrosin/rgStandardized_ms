@@ -18,7 +18,7 @@ output_file <- here("sims/results_draft/scenario1_var_results.csv")
 # sim parameter values
 set.seed(2021)
 n_sims <- 5 #number of simulations
-prev <- c(.05, .3) #true prevalence 
+prev <- seq(.01, .2, by = .01) #true prevalence 
 
 # fully factorial combination of sample sizes and parameters
 # each row is a sub-scenario
