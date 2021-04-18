@@ -28,7 +28,7 @@ gammas <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 5 # number of simulations
+n_sims <- 4 # number of simulations
 n_strata <- 40 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3")
 
@@ -137,7 +137,7 @@ for(i in 1:nrow(sim_conditions)){
     strata_obs[j] <- hat_pi_SRG_vec[3] # Note we can get this info from either standardization estimator,
     # hat_pi_SRG or hat_pi_SRGM; here I take it from hat_pi_SRG
     
-    # finally get model standardized estimates
+    # get model standardized estimates
     hat_pi_SRGM_vec <- ests_std_model(
       dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat,
       dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
