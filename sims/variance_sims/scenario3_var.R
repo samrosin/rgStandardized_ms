@@ -32,28 +32,19 @@ n_sims <- 3 # number of simulations
 n_strata <- 40 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3")
 
-# Create three copies of the gamma (stratum_prop) dataframe,
+# Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
-# For the variance sims we only examine marginal prevalence of .05. 
-# The intercept of the logistic model varies, so that the marginal prevalence is
-# .005, .05, and .30 in the three dataframes
-# s1 <- gammas %>% dplyr::mutate(
-#   prev = inv.logit(alpha_0[1]+alpha_1*(gammas$z1=="z11")+
-#                      alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
-#                      alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
-# )
-s <- gammas %>% dplyr::mutate(
-  prev = inv.logit(alpha_0[2]+alpha_1*(gammas$z1=="z11")+
-                     alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
-                     alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
-) 
-# s3 <- gammas %>% dplyr::mutate(
-#   prev = inv.logit(alpha_0[3]+alpha_1*(gammas$z1=="z11")+
-#                      alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
-#                      alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
-# )
-
-stratum_props <- list(s)
+# The intercept of the logistic model varies to vary the marginal prevalence
+prevs <- seq(.01, .20, by = .01)
+stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
+for(p in 1:length(prevs)){
+  s <- gammas %>% dplyr::mutate(
+    prev = inv.logit(alpha_0[p]+alpha_1*(gammas$z1=="z11")+
+                       alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
+                       alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
+  )
+  stratum_props[[p]] <- s
+}
 
 # Uncomment to print prevalences, checking that they are, e.g., {.005, .05, .3}
 # for(s in 1:length(stratum_props)){
@@ -114,7 +105,7 @@ for(i in 1:nrow(sim_conditions)){
   
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
-    print(j)
+    print(paste("sim number:", j))
     dat <- gen_data_scenario3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
                               row$n_3, as.data.frame(row$stratum_props), vars_std)
     hat_pi_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
@@ -155,7 +146,7 @@ for(i in 1:nrow(sim_conditions)){
     hat_var_pi_SRGM[j] <- hat_pi_SRGM_vec[2]
     ci_lower_pi_SRGM[j] <- hat_pi_SRGM_vec[1] - 
       qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRGM_vec[2])
-    ci_upper_pi_SRGM[j] <- hat_pi_SRG_vec[1] + 
+    ci_upper_pi_SRGM[j] <- hat_pi_SRGM_vec[1] + 
       qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRGM_vec[2])
     covers_pi_SRGM[j] <- ifelse(
       (ci_lower_pi_SRGM[j] < row$prev) && (ci_upper_pi_SRGM[j] > row$prev), 1, 0)
