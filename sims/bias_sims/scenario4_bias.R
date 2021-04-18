@@ -91,6 +91,7 @@ for(i in 1:nrow(sim_conditions)){
     hat_pi_SRG[j] <- hat_pi_SRG_vec[1]
     strata_obs[j] <- hat_pi_SRG_vec[2] # Note we can get this info from either standardization estimator,
     # hat_pi_SRG or hat_pi_SRGM; here I take it from hat_pi_SRG
+    
     hat_pi_SRGM[j] <- ests_std_model(
       dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat,
       dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
