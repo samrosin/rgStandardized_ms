@@ -3,8 +3,8 @@
 time1 <- Sys.time() 
 
 library(tidyverse)
-library(looplot) #install with devtools::install_github("matherealize/looplot")
 library(here)
+library(fastDummies) # indicator variable coding
 
 source(here("estimation_fns.R"))
 source(here("sims/input_files/sim_param_values.R")) #load sim parameter values common across scenarios
@@ -33,7 +33,6 @@ n_sims <- 5 # number of simulations
 n_strata <- 80 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3", "z4")
 
-
 # Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
 # The intercept of the logistic model varies to vary the marginal prevalence
@@ -42,17 +41,17 @@ stratum_props <- vector(mode = "list", length = length(prevs)) # create list of 
 for(p in 1:length(prevs)){
   s <- gammas %>% dplyr::mutate(
     prev = inv.logit(nu_0[p]+nu_1*(gammas$z1=="z11")+
-                       nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21")+
+                       nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21") +
                        nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31") + 
                        nu_6*(gammas$z4=="z41"))
   )
+  # make indicator variables for z1, z2, z3, z4
+  s <- fastDummies::dummy_cols(s, select_columns = c("z1", "z2", "z3", "z4")) %>% 
+    dplyr::relocate(c(stratum_prop, sampling_prob, prev), .after = z4_z41) # rearrange columns
   stratum_props[[p]] <- s
 }
 
-for(s in 1:length(stratum_props)){
-  print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
-}
-# Uncomment to print prevalences, checking that they are, e.g., {.005, .05, .3}
+# Uncomment to print prevalences, checking that they are, e.g., {.01, .05, .3}
 for(s in 1:length(stratum_props)){
   print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
 }
@@ -71,7 +70,6 @@ sim_conditions <- tidyr::crossing(
          num_infinite_pi_SRGM = NA_real_, # number of infinite estimates \hat \pi_SRGM
          n_strata_obs_full = NA_real_ # number of simulations with positivity (all strata observed)
   )
-
 
 # conduct the simulation, iterating through the subscenarios
 for(i in 1:nrow(sim_conditions)){
@@ -94,11 +92,12 @@ for(i in 1:nrow(sim_conditions)){
     strata_obs[j] <- hat_pi_SRG_vec[2] # Note we can get this info from either standardization estimator,
     # hat_pi_SRG or hat_pi_SRGM; here I take it from hat_pi_SRG
     hat_pi_SRGM[j] <- ests_std_model(
-      dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat, 
-      dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, vars_std, 
-      mod_formula = formula("x ~ z1 + z2 + z3 + z4"), variance = FALSE
+      dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat,
+      dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
+      vars_std = c("z1_z11", "z2_z20", "z2_z21", "z3_z30", "z3_z31", "z4_z41"),
+      mod_formula = formula("x ~ z1_z11 + z2_z20 + z2_z21 + z3_z30 + z3_z31 + z4_z41"), 
+      variance = FALSE
     )
-    
   }
   
   # compute mean relative bias of the finite estimates for the sub-scenario,
