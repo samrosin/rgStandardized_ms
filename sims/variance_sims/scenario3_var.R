@@ -3,8 +3,8 @@
 time1 <- Sys.time() 
 
 library(tidyverse)
-library(looplot) #install with devtools::install_github("matherealize/looplot")
 library(here)
+library(fastDummies)
 
 source(here("estimation_fns.R"))
 source(here("sims/input_files/sim_param_values_variance.R")) #load sim parameter values common across scenarios
@@ -28,7 +28,7 @@ gammas <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 3 # number of simulations
+n_sims <- 5 # number of simulations
 n_strata <- 40 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3")
 
@@ -43,13 +43,16 @@ for(p in 1:length(prevs)){
                        alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
                        alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
   )
+  # make indicator variables for z1, z2, z3
+  s <- fastDummies::dummy_cols(s, select_columns = c("z1", "z2", "z3")) %>% 
+    dplyr::relocate(c(stratum_prop, sampling_prob, prev), .after = z3_z34) # rearrange columns
   stratum_props[[p]] <- s
 }
 
 # Uncomment to print prevalences, checking that they are, e.g., {.005, .05, .3}
-# for(s in 1:length(stratum_props)){
-#   print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
-# }
+for(s in 1:length(stratum_props)){
+  print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
+}
 
 # fully factorial combination of sample sizes and parameters, 
 # where each row is a sub-scenario
@@ -78,7 +81,6 @@ sim_conditions <- tidyr::crossing(
          n_strata_obs_full = NA_real_ # number of simulations with positivity (all strata observed)
   )
 
-# i = 55
 # conduct the simulation, iterating through the subscenarios
 for(i in 1:nrow(sim_conditions)){
   print(i)
@@ -137,9 +139,11 @@ for(i in 1:nrow(sim_conditions)){
     
     # finally get model standardized estimates
     hat_pi_SRGM_vec <- ests_std_model(
-      dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat, 
-      dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, vars_std, 
-      mod_formula = formula("x ~ z1 + z2 + z3"), variance = TRUE
+      dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat,
+      dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
+      vars_std = c("z1_z11", "z2_z20", "z2_z21", "z3_z30", "z3_z31"),
+      mod_formula = formula("x ~ z1_z11 + z2_z20 + z2_z21 + z3_z30 + z3_z31"), 
+      variance = TRUE
     )
     
     hat_pi_SRGM[j] <- hat_pi_SRGM_vec[1]
