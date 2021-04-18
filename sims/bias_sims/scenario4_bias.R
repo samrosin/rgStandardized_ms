@@ -33,37 +33,29 @@ n_sims <- 5 # number of simulations
 n_strata <- 80 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3", "z4")
 
-# Create three copies of the gamma (stratum_prop) dataframe,
+
+# Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
-# The intercept of the logistic model varies, so that the marginal prevalence is
-# .005, .05, and .30 in the three dataframes. 
-# Note that in scenario 3 each parameter is arbitrarily called an alph; 
-# here they are arbitrarily called nus. 
-s1 <- gammas %>% dplyr::mutate(
-  prev = inv.logit(nu_0[1]+nu_1*(gammas$z1=="z11")+
-                     nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21")+
-                     nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31") + 
-                     nu_6*(gammas$z4=="z41"))
-)
-s2 <- gammas %>% dplyr::mutate(
-  prev = inv.logit(nu_0[2]+nu_1*(gammas$z1=="z11")+
-                     nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21")+
-                     nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31")+
-                     nu_6*(gammas$z4=="z41"))
-)
-s3 <- gammas %>% dplyr::mutate(
-  prev = inv.logit(nu_0[3]+nu_1*(gammas$z1=="z11")+
-                     nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21")+
-                     nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31")+
-                     nu_6*(gammas$z4=="z41"))
-)
+# The intercept of the logistic model varies to vary the marginal prevalence
+prevs <- seq(.01, .2, by = .01)
+stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
+for(p in 1:length(prevs)){
+  s <- gammas %>% dplyr::mutate(
+    prev = inv.logit(nu_0[p]+nu_1*(gammas$z1=="z11")+
+                       nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21")+
+                       nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31") + 
+                       nu_6*(gammas$z4=="z41"))
+  )
+  stratum_props[[p]] <- s
+}
 
-stratum_props <- list(s1, s2, s3)
-
+for(s in 1:length(stratum_props)){
+  print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
+}
 # Uncomment to print prevalences, checking that they are, e.g., {.005, .05, .3}
-# for(s in 1:length(stratum_props)){
-#   print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
-# }
+for(s in 1:length(stratum_props)){
+  print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
+}
 
 # fully factorial combination of sample sizes and parameters, 
 # where each row is a sub-scenario
@@ -134,5 +126,5 @@ sim_results$n_sims <- NA_real_
 sim_results[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, 
                                   # but it is useful to store this value somewhere and without repeating it in each row)
 #write_csv(sim_results, output_file)
-#time2 <- Sys.time()
-#print(time2 - time1)
+time2 <- Sys.time()
+print(time2 - time1)
