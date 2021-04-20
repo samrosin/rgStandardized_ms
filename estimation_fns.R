@@ -178,7 +178,7 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     
     e <- matrix(c(1, -1, 0, sigma_e_hat + sigma_p_hat -1), nrow = 2, ncol = 2) # estimate E
     f <- matrix(c(n_1 * sigma_e_hat * (1 - sigma_e_hat) / n, 0,
-                  0, n_2 * sigma_p_hat * (1 - sigma_p_hat)) / n, nrow = 2, ncol = 2) # estimate F 
+                  0, n_2 * sigma_p_hat * (1 - sigma_p_hat) / n ), nrow = 2, ncol = 2) # estimate F 
     
     # estimate G 
     g <- matrix(NA, nrow = nrow(coef), ncol = nrow(coef)) #declare G as an empty p * p matrix 
