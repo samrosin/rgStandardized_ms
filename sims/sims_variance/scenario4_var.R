@@ -7,7 +7,7 @@ library(here)
 library(fastDummies)
 
 source(here("estimation_fns.R"))
-source(here("sims/input_files/sim_param_values_variance.R")) #load sim parameter values common across scenarios
+source(here("sims/inputs/sim_param_values_variance.R")) #load sim parameter values common across scenarios
 source(here("sims/sim_fns.R"))
 
 # Note that the final simulation results are placed in the 

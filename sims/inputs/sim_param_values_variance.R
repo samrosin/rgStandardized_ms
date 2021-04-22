@@ -2,9 +2,13 @@
 # If desired, these parameter values could vary across scenarios. 
 
 set.seed(2021)
-sigma_p <- c(.8, .95, .99)
-sigma_e <- c(.8, .99)
-n_1 <- c(40, 250)
+
+# a couple values for testing
+sigma_p = .99; sigma_e = .8; n_1 = 40
+
+#sigma_p <- c(.8, .95, .99)
+#sigma_e <- c(.8, .99)
+#n_1 <- c(40, 250)
 n_2 <- 250
 n_3 <- 2500
 
@@ -45,6 +49,7 @@ nu_0 <- c(-4.64, -3.93, -3.505, -3.2, -2.9563234,
 )
 #nu_0 <- c(-5.3445212,-2.9563234,-0.658353) ### these lead to marginal prevalences of .005, .05, and .3
 nu_1 <- -1
+#nu_2 <- 5 
 nu_2 <- -.6
 nu_3 <- .8
 nu_4 <- .6
