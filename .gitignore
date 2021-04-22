@@ -15,3 +15,4 @@ sims/variance_sims/scenario4_var_datagen_cluster_local.R
 sims/results_old/
 fixlogreg_scen3local.R
 sims/fix_logisticreg.R
+sims/misc_old_files/
