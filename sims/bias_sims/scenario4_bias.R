@@ -29,14 +29,14 @@ gammas <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 1000 # number of simulations
+n_sims <- 50 # number of simulations
 n_strata <- 80 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3", "z4")
 
 # Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
 # The intercept of the logistic model varies to vary the marginal prevalence
-prevs <- seq(.01, .05, by = .01)
+prevs <- seq(.01, .2, by = .01)
 stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
 for(p in 1:length(prevs)){
   s <- gammas %>% dplyr::mutate(
