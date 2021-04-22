@@ -68,7 +68,7 @@ res1_facet <- ggplot(data = res1_gg,
   theme(axis.text.y = element_text(size = 12),
         axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 16),
-        legend.position = c(.94,0.927),
+        legend.position = c(.94,0.945),
         legend.title = element_text(size = 14),
         legend.text = element_text(size = 12),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
@@ -123,6 +123,38 @@ pdf(here("sims/bias_plots/DGP1_n1_250.pdf"),
 print(res1_facet_n1_250)
 dev.off()
 
+# absolute bias plot 
+res1_bias <- res1_gg %>% mutate(bias = rel_bias * pi)
+
+res1_bias_facet <- ggplot(data = res1_bias, 
+                     mapping = aes(x = pi, y = bias,
+                                   linetype = Method, color = Method)) +
+  geom_line() + 
+  facet_grid(Sens ~ Spec, 
+             labeller = labeller(.rows = label_both, .cols = label_both)) + 
+  theme(axis.text.y = element_text(size = 12),
+        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
+        axis.title = element_text(size = 16),
+        legend.position = c(.94,0.927),
+        legend.title = element_text(size = 14),
+        legend.text = element_text(size = 12),
+        #                    legend.background = element_rect(fill=alpha('white', 0)),
+        strip.text = element_text(size = 14)) + 
+  labs(x = "Prevalence", y = expression(paste("Bias  ", (hat(pi) - pi)))) + 
+  #scale_y_continuous(labels = function(x) paste0(x, "%")) + 
+  scale_linetype_manual(name = "Method", values = c(2),
+                        labels = c(expression(hat(pi)[RG]))) + 
+  scale_color_manual(name = "Method", values = scales::hue_pal()(1),
+                     labels = c(expression(hat(pi)[RG]))) + 
+  geom_hline(aes(yintercept = 0), linetype = "dashed")
+res1_bias_facet
+
+pdf(here("sims/bias_plots/DGP1_bias.pdf"),
+    paper = "USr",width = 8.5, height = 11)
+print(res1_bias_facet)
+dev.off()
+
+
 # Scenario 2 Plots --------------------------------------------------------
 res2_gg <- results_2 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
             dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
@@ -148,7 +180,7 @@ res2_facet <- ggplot(data = res2_gg,
   scale_linetype_manual(name = "Method", values = c(2, 1),
                         labels = c(expression(hat(pi)[RG]), 
                                    expression(hat(pi)[SRG]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(2),
+  scale_color_manual(name = "Method", values = scales::hue_pal()(3)[1:2],
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
