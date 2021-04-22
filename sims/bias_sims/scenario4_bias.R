@@ -17,7 +17,7 @@ output_file <- here("sims/results_draft/scenario4_results.csv")
 
 #### The known stratum proportions (the gamma_{zj}s) must be prespecified,
 #### and they are loaded here
-gammas <- read_csv(here("sims/input_files/scenario4_stratum_props_ALT.csv"),
+gammas <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
