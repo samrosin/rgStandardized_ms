@@ -15,7 +15,7 @@
 library(tidyverse)
 library(looplot) # install with devtools::install_github("matherealize/looplot")
 library(here)
-source(here("sims/input_files/sim_param_values_variance.R")) #load sim parameter values common across scenarios
+source(here("sims/inputs/sim_param_values_variance.R")) #load sim parameter values common across scenarios
 source(here("sims/sim_fns.R"))
 
 color_scheme <- "Set2"
@@ -35,7 +35,7 @@ results_2 <- read_csv(here("sims/results_final/scenario2_var_results.csv"),
 results_3 <- read_csv(here("sims/results_final/scenario3_var_results.csv"),
                       col_types = cols(.default = col_double())
 )
-gammas_3 <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
+gammas_3 <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
                      col_types = cols(
                        z1 = col_character(),
                        z2 = col_character(),
@@ -48,7 +48,7 @@ results_4 <- read_csv(here("sims/results_final/scenario4_var_results.csv"),
                       col_types = cols(.default = col_double())
 )
 
-gammas_4 <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
+gammas_4 <- read_csv(here("sims/inputs/scenario4_stratum_props.csv"),
                      col_types = cols(
                        z1 = col_character(),
                        z2 = col_character(),
@@ -92,11 +92,10 @@ res1_facet <- ggplot(data = res1_gg,
 res1_facet
 
 #send plot to pdf
-pdf(here("sims/variance_plots/DGP1_coverage.pdf"),
+pdf(here("sims/figs/var/DGP1_coverage.pdf"),
     paper = "USr", width = 8.5, height = 11)
 print(res1_facet)
 dev.off()
-
 
 
 # DGP 2 Plots -------------------------------------------------------------
@@ -133,7 +132,7 @@ res2_facet <- ggplot(data = res2_gg,
 res2_facet
 
 #send plot to pdf
-pdf(here("sims/variance_plots/DGP2_coverage.pdf"),
+pdf(here("sims/figs/var/DGP2_coverage.pdf"),
     paper = "USr", width = 8.5, height = 11)
 print(res2_facet)
 dev.off()
@@ -178,7 +177,7 @@ res3_facet <- ggplot(data = res3_gg,
 res3_facet
 
 #send plot to pdf
-pdf(here("sims/variance_plots/DGP3_coverage.pdf"),
+pdf(here("sims/figs/var/DGP3_coverage.pdf"),
     paper = "USr", width = 8.5, height = 11)
 print(res3_facet)
 dev.off()
@@ -219,7 +218,7 @@ res3_eses <- ggplot(data = res3_ese_gg,
 res3_eses
 
 #send plot to pdf
-pdf(here("sims/variance_plots/DGP3_ESEs.pdf"),
+pdf(here("sims/figs/var/DGP3_ESEs.pdf"),
     paper = "USr", width = 8.5, height = 11)
 print(res3_eses)
 dev.off()
@@ -262,7 +261,7 @@ res4_facet <- ggplot(data = res4_gg,
 res4_facet
 
 # send to pdf 
-pdf(here("sims/variance_plots/DGP4_coverage.pdf"),
+pdf(here("sims/figs/var/DGP4_coverage.pdf"),
     paper = "USr", width = 8.5, height = 11)
 print(res4_facet)
 dev.off()
@@ -303,7 +302,7 @@ res4_eses <- ggplot(data = res4_ese_gg,
 res4_eses
 
 #send plot to pdf
-pdf(here("sims/variance_plots/DGP4_ESEs.pdf"),
+pdf(here("sims/figs/var/DGP4_ESEs.pdf"),
     paper = "USr", width = 8.5, height = 11)
 print(res4_eses)
 dev.off()

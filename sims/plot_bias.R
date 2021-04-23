@@ -3,7 +3,7 @@
 # Setup -------------------------------------------------------------------
 library(tidyverse)
 library(here)
-source(here("sims/input_files/sim_param_values.R")) #load sim parameter values common across scenarios
+source(here("sims/inputs/sim_param_values.R")) #load sim parameter values common across scenarios
 source(here("sims/sim_fns.R"))
 
 color_scheme <- "Set2"
@@ -23,7 +23,7 @@ results_2 <- read_csv(here("sims/results_final/scenario2_results.csv"),
 results_3 <- read_csv(here("sims/results_final/scenario3_results.csv"),
                       col_types = cols(.default = col_double())
 )
-gammas_3 <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
+gammas_3 <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -32,12 +32,11 @@ gammas_3 <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
                      sampling_prob = col_double()
                    ))
 
-
 results_4 <- read_csv(here("sims/results_final/scenario4_results.csv"),
                       col_types = cols(.default = col_double())
 )
 
-gammas_4 <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
+gammas_4 <- read_csv(here("sims/inputs/scenario4_stratum_props.csv"),
                      col_types = cols(
                        z1 = col_character(), 
                        z2 = col_character(), 
@@ -47,8 +46,7 @@ gammas_4 <- read_csv(here("sims/input_files/scenario4_stratum_props.csv"),
                        sampling_prob = col_double()
                      ))
 
-
-# Scenario 1 Plots --------------------------------------------------------------
+# DGP 1 Plots --------------------------------------------------------------
 
 # plot where n_1 == 40
 
@@ -82,7 +80,7 @@ res1_facet <- ggplot(data = res1_gg,
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res1_facet
 
-pdf(here("sims/bias_plots/DGP1.pdf"),
+pdf(here("sims/figs/bias/DGP1.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res1_facet)
 dev.off()
@@ -118,7 +116,7 @@ res1_facet_n1_250 <- ggplot(data = res1_gg_n1_250,
                      labels = c(expression(hat(pi)[RG]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 
-pdf(here("sims/bias_plots/DGP1_n1_250.pdf"),
+pdf(here("sims/figs/bias/DGP1_n1_250.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res1_facet_n1_250)
 dev.off()
@@ -149,13 +147,13 @@ res1_bias_facet <- ggplot(data = res1_bias,
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res1_bias_facet
 
-pdf(here("sims/bias_plots/DGP1_bias.pdf"),
+pdf(here("sims/figs/bias/DGP1_bias.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res1_bias_facet)
 dev.off()
 
 
-# Scenario 2 Plots --------------------------------------------------------
+# DGP 2 Plots --------------------------------------------------------
 res2_gg <- results_2 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
             dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
             gather(key = Method, value = rel_bias,
@@ -186,7 +184,7 @@ res2_facet <- ggplot(data = res2_gg,
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res2_facet
 
-pdf(here("sims/bias_plots/DGP2.pdf"),
+pdf(here("sims/figs/bias/DGP2.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res2_facet)
 dev.off()
@@ -220,12 +218,12 @@ res2_n1_250 <- ggplot(data = res2_gg_n1_250,
                                 expression(hat(pi)[SRG]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 
-pdf(here("sims/bias_plots/DGP2_n1_250.pdf"),
+pdf(here("sims/figs/bias/DGP2_n1_250.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res2_n1_250)
 dev.off()
 
-# Scenario 3 Plots --------------------------------------------------------
+# DGP 3 Plots --------------------------------------------------------
 
 # plot the gamma_js vs sampling probs s_js to understand 
 # the amount of sampling bias in each 
@@ -262,7 +260,7 @@ scenario3_selectionbias_plot <- ggplot(data = sp3_05, aes(x=stratum_prop, y = sa
 
 scenario3_selectionbias_plot
 
-pdf(here("sims/bias_plots/DGP3_selectionbias.pdf"),
+pdf(here("sims/figs/bias/DGP3_selectionbias.pdf"),
     paper = "USr",width=8.5,height=11)
 print(scenario3_selectionbias_plot)
 dev.off()
@@ -300,7 +298,7 @@ res3_facet <- ggplot(data = res3_gg,
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res3_facet
 
-pdf(here("sims/bias_plots/DGP3.pdf"),
+pdf(here("sims/figs/bias/DGP3.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res3_facet)
 dev.off()
@@ -338,13 +336,13 @@ res3_facet_n1_250 <- ggplot(data = res3_gg_n1_250,
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res3_facet_n1_250
 
-pdf(here("sims/bias_plots/DGP3_n1_250.pdf"),
+pdf(here("sims/figs/bias/DGP3_n1_250.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res3_facet_n1_250)
 dev.off()
 
 
-# Scenario 4 Plots --------------------------------------------------------
+# DGP 4 Plots --------------------------------------------------------
 
 # plot the gamma_js vs sampling probs s_js to understand 
 # the amount of sampling bias in each 
@@ -365,14 +363,14 @@ sp4_05 <- sp4 %>% dplyr::mutate(
 
 # plot gamma_j vs s_j
 scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sampling_prob)) + 
-  geom_point(aes(size=pi), alpha = .8, 
-             color = "black") + 
+  geom_jitter(aes(size=pi), alpha = .6, 
+             color = "black", width = .001) + 
   labs(size = "Prevalence") + 
   geom_abline(colour = "grey50", size = 2) + 
   xlab(expression(paste(gamma[j]," (Stratum proportion)",sep=""))) + 
   ylab(expression(paste(s[j]," (Sampling probability)", sep=""))) + 
   theme(text = element_text(size=20),
-        legend.position = c(.125,0.92),
+        legend.position = c(.7,0.92),
         legend.title = element_text(size = 14),
         legend.text = element_text(size = 12)) + 
   scale_size(name = "Prevalence",
@@ -383,7 +381,7 @@ scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sa
 
 scenario4_selectionbias_plot
 
-pdf(here("sims/bias_plots/DGP4_selectionbias.pdf"),
+pdf(here("sims/figs/bias/DGP4_selectionbias.pdf"),
     paper = "USr", width = 8.5, height = 11)
 print(scenario4_selectionbias_plot)
 dev.off()
@@ -392,7 +390,7 @@ dev.off()
 res4_gg <- results_4 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = rel_bias,
-         hat_pi_RG, hat_pi_SRG, hat_pi_SRGM)
+         hat_pi_RG, hat_pi_SRG_restriction, hat_pi_SRGM)
 
 res4_facet <- ggplot(data = res4_gg, 
                      mapping = aes(x = pi, y = rel_bias,
@@ -410,18 +408,18 @@ res4_facet <- ggplot(data = res4_gg,
         strip.text = element_text(size = 14)) + 
   labs(x = "Prevalence", y = "Relative Bias (%)") + 
   scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
+  scale_linetype_manual(name = "Method", values = c(2, 4, 3),
                         labels = c(expression(hat(pi)[RG]), 
-                                   expression(hat(pi)[SRG]),
+                                   expression(hat(pi)[SRG-Restriction]),
                                    expression(hat(pi)[SRGM]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
+  scale_color_manual(name = "Method", values = scales::hue_pal()(4)[c(1,3,4)],
                      labels = c(expression(hat(pi)[RG]), 
-                                expression(hat(pi)[SRG]),
+                                expression(hat(pi)[SRG-Restriction]),
                                 expression(hat(pi)[SRGM]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res4_facet
 
-pdf(here("sims/bias_plots/DGP4.pdf"),
+pdf(here("sims/figs/bias/DGP4.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res4_facet)
 dev.off()
@@ -459,7 +457,7 @@ res4_facet_n1_250 <- ggplot(data = res4_gg_n1_250,
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res4_facet_n1_250
 
-pdf(here("sims/bias_plots/DGP4_n1_250.pdf"),
+pdf(here("sims/figs/bias/DGP4_n1_250.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res4_facet)
 dev.off()
