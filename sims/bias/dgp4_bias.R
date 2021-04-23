@@ -17,7 +17,7 @@ output_file <- here("sims/results_draft/scenario4_results.csv")
 
 #### The known stratum proportions (the gamma_{zj}s) must be prespecified,
 #### and they are loaded here
-gammas <- read_csv(here("sims/inputs/scenario4_stratum_props_alt.csv"),
+gammas <- read_csv(here("sims/inputs/scenario4_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -29,14 +29,14 @@ gammas <- read_csv(here("sims/inputs/scenario4_stratum_props_alt.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 500 # number of simulations
+n_sims <- 10 # number of simulations
 n_strata <- 80 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3", "z4")
 
 # Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
 # The intercept of the logistic model varies to vary the marginal prevalence
-prevs <- seq(.05, .12, by = .01)
+prevs <- seq(.01, .2, by = .01)
 stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
 for(p in 1:length(prevs)){
   s <- gammas %>% dplyr::mutate(
@@ -68,7 +68,8 @@ sim_conditions <- tidyr::crossing(
          num_infinite_pi_RG = NA_real_, # number of infinite estimates \hat \pi_RG
          num_infinite_pi_SRG = NA_real_, # number of infinite estimates \hat \pi_SRG
          num_infinite_pi_SRGM = NA_real_, # number of infinite estimates \hat \pi_SRGM
-         sims_w_positivity = NA_real_ # number of simulations with positivity (all strata observed)
+         sims_w_positivity = NA_real_, # number of simulations with positivity (all strata observed)
+         avg_strata_obs = NA_real_
   )
 
 # conduct the simulation, iterating through the subscenarios
@@ -107,23 +108,24 @@ for(i in 1:nrow(sim_conditions)){
   
   # compute mean relative bias of the finite estimates for the sub-scenario,
   # and compute the other results of interest
-  sim_conditions[i,"hat_pi_RG"] <- 100 * ( 
+  sim_conditions[i, "hat_pi_RG"] <- 100 * ( 
     mean(hat_pi_RG[is.finite(hat_pi_RG)]) - row$prev ) / row$prev 
-  sim_conditions[i,"num_infinite_pi_RG"] <- sum(!is.finite(hat_pi_RG))
+  sim_conditions[i, "num_infinite_pi_RG"] <- sum(!is.finite(hat_pi_RG))
   
-  sim_conditions[i,"hat_pi_SRG"] <- 100 * (
+  sim_conditions[i, "hat_pi_SRG"] <- 100 * (
     mean(hat_pi_SRG[positivity], na.rm = TRUE) - row$prev) / row$prev 
-  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
+  sim_conditions[i, "num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
   
-  sim_conditions[i,"hat_pi_SRG_restriction"] <- 100 * (
+  sim_conditions[i, "hat_pi_SRG_restriction"] <- 100 * (
     mean(hat_pi_SRG[!positivity], na.rm = TRUE) - row$prev) / row$prev 
-  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
+  sim_conditions[i, "num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
   
-  sim_conditions[i,"hat_pi_SRGM"] <- 100 * (
+  sim_conditions[i, "hat_pi_SRGM"] <- 100 * (
     mean(hat_pi_SRGM[is.finite(hat_pi_SRGM)]) - row$prev) / row$prev 
-  sim_conditions[i,"num_infinite_pi_SRGM"] <- sum(!is.finite(hat_pi_SRGM))
+  sim_conditions[i, "num_infinite_pi_SRGM"] <- sum(!is.finite(hat_pi_SRGM))
   
-  sim_conditions[i,"sims_w_positivity"] <- sum(positivity)
+  sim_conditions[i, "sims_w_positivity"] <- sum(positivity)
+  sim_conditions[i, "avg_strata_obs"] <- mean(strata_obs)
 }
 
 # since the above simulation can take some time, 
