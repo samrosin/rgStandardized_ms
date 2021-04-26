@@ -17,7 +17,7 @@ output_file <- here("sims/results_draft/scenario3_var_results.csv")
 
 #### The known stratum proportions (the gamma_{zj}s) must be prespecified,
 #### and they are loaded here
-gammas <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
+gammas <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -35,7 +35,7 @@ vars_std <- c("z1", "z2", "z3")
 # Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
 # The intercept of the logistic model varies to vary the marginal prevalence
-prevs <- seq(.01, .01, by = .01)
+prevs <- seq(.01, .02, by = .01)
 stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
 for(p in 1:length(prevs)){
   s <- gammas %>% dplyr::mutate(
@@ -71,10 +71,10 @@ sim_conditions <- tidyr::crossing(
          covers_pi_SRG = NA_real_, # coverage proportion for hat_var_pi_SRG
          
          # repeat, but for sims where there was non-positivity
-         hat_pi_SRG_nonpos = NA_real_, 
-         ESE_hat_pi_SRG_nonpos = NA_real_, # empirical SE of hat_pi_SRG
-         ASE_hat_pi_SRG_nonpos = NA_real_, # mean asymptotic SE of hat_pi_SRG
-         covers_pi_SRG_nonpos = NA_real_, # coverage proportion for hat_var_pi_SRG
+         hat_pi_SRG_restriction = NA_real_, 
+         ESE_hat_pi_SRG_restriction = NA_real_, # empirical SE of hat_pi_SRG
+         ASE_hat_pi_SRG_restriction = NA_real_, # mean asymptotic SE of hat_pi_SRG
+         covers_pi_SRG_restriction = NA_real_, # coverage proportion for hat_var_pi_SRG
          
          hat_pi_SRGM = NA_real_,
          ESE_hat_pi_SRGM = NA_real_, # empirical SE of hat_pi_SRGM
@@ -84,6 +84,7 @@ sim_conditions <- tidyr::crossing(
          num_infinite_pi_RG= NA_real_, # number of infinite estimates \hat \pi
          num_infinite_pi_SRG = NA_real_, # number of infinite estimates \hat \pi_SRG
          num_infinite_pi_SRGM = NA_real_, # number of infinite estimates \hat \pi_SRGM
+         num_infinite_pi_SRG_restriction = NA_real_,
          n_strata_obs_full = NA_real_ # number of simulations with positivity (all strata observed)
   )
 
@@ -112,6 +113,7 @@ for(i in 1:nrow(sim_conditions)){
   strata_obs <- rep(NA, n_sims) # number of observed strata in a sim
   positivity <- rep(NA, n_sims) # is there positivity? 
   
+  
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
     print(paste("sim number:", j))
@@ -128,14 +130,11 @@ for(i in 1:nrow(sim_conditions)){
     covers_pi_RG[j] <- ifelse(
       (ci_lower_pi_RG[j] < row$prev) && (ci_upper_pi_RG[j] > row$prev), 1, 0)
     
-    #standardized estimate
+    # standardized estimate
     hat_pi_SRG_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat, 
                                row$n_1, row$n_2, row$n_3, vars_std, variance = TRUE)
     hat_pi_SRG[j] <- hat_pi_SRG_vec[1]
     hat_var_pi_SRG[j] <- hat_pi_SRG_vec[2]
-    # set standardized estimators to NA if there is nonpositivity
-    #hat_pi_SRG[j] <- ifelse(hat_pi_SRG_vec[3] < n_strata, NA, hat_pi_SRG_vec[1]) 
-    #hat_var_pi_SRG[j] <- ifelse(hat_pi_SRG_vec[3] < n_strata, NA, hat_pi_SRG_vec[2]) 
     ci_lower_pi_SRG[j] <- hat_pi_SRG_vec[1] - 
       qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRG_vec[2])
     ci_upper_pi_SRG[j] <- hat_pi_SRG_vec[1] + 
@@ -181,13 +180,14 @@ for(i in 1:nrow(sim_conditions)){
   sim_conditions[i, "ESE_hat_pi_SRG"] <- sd(hat_pi_SRG[positivity])
   sim_conditions[i, "ASE_hat_pi_SRG"] <- mean(sqrt(hat_var_pi_SRG[positivity]))
   sim_conditions[i, "covers_pi_SRG"] <- mean(covers_pi_SRG[positivity])
-  # sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
+  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
   
-  sim_conditions[i,"hat_pi_SRG_nonpos"] <- 100 * (
+  sim_conditions[i,"hat_pi_SRG_restriction"] <- 100 * (
     mean(hat_pi_SRG[!positivity], na.rm = TRUE) - row$prev) / row$prev 
-  sim_conditions[i, "ESE_hat_pi_SRG_nonpos"] <- sd(hat_pi_SRG[!positivity])
-  sim_conditions[i, "ASE_hat_pi_SRG_nonpos"] <- mean(sqrt(hat_var_pi_SRG[!positivity]))
-  sim_conditions[i, "covers_pi_SRG_nonpos"] <- mean(covers_pi_SRG[!positivity])
+  sim_conditions[i, "ESE_hat_pi_SRG_restriction"] <- sd(hat_pi_SRG[!positivity])
+  sim_conditions[i, "ASE_hat_pi_SRG_restriction"] <- mean(sqrt(hat_var_pi_SRG[!positivity]))
+  sim_conditions[i, "covers_pi_SRG_restriction"] <- mean(covers_pi_SRG[!positivity])
+  sim_conditions[i,"num_infinite_pi_SRG_restriction"] <- sum(!is.finite(hat_pi_SRG[!positivity]))
   
   sim_conditions[i,"hat_pi_SRGM"] <- 100 * (
     mean(hat_pi_SRGM[is.finite(hat_pi_SRGM)]) - row$prev) / row$prev 
