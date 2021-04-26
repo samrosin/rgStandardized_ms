@@ -17,7 +17,7 @@ output_file <- here("sims/results_draft/scenario3_results.csv")
 
 #### The known stratum proportions (the gamma_{zj}s) must be prespecified,
 #### and they are loaded here
-gammas <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
+gammas <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -28,7 +28,7 @@ gammas <- read_csv(here("sims/input_files/scenario3_stratum_props.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 1000 # number of simulations
+n_sims <- 10 # number of simulations
 n_strata <- 40 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3")
 
@@ -60,10 +60,12 @@ sim_conditions <- tidyr::crossing(
   rowwise() %>% 
   mutate(prev = sum(stratum_props$stratum_prop * stratum_props$prev),
          hat_pi_RG = NA_real_,
-         hat_pi_SRG = NA_real_, 
+         hat_pi_SRG = NA_real_,
+         hat_pi_SRG_restriction = NA_real_,
          hat_pi_SRGM = NA_real_,
          num_infinite_pi_RG = NA_real_, # number of infinite estimates \hat \pi_RG
          num_infinite_pi_SRG = NA_real_, # number of infinite estimates \hat \pi_SRG
+         num_infinite_pi_SRG_restriction = NA_real_,
          num_infinite_pi_SRGM = NA_real_, # number of infinite estimates \hat \pi_SRGM
          sims_w_positivity = NA_real_ # number of simulations with positivity (all strata observed)
   )
@@ -110,11 +112,11 @@ for(i in 1:nrow(sim_conditions)){
   
   sim_conditions[i,"hat_pi_SRG"] <- 100 * (
     mean(hat_pi_SRG[positivity], na.rm = TRUE) - row$prev) / row$prev 
-  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
+  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG[positivity]))
   
   sim_conditions[i,"hat_pi_SRG_restriction"] <- 100 * (
     mean(hat_pi_SRG[!positivity], na.rm = TRUE) - row$prev) / row$prev 
-  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
+  sim_conditions[i,"num_infinite_pi_SRG_restriction"] <- sum(!is.finite(hat_pi_SRG[!positivity]))
   
   sim_conditions[i,"hat_pi_SRGM"] <- 100 * (
     mean(hat_pi_SRGM[is.finite(hat_pi_SRGM)]) - row$prev) / row$prev 
