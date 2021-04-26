@@ -113,7 +113,6 @@ for(i in 1:nrow(sim_conditions)){
   strata_obs <- rep(NA, n_sims) # number of observed strata in a sim
   positivity <- rep(NA, n_sims) # is there positivity? 
   
-  
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
     print(paste("sim number:", j))
