@@ -269,7 +269,8 @@ dev.off()
 res3_gg <- results_3 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = rel_bias,
-         hat_pi_RG, hat_pi_SRG, hat_pi_SRGM)
+         hat_pi_RG, hat_pi_SRG, hat_pi_SRGM,
+         hat_pi_SRG_restriction)
 
 res3_facet <- ggplot(data = res3_gg, 
                      mapping = aes(x = pi, y = rel_bias,
@@ -280,21 +281,23 @@ res3_facet <- ggplot(data = res3_gg,
   theme(axis.text.y = element_text(size = 12),
         axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 16),
-        legend.position = c(.935,0.915),
+        legend.position = c(.90,0.90),
         legend.title = element_text(size = 14),
         legend.text = element_text(size = 12),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
         strip.text = element_text(size = 14)) + 
   labs(x = "Prevalence", y = "Relative Bias (%)") + 
   scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
+  scale_linetype_manual(name = "Method", values = c(2, 1, 3, 4),
                         labels = c(expression(hat(pi)[RG]), 
                                    expression(hat(pi)[SRG]),
-                                   expression(hat(pi)[SRGM]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
+                                   expression(hat(pi)[SRGM]),
+                                   expression(hat(pi)[SRG-Restriction]))) + 
+  scale_color_manual(name = "Method", values = scales::hue_pal()(4),
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
-                                expression(hat(pi)[SRGM]))) + 
+                                expression(hat(pi)[SRGM]),
+                                expression(hat(pi)[SRG-Restriction]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res3_facet
 
@@ -401,7 +404,7 @@ res4_facet <- ggplot(data = res4_gg,
   theme(axis.text.y = element_text(size = 12),
         axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 16),
-        legend.position = c(.935,0.915),
+        legend.position = c(.9,0.915),
         legend.title = element_text(size = 14),
         legend.text = element_text(size = 12),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
@@ -412,7 +415,7 @@ res4_facet <- ggplot(data = res4_gg,
                         labels = c(expression(hat(pi)[RG]), 
                                    expression(hat(pi)[SRG-Restriction]),
                                    expression(hat(pi)[SRGM]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(4)[c(1,3,4)],
+  scale_color_manual(name = "Method", values = scales::hue_pal()(4)[c(1,4,3)],
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG-Restriction]),
                                 expression(hat(pi)[SRGM]))) + 
