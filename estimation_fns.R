@@ -153,14 +153,13 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     c <- matrix(c(0, pi_hat_mst, 0, -1 + pi_hat_mst), nrow = 2, ncol = 2) # estimate C
     
     # estimate D
-    # unique covariate strata in the sample data
-    strata <- unique(sample[,c(vars_std,"stratum_prop")])
-    covariate_names <- colnames(strata)[1:length(vars_std)]
+    # get all covariate names, for *all* strata (whether in sample or not)
+    covariate_names <- colnames(stratum_props)[1:length(vars_std)]
     
     # create only the RHS of the regression formula, for application to *all* strata, 
     model_mat_formula <- "~"
     for(cov_name in covariate_names){
-      model_mat_formula <- paste(model_mat_formula, "strata$",cov_name,"+",sep="")
+      model_mat_formula <- paste(model_mat_formula, "stratum_props$",cov_name,"+",sep="")
     }
     model_mat_formula <- formula(substr(model_mat_formula,1,nchar(model_mat_formula)-1)) # remove final "+" from formula
     mat_strat <- model.matrix(model_mat_formula) # model matrix for *all* strata, even those not in sample support
@@ -171,7 +170,7 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
       exp_coef_times_mat_strat <- exp(crossprod(coef, t(mat_strat))) # this is a row vector with ith element exp(hat beta ^T %*% h(Z_i))
       for(j in 1:nrow(mat_strat)){
         stratum_contrib[j] <- as.matrix(mat_strat[j,l]) * exp_coef_times_mat_strat[1,j] / 
-          (1 + exp_coef_times_mat_strat[1,j])^2 * strata$stratum_prop[j]
+          (1 + exp_coef_times_mat_strat[1,j])^2 * stratum_props$stratum_prop[j] # compare to formula in supporting info
       }
       d[1,l] <- -1 * sum(stratum_contrib)
     }
