@@ -4,7 +4,6 @@ time1 <- Sys.time()
 
 library(tidyverse)
 library(here)
-library(fastDummies) # indicator variable coding
 
 source(here("estimation_fns.R"))
 source(here("sims/inputs/sim_param_values.R")) #load sim parameter values common across scenarios
@@ -29,14 +28,14 @@ gammas <- read_csv(here("sims/inputs/scenario4_stratum_props.csv"),
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 10 # number of simulations
+n_sims <- 20 # number of simulations
 n_strata <- 80 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3", "z4")
 
 # Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
 # The intercept of the logistic model varies to vary the marginal prevalence
-prevs <- seq(.01, .2, by = .01)
+prevs <- seq(.01, .20, by = .01)
 stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
 for(p in 1:length(prevs)){
   s <- gammas %>% dplyr::mutate(
@@ -45,9 +44,6 @@ for(p in 1:length(prevs)){
                        nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31") + 
                        nu_6*(gammas$z4=="z41"))
   )
-  # make indicator variables for z1, z2, z3, z4
-  s <- fastDummies::dummy_cols(s, select_columns = c("z1", "z2", "z3", "z4")) %>% 
-    dplyr::relocate(c(stratum_prop, sampling_prob, prev), .after = z4_z41) # rearrange columns
   stratum_props[[p]] <- s
 }
 
@@ -100,8 +96,8 @@ for(i in 1:nrow(sim_conditions)){
     hat_pi_SRGM[j] <- ests_std_model(
       dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat,
       dat$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
-      vars_std = c("z1_z11", "z2_z20", "z2_z21", "z3_z30", "z3_z31", "z4_z41"),
-      mod_formula = formula("x ~ z1_z11 + z2_z20 + z2_z21 + z3_z30 + z3_z31 + z4_z41"), 
+      vars_std = c("z1", "z2", "z3", "z4"),
+      mod_formula = formula("x ~ z1 + z2 + z3 + z4"), 
       variance = FALSE
     )
   }
