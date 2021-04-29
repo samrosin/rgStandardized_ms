@@ -4,10 +4,11 @@
 set.seed(2021)
 
 # a couple values for testing
-sigma_p = .99; sigma_e = .8; n_1 = 40
+#sigma_p = .99; sigma_e = .99; n_1 = 40
 
-#sigma_p <- c(.8, .95, .99)
-#sigma_e <- c(.8, .99)
+sigma_p <- c(.8, .95, .99)
+sigma_e <- c(.8, .99)
+n_1 <- 40
 #n_1 <- c(40, 250)
 n_2 <- 250
 n_3 <- 2500
@@ -42,15 +43,12 @@ alpha_5 <- .4
 # stratum-specific prevalence in scenario 4.
 # Note that the intercept nu_0 is a vector 
 # corresponding to the desired marginal prevalences. 
-nu_0 <- c(-4.64, -3.93, -3.505, -3.2, -2.9563234, 
-          -2.75, -2.58, -2.44, -2.291, -2.17,
-          -2.05, -1.94, -1.85, -1.755, -1.67,
-          -1.58, -1.5, -1.42, -1.345, -1.27
-)
-#nu_0 <- c(-5.3445212,-2.9563234,-0.658353) ### these lead to marginal prevalences of .005, .05, and .3
+nu_0 <- c(-7, -6.2, -5.7, -5.4, -5.2, 
+          -5, -4.8, -4.6, -4.45, -4.35,
+          -4.23, -4.13, -4, -3.88, -3.78,
+          -3.68, -3.58, -3.5, -3.42, -3.32)
 nu_1 <- -1
-#nu_2 <- 5 
-nu_2 <- -.6
+nu_2 <- 3.25 #nu_2 = 5? 
 nu_3 <- .8
 nu_4 <- .6
 nu_5 <- .4
