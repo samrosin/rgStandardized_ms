@@ -3,7 +3,7 @@
 # Setup -------------------------------------------------------------------
 library(tidyverse)
 library(here)
-source(here("sims/inputs/sim_param_values.R")) #load sim parameter values common across scenarios
+source(here("sims/inputs/param_values.R")) #load sim parameter values common across scenarios
 source(here("sims/sim_fns.R"))
 
 color_scheme <- "Set2"
@@ -13,17 +13,17 @@ color_scheme <- "Set2"
 # not the results_draft subdirectory. 
 # Results are manually moved into results_final 
 # (after they are finalized, of course).
-results_1 <- read_csv(here("sims/results_final/scenario1_results.csv"),
+results_1 <- read_csv(here("sims/results_final/dgp1_results.csv"),
                       col_types = cols(.default = col_double())
                       )
-results_2 <- read_csv(here("sims/results_final/scenario2_results.csv"),
+results_2 <- read_csv(here("sims/results_final/dgp2_results.csv"),
                       col_types = cols(.default = col_double())
                       )
 
-results_3 <- read_csv(here("sims/results_final/scenario3_results.csv"),
+results_3 <- read_csv(here("sims/results_final/dgp3_results.csv"),
                       col_types = cols(.default = col_double())
 )
-gammas_3 <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
+gammas_3 <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -32,11 +32,11 @@ gammas_3 <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
                      sampling_prob = col_double()
                    ))
 
-results_4 <- read_csv(here("sims/results_final/scenario4_results.csv"),
+results_4 <- read_csv(here("sims/results_final/dgp4_results.csv"),
                       col_types = cols(.default = col_double())
 )
 
-gammas_4 <- read_csv(here("sims/inputs/scenario4_stratum_props.csv"),
+gammas_4 <- read_csv(here("sims/inputs/dgp4_stratum_props.csv"),
                      col_types = cols(
                        z1 = col_character(), 
                        z2 = col_character(), 
@@ -116,7 +116,7 @@ res1_facet_n1_250 <- ggplot(data = res1_gg_n1_250,
                      labels = c(expression(hat(pi)[RG]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 
-pdf(here("sims/figs/bias/DGP1_n1_250.pdf"),
+pdf(here("sims/figs/bias/n1_250/DGP1.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res1_facet_n1_250)
 dev.off()
@@ -218,7 +218,7 @@ res2_n1_250 <- ggplot(data = res2_gg_n1_250,
                                 expression(hat(pi)[SRG]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 
-pdf(here("sims/figs/bias/DGP2_n1_250.pdf"),
+pdf(here("sims/figs/bias/n1_250/DGP2.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res2_n1_250)
 dev.off()
@@ -339,7 +339,7 @@ res3_facet_n1_250 <- ggplot(data = res3_gg_n1_250,
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res3_facet_n1_250
 
-pdf(here("sims/figs/bias/DGP3_n1_250.pdf"),
+pdf(here("sims/figs/bias/n1_250/DGP3.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res3_facet_n1_250)
 dev.off()
