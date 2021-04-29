@@ -1,23 +1,29 @@
 ##########
-# Conducts simulation scenario 3
+# Conducts simulation dgp 3
 time1 <- Sys.time() 
+
+# sim parameter values
+set.seed(2021)
+n_sims <- 5 # number of simulations
+n_strata <- 40 # number of strata for this dgp
+vars_std <- c("z1", "z2", "z3")
+prevs <- seq(.01, .20, by = .01)
 
 library(tidyverse)
 library(here)
-library(fastDummies)
 
 source(here("estimation_fns.R"))
-source(here("sims/inputs/sim_param_values_variance.R")) #load sim parameter values common across scenarios
+source(here("sims/inputs/param_values_var.R")) #load sim parameter values common across dgps
 source(here("sims/sim_fns.R"))
 
 # Note that the final simulation results are placed in the 
 # results_final subdirectory, but as the simulations are conducted
 # results are placed in the results_draft subdirectory
-output_file <- here("sims/results_draft/scenario3_var_results.csv")
+output_file <- here("sims/results_draft/dgp3_var_results.csv")
 
 #### The known stratum proportions (the gamma_{zj}s) must be prespecified,
 #### and they are loaded here
-gammas <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
+gammas <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -26,16 +32,10 @@ gammas <- read_csv(here("sims/inputs/scenario3_stratum_props.csv"),
                      sampling_prob = col_double()
                    ))
 
-# sim parameter values
-set.seed(2021)
-n_sims <- 5 # number of simulations
-n_strata <- 40 # number of strata for this scenario
-vars_std <- c("z1", "z2", "z3")
 
 # Create copies of the gamma (stratum_prop) dataframe,
 # with stratum-specific prevalence created from a true logistic model. 
 # The intercept of the logistic model varies to vary the marginal prevalence
-prevs <- seq(.01, .20, by = .01)
 stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
 for(p in 1:length(prevs)){
   s <- gammas %>% dplyr::mutate(
@@ -113,7 +113,7 @@ for(i in 1:nrow(sim_conditions)){
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
     print(paste("sim number:", j))
-    dat <- gen_data_scenario3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
+    dat <- gen_data_dgp3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
                               row$n_3, as.data.frame(row$stratum_props), vars_std)
     hat_pi_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
                           row$n_1, row$n_2, row$n_3, variance = TRUE)

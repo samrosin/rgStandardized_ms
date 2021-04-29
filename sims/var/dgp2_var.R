@@ -2,23 +2,23 @@
 # Conducts simulation scenario 2
 time1 <- Sys.time() 
 
+# sim parameter values
+set.seed(2021)
+n_sims <- 15 # number of simulations
+n_strata <- 2 # number of strata for this dgp
+prevs <- seq(.01, .20, by = .01) 
+
 library(tidyverse)
-library(looplot) #install with devtools::install_github("matherealize/looplot")
 library(here)
 
 source(here("estimation_fns.R"))
-source(here("sims/inputs/sim_param_values_variance.R")) #load sim parameter values common across scenarios
+source(here("sims/inputs/param_values_var.R")) #load sim parameter values common across dgps
 source(here("sims/sim_fns.R"))
 
 # Note that the final simulation results are placed in the 
 # results_final subdirectory, but as the simulations are conducted
 # results are placed in the results_draft subdirectory
-output_file <- here("sims/results_draft/scenario2_var_results.csv")
-
-# sim parameter values
-set.seed(2021)
-n_sims <- 15 # number of simulations
-n_strata <- 2 # number of strata for this scenario
+output_file <- here("sims/results_draft/dgp2_var_results.csv")
 
 # The known stratum proportions (the gamma_js) must be prespecified. 
 # Here the two strata have the same proportion, gamma_1 = gamma_2 = .5, 
@@ -27,7 +27,6 @@ n_strata <- 2 # number of strata for this scenario
 # The stratum-specific prevalences are defined to match the 
 # true prevalences of .01, .04, .07, ..., .34, 
 # where the first stratum has 1.5*pi and the second stratum 0.5*pi as their prevalences
-prevs <- seq(.01, .12, by = .01) 
 prev_mat <- matrix(NA, nrow = length(prevs), ncol = 2) # create matrix of prevalences using common ratio
 i <- 1
 for(p in prevs){
@@ -88,7 +87,7 @@ for(i in 1:nrow(sim_conditions)){
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
     print(j)
-    dat <- gen_data_scenario2(row$n_1, row$sigma_e, row$n_2, 
+    dat <- gen_data_dgp2(row$n_1, row$sigma_e, row$n_2, 
                        row$sigma_p, row$n_3, as.data.frame(row$stratum_props))
     hat_pi_RG_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
                          row$n_1, row$n_2, row$n_3, variance = TRUE)
