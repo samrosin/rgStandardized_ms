@@ -4,11 +4,11 @@
 set.seed(2021)
 
 # a couple values for testing
-sigma_p = .8; sigma_e = .8; n_1 = 40
+#sigma_p = .95; sigma_e = .8; n_1 = 40
 
-#sigma_p <- c(.8, .95, .99)
-#sigma_e <- c(.8, .99)
-#n_1 <- c(40, 250)
+sigma_p <- c(.8, .95, .99)
+sigma_e <- c(.8, .99)
+n_1 <- c(40, 250)
 n_2 <- 250
 n_3 <- 2500
 
