@@ -6,11 +6,11 @@ libs <- "/nas/longleaf/home/srosin/RLibs/" # directory containing R packages
 user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directory for the project
 
 # specify number of simulations and number of strata
-n_sims <- 1000
-n_strata <- 40
+n_sims <- 2500
+n_strata <- 80
 
-setwd(paste(user_home_dir, "scenario4_var_results/", sep = ""))
-outfile <- paste(user_home_dir, "scenario4_var_results.csv", sep = "")
+setwd(paste(user_home_dir, "dgp4_results/", sep = ""))
+outfile <- paste(user_home_dir, "dgp4_results.csv", sep = "")
 library(tidyverse)
 
 list_of_all_results <- vector(mode = "list", length = n_sims)
@@ -46,20 +46,20 @@ sim_results <- all_results %>%
             rho_hat = mean(rho_hat),
             ESE_hat_pi_RG = sd(hat_pi_RG, na.rm = TRUE),
             ASE_hat_pi_RG = mean(sqrt(hat_var_pi_RG), na.rm = TRUE),
-            covers_pi_RG = mean(covers_pi_RG, na.rm = TRUE),
-            ESE_hat_pi_SRG = sd(hat_pi_SRG, na.rm = T),
-            ASE_hat_pi_SRG = mean(sqrt(hat_var_pi_SRG), na.rm = T),
-            covers_pi_SRG = mean(covers_pi_SRG, na.rm = T),
-            ESE_hat_pi_SRG_restriction = sd(hat_pi_SRG, na.rm = T),
-            ASE_hat_pi_SRG_restriction = mean(sqrt(hat_var_pi_SRG), na.rm = T),
-            covers_pi_SRG_restriction = mean(covers_pi_SRG, na.rm = T),
+            coverage_pi_RG = mean(covers_pi_RG, na.rm = TRUE),
+            ESE_hat_pi_SRG = sd(hat_pi_SRG[positivity], na.rm = T),
+            ASE_hat_pi_SRG = mean(sqrt(hat_var_pi_SRG[positivity]), na.rm = T),
+            coverage_pi_SRG = mean(covers_pi_SRG[positivity], na.rm = T),
+            ESE_hat_pi_SRG_restriction = sd(hat_pi_SRG[!positivity], na.rm = T),
+            ASE_hat_pi_SRG_restriction = mean(sqrt(hat_var_pi_SRG[!positivity]), na.rm = T),
+            coverage_pi_SRG_restriction = mean(covers_pi_SRG[!positivity], na.rm = T),
             ESE_hat_pi_SRGM = sd(hat_pi_SRGM, na.rm = T),
             ASE_hat_pi_SRGM = mean(sqrt(hat_var_pi_SRGM), na.rm = T),
-            covers_pi_SRGM = mean(covers_pi_SRGM, na.rm = T),
+            coverage_pi_SRGM = mean(covers_pi_SRGM, na.rm = T),
             num_infinite_pi_RG = sum(inf_RG),
             num_infinite_pi_SRG = sum(inf_SRG),
             num_infinite_pi_SRGM = sum(inf_SRGM),
-            n_strata_obs_full = sum(strata_obs == 40),
+            n_strata_obs_full = sum(strata_obs == n_strata),
             hat_pi_RG = mean(relbias_RG, na.rm = TRUE),
             hat_pi_SRG = mean(relbias_SRG, na.rm = TRUE),
             hat_pi_SRG_restriction = mean(relbias_SRG_restriction, na.rm = T),

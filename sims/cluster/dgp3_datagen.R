@@ -10,7 +10,6 @@ user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directo
 
 setwd(user_home_dir)
 library(tidyverse)
-library(fastDummies, lib.loc = libs)
 
 # load helpful functions and parameter values from source files, 
 # all of which are in the top-level user_home_dir
@@ -28,7 +27,7 @@ vars_std <- c("z1", "z2", "z3")
 
 # The known stratum proportions (the gamma_{zj}s) must be prespecified,
 # and they are loaded here
-gammas <- read_csv("scenario3_stratum_props.csv",
+gammas <- read_csv("dgp3_stratum_props.csv",
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -48,9 +47,6 @@ for(p in 1:length(prevs)){
                        alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21")+
                        alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
   )
-  # make indicator variables for z1, z2, z3
-  s <- fastDummies::dummy_cols(s, select_columns = c("z1", "z2", "z3")) %>% 
-    dplyr::relocate(c(stratum_prop, sampling_prob, prev), .after = z3_z34) # rearrange columns
   stratum_props[[p]] <- s
 }
 
@@ -65,7 +61,7 @@ sim_conditions <- tidyr::crossing(
          rho_hat = NA_real_,
          hat_pi_RG = NA_real_,
          hat_pi_SRG = NA_real_, 
-         hat_pi_SRGM = NA_real_,
+         hat_pi_SRGM = NA_real_
 )
 
 for(sim in 1:n_sims){
@@ -75,7 +71,7 @@ for(sim in 1:n_sims){
   # simulate the data, iterating through the subscenarios
   for(i in 1:nrow(sim_conditions)){
     row <- sim_conditions[i,]
-    dat <- gen_data_scenario3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
+    dat <- gen_data_dgp3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
                               row$n_3, as.data.frame(row$stratum_props), vars_std)
     sim_conditions[i,"sigma_e_hat"] <- dat$sigma_e_hat
     sim_conditions[i,"sigma_p_hat"] <- dat$sigma_p_hat
@@ -85,5 +81,5 @@ for(sim in 1:n_sims){
   # store this simulation's data in an .RData file. This data format is used because 
   # sim_conditions is a dataframe, itself containing a dataframe as a column (stratum_props)
   output_filename <- paste("scenario3_var_datasets/sim_",sim,".RData",sep="")
-  save(sim_conditions,sample_list, file `= output_filename)
+  save(sim_conditions,sample_list, file = output_filename)
 }

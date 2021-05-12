@@ -8,7 +8,6 @@ user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directo
 
 setwd(user_home_dir)
 library(tidyverse)
-library(fastDummies)
 
 # load helpful functions and parameter values from source files, 
 # all of which are in the top-level user_home_dir
@@ -91,8 +90,8 @@ for(i in 1:nrow(sim_conditions)){
   hat_pi_SRGM_vec <- ests_std_model(
     sample_list[[i]], as.data.frame(row$stratum_props), row$sigma_e_hat,
     row$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
-    vars_std = c("z1_z11", "z2_z20", "z2_z21", "z3_z30", "z3_z31"),
-    mod_formula = formula("x ~ z1_z11 + z2_z20 + z2_z21 + z3_z30 + z3_z31"), 
+    vars_std = c("z1", "z2", "z3"),
+    mod_formula = formula("x ~ z1 + z2 + z3"), 
     variance = TRUE
   )
   
