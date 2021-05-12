@@ -1,3 +1,5 @@
+source("sims/sim_fns.R")
+
 # The inverse logit function 
 inv.logit <- function(x){1/(1 + exp(-x))} 
 
@@ -23,18 +25,18 @@ inv.logit <- function(x){1/(1 + exp(-x))}
 
 ests_rg <- function(rho_hat, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, variance = FALSE){
   pi_hat <- (rho_hat + sigma_p_hat - 1) / (sigma_e_hat + sigma_p_hat - 1) ###Rogan and Gladen formula
-  pi_hat_trunc <- max(0,min(pi_hat,1)) #truncate into [0,1]
   if (variance == FALSE) {
-    return(pi_hat_trunc)
+    return(truncate_01(pi_hat))
   } else {
     # compute variance estimator
     a <- pi_hat^2 * sigma_e_hat * (1 - sigma_e_hat) / n_1
     b <- (1 - pi_hat)^2 * sigma_p_hat * (1 - sigma_p_hat) / n_2
     c <- rho_hat * (1 - rho_hat) / n_3
     var_pi_hat <- (a + b + c) * (sigma_e_hat + sigma_p_hat - 1)^(-2)
-    return(c(pi_hat_trunc, var_pi_hat))
+    return(c(pi_hat, var_pi_hat))
   }
 }
+
 
 #' Compute prevalence estimates using standardization and a Rogan-Gladen adjustment. 
 #' Corresponds to \hat \pi_{st} in the manuscript. 
@@ -69,9 +71,8 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
   
   strata$std_est <- (strata$n_pos / strata$n) * strata$stratum_prop
   pi_hat_st <- (sum(strata$std_est) - (1-sigma_p_hat))/(sigma_e_hat - (1-sigma_p_hat)) #point estimate
-  pi_hat_st_trunc <- max(0,min(pi_hat_st,1))
   if(variance == FALSE){
-    return(c(pi_hat_st_trunc, nrow(strata))) #include number of strata in return vector
+    return(c(truncate_01(pi_hat_st), nrow(strata))) # include truncated estimate and number of strata in return vector
   } else{ 
     # compute variance estimator by summing the three components. compare to formula in manuscript. 
     a <- pi_hat_st^2 * sigma_e_hat * (1 - sigma_e_hat) / n_1
@@ -84,8 +85,9 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
     var_pi_hat_st <- (a + b + c) * (sigma_e_hat + sigma_p_hat - 1)^(-2)
   }
   
-  #return point and variance estimates
-  return(c(pi_hat_st_trunc, var_pi_hat_st, nrow(strata))) #include number of strata in return vector
+  # return point and variance estimates
+  # note point estimate is not truncated for use in CI construction
+  return(c(pi_hat_st, var_pi_hat_st, nrow(strata))) #include number of strata in return vector
 }
 
 #' Compute prevalence estimates using Rogan-Gladen adjustment and
@@ -122,10 +124,9 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
   # point estimate
   pi_hat_mst <- (sum(stratum_props$std_est_model) - (1 - sigma_p_hat)) / 
     (sigma_e_hat - (1 - sigma_p_hat))
-  pi_hat_mst_trunc <- max(0,min(pi_hat_mst,1)) #truncate into [0,1]
   
   if(variance == FALSE){
-    return(pi_hat_mst_trunc)
+    return(truncate_01(pi_hat_mst)) # truncated estimate
   } else{
     
     n <- n_1 + n_2 + n_3 #total sample size
@@ -198,8 +199,7 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     final <- pt1 + pt2
     var_hat_pi_mst <- final[2,2] / n # the lower-right element divided by n is the variance estimator of interest
     
-    c(pi_hat_mst_trunc, var_hat_pi_mst)
+    c(pi_hat_mst, var_hat_pi_mst)
   }
 }
-
 

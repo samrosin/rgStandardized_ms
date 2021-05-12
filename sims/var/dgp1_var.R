@@ -4,8 +4,8 @@ time1 <- Sys.time()
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 5 #number of simulations
-prev <- seq(.01, .2, by = .01) #true prevalence 
+n_sims <- 500 #number of simulations
+prev <- seq(.01, .02, by = .01) #true prevalence 
 
 library(tidyverse)
 library(here)
@@ -44,12 +44,12 @@ for(i in 1:nrow(sim_conditions)){
                               row$sigma_p, row$n_3, row$prev)
     hat_pi_RG_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
                          row$n_1, row$n_2, row$n_3, variance = TRUE)
-    hat_pi_RG[j] <- hat_pi_RG_vec[1]
+    hat_pi_RG[j] <- truncate_01(hat_pi_RG_vec[1])
     hat_var_pi_RG[j] <- hat_pi_RG_vec[2]
-    ci_lower_pi[j] <- hat_pi_RG_vec[1] - 
-                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2])
-    ci_upper_pi[j] <- hat_pi_RG_vec[1] + 
-                      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2])
+    ci_lower_pi[j] <- truncate_01(hat_pi_RG_vec[1] - 
+              qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2]))
+    ci_upper_pi[j] <- truncate_01(hat_pi_RG_vec[1] + 
+              qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2]))
     covers_pi_RG[j] <- ifelse(
       (ci_lower_pi[j] < row$prev) && (ci_upper_pi[j] > row$prev), 1, 0)
     
@@ -74,3 +74,4 @@ sim_conditions[1,"n_sims"] <- n_sims # store number of simulations (in a non-tid
 time2 <- Sys.time()
 print(time2 - time1)
 
+print(sim_conditions$covers_pi_RG)
