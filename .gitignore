@@ -19,3 +19,9 @@ sims/misc_old_files/
 sims/old_misc/
 sims/old_res/
 sims/old_misc/fix_logisticreg.R
+sims/results_draft/dgp1_var_results.csv
+sims/results_draft/dgp1_var_results_test.csv
+sims/results_draft/dgp4_results.csv
+sims/results_draft/dgp4_results_tests.csv
+sims/plot_var_dgp4.R
+sims/plot_var_dgp4_tests.R
