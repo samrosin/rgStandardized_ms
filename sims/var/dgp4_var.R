@@ -4,16 +4,17 @@ time1 <- Sys.time()
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 100 # number of simulations
+n_sims <- 10 # number of simulations
 n_strata <- 80 # number of strata for this dgp
 vars_std <- c("z1", "z2", "z3", "z4")
-prevs <- seq(.01, .20, by = .01)
+#prevs <- seq(.005, .15, by = .005)
+prevs <- seq(.005, .01, by = .005)
 
 library(tidyverse)
 library(here)
 
 source(here("estimation_fns.R"))
-source(here("sims/inputs/sim_param_values_variance.R")) #load sim parameter values common across dgps
+source(here("sims/inputs/param_values_var.R")) #load sim parameter values common across dgps
 source(here("sims/sim_fns.R"))
 
 # Note that the final simulation results are placed in the 
