@@ -94,3 +94,6 @@ gen_data_dgp3 <- function(n_1, sigma_e, n_2, sigma_p,
                rho_hat = rho_hat, sample = sample)
   data
 }
+
+# truncate a number into the range [0, 1]
+truncate_01 <- function(x) {min(1, max(0, x))}
