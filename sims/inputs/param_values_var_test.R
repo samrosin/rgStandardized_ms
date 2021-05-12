@@ -4,15 +4,15 @@
 set.seed(2021)
 
 # a couple values for testing
-sigma_p = .99; sigma_e = .99; n_1 = 40
-n_2 <- 250; n_3 <- 200
+#sigma_p = .99; sigma_e = .99; n_1 = 40
 
-# sigma_p <- c(.8, .95, .99)
-# sigma_e <- c(.8, .99)
-# #n_1 <- 40
-# n_1 <- c(40, 250)
-# n_2 <- c(250, 1000)
-# n_3 <- 2500
+sigma_p <- c(.5, .8, .9, .95, .975, .99, 1)
+sigma_e <- .8
+#sigma_e <- c(.8, .99)
+#n_1 <- 40
+n_1 <- 1000
+n_2 <- 1000
+n_3 <- 20000
 
 ### TESTING
 # sigma_e <- c(.95) #true sensitivity
