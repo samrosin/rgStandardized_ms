@@ -25,3 +25,4 @@ sims/results_draft/dgp4_results.csv
 sims/results_draft/dgp4_results_tests.csv
 sims/plot_var_dgp4.R
 sims/plot_var_dgp4_tests.R
+sims/dgp1_var_transform.R
