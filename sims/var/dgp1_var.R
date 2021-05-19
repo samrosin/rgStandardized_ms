@@ -4,8 +4,8 @@ time1 <- Sys.time()
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 500 #number of simulations
-prev <- seq(.01, .02, by = .01) #true prevalence 
+n_sims <- 1000 #number of simulations
+prev <- seq(.005, .20, by = .005) #true prevalence 
 
 library(tidyverse)
 library(here)

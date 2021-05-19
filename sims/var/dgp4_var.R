@@ -4,11 +4,11 @@ time1 <- Sys.time()
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 2 # number of simulations
+n_sims <- 1000 # number of simulations
 n_strata <- 80 # number of strata for this dgp
 vars_std <- c("z1", "z2", "z3", "z4")
-#prevs <- seq(.005, .15, by = .005)
-prevs <- .005
+prevs <- seq(.005, .20, by = .005)
+#prevs <- .005
 
 library(tidyverse)
 library(here)

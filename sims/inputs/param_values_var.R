@@ -1,18 +1,16 @@
 # Common parameter values across all simulation scenarios.
 # If desired, these parameter values could vary across scenarios. 
 
-set.seed(2021)
-
+#set.seed(2021)
 # a couple values for testing
-sigma_p = .99; sigma_e = .99; n_1 = 40
-n_2 <- 250; n_3 <- 200
+#sigma_p = .99; sigma_e = .99; n_1 = 40
+#n_2 <- 250; n_3 <- 2500
 
-# sigma_p <- c(.8, .95, .99)
-# sigma_e <- c(.8, .99)
-# #n_1 <- 40
-# n_1 <- c(40, 250)
-# n_2 <- c(250, 1000)
-# n_3 <- 2500
+sigma_p <- c(.8, .95, .99)
+sigma_e <- c(.8, .99)
+n_1 <- 40
+n_2 <- 250
+n_3 <- 2500
 
 ### TESTING
 # sigma_e <- c(.95) #true sensitivity
@@ -51,12 +49,14 @@ alpha_5 <- .4
 #           -4.23, -4.13, -4, -3.88, -3.78,
 #           -3.68, -3.58, -3.5, -3.42, -3.32)
 
-# for {.005, .01, .015, ... .15} use the following intercepts:
+# for {.005, .01, .015, ... .20} use the following intercepts:
 nu_0 <- c(-7.6, -6.9, -6.45, -6.18, -5.9, -5.75,
           -5.58, -5.41, -5.3, -5.18, -5.06, -4.97, 
           -4.89, -4.79, -4.705, -4.62, -4.54, -4.45, 
           -4.4, -4.35, -4.29, -4.23, -4.18, -4.13,
-          -4.06, -4, -3.94, -3.88, -3.83, -3.78)
+          -4.06, -4, -3.94, -3.88, -3.83, -3.78,
+          -3.735, -3.69, -3.642, -3.596, -3.55, -3.505,
+          -3.462, -3.42, -3.375, -3.337)
 nu_1 <- -1
 nu_2 <- 3.25 #nu_2 = 5? 
 nu_3 <- .8
