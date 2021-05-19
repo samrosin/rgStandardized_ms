@@ -288,16 +288,14 @@ res3_facet <- ggplot(data = res3_gg,
         strip.text = element_text(size = 14)) + 
   labs(x = "Prevalence", y = "Relative Bias (%)") + 
   scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2, 1, 3, 4),
+  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
                         labels = c(expression(hat(pi)[RG]), 
                                    expression(hat(pi)[SRG]),
-                                   expression(hat(pi)[SRGM]),
-                                   expression(hat(pi)[SRG-Restriction]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(4),
+                                   expression(hat(pi)[SRGM]))) + 
+  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
-                                expression(hat(pi)[SRGM]),
-                                expression(hat(pi)[SRG-Restriction]))) + 
+                                expression(hat(pi)[SRGM]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res3_facet
 
@@ -373,7 +371,7 @@ scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sa
   xlab(expression(paste(gamma[j]," (Stratum proportion)",sep=""))) + 
   ylab(expression(paste(s[j]," (Sampling probability)", sep=""))) + 
   theme(text = element_text(size=20),
-        legend.position = c(.7,0.92),
+        legend.position = c(.85,0.92),
         legend.title = element_text(size = 14),
         legend.text = element_text(size = 12)) + 
   scale_size(name = "Prevalence",
@@ -382,7 +380,7 @@ scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sa
                         "Marginal Prev",
                         expression(2 %*% "Marginal Prev"))) 
 
-scenario4_selectionbias_plot
+#scenario4_selectionbias_plot
 
 pdf(here("sims/figs/bias/DGP4_selectionbias.pdf"),
     paper = "USr", width = 8.5, height = 11)
@@ -411,13 +409,13 @@ res4_facet <- ggplot(data = res4_gg,
         strip.text = element_text(size = 14)) + 
   labs(x = "Prevalence", y = "Relative Bias (%)") + 
   scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2, 4, 3),
+  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
                         labels = c(expression(hat(pi)[RG]), 
-                                   expression(hat(pi)[SRG-Restriction]),
+                                   expression(hat(pi)[SRG]),
                                    expression(hat(pi)[SRGM]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(4)[c(1,4,3)],
+  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
                      labels = c(expression(hat(pi)[RG]), 
-                                expression(hat(pi)[SRG-Restriction]),
+                                expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
 res4_facet
