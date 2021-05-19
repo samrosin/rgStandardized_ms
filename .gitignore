@@ -33,3 +33,6 @@ reiczigel_testing.R
 sims/var/dgp1_var_logshift.R
 sims/var/dgp1_var_arcsine.R
 sims/var/dgp1_var_reiczigel.R
+sims/results_draft/dgp1_var_results_arcsine.csv
+sims/results_draft/dgp1_var_results_logshift.csv
+sims/results_draft/dgp4_results_varysp.csv
