@@ -15,15 +15,13 @@ library(tidyverse)
 # all of which are in the top-level user_home_dir
 source("estimation_fns.R")
 source("sim_fns.R")
-source("sim_param_values_variance.R")
+source("param_values_var.R")
 
 # sim parameter values
 set.seed(2021)
 n_sims <- 5 # number of simulations
-n_strata <- 40 # number of strata for this scenario
+n_strata <- 40 # number of strata for this dgp
 vars_std <- c("z1", "z2", "z3")
-
-# output_file <- here("results_draft/scenario4_var_results.csv")
 
 # The known stratum proportions (the gamma_{zj}s) must be prespecified,
 # and they are loaded here
@@ -48,6 +46,11 @@ for(p in 1:length(prevs)){
                        alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
   )
   stratum_props[[p]] <- s
+}
+
+# Uncomment to print prevalences, checking that they are, e.g., {.01, .05, .2}
+for(s in 1:length(stratum_props)){
+  print(sum(stratum_props[[s]]$stratum_prop * stratum_props[[s]]$prev))
 }
 
 # fully factorial combination of sample sizes and parameters, 
@@ -80,6 +83,6 @@ for(sim in 1:n_sims){
   }
   # store this simulation's data in an .RData file. This data format is used because 
   # sim_conditions is a dataframe, itself containing a dataframe as a column (stratum_props)
-  output_filename <- paste("scenario3_var_datasets/sim_",sim,".RData",sep="")
+  output_filename <- paste("dgp3_datasets/sim_",sim,".RData",sep="")
   save(sim_conditions,sample_list, file = output_filename)
 }

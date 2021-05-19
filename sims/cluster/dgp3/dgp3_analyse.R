@@ -9,7 +9,7 @@ user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directo
 n_sims <- 1000
 n_strata <- 40
 
-setwd(paste(user_home_dir, "scenario3_var_results/", sep = ""))
+setwd(paste(user_home_dir, "dgp3_results/", sep = ""))
 outfile <- paste(user_home_dir, "dgp3_var_results.csv", sep = "")
 library(tidyverse)
 
