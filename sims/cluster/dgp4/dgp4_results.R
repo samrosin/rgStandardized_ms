@@ -1,6 +1,7 @@
 ##########
 # Generates data for simulation DGP 4.
 # Relies on a SLURM-managed cluster.
+t1 <- Sys.time()
 
 # these two directories must be specified by the user 
 libs <- "/nas/longleaf/home/srosin/RLibs/" # directory containing R packages
@@ -8,17 +9,16 @@ user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directo
 
 setwd(user_home_dir)
 library(tidyverse)
-library(fastDummies)
 
 # load helpful functions and parameter values from source files, 
 # all of which are in the top-level user_home_dir
 source("estimation_fns.R")
 source("sim_fns.R")
-source("sim_param_values_variance.R")
+source("param_values_var.R")
 
 # Read in simulation data
 sim <- Sys.getenv("SLURM_ARRAY_TASK_ID") # get the number of the simulation
-load((paste("scenario4_var_datasets/sim_", sim, ".RData", sep=""))) # load .RData file
+load((paste("dgp4_datasets/sim_", sim, ".RData", sep=""))) # load .RData file
 
 # sim parameter values
 n_strata <- 80 # number of strata for this scenario
@@ -58,13 +58,13 @@ for(i in 1:nrow(sim_conditions)){
   print(i)
   row <- sim_conditions[i,]
   hat_pi_RG_vec <- ests_rg(row$rho_hat, row$sigma_e_hat, row$sigma_p_hat, 
-                          row$n_1, row$n_2, row$n_3, variance = TRUE)
-  sim_conditions[i, "hat_pi_RG"] <- hat_pi_RG_vec[1]
+                           row$n_1, row$n_2, row$n_3, variance = TRUE)
+  sim_conditions[i, "hat_pi_RG"] <- truncate_01(hat_pi_RG_vec[1])
   sim_conditions[i, "hat_var_pi_RG"] <- hat_pi_RG_vec[2]
-  sim_conditions[i, "ci_lower_pi_RG"] <- hat_pi_RG_vec[1] - 
-    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2])
-  sim_conditions[i, "ci_upper_pi_RG"] <- hat_pi_RG_vec[1] + 
-    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2])
+  sim_conditions[i, "ci_lower_pi_RG"] <- truncate_01(hat_pi_RG_vec[1] - 
+    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2]))
+  sim_conditions[i, "ci_upper_pi_RG"] <- truncate_01(hat_pi_RG_vec[1] + 
+    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_RG_vec[2]))
   sim_conditions[i, "covers_pi_RG"] <-ifelse(
     (sim_conditions[i,"ci_lower_pi_RG"] < row$prev) && 
       (sim_conditions[i,"ci_upper_pi_RG"] > row$prev), 1, 0)
@@ -73,12 +73,12 @@ for(i in 1:nrow(sim_conditions)){
   hat_pi_SRG_vec <- ests_std(sample_list[[i]], row$sigma_e_hat, row$sigma_p_hat, 
                              row$n_1, row$n_2, row$n_3, vars_std, variance = TRUE)
   
-  sim_conditions[i, "hat_pi_SRG"] <- hat_pi_SRG_vec[1]
+  sim_conditions[i, "hat_pi_SRG"] <- truncate_01(hat_pi_SRG_vec[1])
   sim_conditions[i, "hat_var_pi_SRG"] <- hat_pi_SRG_vec[2]
-  sim_conditions[i, "ci_lower_pi_SRG"] <- hat_pi_SRG_vec[1] - 
-    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRG_vec[2])
-  sim_conditions[i, "ci_upper_pi_SRG"] <- hat_pi_SRG_vec[1] + 
-    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRG_vec[2])
+  sim_conditions[i, "ci_lower_pi_SRG"] <- truncate_01(hat_pi_SRG_vec[1] - 
+    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRG_vec[2]))
+  sim_conditions[i, "ci_upper_pi_SRG"] <- truncate_01(hat_pi_SRG_vec[1] + 
+    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRG_vec[2]))
   sim_conditions[i, "covers_pi_SRG"] <- ifelse(
     (sim_conditions[i, "ci_lower_pi_SRG"] < row$prev) && 
       (sim_conditions[i, "ci_upper_pi_SRG"] > row$prev), 1, 0)
@@ -87,28 +87,29 @@ for(i in 1:nrow(sim_conditions)){
   # hat_pi_SRG or hat_pi_SRGM; here I take it from hat_pi_SRG
   sim_conditions[i, "positivity"] <- ifelse(hat_pi_SRG_vec[3] < n_strata, FALSE, TRUE)
   
-    # get model standardized estimates
-    hat_pi_SRGM_vec <- ests_std_model(
-      sample_list[[i]], as.data.frame(row$stratum_props), row$sigma_e_hat, 
-      row$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
-      vars_std = c("z1_z11", "z2_z20", "z2_z21", "z3_z30", "z3_z31", "z4_z41"),
-      mod_formula = formula("x ~ z1_z11 + z2_z20 + z2_z21 + z3_z30 + z3_z31 + z4_z41"), 
-      variance = TRUE
-    )
-    
-    sim_conditions[i, "hat_pi_SRGM"] <- hat_pi_SRGM_vec[1]
-    sim_conditions[i, "hat_var_pi_SRGM"] <- hat_pi_SRGM_vec[2]
-    sim_conditions[i, "ci_lower_pi_SRGM"] <- hat_pi_SRGM_vec[1] - 
-      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRGM_vec[2])
-    sim_conditions[i, "ci_upper_pi_SRGM"] <- hat_pi_SRGM_vec[1] + 
-      qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRGM_vec[2])
-    sim_conditions[i, "covers_pi_SRGM"] <- ifelse(
-      (sim_conditions[i, "ci_lower_pi_SRGM"] < row$prev) && 
-        (sim_conditions[i, "ci_upper_pi_SRGM"] > row$prev), 1, 0)
+  # get model standardized estimates
+  hat_pi_SRGM_vec <- ests_std_model(
+    sample_list[[i]], as.data.frame(row$stratum_props), row$sigma_e_hat, 
+    row$sigma_p_hat, row$n_1, row$n_2, row$n_3, 
+    vars_std = c("z1", "z2", "z3", "z4"),
+    mod_formula = formula("x ~ z1 + z2 + z3 + z4"),
+    variance = TRUE
+  )
+  
+  sim_conditions[i, "hat_pi_SRGM"] <- truncate_01(hat_pi_SRGM_vec[1])
+  sim_conditions[i, "hat_var_pi_SRGM"] <- hat_pi_SRGM_vec[2]
+  sim_conditions[i, "ci_lower_pi_SRGM"] <- truncate_01(hat_pi_SRGM_vec[1] - 
+    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRGM_vec[2]))
+  sim_conditions[i, "ci_upper_pi_SRGM"] <- truncate_01(hat_pi_SRGM_vec[1] + 
+    qnorm(1 - alpha_level / 2) * sqrt(hat_pi_SRGM_vec[2]))
+  sim_conditions[i, "covers_pi_SRGM"] <- ifelse(
+    (sim_conditions[i, "ci_lower_pi_SRGM"] < row$prev) && 
+      (sim_conditions[i, "ci_upper_pi_SRGM"] > row$prev), 1, 0)
 }
 
+t2 <- Sys.time()
+print(t2 - t1)
 sim_results <- sim_conditions %>% select(-c(stratum_props))
-output_filename <- paste("scenario4_var_results/results_", sim, ".csv", sep="")
+output_filename <- paste("dgp4_results/results_", sim, ".csv", sep="")
 write_csv(sim_results, output_filename)
 
-     
