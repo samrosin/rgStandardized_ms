@@ -38,3 +38,4 @@ sims/results_draft/dgp1_var_results_arcsine.csv
 sims/results_draft/dgp1_var_results_logshift.csv
 sims/results_draft/dgp4_results_varysp.csv
 sims/cluster/dgp4_varysp
+sims/plot_var_edited.R
