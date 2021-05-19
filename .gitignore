@@ -28,6 +28,7 @@ sims/plot_var_dgp4_tests.R
 sims/dgp1_var_transform.R
 sims/var/dgp1_var_transform.R
 sims/bias/dgp1_bias_transform.R
+sims/cluster/dgp3/old/
 sims/cluster/dgp4/old/
 reiczigel_testing.R
 sims/var/dgp1_var_logshift.R
@@ -36,3 +37,4 @@ sims/var/dgp1_var_reiczigel.R
 sims/results_draft/dgp1_var_results_arcsine.csv
 sims/results_draft/dgp1_var_results_logshift.csv
 sims/results_draft/dgp4_results_varysp.csv
+sims/cluster/dgp4_varysp
