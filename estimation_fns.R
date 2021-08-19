@@ -154,16 +154,9 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     c <- matrix(c(0, pi_hat_mst, 0, -1 + pi_hat_mst), nrow = 2, ncol = 2) # estimate C
     
     # estimate D
-    # get all covariate names, for *all* strata (whether in sample or not)
-    covariate_names <- colnames(stratum_props)[1:length(vars_std)]
-    
-    # create only the RHS of the regression formula, for application to *all* strata, 
-    model_mat_formula <- "~"
-    for(cov_name in covariate_names){
-      model_mat_formula <- paste(model_mat_formula, "stratum_props$",cov_name,"+",sep="")
-    }
-    model_mat_formula <- formula(substr(model_mat_formula,1,nchar(model_mat_formula)-1)) # remove final "+" from formula
-    mat_strat <- model.matrix(model_mat_formula) # model matrix for *all* strata, even those not in sample support
+    ff <- mod_formula[-2]
+    m <- model.frame(ff, stratum_props)
+    mat_strat <- model.matrix(ff, m) # model matrix for all strata, even those not in sample support
     
     d <- matrix(0, nrow = 2, ncol = nrow(coef)) # declare D as 2 * p matrix of 0s (convenient since the 2nd row is 0)
     for(l in 1:nrow(coef)){
@@ -193,12 +186,6 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
         g[j,k] <- (n_3 / n) * mean(unit_contrib_g)
       }
     }
-    
-    # pt1 <- solve(e) %*% c %*% solve(a) %*% f %*% solve(a) %*% t(c) %*% t(solve(e)) 
-    # pt2 <- solve(e) %*% d %*% solve(b) %*% g %*% solve(b) %*% t(d) %*% t(solve(e))
-    # final <- pt1 + pt2
-    # var_hat_pi_mst <- final[2,2] / n # the lower-right element divided by n is the variance estimator of interest
-    # 
     
     #### 
     # define a_mat, b_mat - the 'bread' and 'meat' matrices 
