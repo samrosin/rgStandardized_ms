@@ -194,10 +194,34 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
       }
     }
     
-    pt1 <- solve(e) %*% c %*% solve(a) %*% f %*% solve(a) %*% t(c) %*% t(solve(e)) 
-    pt2 <- solve(e) %*% d %*% solve(b) %*% g %*% solve(b) %*% t(d) %*% t(solve(e))
-    final <- pt1 + pt2
-    var_hat_pi_mst <- final[2,2] / n # the lower-right element divided by n is the variance estimator of interest
+    # pt1 <- solve(e) %*% c %*% solve(a) %*% f %*% solve(a) %*% t(c) %*% t(solve(e)) 
+    # pt2 <- solve(e) %*% d %*% solve(b) %*% g %*% solve(b) %*% t(d) %*% t(solve(e))
+    # final <- pt1 + pt2
+    # var_hat_pi_mst <- final[2,2] / n # the lower-right element divided by n is the variance estimator of interest
+    # 
+    
+    #### 
+    # define a_mat, b_mat - the 'bread' and 'meat' matrices 
+    # of the sandwich variance estimator 
+    a_mat <- cbind(
+      rbind(a, matrix(0, nrow = nrow(b), ncol = ncol(a)), c),
+      rbind(matrix(0, nrow = 2, ncol = ncol(b)), b, d),
+      rbind(matrix(0, nrow = 2, ncol = 2), 
+            matrix(0, nrow = nrow(b), ncol = 2), e)
+    ) 
+    
+    b_mat <- cbind(
+      rbind(f, matrix(0, nrow = nrow(g), ncol = 2), 
+            matrix(0, nrow = 2, ncol = 2)),
+      rbind(matrix(0, nrow = 2, ncol = ncol(g)), g, 
+            matrix(0, nrow = 2, ncol = ncol(g))),
+      rbind(matrix(0, nrow = 2, ncol = 2),
+            matrix(0, nrow = nrow(g), ncol = 2),
+            matrix(0, nrow = 2, ncol = 2))
+    )
+    
+    var_hat_theta <- solve(a_mat) %*% b_mat %*% t(solve(a_mat)) # var-covar matrix
+    var_hat_pi_mst <- var_hat_theta[nrow(var_hat_theta),ncol(var_hat_theta)] / n # the lower-right element divided by n is the variance estimator of interest
     
     c(pi_hat_mst, var_hat_pi_mst)
   }
