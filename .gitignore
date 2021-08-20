@@ -41,3 +41,4 @@ sims/cluster/dgp4_varysp
 sims/plot_var_edited.R
 extra_estimation_fns.R
 sims/figs/bias/old/
+sims/figs/var/old/
