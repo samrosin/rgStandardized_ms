@@ -89,73 +89,6 @@ pdf(here("sims/figs/bias/DGP1.pdf"),
 print(res1_bias)
 dev.off()
 
-# repeat, but with n_1 == 250
-
-# subset results
-res1_gg_n1_250 <- results_1 %>% filter(n_1 == 250 & sigma_e != .6) %>% 
-  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
-  gather(key = Method, value = rel_bias,
-         hat_pi_RG)
-
-# construct ggplot
-res1_facet_n1_250 <- ggplot(data = res1_gg_n1_250, 
-                            mapping = aes(x = pi, y = rel_bias,
-                                          linetype = Method, color = Method)) +
-  geom_line() + 
-  facet_grid(Sens ~ Spec, 
-             labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme(axis.text.y = element_text(size = 12),
-        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 16),
-        legend.position = c(.94,0.927),
-        legend.title = element_text(size = 14),
-        legend.text = element_text(size = 12),
-        #                    legend.background = element_rect(fill=alpha('white', 0)),
-        strip.text = element_text(size = 14)) + 
-  labs(x = "Prevalence", y = "Relative Bias (%)") + 
-  scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2),
-                        labels = c(expression(hat(pi)[RG]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(1),
-                     labels = c(expression(hat(pi)[RG]))) + 
-  geom_hline(aes(yintercept = 0), linetype = "dashed")
-
-pdf(here("sims/figs/bias/n1_250/DGP1.pdf"),
-    paper = "USr",width = 8.5, height = 11)
-print(res1_facet_n1_250)
-dev.off()
-
-# absolute bias plot 
-res1_bias <- res1_gg %>% mutate(bias = rel_bias * pi)
-
-res1_bias_facet <- ggplot(data = res1_bias, 
-                          mapping = aes(x = pi, y = bias,
-                                        linetype = Method, color = Method)) +
-  geom_line() + 
-  facet_grid(Sens ~ Spec, 
-             labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme(axis.text.y = element_text(size = 12),
-        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 16),
-        legend.position = c(.94,0.927),
-        legend.title = element_text(size = 14),
-        legend.text = element_text(size = 12),
-        #                    legend.background = element_rect(fill=alpha('white', 0)),
-        strip.text = element_text(size = 14)) + 
-  labs(x = "Prevalence", y = expression(paste("Bias  ", (hat(pi) - pi)))) + 
-  #scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2),
-                        labels = c(expression(hat(pi)[RG]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(1),
-                     labels = c(expression(hat(pi)[RG]))) + 
-  geom_hline(aes(yintercept = 0), linetype = "dashed")
-res1_bias_facet
-
-pdf(here("sims/figs/bias/DGP1_bias.pdf"),
-    paper = "USr",width = 8.5, height = 11)
-print(res1_bias_facet)
-dev.off()
-
 
 # DGP 2 Plots --------------------------------------------------------
 res2_gg <- results_2 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
@@ -191,40 +124,6 @@ res2_facet
 pdf(here("sims/figs/bias/DGP2.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res2_facet)
-dev.off()
-
-res2_gg_n1_250 <- results_2 %>% filter(n_1 == 250 & sigma_e != .6) %>% 
-  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
-  gather(key = Method, value = rel_bias,
-         hat_pi_RG, hat_pi_SRG)
-
-res2_n1_250 <- ggplot(data = res2_gg_n1_250, 
-                      mapping = aes(x = pi, y = rel_bias,
-                                    linetype = Method, color = Method)) +
-  geom_line() + 
-  facet_grid(Sens ~ Spec, 
-             labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme(axis.text.y = element_text(size = 12),
-        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 16),
-        legend.position = c(.94,0.927),
-        legend.title = element_text(size = 14),
-        legend.text = element_text(size = 12),
-        #                    legend.background = element_rect(fill=alpha('white', 0)),
-        strip.text = element_text(size = 14)) + 
-  labs(x = "Prevalence", y = "Relative Bias (%)") + 
-  scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2, 1),
-                        labels = c(expression(hat(pi)[RG]), 
-                                   expression(hat(pi)[SRG]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(2),
-                     labels = c(expression(hat(pi)[RG]), 
-                                expression(hat(pi)[SRG]))) + 
-  geom_hline(aes(yintercept = 0), linetype = "dashed")
-
-pdf(here("sims/figs/bias/n1_250/DGP2.pdf"),
-    paper = "USr",width = 8.5, height = 11)
-print(res2_n1_250)
 dev.off()
 
 # DGP 3 Plots --------------------------------------------------------
@@ -308,45 +207,6 @@ pdf(here("sims/figs/bias/DGP3.pdf"),
 print(res3_facet)
 dev.off()
 
-# plot results for DGP3, n_1 = 250
-res3_gg_n1_250 <- results_3 %>% filter(n_1 == 250 & sigma_e != .6) %>% 
-  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
-  gather(key = Method, value = rel_bias,
-         hat_pi_RG, hat_pi_SRG, hat_pi_SRGM)
-
-res3_facet_n1_250 <- ggplot(data = res3_gg_n1_250, 
-                            mapping = aes(x = pi, y = rel_bias,
-                                          linetype = Method, color = Method)) +
-  geom_line() + 
-  facet_grid(Sens ~ Spec, 
-             labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme(axis.text.y = element_text(size = 12),
-        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 16),
-        legend.position = c(.935,0.915),
-        legend.title = element_text(size = 14),
-        legend.text = element_text(size = 12),
-        #                    legend.background = element_rect(fill=alpha('white', 0)),
-        strip.text = element_text(size = 14)) + 
-  labs(x = "Prevalence", y = "Relative Bias (%)") + 
-  scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
-                        labels = c(expression(hat(pi)[RG]), 
-                                   expression(hat(pi)[SRG]),
-                                   expression(hat(pi)[SRGM]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
-                     labels = c(expression(hat(pi)[RG]), 
-                                expression(hat(pi)[SRG]),
-                                expression(hat(pi)[SRGM]))) + 
-  geom_hline(aes(yintercept = 0), linetype = "dashed")
-res3_facet_n1_250
-
-pdf(here("sims/figs/bias/n1_250/DGP3.pdf"),
-    paper = "USr",width = 8.5, height = 11)
-print(res3_facet_n1_250)
-dev.off()
-
-
 # DGP 4 Plots --------------------------------------------------------
 
 # plot the gamma_js vs sampling probs s_js to understand 
@@ -425,44 +285,6 @@ res4_facet <- ggplot(data = res4_gg,
 res4_facet
 
 pdf(here("sims/figs/bias/DGP4.pdf"),
-    paper = "USr",width = 8.5, height = 11)
-print(res4_facet)
-dev.off()
-
-# plot results for DGP4, n_1 = 250
-res4_gg_n1_250 <- results_4 %>% filter(n_1 == 250 & sigma_e != .6) %>% 
-  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
-  gather(key = Method, value = rel_bias,
-         hat_pi_RG, hat_pi_SRG, hat_pi_SRGM)
-
-res4_facet_n1_250 <- ggplot(data = res4_gg_n1_250, 
-                            mapping = aes(x = pi, y = rel_bias,
-                                          linetype = Method, color = Method)) +
-  geom_line() + 
-  facet_grid(Sens ~ Spec, 
-             labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme(axis.text.y = element_text(size = 12),
-        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 16),
-        legend.position = c(.935,0.915),
-        legend.title = element_text(size = 14),
-        legend.text = element_text(size = 12),
-        #                    legend.background = element_rect(fill=alpha('white', 0)),
-        strip.text = element_text(size = 14)) + 
-  labs(x = "Prevalence", y = "Relative Bias (%)") + 
-  scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
-                        labels = c(expression(hat(pi)[RG]), 
-                                   expression(hat(pi)[SRG]),
-                                   expression(hat(pi)[SRGM]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
-                     labels = c(expression(hat(pi)[RG]), 
-                                expression(hat(pi)[SRG]),
-                                expression(hat(pi)[SRGM]))) + 
-  geom_hline(aes(yintercept = 0), linetype = "dashed")
-res4_facet_n1_250
-
-pdf(here("sims/figs/bias/DGP4_n1_250.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res4_facet)
 dev.off()
