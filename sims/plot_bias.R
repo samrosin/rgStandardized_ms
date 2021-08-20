@@ -15,24 +15,24 @@ color_scheme <- "Set2"
 # (after they are finalized, of course).
 results_1 <- read_csv(here("sims/results_final/dgp1_results.csv"),
                       col_types = cols(.default = col_double())
-                      )
+)
 results_2 <- read_csv(here("sims/results_final/dgp2_results.csv"),
                       col_types = cols(.default = col_double())
-                      )
+)
 
 results_3 <- read_csv(here("sims/results_final/dgp3_results.csv"),
                       col_types = cols(.default = col_double())
 )
 gammas_3 <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
-                   col_types = cols(
-                     z1 = col_character(), 
-                     z2 = col_character(), 
-                     z3 = col_character(), 
-                     stratum_prop = col_double(),
-                     sampling_prob = col_double()
-                   ))
+                     col_types = cols(
+                       z1 = col_character(), 
+                       z2 = col_character(), 
+                       z3 = col_character(), 
+                       stratum_prop = col_double(),
+                       sampling_prob = col_double()
+                     ))
 
-results_4 <- read_csv(here("sims/results_final/dgp4_results.csv"),
+results_4 <- read_csv(here("sims/results_draft/dgp4_results.csv"),
                       col_types = cols(.default = col_double())
 )
 
@@ -57,32 +57,36 @@ res1_gg <- results_1 %>% filter(n_1 == 40 & sigma_e != .6) %>%
          hat_pi_RG)
 
 # construct ggplot
-res1_facet <- ggplot(data = res1_gg, 
-                     mapping = aes(x = pi, y = rel_bias,
-                      linetype = Method, color = Method)) +
-  geom_line() + 
+res1_bias <- ggplot(data = res1_gg, 
+       mapping = aes(x = pi, y = rel_bias,
+                     linetype = Method, color = Method)) +
+  geom_line(size = 2) + 
   facet_grid(Sens ~ Spec, 
              labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme(axis.text.y = element_text(size = 12),
-        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 16),
-        legend.position = c(.94,0.945),
-        legend.title = element_text(size = 14),
-        legend.text = element_text(size = 12),
+  theme_bw() + 
+  theme(axis.text.y = element_text(size = 16),
+        axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
+        axis.title = element_text(size = 20),
+        legend.position = c(.93,0.94),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 20),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
-        strip.text = element_text(size = 14)) + 
-  labs(x = "Prevalence", y = "Relative Bias (%)") + 
+        panel.spacing.y = unit(1.25, "lines"),
+        strip.text = element_text(size = 18)) + 
+  labs(x = "Prevalence", y = "Relative Bias") + 
   scale_y_continuous(labels = function(x) paste0(x, "%")) + 
+  #                   limits = c(-50, 200)) + 
   scale_linetype_manual(name = "Method", values = c(2),
                         labels = c(expression(hat(pi)[RG]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(1),
+  scale_color_manual(name = "Method", values = scales::hue_pal()(2)[1],
                      labels = c(expression(hat(pi)[RG]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
-res1_facet
+
+res1_bias
 
 pdf(here("sims/figs/bias/DGP1.pdf"),
     paper = "USr",width = 8.5, height = 11)
-print(res1_facet)
+print(res1_bias)
 dev.off()
 
 # repeat, but with n_1 == 250
@@ -95,8 +99,8 @@ res1_gg_n1_250 <- results_1 %>% filter(n_1 == 250 & sigma_e != .6) %>%
 
 # construct ggplot
 res1_facet_n1_250 <- ggplot(data = res1_gg_n1_250, 
-                     mapping = aes(x = pi, y = rel_bias,
-                                   linetype = Method, color = Method)) +
+                            mapping = aes(x = pi, y = rel_bias,
+                                          linetype = Method, color = Method)) +
   geom_line() + 
   facet_grid(Sens ~ Spec, 
              labeller = labeller(.rows = label_both, .cols = label_both)) + 
@@ -125,8 +129,8 @@ dev.off()
 res1_bias <- res1_gg %>% mutate(bias = rel_bias * pi)
 
 res1_bias_facet <- ggplot(data = res1_bias, 
-                     mapping = aes(x = pi, y = bias,
-                                   linetype = Method, color = Method)) +
+                          mapping = aes(x = pi, y = bias,
+                                        linetype = Method, color = Method)) +
   geom_line() + 
   facet_grid(Sens ~ Spec, 
              labeller = labeller(.rows = label_both, .cols = label_both)) + 
@@ -155,24 +159,24 @@ dev.off()
 
 # DGP 2 Plots --------------------------------------------------------
 res2_gg <- results_2 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
-            dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
-            gather(key = Method, value = rel_bias,
-                   hat_pi_RG, hat_pi_SRG)
+  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
+  gather(key = Method, value = rel_bias,
+         hat_pi_RG, hat_pi_SRG)
 
 res2_facet <- ggplot(data = res2_gg, 
                      mapping = aes(x = pi, y = rel_bias,
-                                    linetype = Method, color = Method)) +
-              geom_line() + 
-              facet_grid(Sens ~ Spec, 
-                         labeller = labeller(.rows = label_both, .cols = label_both)) + 
-              theme(axis.text.y = element_text(size = 12),
-                    axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
-                    axis.title = element_text(size = 16),
-                    legend.position = c(.94,0.927),
-                    legend.title = element_text(size = 14),
-                    legend.text = element_text(size = 12),
-#                    legend.background = element_rect(fill=alpha('white', 0)),
-                    strip.text = element_text(size = 14)) + 
+                                   linetype = Method, color = Method)) +
+  geom_line() + 
+  facet_grid(Sens ~ Spec, 
+             labeller = labeller(.rows = label_both, .cols = label_both)) + 
+  theme(axis.text.y = element_text(size = 12),
+        axis.text.x = element_text(size = 12, angle = 90, hjust = 1, vjust = .5),
+        axis.title = element_text(size = 16),
+        legend.position = c(.94,0.927),
+        legend.title = element_text(size = 14),
+        legend.text = element_text(size = 12),
+        #                    legend.background = element_rect(fill=alpha('white', 0)),
+        strip.text = element_text(size = 14)) + 
   labs(x = "Prevalence", y = "Relative Bias (%)") + 
   scale_y_continuous(labels = function(x) paste0(x, "%")) + 
   scale_linetype_manual(name = "Method", values = c(2, 1),
@@ -195,8 +199,8 @@ res2_gg_n1_250 <- results_2 %>% filter(n_1 == 250 & sigma_e != .6) %>%
          hat_pi_RG, hat_pi_SRG)
 
 res2_n1_250 <- ggplot(data = res2_gg_n1_250, 
-                     mapping = aes(x = pi, y = rel_bias,
-                                   linetype = Method, color = Method)) +
+                      mapping = aes(x = pi, y = rel_bias,
+                                    linetype = Method, color = Method)) +
   geom_line() + 
   facet_grid(Sens ~ Spec, 
              labeller = labeller(.rows = label_both, .cols = label_both)) + 
@@ -228,7 +232,7 @@ dev.off()
 # plot the gamma_js vs sampling probs s_js to understand 
 # the amount of sampling bias in each 
 sp3 <- gammas_3
-  
+
 # Under pi \approx .05, assign the stratum-specific prevalences
 # and then plot them. 
 # Note that this plot will look the same under *any* of the marginal 
@@ -236,8 +240,8 @@ sp3 <- gammas_3
 # by only varying the intercept of the logistic model .
 sp3_05 <- sp3 %>% dplyr::mutate(
   pi = inv.logit(alpha_0[5]+alpha_1*(gammas_3$z1=="z11")+
-                     alpha_2*(gammas_3$z2=="z20")+alpha_3*(gammas_3$z2=="z21")+
-                     alpha_4*(gammas_3$z3=="z30")+alpha_5*(gammas_3$z3=="z31"))
+                   alpha_2*(gammas_3$z2=="z20")+alpha_3*(gammas_3$z2=="z21")+
+                   alpha_4*(gammas_3$z3=="z30")+alpha_5*(gammas_3$z3=="z31"))
 )
 
 # plot gamma_j vs s_j
@@ -311,8 +315,8 @@ res3_gg_n1_250 <- results_3 %>% filter(n_1 == 250 & sigma_e != .6) %>%
          hat_pi_RG, hat_pi_SRG, hat_pi_SRGM)
 
 res3_facet_n1_250 <- ggplot(data = res3_gg_n1_250, 
-                     mapping = aes(x = pi, y = rel_bias,
-                                   linetype = Method, color = Method)) +
+                            mapping = aes(x = pi, y = rel_bias,
+                                          linetype = Method, color = Method)) +
   geom_line() + 
   facet_grid(Sens ~ Spec, 
              labeller = labeller(.rows = label_both, .cols = label_both)) + 
@@ -356,16 +360,16 @@ sp4 <- gammas_4
 # by only varying the intercept of the logistic model .
 sp4_05 <- sp4 %>% dplyr::mutate(
   pi = inv.logit(nu_0[5] + nu_1*(gammas_4$z1 == "z11") +
-                     nu_2 * (gammas_4$z2 == "z20") + nu_3 * (gammas_4$z2 == "z21") +
-                     nu_4 * (gammas_4$z3 == "z30") + nu_5 * (gammas_4$z3 == "z31") +
-                     nu_6 * (gammas_4$z4 == "z41"))
+                   nu_2 * (gammas_4$z2 == "z20") + nu_3 * (gammas_4$z2 == "z21") +
+                   nu_4 * (gammas_4$z3 == "z30") + nu_5 * (gammas_4$z3 == "z31") +
+                   nu_6 * (gammas_4$z4 == "z41"))
 )
 
 
 # plot gamma_j vs s_j
 scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sampling_prob)) + 
   geom_jitter(aes(size=pi), alpha = .6, 
-             color = "black", width = .001) + 
+              color = "black", width = .001) + 
   labs(size = "Prevalence") + 
   geom_abline(colour = "grey50", size = 2) + 
   xlab(expression(paste(gamma[j]," (Stratum proportion)",sep=""))) + 
@@ -432,8 +436,8 @@ res4_gg_n1_250 <- results_4 %>% filter(n_1 == 250 & sigma_e != .6) %>%
          hat_pi_RG, hat_pi_SRG, hat_pi_SRGM)
 
 res4_facet_n1_250 <- ggplot(data = res4_gg_n1_250, 
-                     mapping = aes(x = pi, y = rel_bias,
-                                   linetype = Method, color = Method)) +
+                            mapping = aes(x = pi, y = rel_bias,
+                                          linetype = Method, color = Method)) +
   geom_line() + 
   facet_grid(Sens ~ Spec, 
              labeller = labeller(.rows = label_both, .cols = label_both)) + 
