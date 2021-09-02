@@ -96,6 +96,7 @@ ests_std <- function(sample, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std, 
 #' Corresponds to \hat \pi_{mst} in the manuscript. 
 #'
 #' @param sample A dataframe with data from the sample, including the stratum_props (gamma_js) which will be used in standardization
+#' @param stratum_props the stratum_props dataframe. note that the vars_std need to be the first columns from the left 
 #' @param sigma_e_hat Estimated sensitivity 
 #' @param sigma_p_hat Estimated specificity
 #' @param n_1 Sample size for sensitivity validation dataset
