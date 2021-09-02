@@ -42,3 +42,4 @@ sims/plot_var_edited.R
 extra_estimation_fns.R
 sims/figs/bias/old/
 sims/figs/var/old/
+editing_var_srgm.R
