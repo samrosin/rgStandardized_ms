@@ -1,0 +1,57 @@
+﻿sex_name,race_name,age_group,pat_count,stratum_prop
+Male,White or Caucasian,20-29,465796,0.059156428
+Male,White or Caucasian,30-39,438084,0.055636984
+Male,White or Caucasian,40-49,447924,0.056886671
+Male,White or Caucasian,50-59,471525,0.059884015
+Male,White or Caucasian,60-69,440092,0.055892002
+Male,White or Caucasian,70-79,294071,0.037347229
+Male,White or Caucasian,80-plus,124315,0.015788095
+Male,Black or African American,20-29,164747,0.020922988
+Male,Black or African American,30-39,128059,0.016263585
+Male,Black or African American,40-49,140900,0.017894402
+Male,Black or African American,50-59,132657,0.016847535
+Male,Black or African American,60-69,103135,0.013098219
+Male,Black or African American,70-79,53918,0.006847625
+Male,Black or African American,80-plus,22232,0.00282348
+Male,Asian,20-29,23797,0.003022236
+Male,Asian,30-39,30129,0.003826405
+Male,Asian,40-49,24934,0.003166636
+Male,Asian,50-59,14426,0.001832112
+Male,Asian,60-69,8507,0.001080395
+Male,Asian,70-79,5581,0.000708791
+Male,Asian,80-plus,2573,0.000326773
+Male,Other,20-29,65560,0.008326167
+Male,Other,30-39,51154,0.006496595
+Male,Other,40-49,49009,0.006224178
+Male,Other,50-59,37000,0.004699027
+Male,Other,60-69,16280,0.002067572
+Male,Other,70-79,6947,0.000882274
+Male,Other,80-plus,2016,0.000256033
+Female,White or Caucasian,20-29,436880,0.055484075
+Female,White or Caucasian,30-39,445324,0.056556469
+Female,White or Caucasian,40-49,454699,0.057747101
+Female,White or Caucasian,50-59,501053,0.063634093
+Female,White or Caucasian,60-69,487725,0.061941427
+Female,White or Caucasian,70-79,352024,0.044707302
+Female,White or Caucasian,80-plus,187789,0.023849339
+Female,Black or African American,20-29,160686,0.020407238
+Female,Black or African American,30-39,165113,0.02096947
+Female,Black or African American,40-49,156771,0.01991003
+Female,Black or African American,50-59,156758,0.019908379
+Female,Black or African American,60-69,141114,0.01792158
+Female,Black or African American,70-79,77384,0.009827824
+Female,Black or African American,80-plus,36837,0.004678326
+Female,Asian,20-29,21656,0.002750328
+Female,Asian,30-39,33003,0.004191405
+Female,Asian,40-49,26055,0.003309004
+Female,Asian,50-59,17312,0.002198636
+Female,Asian,60-69,12038,0.001528835
+Female,Asian,70-79,7311,0.000928502
+Female,Asian,80-plus,3437,0.000436501
+Female,Other,20-29,61796,0.007848137
+Female,Other,30-39,53781,0.006830226
+Female,Other,40-49,50864,0.006459765
+Female,Other,50-59,29626,0.003762523
+Female,Other,60-69,19232,0.002442478
+Female,Other,70-79,8766,0.001113288
+Female,Other,80-plus,3569,0.000453266

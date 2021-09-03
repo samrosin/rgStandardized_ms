@@ -1,0 +1,293 @@
+---
+title: "Estimating Seroprevalence of SARS-CoV-2"
+author: "Samuel Rosin"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document: default
+  rmarkdown::github_document: default
+---
+
+This reanalysis of the ScreenNC study accompanies the manuscript "Estimating Seroprevalence of SARS-CoV-2" by Samuel Rosin, Bonnie E. Shook-Sa, Stephen R. Cole, and Michael G. Hudgens. ScreenNC initially studied COVID-19 asymptomatic patients who sought medical care unrelated to COVID-19 at any of 11 outpatient clinical sites associated with the UNC Health Network and emergency room sites between April 28 and June 19, 2020. A blood draw was taken from each patient and tested for the presence of antibodies to SARS-CoV-2. This serological study estimated the prevalence of antibodies for SARS-CoV-2 in the study sample and among target populations.
+
+The initial analysis was published in the paper ["SARS-CoV-2 Seroprevalence Among a Southern U.S. Population Indicates Limited Asymptomatic Spread under Physical Distancing Measures"](https://mbio.asm.org/content/11/5/e02426-20). Extra detail about ScreenNC and the associated datasets can be found in that paper and its [supplementary information and code](https://bitbucket.org/dittmerlab/public_screen_nc/src/public/). The serology and stratum proportion data in this directory were derived from the data at the linked supplementary site. 
+
+```{r setup, warning = FALSE, include = FALSE, message = FALSE}
+# load libraries and files of helper functions, set global variables and options, etc.
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(here)
+library(testit)
+library(table1)
+library(lubridate)
+library(knitr)
+set.seed(2021) # set random seed so procedures are replicable
+
+other_races <- c("American Indian or Alaska Native", 
+                 "Native Hawaiian or Other Pacific Islander", "Other Race", 
+                 "Other/Hispanic", "Patient Refused", "Unknown") # names of races grouped into 'Other Race' 
+kable_format <- "pandoc" # format used for kable 
+vars_std <- c("sex_name", "race_name","age_group") # variables to standardize over
+vars_table1 <- c("sex_name", "race_name", "age_group") # variables to include in table 1
+
+# source files of helper functions
+source(here::here("descriptive_fns.R")) 
+source(here::here("estimation_fns.R"))
+```
+
+# Data Reading and Cleaning
+
+Some brief data cleaning is performed. 
+
+```{r fileread, warning=FALSE}
+snc1_filename <- here::here("serology_clean.csv")
+unc20_filename <- here::here("strataprops_unc.csv") ## updated july 8 2020
+nc_census19_filename <- here::here("strataprops_nc_clean.csv")
+
+###### test that the data have not changed
+snc1_md5sum <- "0e39182f504ce52a49c49f22634a94fd" 
+unc20_md5sum <-  "cac70f7b97e06b54cfd6a513f8c1a471" 
+nc_census19_md5sum <- "d8c130a7c4e7adff531e73defc7e42cf"
+
+assert("The ScreenNC1 data are unchanged", 
+       {tools::md5sum(snc1_filename) == snc1_md5sum})
+assert("The UNC Hospitals 2020 data are unchanged", 
+       {tools::md5sum(unc20_filename) == unc20_md5sum})
+assert("The NC ACS (Census) 2019 data are unchanged", 
+       {tools::md5sum(nc_census19_filename) == nc_census19_md5sum})
+
+snc1_raw <- read.csv(snc1_filename, header = T, 
+                     na.strings = c("","NA"), fileEncoding = "UTF-8-BOM") 
+unc20_raw <- read.csv(unc20_filename, header = T, 
+                      na.strings = c("","NA"), fileEncoding = "UTF-8-BOM")
+nc_census19 <- read.csv(nc_census19_filename, header = T)
+
+age_grp_cuts <- c(18, 20, 30, 40, 50, 60, 70, 80, Inf) #how to bucket/discretize age 
+
+snc1_final <- format_snc(snc1_raw, age_grp_cuts)
+unc20_final <- format_unc(unc20_raw)
+
+# run some confidence checks to ensure that ScreenNC and UNC 
+# target population datasets have expected formatting.
+# this function returns warnings if there are formatting inconsistencies. 
+confidence_checks(snc1_final, unc20_final) 
+levels(snc1_final$age_group) <- levels(unc20_final$age_group)
+```
+
+After cleaning, the datasets look as follows:
+
+```{r show-data}
+kable(head(snc1_final, 2), caption="First two rows of ScreenNC dataset", 
+      format = kable_format, row.names = FALSE)
+
+kable(head(unc20_final, 2), caption="First two rows of UNC target population 
+      dataset", format = kable_format, row.names = FALSE)
+
+kable(head(nc_census19, 2), caption="First two rows of NC Census 2019 
+      target population dataset", format = kable_format, row.names=FALSE)
+```
+
+The columns are mostly self-explanatory. ABNORMAL_YN is whether the serologic test result was positive (Y) or negative (N). In the UNC population data, pat_count represents the number of patients that match that row's combination of demographics. For instance, the first row of the 2020 file indicates that the count of patients with sex `r unc20_final[1,]$sex_name`, race `r unc20_final[1,]$race_name`, and in age group `r unc20_final[1,]$age_group` in the UNC Hospitals population is `r unc20_final[1,]$pat_count`. stratum_prop is the proportion of the population made up by a demographic group, where the population is not all persons in NC but the union of all demographic groups. 
+
+
+# Comparing the ScreenNC Cohort to the UNC Hospitals Population {#table1}
+
+For the demographics of sex (identified as binary male or female) and race, we compare the distributions in the ScreenNC sample to the UNC Hospitals populations in 2020 and 2019. For the purposes of displaying summary statistics, we group the following identified races into "Other": `r other_races`. 
+
+```{r table1}
+# format data for inclusion in table1
+snc1_table1 <- format_table1(snc1_final, "ScreenNC", vars_table1)
+unc20.table1 <- format_table1(unc20_final, "UNC 2020", vars_table1)
+
+#combine all the relevant data for table1
+dat_table1 <- label_table1(rbind(snc1_table1, unc20.table1))
+
+#display table1 in-line
+```
+
+`r table1(~ sex_name + race_name | cohort, data = dat_table1, overall = FALSE)`
+
+Women may be slightly overrepresented in ScreenNC compared to men. White patients are overrepresented in ScreenNC, while Black patients, patients in our Other Race bucket, and patients who refused to give their race or whose race is unknown are all underrepresented.  We filter 18 and 19-year-old patients out of the ScreenNC sample before comparing age distributions because UNC Hospitals population data are not presently available for these patients.
+
+
+```{r age-table1}
+snc1_agefilter <- snc1_final %>% dplyr::filter(age_group != "18-19")
+snc1_agefilter$age_group <- droplevels(snc1_agefilter$age_group)
+unc20.table1$age_group <- droplevels(unc20.table1$age_group)
+
+snc1_table1_agefilter <- format_table1(snc1_agefilter, 
+                    "ScreenNC filtered Age 20+", vars_table1)
+
+#combine all the relevant data for table1 and display inline
+dat_table1_agefilter <- label_table1(rbind(snc1_table1_agefilter, unc20.table1))
+```
+
+`r table1(~ age_group | cohort, data = dat_table1_agefilter, overall = FALSE)`
+
+ScreenNC has fewer of the oldest patients (ages 60+) and more younger patients than the UNC Hospitals populations. This may be because these patients were on the strictest stay-at-home orders. 
+
+The UNC lab that performed the assays for ScreenNC also performed validation studies to assess the sensitivity $\sigma_e$ and specificity $\sigma_p$ of the Abbott Architect IgG assay. The sensitivity estimate was $\hat \sigma_e=40/40=100\%$ (91.2%, 100%) and the specificity estimate was $\hat \sigma_p=274/277=98.9\%$ (96.9%, 99.8%), where the 95% confidence intervals are exact Clopper-Pearson intervals. Under these assumptions, note that we expect a sample where no one has antibodies to still show, on average, 1.1% of participants with a positive test results. 
+
+# Seroprevalence estimation, adjusting for sensitivity and specificity  {#rogangladen}
+Having made our sensitivity and specificity assumptions, we now estimate the seroprevalence of IgG antibodies for SARS-CoV2 for the ScreenNC study. We adjust for assay sensitivity and specificity using the method of [Rogan and Gladen (1978)](https://bit.ly/2zo1vUA). A 95% Wald-type confidence interval is estimated using the variance estimator described in Section 2.1. 
+
+```{r rg-ests}
+# Rogan-Gladen estimates rely on hard-coded validation data 
+# and the ScreenNC results
+
+# sensitivity data
+n_1 <- 40 #number of people confirmed positive for SARS-CoV-2 antibodies
+sum_x_delta1 <- 40 #number of people the Abbott assay 
+                   # evaluated as positive (true positives)
+sigma_e_hat <- sum_x_delta1 / n_1 # sensitivity estimate
+
+# sensitivity data
+n_2 <- 277 # number of people confirmed negative for antibodies 
+sum_x_delta2 <- 3 # number of people the Abbott assay 
+                  # evaluated as positive instead (false positives)
+sigma_p_hat <- 1 - (sum_x_delta2 / n_2) #sensitivity estimate
+
+# ScreenNC main study data
+n_3 <- nrow(snc1_final) #number of tests
+sum_x_delta3 <- nrow(snc1_final[snc1_final$ABNORMAL_YN == "Y",]) # number positive
+rho_hat <- sum_x_delta3 / n_3
+
+# rg_ests is a vector containing the Rogan-Gladen point and variance estimates 
+rg_ests <- ests_rg(rho_hat, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, 
+                   variance = TRUE) 
+est_rg <- rg_ests[1]
+ASE_rg <- sqrt(rg_ests[2])
+ci_lower_rg <- max(0, est_rg - qnorm(.975) * ASE_rg)
+ci_upper_rg <- min(1, est_rg + qnorm(.975) * ASE_rg)
+```
+
+There are `r nrow(snc1_final)` patients who had assays taken, the first on `r min(snc1_final$encounter_date)` and the most recent on `r max(snc1_final$encounter_date)`. Of these, `r nrow(snc1_final[snc1_final$ABNORMAL_YN == "Y",])` tested positive and `r nrow(snc1_final[snc1_final$ABNORMAL_YN == "N",])` tested negative, for an unadjusted seroprevalence rate of `r pct(nrow(snc1_final[snc1_final$ABNORMAL_YN == "Y",]) / nrow(snc1_final))`.
+
+Once adjusted for sensitivity and specificity, our point estimate of seroprevalence in the sample is `r pct(est_rg)`. The 95% confidence interval for sample seroprevalence is (`r pct(ci_lower_rg)`,`r pct(ci_upper_rg)`). In other words, if our assumptions about sensitivity and specificity are correct, we can state with a confidence level of 95% that the true seroprevalence in the ScreenNC sample lies within this interval. 
+
+# Seroprevalence estimation among the target population of UNC Hospitals patients
+
+There are significant demographic differences between the sample in ScreenNC and the target population of UNC Hospitals patients. It is also well-known in general that patients in different demographic groups have differential chances of contracting SARS-CoV-2. As such, we estimate the prevalence of antibodies in each of the UNC Hospitals populations.
+
+We standardize over the demographic variables of `r vars_std` to estimate what the prevalence of SARS-CoV-2 IgG antibodies was among the UNC Hospitals populations, following the methodology of Section 2.2. 
+
+```{r standardization, warning = FALSE}
+# create dataframe for ScreenNC sample containing a 0/1 test result variable
+dat_samp <- snc1_final %>% dplyr::mutate(test = ifelse(ABNORMAL_YN == "Y", 1 ,
+                    ifelse(ABNORMAL_YN == "N", 0 , NA))) %>% # Y is 1, N is 0, else NA
+                    dplyr::select(all_of(vars_std), "test") %>% 
+                    dplyr::filter(age_group != "18-19") %>% 
+                    dplyr::rename(x = test) %>% 
+                    droplevels()
+
+# target population dataset. make_tgt_pop recomputes the pat_count 
+# for the standardization variables, then includes a column called stratum_prop
+tgt_unc <- droplevels(make_tgt_pop(unc20_final, vars_std)) # nrow = 70
+
+# use the restriction strategy to account for non-positivity 
+strata_samp_unc <- unique(dat_samp[, c(vars_std)]) # strata in the sample; nrow = 67
+strata_tgt_unc <- unique(tgt_unc[, c(vars_std)])  # strata in the target pop; nrow = 70
+# difference between the above two are the strata not in the sample; nrow = 3
+strata_missing_unc <- setdiff(strata_tgt_unc, strata_samp_unc)  
+
+# create a new target dataset that only includes the restricted population, 
+# i.e. excludes the strata missing in the sample
+tgt_unc_restricted <- dplyr::anti_join(tgt_unc, 
+                          strata_missing_unc, by = vars_std)
+tgt_unc_restricted$stratum_prop <- 
+  tgt_unc_restricted$pat_count / sum(tgt_unc_restricted$pat_count)
+
+# include column for stratum proportion/gamma in the sample dataset
+dat_samp_tgt_unc <- dplyr::left_join(dat_samp, tgt_unc_restricted, by = vars_std) %>% 
+      dplyr::select(-c(pat_count))
+
+# standardization estimates 
+std_ests <- ests_std(dat_samp_tgt_unc, sigma_e_hat, sigma_p_hat, 
+                          n_1, n_2, n_3, vars_std, variance = TRUE)
+est_std <- std_ests[1]
+ASE_std <- sqrt(std_ests[2])
+ci_lower_std <- max(0, est_std - qnorm(.975) * ASE_std)
+ci_upper_std <- min(1, est_std + qnorm(.975) * ASE_std)
+
+# use the logistic regression strategy, which does not require any restriction
+dat_samp_tgt_unc_model <- dplyr::left_join(dat_samp, tgt_unc, by = vars_std) %>% 
+  dplyr::select(-c(pat_count)) %>% 
+  droplevels()
+
+model_ests <- ests_std_model(dat_samp_tgt_unc_model, tgt_unc, sigma_e_hat, 
+                sigma_p_hat, n_1, n_2, n_3, vars_std,
+                mod_formula = formula("x ~ sex_name + race_name + age_group"),
+                variance = TRUE)
+est_std_model <- model_ests[1]
+ASE_std_model <- sqrt(model_ests[2])
+ci_lower_std_model <- max(0,est_std_model - qnorm(.975) * ASE_std_model)
+ci_upper_std_model <- min(1,est_std_model + qnorm(.975) * ASE_std_model)
+```
+
+The following `r nrow(strata_missing_unc)` of the $56 = 7 \times 4 \times 2$ strata did not have sample data, so the restriction strategy was used to recompute a target dataset without their inclusion: `r kable(strata_missing_unc)`
+
+Once standardized for the aforemationed demographic variables, our point estimate of seroprevalence is `r pct(est_std)`. The 95% confidence interval for seroprevalence is (`r pct(ci_lower_std)`,`r pct(ci_upper_std)`). Again, all estimates are reported with lower bounds of 0. Notice that the estimates are slightly higher, likely due to the higher estimated prevalences in groups that were undersampled. 
+
+The logistic regression model $$ logit(\rho_j) = \beta_1+\beta_2SexMale_j + \beta_3RaceBlack_j + \beta_4RaceOther_j + \beta_5RaceUnknown_j + \beta_6RaceWhite_j + \\ \beta_7Age30to39_j + \beta_8Age40to49_j + \beta9Age50to59_j + \beta10Age60to69_j + \beta_11Age70to79_j + \beta_12Age80Plus_j $$ is also used to estimate the mismeasured stratum-specific prevalence in each stratum $j$. With this model-based standardization method, the point estimate is  is `r pct(est_std_model)` with a 95% CI of (`r pct(ci_lower_std_model)`,`r pct(ci_upper_std_model)`). 
+
+Note that the logistic regression function glm() may return a warning: "glm.fit: fitted probabilities numerically 0 or 1 occurred". This is expected behavior which is due to the relatively low number of positive tests in the dataset, such that there exist many strata with zero positive tests even though no interaction terms were fit. For instance, `r sum(dat_samp_tgt_unc_model[dat_samp_tgt_unc_model$race_name=="Asian",]$x)` of the `r nrow(dat_samp_tgt_unc_model[dat_samp_tgt_unc_model$race_name=="Asian",])` Asian volunteers were seropositive. Different model specifications can be fit that do not have such fitted probabilities of 0, but these alternative specifications have very similar results ( CI bounds within 0.05 percentage points of the given specification).
+
+
+# Seroprevalence among the target population of all NC adults 
+
+```{r standardization-census, warning = FALSE}
+# create a dataset for the sample pop with a 0/1 test result variable
+dat_samp_nc <- dat_samp
+
+# replace patient refused with other
+dat_samp_nc$race_name[dat_samp_nc$race_name == "Patient Refused or Unknown"] <- "Other"
+
+# use the restriction strategy to account for non-positivity 
+strata_samp_nc <- unique(dat_samp_nc[, c(vars_std)]) #nrow = 54
+strata_tgt_nc <- unique(nc_census19[, c(vars_std)])  #nrow = 56
+strata_missing_nc <- setdiff(strata_tgt_nc, strata_samp_nc) #missing = 2
+
+# create a new target dataset that only includes the restricted population, 
+# i.e. excludes the strata missing in the sample
+strata_tgt_nc_restricted <- dplyr::anti_join(nc_census19, 
+                          strata_missing_nc, by = vars_std) 
+strata_tgt_nc_restricted$stratum_prop <- strata_tgt_nc_restricted$pat_count / 
+  sum(strata_tgt_nc_restricted$pat_count)
+
+#include column for stratum proportion
+dat_samp_tgt_nc <- dplyr::left_join(dat_samp_nc, strata_tgt_nc_restricted, 
+                                    by = vars_std) %>% 
+  dplyr::select(-c(pat_count)) %>% 
+  droplevels()
+
+# make the standardization estimates 
+ests_std_nc <- ests_std(dat_samp_tgt_nc, sigma_e_hat, sigma_p_hat, 
+                             n_1, n_2, n_3, vars_std, variance = TRUE)
+est_std_nc <- ests_std_nc[1]
+ASE_std_nc <- sqrt(ests_std_nc[2])
+ci_lower_std_nc <- max(0, est_std_nc - qnorm(.975) * ASE_std_nc)
+ci_upper_std_nc <- min(1, est_std_nc + qnorm(.975) * ASE_std_nc)
+
+# make the standardization estimates  - logistic regression
+dat_samp_nc_model <- dplyr::left_join(dat_samp_nc, nc_census19, 
+                                      by = vars_std) %>% 
+  dplyr::select(-c(pat_count)) %>%
+  droplevels()
+
+# this model 
+ests_std_nc_model <- ests_std_model(dat_samp_nc_model, nc_census19, 
+                        sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, vars_std,
+                        mod_formula = formula("x ~ sex_name + race_name + age_group"),
+                        variance = TRUE)
+est_std_nc_model <- ests_std_nc_model[1]
+ASE_std_nc_model <- sqrt(ests_std_nc_model[2])
+ci_lower_std_nc_model <- max(0, est_std_nc_model - qnorm(.975) * ASE_std_nc_model)
+ci_upper_std_nc_model <- min(1, est_std_nc_model + qnorm(.975) * ASE_std_nc_model)
+```
+
+In this section we use demographic data on the total population of North Carolina from the 2019 American Community Survey. We standardize on the initial demographic variables of race, sex, and age group. There are no data in the ACS on race refused or unknown, so that race is grouped under Other and there are now a total of $56 = 7 \times 4 \times 2$ strata. Of these, the following `r nrow(strata_missing_nc)` strata did not have sample data, so the target dataset was recomputed without their inclusion: `r kable(strata_missing_nc)`
+
+A standardized point estimate of seroprevalence was `r pct(est_std_nc)`, and the 95% confidence interval was (`r pct(ci_lower_std_nc)`,`r pct(ci_upper_std_nc)`). Estimates are slightly higher but very similar to those standardized to the UNC Hospitals population, suggesting that the UNC Hospitals population may not be that different from the census population.
+
+The same logistic regression model (though by necessity with no term for Race:Refused) is used. With this model-based standardization method, the point estimate is  is `r pct(est_std_nc_model)` with a 95% CI of (`r pct(ci_lower_std_nc_model)`,`r pct(ci_upper_std_nc_model)`).
+

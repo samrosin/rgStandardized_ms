@@ -1,0 +1,321 @@
+﻿count_start_date,count_end_date,sex_name,race_name,ethnic_group_name,age_group,pat_count
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Hispanic or Latino,40_49,1
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Hispanic or Latino,50_59,1
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Not Hispanic or Latino,20_29,7
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Not Hispanic or Latino,30_39,9
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Not Hispanic or Latino,40_49,8
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Not Hispanic or Latino,50_59,9
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Not Hispanic or Latino,60_69,8
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Not Hispanic or Latino,70_79,5
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Not Hispanic or Latino,80_plus,7
+2/15/20,6/15/20,Female,American Indian or Alaska Native,Unknown,60_69,2
+2/15/20,6/15/20,Female,Asian,Hispanic or Latino,20_29,2
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,0_9,19
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,10_19,12
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,20_29,36
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,30_39,57
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,40_49,52
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,50_59,49
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,60_69,51
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,70_79,30
+2/15/20,6/15/20,Female,Asian,Not Hispanic or Latino,80_plus,15
+2/15/20,6/15/20,Female,Asian,Unknown,0_9,1
+2/15/20,6/15/20,Female,Asian,Unknown,20_29,3
+2/15/20,6/15/20,Female,Asian,Unknown,30_39,2
+2/15/20,6/15/20,Female,Asian,Unknown,40_49,2
+2/15/20,6/15/20,Female,Asian,Unknown,50_59,3
+2/15/20,6/15/20,Female,Asian,Unknown,60_69,2
+2/15/20,6/15/20,Female,Asian,Unknown,70_79,2
+2/15/20,6/15/20,Female,Black or African American,Hispanic or Latino,0_9,4
+2/15/20,6/15/20,Female,Black or African American,Hispanic or Latino,10_19,2
+2/15/20,6/15/20,Female,Black or African American,Hispanic or Latino,20_29,4
+2/15/20,6/15/20,Female,Black or African American,Hispanic or Latino,30_39,6
+2/15/20,6/15/20,Female,Black or African American,Hispanic or Latino,40_49,6
+2/15/20,6/15/20,Female,Black or African American,Hispanic or Latino,50_59,2
+2/15/20,6/15/20,Female,Black or African American,Hispanic or Latino,60_69,4
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,0_9,96
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,10_19,114
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,20_29,382
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,30_39,478
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,40_49,593
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,50_59,772
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,60_69,660
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,70_79,440
+2/15/20,6/15/20,Female,Black or African American,Not Hispanic or Latino,80_plus,190
+2/15/20,6/15/20,Female,Black or African American,Patient Refused,0_9,1
+2/15/20,6/15/20,Female,Black or African American,Patient Refused,30_39,1
+2/15/20,6/15/20,Female,Black or African American,Patient Refused,40_49,1
+2/15/20,6/15/20,Female,Black or African American,Patient Refused,50_59,2
+2/15/20,6/15/20,Female,Black or African American,Patient Refused,60_69,1
+2/15/20,6/15/20,Female,Black or African American,Patient Refused,70_79,1
+2/15/20,6/15/20,Female,Black or African American,Unknown,0_9,3
+2/15/20,6/15/20,Female,Black or African American,Unknown,10_19,3
+2/15/20,6/15/20,Female,Black or African American,Unknown,20_29,10
+2/15/20,6/15/20,Female,Black or African American,Unknown,30_39,13
+2/15/20,6/15/20,Female,Black or African American,Unknown,40_49,16
+2/15/20,6/15/20,Female,Black or African American,Unknown,50_59,7
+2/15/20,6/15/20,Female,Black or African American,Unknown,60_69,7
+2/15/20,6/15/20,Female,Black or African American,Unknown,70_79,4
+2/15/20,6/15/20,Female,Black or African American,Unknown,80_plus,4
+2/15/20,6/15/20,Female,Native Hawaiian or Other Pacific Islander,Hispanic or Latino,30_39,1
+2/15/20,6/15/20,Female,Native Hawaiian or Other Pacific Islander,Hispanic or Latino,70_79,1
+2/15/20,6/15/20,Female,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,40_49,2
+2/15/20,6/15/20,Female,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,60_69,2
+2/15/20,6/15/20,Female,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,80_plus,1
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,0_9,28
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,10_19,36
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,20_29,83
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,30_39,102
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,40_49,116
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,50_59,116
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,60_69,51
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,70_79,28
+2/15/20,6/15/20,Female,Other Race,Hispanic or Latino,80_plus,10
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,0_9,13
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,10_19,19
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,20_29,32
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,30_39,35
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,40_49,39
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,50_59,43
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,60_69,35
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,70_79,16
+2/15/20,6/15/20,Female,Other Race,Not Hispanic or Latino,80_plus,4
+2/15/20,6/15/20,Female,Other Race,Patient Refused,50_59,1
+2/15/20,6/15/20,Female,Other Race,Patient Refused,70_79,2
+2/15/20,6/15/20,Female,Other Race,Unknown,0_9,4
+2/15/20,6/15/20,Female,Other Race,Unknown,10_19,2
+2/15/20,6/15/20,Female,Other Race,Unknown,20_29,2
+2/15/20,6/15/20,Female,Other Race,Unknown,30_39,4
+2/15/20,6/15/20,Female,Other Race,Unknown,40_49,6
+2/15/20,6/15/20,Female,Other Race,Unknown,50_59,4
+2/15/20,6/15/20,Female,Other Race,Unknown,60_69,4
+2/15/20,6/15/20,Female,Other Race,Unknown,70_79,1
+2/15/20,6/15/20,Female,Patient Refused,Not Hispanic or Latino,0_9,1
+2/15/20,6/15/20,Female,Patient Refused,Not Hispanic or Latino,30_39,1
+2/15/20,6/15/20,Female,Patient Refused,Not Hispanic or Latino,40_49,2
+2/15/20,6/15/20,Female,Patient Refused,Not Hispanic or Latino,50_59,2
+2/15/20,6/15/20,Female,Patient Refused,Not Hispanic or Latino,60_69,1
+2/15/20,6/15/20,Female,Patient Refused,Not Hispanic or Latino,70_79,1
+2/15/20,6/15/20,Female,Patient Refused,Not Hispanic or Latino,80_plus,1
+2/15/20,6/15/20,Female,Patient Refused,Patient Refused,0_9,2
+2/15/20,6/15/20,Female,Patient Refused,Patient Refused,10_19,1
+2/15/20,6/15/20,Female,Patient Refused,Patient Refused,30_39,1
+2/15/20,6/15/20,Female,Patient Refused,Patient Refused,40_49,3
+2/15/20,6/15/20,Female,Patient Refused,Patient Refused,50_59,3
+2/15/20,6/15/20,Female,Patient Refused,Patient Refused,80_plus,1
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,0_9,1
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,10_19,2
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,20_29,4
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,30_39,4
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,40_49,6
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,50_59,2
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,70_79,2
+2/15/20,6/15/20,Female,Unknown,Hispanic or Latino,80_plus,1
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,0_9,1
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,10_19,10
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,20_29,8
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,30_39,11
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,40_49,9
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,50_59,10
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,60_69,4
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,70_79,6
+2/15/20,6/15/20,Female,Unknown,Not Hispanic or Latino,80_plus,6
+2/15/20,6/15/20,Female,Unknown,Patient Refused,60_69,1
+2/15/20,6/15/20,Female,Unknown,Unknown,0_9,4
+2/15/20,6/15/20,Female,Unknown,Unknown,10_19,12
+2/15/20,6/15/20,Female,Unknown,Unknown,20_29,40
+2/15/20,6/15/20,Female,Unknown,Unknown,30_39,51
+2/15/20,6/15/20,Female,Unknown,Unknown,40_49,27
+2/15/20,6/15/20,Female,Unknown,Unknown,50_59,36
+2/15/20,6/15/20,Female,Unknown,Unknown,60_69,27
+2/15/20,6/15/20,Female,Unknown,Unknown,70_79,15
+2/15/20,6/15/20,Female,Unknown,Unknown,80_plus,17
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,0_9,3
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,10_19,8
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,20_29,32
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,30_39,23
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,40_49,31
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,50_59,21
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,60_69,25
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,70_79,15
+2/15/20,6/15/20,Female,White or Caucasian,Hispanic or Latino,80_plus,6
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,0_9,230
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,10_19,326
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,20_29,833
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,30_39,1070
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,40_49,1212
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,50_59,1546
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,60_69,1770
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,70_79,1456
+2/15/20,6/15/20,Female,White or Caucasian,Not Hispanic or Latino,80_plus,735
+2/15/20,6/15/20,Female,White or Caucasian,Patient Refused,20_29,2
+2/15/20,6/15/20,Female,White or Caucasian,Patient Refused,30_39,3
+2/15/20,6/15/20,Female,White or Caucasian,Patient Refused,50_59,2
+2/15/20,6/15/20,Female,White or Caucasian,Patient Refused,70_79,2
+2/15/20,6/15/20,Female,White or Caucasian,Patient Refused,80_plus,3
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,0_9,7
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,10_19,12
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,20_29,21
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,30_39,18
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,40_49,27
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,50_59,21
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,60_69,17
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,70_79,13
+2/15/20,6/15/20,Female,White or Caucasian,Unknown,80_plus,11
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Hispanic or Latino,10_19,1
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Hispanic or Latino,20_29,1
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Hispanic or Latino,30_39,1
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,0_9,3
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,10_19,2
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,20_29,1
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,30_39,2
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,40_49,9
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,50_59,2
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,60_69,8
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,70_79,2
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Not Hispanic or Latino,80_plus,2
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Patient Refused,40_49,1
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Unknown,40_49,1
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Unknown,50_59,1
+2/15/20,6/15/20,Male,American Indian or Alaska Native,Unknown,60_69,1
+2/15/20,6/15/20,Male,Asian,Hispanic or Latino,30_39,1
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,0_9,9
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,10_19,10
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,20_29,15
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,30_39,25
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,40_49,20
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,50_59,32
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,60_69,29
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,70_79,21
+2/15/20,6/15/20,Male,Asian,Not Hispanic or Latino,80_plus,5
+2/15/20,6/15/20,Male,Asian,Unknown,50_59,2
+2/15/20,6/15/20,Male,Asian,Unknown,60_69,2
+2/15/20,6/15/20,Male,Asian,Unknown,70_79,2
+2/15/20,6/15/20,Male,Black or African American,Hispanic or Latino,0_9,1
+2/15/20,6/15/20,Male,Black or African American,Hispanic or Latino,10_19,1
+2/15/20,6/15/20,Male,Black or African American,Hispanic or Latino,20_29,2
+2/15/20,6/15/20,Male,Black or African American,Hispanic or Latino,30_39,1
+2/15/20,6/15/20,Male,Black or African American,Hispanic or Latino,60_69,1
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,0_9,101
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,10_19,64
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,20_29,89
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,30_39,132
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,40_49,232
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,50_59,349
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,60_69,374
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,70_79,209
+2/15/20,6/15/20,Male,Black or African American,Not Hispanic or Latino,80_plus,73
+2/15/20,6/15/20,Male,Black or African American,Patient Refused,50_59,3
+2/15/20,6/15/20,Male,Black or African American,Patient Refused,70_79,2
+2/15/20,6/15/20,Male,Black or African American,Unknown,0_9,1
+2/15/20,6/15/20,Male,Black or African American,Unknown,10_19,3
+2/15/20,6/15/20,Male,Black or African American,Unknown,20_29,3
+2/15/20,6/15/20,Male,Black or African American,Unknown,30_39,4
+2/15/20,6/15/20,Male,Black or African American,Unknown,40_49,8
+2/15/20,6/15/20,Male,Black or African American,Unknown,50_59,7
+2/15/20,6/15/20,Male,Black or African American,Unknown,60_69,11
+2/15/20,6/15/20,Male,Black or African American,Unknown,70_79,2
+2/15/20,6/15/20,Male,Black or African American,Unknown,80_plus,3
+2/15/20,6/15/20,Male,Native Hawaiian or Other Pacific Islander,Hispanic or Latino,60_69,1
+2/15/20,6/15/20,Male,Native Hawaiian or Other Pacific Islander,Hispanic or Latino,70_79,1
+2/15/20,6/15/20,Male,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,0_9,1
+2/15/20,6/15/20,Male,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,20_29,1
+2/15/20,6/15/20,Male,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,40_49,1
+2/15/20,6/15/20,Male,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,50_59,1
+2/15/20,6/15/20,Male,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,70_79,1
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,0_9,44
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,10_19,28
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,20_29,34
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,30_39,48
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,40_49,68
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,50_59,63
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,60_69,36
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,70_79,16
+2/15/20,6/15/20,Male,Other Race,Hispanic or Latino,80_plus,14
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,0_9,22
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,10_19,12
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,20_29,20
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,30_39,22
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,40_49,25
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,50_59,26
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,60_69,21
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,70_79,12
+2/15/20,6/15/20,Male,Other Race,Not Hispanic or Latino,80_plus,2
+2/15/20,6/15/20,Male,Other Race,Patient Refused,30_39,1
+2/15/20,6/15/20,Male,Other Race,Patient Refused,50_59,2
+2/15/20,6/15/20,Male,Other Race,Unknown,0_9,1
+2/15/20,6/15/20,Male,Other Race,Unknown,20_29,1
+2/15/20,6/15/20,Male,Other Race,Unknown,30_39,1
+2/15/20,6/15/20,Male,Other Race,Unknown,40_49,2
+2/15/20,6/15/20,Male,Other Race,Unknown,50_59,1
+2/15/20,6/15/20,Male,Other Race,Unknown,60_69,4
+2/15/20,6/15/20,Male,Other Race,Unknown,70_79,1
+2/15/20,6/15/20,Male,Patient Refused,Hispanic or Latino,50_59,1
+2/15/20,6/15/20,Male,Patient Refused,Not Hispanic or Latino,20_29,1
+2/15/20,6/15/20,Male,Patient Refused,Not Hispanic or Latino,30_39,1
+2/15/20,6/15/20,Male,Patient Refused,Not Hispanic or Latino,40_49,1
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,0_9,3
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,10_19,1
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,20_29,2
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,30_39,1
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,40_49,1
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,50_59,1
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,60_69,2
+2/15/20,6/15/20,Male,Patient Refused,Patient Refused,70_79,2
+2/15/20,6/15/20,Male,Patient Refused,Unknown,30_39,1
+2/15/20,6/15/20,Male,Unknown,Hispanic or Latino,0_9,1
+2/15/20,6/15/20,Male,Unknown,Hispanic or Latino,20_29,3
+2/15/20,6/15/20,Male,Unknown,Hispanic or Latino,40_49,5
+2/15/20,6/15/20,Male,Unknown,Hispanic or Latino,50_59,1
+2/15/20,6/15/20,Male,Unknown,Hispanic or Latino,60_69,1
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,0_9,5
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,10_19,3
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,20_29,7
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,30_39,11
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,40_49,8
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,50_59,13
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,60_69,18
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,70_79,7
+2/15/20,6/15/20,Male,Unknown,Not Hispanic or Latino,80_plus,2
+2/15/20,6/15/20,Male,Unknown,Patient Refused,0_9,1
+2/15/20,6/15/20,Male,Unknown,Unknown,0_9,14
+2/15/20,6/15/20,Male,Unknown,Unknown,10_19,7
+2/15/20,6/15/20,Male,Unknown,Unknown,20_29,16
+2/15/20,6/15/20,Male,Unknown,Unknown,30_39,33
+2/15/20,6/15/20,Male,Unknown,Unknown,40_49,31
+2/15/20,6/15/20,Male,Unknown,Unknown,50_59,21
+2/15/20,6/15/20,Male,Unknown,Unknown,60_69,31
+2/15/20,6/15/20,Male,Unknown,Unknown,70_79,10
+2/15/20,6/15/20,Male,Unknown,Unknown,80_plus,8
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,0_9,4
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,10_19,2
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,20_29,5
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,30_39,14
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,40_49,19
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,50_59,15
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,60_69,9
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,70_79,8
+2/15/20,6/15/20,Male,White or Caucasian,Hispanic or Latino,80_plus,3
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,0_9,265
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,10_19,251
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,20_29,346
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,30_39,560
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,40_49,761
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,50_59,971
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,60_69,1291
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,70_79,973
+2/15/20,6/15/20,Male,White or Caucasian,Not Hispanic or Latino,80_plus,494
+2/15/20,6/15/20,Male,White or Caucasian,Patient Refused,0_9,1
+2/15/20,6/15/20,Male,White or Caucasian,Patient Refused,40_49,1
+2/15/20,6/15/20,Male,White or Caucasian,Patient Refused,50_59,4
+2/15/20,6/15/20,Male,White or Caucasian,Patient Refused,60_69,2
+2/15/20,6/15/20,Male,White or Caucasian,Patient Refused,70_79,4
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,0_9,7
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,10_19,12
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,20_29,12
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,30_39,14
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,40_49,29
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,50_59,32
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,60_69,34
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,70_79,12
+2/15/20,6/15/20,Male,White or Caucasian,Unknown,80_plus,5

@@ -1,0 +1,3378 @@
+﻿age,sex_name,race_name,encounter_date,PROC_NAME,proc_code,ABNORMAL_YN
+70,Male,White or Caucasian,4/30/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+93,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+89,Female,White or Caucasian,5/24/20,COVID-19 PCR,LAB12019,N
+89,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+80,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+63,Female,Black or African American,5/15/20,COVID IGG,LAB19414,N
+82,Female,White or Caucasian,6/10/20,COVID-19 PCR,LAB12019,N
+82,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+83,Female,Black or African American,5/26/20,COVID IGG,LAB19414,N
+93,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+61,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+61,Female,Patient Refused,5/21/20,COVID IGG,LAB19414,Y
+62,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+77,Female,Black or African American,5/29/20,COVID-19 PCR,LAB12019,N
+77,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+59,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+84,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+85,Female,Black or African American,6/15/20,COVID IGG,LAB19414,N
+85,Female,Black or African American,6/15/20,COVID-19 PCR,LAB12019,N
+61,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+92,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+75,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+58,Female,Black or African American,4/29/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,4/22/20,COVID-19 PCR,LAB12019,N
+75,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+57,Male,Black or African American,4/29/20,COVID IGG,LAB19414,N
+57,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+75,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,5/31/20,COVID-19 PCR,LAB12019,N
+56,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+79,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+58,Male,Black or African American,5/20/20,COVID-19 PCR,LAB12019,N
+58,Male,Black or African American,5/20/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+54,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/15/20,COVID-19 PCR,LAB12019,N
+77,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+68,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+53,Male,Black or African American,6/3/20,COVID IGG,LAB19414,N
+73,Male,Black or African American,6/18/20,COVID IGG,LAB19414,N
+53,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+54,Male,Black or African American,5/12/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+72,Male,Black or African American,4/30/20,COVID-19 PCR,LAB12019,N
+72,Male,Black or African American,5/7/20,COVID-19 PCR,LAB12019,N
+72,Male,Black or African American,6/3/20,COVID-19 PCR,LAB12019,N
+72,Male,Black or African American,5/18/20,COVID IGG,LAB19414,N
+52,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+52,Male,Black or African American,6/10/20,COVID IGG,LAB19414,N
+52,Female,Black or African American,5/4/20,COVID-19 PCR,LAB12019,N
+52,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+64,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+64,Female,Black or African American,6/19/20,COVID-19 PCR,LAB12019,N
+91,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+91,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+50,Male,Black or African American,5/28/20,COVID-19 PCR,LAB12019,N
+50,Male,Black or African American,5/28/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+50,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+49,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/6/20,COVID-19 PCR,LAB12019,N
+75,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+48,Male,Black or African American,5/19/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/13/20,COVID-19 PCR,LAB12019,N
+70,Male,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+70,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+47,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+86,Male,Black or African American,6/8/20,COVID-19 PCR,LAB12019,N
+86,Male,Black or African American,6/8/20,COVID IGG,LAB19414,N
+47,Male,Black or African American,5/4/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,5/5/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+67,Male,Unknown,5/11/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+47,Male,Black or African American,5/19/20,COVID IGG,LAB19414,N
+47,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+69,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+67,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+46,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+69,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+67,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/6/20,COVID-19 PCR,LAB12019,N
+77,Male,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+77,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+61,Female,Black or African American,3/22/20,COVID-19 PCR,LAB12019,N
+61,Female,Black or African American,3/29/20,COVID-19 PCR,LAB12019,N
+70,Male,White or Caucasian,6/9/20,COVID-19 PCR,LAB12019,N
+70,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+71,Male,Black or African American,5/13/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+60,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+81,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/21/20,COVID-19 PCR,LAB12019,N
+71,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+80,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+44,Male,Black or African American,6/10/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+43,Male,Black or African American,6/3/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+49,Female,Black or African American,5/27/20,COVID-19 PCR,LAB12019,N
+43,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+76,Male,Black or African American,6/1/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+62,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,4/22/20,COVID-19 PCR,LAB12019,N
+59,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+44,Male,Black or African American,4/10/20,COVID-19 PCR,LAB12019,N
+44,Male,Black or African American,5/13/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+79,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,6/15/20,COVID-19 PCR,LAB12019,N
+54,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+60,Male,Black or African American,6/8/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+62,Female,Black or African American,4/6/20,COVID-19 PCR,LAB12019,N
+62,Female,Black or African American,5/22/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+65,Male,Unknown,5/22/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+40,Female,Black or African American,5/11/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,3/24/20,COVID-19 PCR,LAB12019,N
+56,Female,Black or African American,4/29/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+72,Male,Asian,5/6/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+60,Male,Unknown,6/9/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+65,Female,Unknown,6/16/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+39,Male,Black or African American,6/11/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+71,Female,Black or African American,6/15/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+68,Male,Black or African American,6/9/20,COVID-19 PCR,LAB12019,N
+68,Male,Black or African American,6/9/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+85,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/13/20,COVID-19 PCR,LAB12019,N
+56,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+69,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+62,Male,Unknown,5/22/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+78,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+58,Female,Black or African American,5/29/20,COVID IGG,LAB19414,Y
+68,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,4/8/20,COVID-19 PCR,LAB12019,N
+62,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+58,Female,Unknown,5/18/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+76,Male,Black or African American,5/23/20,COVID-19 PCR,LAB12019,N
+76,Male,Black or African American,6/2/20,COVID-19 PCR,LAB12019,N
+76,Male,Black or African American,6/2/20,COVID IGG,LAB19414,N
+35,Female,Black or African American,5/20/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,4/1/20,COVID-19 PCR,LAB12019,Y
+69,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+46,Female,Unknown,6/11/20,COVID IGG,LAB19414,N
+60,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+35,Female,Other Race,6/11/20,COVID IGG,LAB19414,N
+35,Female,Other Race,6/7/20,COVID-19 PCR,LAB12019,N
+35,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/12/20,COVID-19 PCR,LAB12019,N
+63,Male,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+63,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+86,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+64,Female,Black or African American,5/27/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,4/28/20,COVID IGG,LAB19414,N
+80,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/15/20,COVID-19 PCR,LAB12019,N
+34,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+34,Male,White or Caucasian,5/28/20,COVID-19 PCR,LAB12019,N
+34,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+59,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+55,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+43,Male,Asian,5/12/20,COVID IGG,LAB19414,N
+34,Male,Black or African American,4/29/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+71,Male,Asian,6/15/20,COVID-19 PCR,LAB12019,N
+71,Male,Asian,6/15/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+53,Female,Black or African American,5/19/20,COVID IGG,LAB19414,N
+62,Male,Black or African American,4/28/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+32,Male,Unknown,5/15/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+61,Male,Black or African American,6/17/20,COVID-19 PCR,LAB12019,N
+61,Male,Black or African American,5/28/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,5/5/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+47,Male,Black or African American,6/2/20,COVID IGG,LAB19414,N
+81,Female,Black or African American,6/13/20,COVID-19 PCR,LAB12019,N
+81,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+31,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,6/2/20,COVID-19 PCR,LAB12019,N
+77,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/25/20,COVID-19 PCR,LAB12019,N
+59,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/16/20,COVID-19 PCR,LAB12019,N
+64,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,3/19/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+53,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,3/27/20,COVID-19 PCR,LAB12019,N
+48,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+58,Female,Asian,6/4/20,COVID IGG,LAB19414,N
+40,Female,Asian,5/13/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+30,Female,Black or African American,4/2/20,COVID-19 PCR,LAB12019,N
+30,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+30,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+36,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/5/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+58,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/7/20,COVID-19 PCR,LAB12019,N
+72,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,6/1/20,COVID-19 PCR,LAB12019,N
+54,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+59,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+29,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+53,Female,Unknown,6/10/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,6/3/20,COVID-19 PCR,LAB12019,N
+65,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+71,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+36,Female,Asian,5/26/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/10/20,COVID-19 PCR,LAB12019,N
+73,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/17/20,COVID-19 PCR,LAB12019,N
+51,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+36,Male,Unknown,5/5/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+58,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,4/6/20,COVID-19 PCR,LAB12019,N
+54,Female,White or Caucasian,5/13/20,COVID-19 PCR,LAB12019,N
+34,Female,American Indian or Alaska Native,5/20/20,COVID-19 PCR,LAB12019,N
+34,Female,American Indian or Alaska Native,5/30/20,COVID-19 PCR,LAB12019,N
+34,Female,American Indian or Alaska Native,5/20/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/17/20,COVID-19 PCR,LAB12019,N
+53,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,4/29/20,COVID-19 PCR,LAB12019,N
+60,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+81,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+48,Female,Black or African American,6/17/20,COVID-19 PCR,LAB12019,N
+48,Female,Black or African American,4/29/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,3/26/20,COVID-19 PCR,LAB12019,N
+56,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+63,Male,Asian,5/20/20,COVID IGG,LAB19414,N
+69,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+69,Female,Black or African American,3/18/20,COVID-19 PCR,LAB12019,N
+31,Female,Unknown,5/18/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,4/30/20,COVID IGG,LAB19414,Y
+27,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/2/20,COVID-19 PCR,LAB12019,N
+31,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+34,Female,Black or African American,6/15/20,COVID-19 PCR,LAB12019,N
+34,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+64,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+27,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/4/20,COVID-19 PCR,LAB12019,N
+27,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,6/8/20,COVID-19 PCR,LAB12019,N
+54,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+27,Female,Black or African American,5/11/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/21/20,COVID-19 PCR,LAB12019,N
+67,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,Y
+28,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+27,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,4/17/20,COVID-19 PCR,LAB12019,N
+55,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+59,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/8/20,COVID-19 PCR,LAB12019,N
+54,Male,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+54,Male,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+50,Female,Other Race,3/19/20,COVID-19 PCR,LAB12019,N
+50,Female,Other Race,5/19/20,COVID IGG,LAB19414,N
+44,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+65,Female,Unknown,6/1/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+65,Female,Black or African American,6/15/20,COVID-19 PCR,LAB12019,N
+65,Female,Black or African American,6/15/20,COVID IGG,LAB19414,N
+56,Male,Black or African American,5/20/20,COVID-19 PCR,LAB12019,N
+56,Male,Black or African American,6/4/20,COVID-19 PCR,LAB12019,N
+66,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,4/6/20,COVID-19 PCR,LAB12019,N
+56,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+48,Female,Black or African American,6/6/20,COVID-19 PCR,LAB12019,N
+48,Female,Black or African American,4/27/20,COVID-19 PCR,LAB12019,N
+59,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,Y
+51,Female,Unknown,6/10/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+51,Female,White or Caucasian,4/28/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+57,Male,Unknown,5/22/20,COVID IGG,LAB19414,N
+44,Male,Black or African American,5/22/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,3/27/20,COVID-19 PCR,LAB12019,N
+31,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+27,Female,Unknown,4/10/20,COVID-19 PCR,LAB12019,N
+27,Female,Unknown,4/24/20,COVID-19 PCR,LAB12019,N
+27,Female,Unknown,6/19/20,COVID-19 PCR,LAB12019,N
+27,Female,Unknown,6/9/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,3/19/20,COVID-19 PCR,LAB12019,N
+53,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,4/30/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+87,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+55,Female,Asian,6/12/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+45,Male,Other Race,6/10/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+58,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+44,Female,Unknown,5/7/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,6/3/20,COVID-19 PCR,LAB12019,N
+56,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+75,Female,Black or African American,5/22/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,4/23/20,COVID-19 PCR,LAB12019,N
+49,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+39,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+25,Female,American Indian or Alaska Native,5/7/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/30/20,COVID-19 PCR,LAB12019,N
+67,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+48,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,3/19/20,COVID-19 PCR,LAB12019,N
+70,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,6/19/20,COVID-19 PCR,LAB12019,N
+48,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+25,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+52,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+60,Male,Black or African American,5/29/20,COVID IGG,LAB19414,N
+47,Female,Other Race,5/19/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+47,Male,Black or African American,5/7/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,4/29/20,COVID-19 PCR,LAB12019,N
+49,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+81,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+49,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,3/23/20,COVID-19 PCR,LAB12019,N
+36,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+80,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+44,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+33,Female,Black or African American,5/5/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+68,Female,Unknown,5/27/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+24,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+50,Male,Unknown,5/20/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+55,Male,Black or African American,6/8/20,COVID IGG,LAB19414,N
+47,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+23,Female,Black or African American,5/29/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+24,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+60,Female,Other Race,6/2/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+63,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+37,Female,Unknown,5/27/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,3/30/20,COVID-19 PCR,LAB12019,N
+69,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+45,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+49,Female,Unknown,4/21/20,COVID-19 PCR,LAB12019,N
+49,Female,Unknown,5/21/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+26,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+23,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,4/6/20,COVID-19 PCR,LAB12019,N
+60,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+47,Female,Asian,5/21/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+34,Male,Black or African American,6/10/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+87,Male,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+87,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+22,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+83,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+89,Female,Asian,5/8/20,COVID-19 PCR,LAB12019,N
+89,Female,Asian,6/2/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+66,Male,Black or African American,5/1/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+59,Female,Black or African American,6/17/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/23/20,COVID-19 PCR,LAB12019,N
+40,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+22,Male,Black or African American,5/29/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+65,Female,Other Race,5/15/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+33,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+22,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,Y
+41,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+81,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+48,Male,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+48,Male,White or Caucasian,6/8/20,COVID-19 PCR,LAB12019,N
+48,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+83,Male,Other Race,5/6/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+51,Female,Other Race,5/27/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/11/20,COVID-19 PCR,LAB12019,N
+60,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+52,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,6/8/20,COVID-19 PCR,LAB12019,N
+59,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+85,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+72,Male,Other Race,5/13/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,6/10/20,COVID-19 PCR,LAB12019,N
+30,Female,Other Race,5/21/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+26,Female,Other Race,5/5/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/31/20,COVID-19 PCR,LAB12019,N
+61,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+58,Male,Asian,5/22/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,3/17/20,COVID-19 PCR,LAB12019,N
+71,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+21,Female,Black or African American,6/17/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+42,Female,Black or African American,6/12/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+23,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+57,Female,Black or African American,4/17/20,COVID-19 PCR,LAB12019,N
+57,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+21,Female,Black or African American,6/2/20,COVID-19 PCR,LAB12019,N
+21,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+56,Male,American Indian or Alaska Native,5/12/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+50,Male,Black or African American,5/14/20,COVID IGG,LAB19414,N
+82,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+79,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+20,Male,Black or African American,5/7/20,COVID-19 PCR,LAB12019,N
+20,Male,Black or African American,5/7/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,Y
+38,Male,Black or African American,3/27/20,COVID-19 PCR,LAB12019,N
+38,Male,Black or African American,5/12/20,COVID IGG,LAB19414,N
+52,Male,Asian,5/18/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+68,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+20,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+48,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+67,Male,Black or African American,5/11/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+20,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+20,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+67,Male,Black or African American,5/28/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+30,Female,Other Race,4/24/20,COVID-19 PCR,LAB12019,N
+30,Female,Other Race,5/1/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+78,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+67,Female,Other Race,5/27/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+22,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+52,Female,Patient Refused,5/22/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+50,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+65,Female,Unknown,5/12/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+20,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+54,Male,Black or African American,6/8/20,COVID IGG,LAB19414,N
+54,Male,Black or African American,5/29/20,COVID-19 PCR,LAB12019,N
+53,Female,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+53,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+47,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+65,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,4/30/20,COVID-19 PCR,LAB12019,N
+63,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/13/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+60,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/6/20,COVID-19 PCR,LAB12019,N
+53,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+19,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+74,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+47,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+39,Female,Other Race,6/12/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+57,Male,Asian,5/20/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+34,Female,Other Race,5/5/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+49,Female,Other Race,5/28/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+88,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+55,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+44,Female,Black or African American,5/27/20,COVID IGG,LAB19414,N
+20,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+60,Male,Other Race,5/19/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+35,Female,Asian,3/27/20,COVID-19 PCR,LAB12019,N
+35,Female,Asian,5/22/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+61,Male,Black or African American,5/5/20,COVID-19 PCR,LAB12019,N
+61,Male,Black or African American,5/7/20,COVID-19 PCR,LAB12019,N
+61,Male,Black or African American,5/15/20,COVID-19 PCR,LAB12019,N
+61,Male,Black or African American,5/15/20,COVID IGG,LAB19414,N
+55,Female,Asian,5/18/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,6/3/20,COVID-19 PCR,LAB12019,N
+42,Female,Black or African American,6/4/20,COVID-19 PCR,LAB12019,N
+42,Female,Black or African American,6/12/20,COVID IGG,LAB19414,N
+24,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+47,Male,Black or African American,5/8/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,4/28/20,COVID-19 PCR,LAB12019,N
+34,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+83,Male,Other Race,5/13/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/7/20,COVID-19 PCR,LAB12019,N
+20,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+41,Male,Other Race,5/28/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+84,Female,Black or African American,5/22/20,COVID-19 PCR,LAB12019,N
+84,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+18,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+59,Male,Black or African American,5/19/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+45,Female,Black or African American,5/20/20,COVID-19 PCR,LAB12019,N
+45,Female,Black or African American,5/23/20,COVID-19 PCR,LAB12019,N
+45,Female,Black or African American,5/22/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+18,Female,Unknown,5/22/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+50,Female,Black or African American,3/16/20,COVID-19 PCR,LAB12019,N
+50,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+28,Female,Black or African American,4/29/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+18,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+62,Male,Black or African American,5/28/20,COVID IGG,LAB19414,N
+48,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+32,Female,Patient Refused,6/8/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+33,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+50,Female,Other Race,5/22/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/30/20,COVID-19 PCR,LAB12019,N
+69,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+81,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+53,Male,Other Race,5/8/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+76,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+60,Female,Other Race,4/2/20,COVID-19 PCR,LAB12019,N
+60,Female,Other Race,6/1/20,COVID IGG,LAB19414,N
+70,Female,Other Race,5/13/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+39,Female,Other Race,5/29/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+61,Male,Black or African American,6/5/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+21,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+36,Male,Asian,6/3/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+25,Female,Black or African American,4/30/20,COVID-19 PCR,LAB12019,N
+25,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+52,Female,Asian,5/8/20,COVID IGG,LAB19414,N
+80,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+39,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+20,Female,Asian,5/13/20,COVID IGG,LAB19414,N
+80,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+61,Male,White or Caucasian,6/3/20,COVID-19 PCR,LAB12019,N
+39,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+19,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+81,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+44,Male,Other Race,6/2/20,COVID-19 PCR,LAB12019,N
+57,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+53,Male,Unknown,6/16/20,COVID IGG,LAB19414,N
+60,Male,Unknown,6/1/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+57,Male,Other Race,5/18/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+54,Male,Other Race,5/5/20,COVID IGG,LAB19414,N
+57,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+49,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+53,Male,Black or African American,6/16/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,4/13/20,COVID-19 PCR,LAB12019,N
+51,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+83,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,6/3/20,COVID-19 PCR,LAB12019,N
+77,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/30/20,COVID-19 PCR,LAB12019,N
+56,Female,White or Caucasian,6/10/20,COVID-19 PCR,LAB12019,N
+56,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+55,Female,Asian,6/3/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+50,Female,Black or African American,4/17/20,COVID-19 PCR,LAB12019,N
+50,Female,Black or African American,5/19/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,6/15/20,COVID-19 PCR,LAB12019,N
+75,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,Y
+31,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+47,Female,Black or African American,5/21/20,COVID IGG,LAB19414,N
+61,Female,Asian,5/19/20,COVID IGG,LAB19414,N
+34,Female,Other Race,6/18/20,COVID IGG,LAB19414,N
+51,Female,Unknown,5/18/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/10/20,COVID-19 PCR,LAB12019,N
+39,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+43,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+44,Male,Asian,5/1/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/16/20,COVID-19 PCR,LAB12019,N
+64,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+40,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+66,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+61,Male,Other Race,5/5/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+55,Female,Asian,5/11/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+24,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+79,Male,Black or African American,6/9/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+66,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+48,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+29,Male,Black or African American,4/6/20,COVID-19 PCR,LAB12019,N
+29,Male,Black or African American,5/12/20,COVID-19 PCR,LAB12019,N
+29,Male,Black or African American,5/13/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+47,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+45,Female,Unknown,5/12/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+34,Male,Black or African American,6/9/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,5/26/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+19,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+19,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+51,Male,Other Race,6/2/20,COVID-19 PCR,LAB12019,N
+51,Male,Other Race,5/18/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+19,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+48,Male,Black or African American,6/10/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+23,Male,Other Race,5/29/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,4/28/20,COVID-19 PCR,LAB12019,N
+54,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,3/19/20,COVID-19 PCR,LAB12019,N
+50,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+48,Male,American Indian or Alaska Native,5/22/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+22,Female,Other Race,5/11/20,COVID IGG,LAB19414,N
+46,Female,Black or African American,5/13/20,COVID IGG,LAB19414,Y
+51,Male,Other Race,5/14/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,4/1/20,COVID-19 PCR,LAB12019,N
+39,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+51,Female,Asian,5/27/20,COVID IGG,LAB19414,N
+48,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+33,Female,Asian,5/15/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+42,Female,Other Race,5/29/20,COVID IGG,LAB19414,N
+39,Female,Patient Refused,6/11/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+27,Female,Black or African American,6/3/20,COVID-19 PCR,LAB12019,N
+27,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+57,Female,Black or African American,6/15/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+23,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+21,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+39,Male,Other Race,5/1/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+54,Female,Black or African American,5/15/20,COVID IGG,LAB19414,N
+18,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+44,Female,Black or African American,6/15/20,COVID IGG,LAB19414,N
+41,Male,Other Race,5/18/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,3/26/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+44,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+34,Female,Black or African American,5/11/20,COVID IGG,LAB19414,N
+81,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/25/20,COVID-19 PCR,LAB12019,N
+50,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+62,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+62,Female,Black or African American,5/21/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+54,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+85,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+49,Female,Other Race,5/7/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+53,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+43,Female,Asian,5/28/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+82,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+81,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,4/23/20,COVID-19 PCR,LAB12019,N
+61,Female,White or Caucasian,5/8/20,COVID-19 PCR,LAB12019,N
+61,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+21,Male,Other Race,6/2/20,COVID IGG,LAB19414,N
+20,Male,Other Race,6/2/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+33,Male,Other Race,5/19/20,COVID IGG,LAB19414,N
+35,Female,Asian,5/29/20,COVID IGG,LAB19414,N
+34,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,5/19/20,COVID IGG,LAB19414,N
+41,Male,Black or African American,4/28/20,COVID-19 PCR,LAB12019,N
+41,Male,Black or African American,6/8/20,COVID-19 PCR,LAB12019,N
+41,Male,Black or African American,5/27/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+25,Male,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+25,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+34,Female,Other Race,6/2/20,COVID-19 PCR,LAB12019,N
+34,Female,Other Race,5/6/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+18,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+36,Female,Asian,5/27/20,COVID-19 PCR,LAB12019,N
+36,Female,Asian,5/27/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+55,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+84,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+51,Female,Unknown,5/26/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+55,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,3/26/20,COVID-19 PCR,LAB12019,N
+37,Female,White or Caucasian,6/2/20,COVID-19 PCR,LAB12019,N
+37,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+20,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+49,Female,Black or African American,5/27/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+73,Male,Asian,6/10/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+71,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+25,Female,Black or African American,6/15/20,COVID IGG,LAB19414,N
+25,Female,Black or African American,5/14/20,COVID-19 PCR,LAB12019,N
+41,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+22,Female,Black or African American,3/17/20,COVID-19 PCR,LAB12019,N
+22,Female,Black or African American,5/26/20,COVID-19 PCR,LAB12019,N
+22,Female,Black or African American,5/21/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+32,Male,Unknown,5/22/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,3/16/20,COVID-19 PCR,LAB12019,N
+41,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+39,Female,Other Race,5/19/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+18,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+18,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+66,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+39,Female,Unknown,5/22/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,3/23/20,COVID-19 PCR,LAB12019,N
+42,Female,White or Caucasian,4/3/20,COVID-19 PCR,LAB12019,N
+42,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+70,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+56,Female,Other Race,5/22/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+24,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+23,Female,Other Race,5/28/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+34,Female,Black or African American,5/11/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,4/1/20,COVID-19 PCR,LAB12019,N
+79,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,5/20/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+80,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+79,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+44,Male,Other Race,5/22/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+33,Female,Black or African American,5/13/20,COVID-19 PCR,LAB12019,N
+33,Female,Black or African American,5/19/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+39,Female,Asian,5/14/20,COVID IGG,LAB19414,N
+48,Male,Asian,5/13/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/26/20,COVID-19 PCR,LAB12019,Y
+60,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,Y
+39,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/5/20,COVID-19 PCR,LAB12019,N
+38,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,6/17/20,COVID-19 PCR,LAB12019,N
+72,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+46,Male,Other Race,5/14/20,COVID IGG,LAB19414,N
+37,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,6/13/20,COVID-19 PCR,LAB12019,N
+44,Female,Other Race,5/19/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+48,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+30,Female,Other Race,5/27/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,6/9/20,COVID-19 PCR,LAB12019,N
+67,Male,Other Race,5/8/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+26,Female,Black or African American,5/11/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+85,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+42,Male,Asian,6/15/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+42,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+30,Female,Other Race,5/15/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+56,Female,Other Race,6/16/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+36,Male,Black or African American,5/26/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+41,Female,Other Race,5/21/20,COVID IGG,LAB19414,N
+28,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+41,Male,Unknown,5/15/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+34,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,3/24/20,COVID-19 PCR,LAB12019,N
+59,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,3/18/20,COVID-19 PCR,LAB12019,N
+40,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+42,Female,Asian,5/14/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/8/20,COVID-19 PCR,LAB12019,N
+58,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+78,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+50,Female,Other Race,5/12/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/14/20,COVID-19 PCR,LAB12019,N
+24,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,6/18/20,COVID-19 PCR,LAB12019,N
+25,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+18,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+34,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,3/23/20,COVID-19 PCR,LAB12019,N
+31,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+42,Female,Black or African American,5/15/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+39,Female,Other Race,5/1/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+86,Female,Asian,5/20/20,COVID IGG,LAB19414,N
+84,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+36,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+32,Female,Other Race,3/27/20,COVID-19 PCR,LAB12019,N
+32,Female,Other Race,5/22/20,COVID IGG,LAB19414,N
+29,Male,Other Race,5/21/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+34,Male,Black or African American,6/18/20,COVID-19 PCR,LAB12019,N
+30,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+45,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+45,Female,Black or African American,5/16/20,COVID-19 PCR,LAB12019,N
+45,Female,Black or African American,5/16/20,COVID-19 PCR,LAB12019,N
+32,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+32,Female,Black or African American,4/30/20,COVID-19 PCR,LAB12019,N
+32,Female,Black or African American,4/3/20,COVID-19 PCR,LAB12019,N
+23,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,4/27/20,COVID-19 PCR,LAB12019,N
+52,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+80,Female,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+80,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,4/22/20,COVID-19 PCR,LAB12019,N
+66,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+48,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+47,Male,Black or African American,5/27/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+37,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+64,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+43,Female,Other Race,5/14/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+48,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+78,Female,Asian,5/27/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+65,Female,Black or African American,5/11/20,COVID-19 PCR,LAB12019,N
+65,Female,Black or African American,5/11/20,COVID IGG,LAB19414,N
+26,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+30,Female,Black or African American,6/19/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+50,Male,Black or African American,6/2/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+57,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+55,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+52,Male,Black or African American,5/19/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+37,Female,Other Race,5/14/20,COVID IGG,LAB19414,N
+25,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+24,Male,Other Race,5/13/20,COVID IGG,LAB19414,N
+26,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+48,Female,Asian,5/22/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+45,Male,Unknown,3/31/20,COVID-19 PCR,LAB12019,N
+45,Male,Unknown,5/11/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+49,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,6/19/20,COVID-19 PCR,LAB12019,N
+44,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+40,Male,Black or African American,6/19/20,COVID IGG,LAB19414,N
+29,Female,Unknown,5/27/20,COVID IGG,LAB19414,N
+40,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+24,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+68,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+58,Male,Black or African American,6/2/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+47,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+32,Female,Black or African American,4/22/20,COVID-19 PCR,LAB12019,N
+32,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+81,Male,Black or African American,5/29/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+60,Male,American Indian or Alaska Native,6/3/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+28,Female,Black or African American,6/4/20,COVID-19 PCR,LAB12019,N
+28,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+53,Male,Other Race,5/21/20,COVID IGG,LAB19414,N
+67,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+22,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+19,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+30,Male,Black or African American,4/21/20,COVID-19 PCR,LAB12019,N
+30,Male,Black or African American,6/18/20,COVID-19 PCR,LAB12019,N
+30,Male,Black or African American,6/8/20,COVID IGG,LAB19414,N
+56,Female,Other Race,5/13/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+44,Male,Black or African American,5/19/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+63,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,Y
+58,Male,Black or African American,5/26/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+48,Female,Asian,6/8/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+43,Male,Asian,5/14/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+40,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+44,Female,Other Race,5/27/20,COVID-19 PCR,LAB12019,N
+44,Female,Other Race,5/27/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+27,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+38,Male,Other Race,5/18/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/4/20,COVID-19 PCR,LAB12019,N
+54,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+27,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+37,Female,Other Race,5/13/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,6/13/20,COVID-19 PCR,LAB12019,N
+59,Male,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+59,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,5/11/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+53,Female,Unknown,6/11/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+60,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,4/7/20,COVID-19 PCR,LAB12019,N
+39,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+80,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+39,Female,Black or African American,5/8/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,4/6/20,COVID-19 PCR,LAB12019,N
+37,Female,White or Caucasian,6/5/20,COVID-19 PCR,LAB12019,N
+37,Female,White or Caucasian,6/11/20,COVID-19 PCR,LAB12019,N
+37,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+43,Female,Asian,5/15/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+30,Male,Other Race,5/28/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/13/20,COVID-19 PCR,LAB12019,N
+69,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,3/24/20,COVID-19 PCR,LAB12019,N
+32,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,4/29/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+61,Male,Black or African American,5/19/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+65,Male,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+65,Male,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+65,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,6/12/20,COVID-19 PCR,LAB12019,N
+61,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+35,Female,Black or African American,5/21/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+34,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+28,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+42,Female,Black or African American,5/27/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+31,Female,Asian,5/29/20,COVID IGG,LAB19414,N
+39,Female,Black or African American,5/19/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,4/13/20,COVID-19 PCR,LAB12019,N
+39,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+51,Male,Asian,3/27/20,COVID-19 PCR,LAB12019,N
+51,Male,Asian,5/29/20,COVID IGG,LAB19414,N
+47,Female,Other Race,5/1/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,4/7/20,COVID-19 PCR,LAB12019,N
+31,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,6/17/20,COVID-19 PCR,LAB12019,N
+20,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,4/22/20,COVID-19 PCR,LAB12019,N
+51,Female,White or Caucasian,5/25/20,COVID-19 PCR,LAB12019,N
+51,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+48,Male,Asian,5/21/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+19,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,4/27/20,COVID-19 PCR,LAB12019,N
+41,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+71,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+50,Female,Asian,5/19/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+32,Male,Asian,5/28/20,COVID IGG,LAB19414,N
+23,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+33,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,4/21/20,COVID-19 PCR,LAB12019,N
+59,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+52,Male,Asian,5/12/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+35,Female,Other Race,6/17/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+54,Male,Black or African American,5/18/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+43,Female,Other Race,5/27/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,4/30/20,COVID-19 PCR,LAB12019,N
+35,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+71,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+21,Female,Unknown,5/12/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+34,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+84,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+79,Female,Black or African American,5/29/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,4/6/20,COVID-19 PCR,LAB12019,N
+43,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+78,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+76,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/30/20,COVID-19 PCR,LAB12019,N
+72,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/11/20,COVID-19 PCR,LAB12019,N
+56,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,3/26/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+66,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+79,Male,Black or African American,5/20/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+65,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,4/20/20,COVID-19 PCR,LAB12019,N
+26,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+33,Male,Other Race,5/26/20,COVID IGG,LAB19414,N
+45,Female,Other Race,5/19/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+79,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+79,Female,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+76,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+25,Female,Other Race,6/1/20,COVID-19 PCR,LAB12019,N
+25,Female,Other Race,6/12/20,COVID-19 PCR,LAB12019,N
+25,Female,Other Race,5/14/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+76,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+52,Female,Other Race,5/7/20,COVID IGG,LAB19414,N
+47,Female,Other Race,6/10/20,COVID IGG,LAB19414,N
+47,Female,Other Race,4/16/20,COVID-19 PCR,LAB12019,N
+65,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+70,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+50,Female,Other Race,5/7/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+55,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+18,Female,Other Race,6/8/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+55,Male,Unknown,5/18/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/28/20,COVID-19 PCR,LAB12019,N
+33,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+27,Female,American Indian or Alaska Native,5/1/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+67,Male,Black or African American,6/4/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+36,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+39,Female,Other Race,6/11/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+25,Female,Unknown,5/4/20,COVID IGG,LAB19414,N
+82,Male,American Indian or Alaska Native,6/3/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+30,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+31,Female,Unknown,5/15/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,6/1/20,COVID-19 PCR,LAB12019,N
+76,Female,White or Caucasian,6/6/20,COVID-19 PCR,LAB12019,N
+76,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/16/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+68,Female,Black or African American,6/8/20,COVID IGG,LAB19414,Y
+38,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+75,Female,Other Race,6/1/20,COVID IGG,LAB19414,N
+75,Female,Other Race,5/26/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+46,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/10/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+56,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+30,Female,Unknown,6/1/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+54,Male,Asian,6/11/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+74,Male,Black or African American,6/4/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+32,Female,Unknown,5/27/20,COVID IGG,LAB19414,N
+68,Male,American Indian or Alaska Native,6/18/20,COVID IGG,LAB19414,N
+68,Male,American Indian or Alaska Native,6/18/20,COVID-19 PCR,LAB12019,N
+65,Male,Native Hawaiian or Other Pacific Islander,5/26/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/8/20,COVID-19 PCR,LAB12019,N
+33,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+54,Male,Other Race,5/29/20,COVID IGG,LAB19414,N
+85,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+27,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,Y
+52,Female,Black or African American,6/12/20,COVID IGG,LAB19414,N
+25,Male,Unknown,5/20/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+25,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+45,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+51,Female,Unknown,6/18/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+24,Female,Unknown,5/6/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+76,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+40,Female,Black or African American,5/20/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+21,Male,Unknown,5/29/20,COVID IGG,LAB19414,N
+21,Female,Other Race,5/5/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,Y
+47,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+65,Female,Black or African American,6/15/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+51,Female,Other Race,5/18/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+80,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+39,Female,Asian,5/11/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+40,Female,Unknown,5/15/20,COVID IGG,LAB19414,N
+50,Male,Unknown,5/15/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/3/20,COVID-19 PCR,LAB12019,N
+51,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,4/19/20,COVID-19 PCR,LAB12019,N
+35,Male,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+35,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+38,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+67,Female,Black or African American,6/8/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+36,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+19,Male,Other Race,5/8/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,6/10/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+41,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+41,Female,Unknown,5/7/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+35,Female,Unknown,6/12/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+29,Female,Black or African American,6/18/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+31,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+25,Female,Black or African American,6/17/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+37,Female,Unknown,5/11/20,COVID IGG,LAB19414,N
+44,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+46,Male,Unknown,6/3/20,COVID IGG,LAB19414,Y
+34,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+64,Male,Black or African American,6/1/20,COVID IGG,LAB19414,N
+75,Female,Black or African American,5/19/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+21,Female,Black or African American,5/19/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+73,Female,Unknown,5/18/20,COVID IGG,LAB19414,N
+47,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+33,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,3/30/20,COVID-19 PCR,LAB12019,N
+31,Female,White or Caucasian,5/26/20,COVID-19 PCR,LAB12019,N
+31,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,4/24/20,COVID-19 PCR,LAB12019,N
+35,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+65,Female,Unknown,5/8/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/4/20,COVID-19 PCR,LAB12019,N
+33,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+39,Male,Unknown,5/29/20,COVID IGG,LAB19414,N
+34,Male,Unknown,5/27/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+33,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+34,Female,Asian,5/1/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+20,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+27,Female,Unknown,5/11/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,6/15/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+49,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+65,Male,Black or African American,6/12/20,COVID IGG,LAB19414,N
+73,Female,Black or African American,5/29/20,COVID IGG,LAB19414,N
+31,Male,Unknown,6/9/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+52,Female,Unknown,5/5/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+46,Female,Black or African American,6/19/20,COVID IGG,LAB19414,N
+46,Female,Black or African American,4/13/20,COVID-19 PCR,LAB12019,N
+80,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+37,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+44,Female,Black or African American,6/12/20,COVID IGG,LAB19414,N
+80,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+46,Male,Unknown,5/18/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+18,Male,Other Race,5/26/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+59,Male,Black or African American,5/29/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+59,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+54,Female,Black or African American,6/5/20,COVID-19 PCR,LAB12019,N
+54,Female,Black or African American,5/22/20,COVID IGG,LAB19414,N
+29,Male,Asian,6/19/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+73,Male,Unknown,5/14/20,COVID IGG,LAB19414,Y
+61,Male,White or Caucasian,5/22/20,COVID-19 PCR,LAB12019,N
+61,Male,White or Caucasian,5/24/20,COVID-19 PCR,LAB12019,N
+61,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+60,Female,Other Race,5/29/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/21/20,COVID-19 PCR,LAB12019,N
+56,Male,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+56,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,6/9/20,COVID-19 PCR,LAB12019,N
+47,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+24,Female,Unknown,5/29/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+31,Female,Other Race,5/14/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+36,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+46,Female,Asian,5/29/20,COVID IGG,LAB19414,N
+28,Male,Unknown,5/14/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+42,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+43,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+49,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+53,Female,Black or African American,5/20/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/19/20,COVID-19 PCR,LAB12019,N
+24,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+24,Female,Unknown,5/14/20,COVID IGG,LAB19414,N
+24,Female,Other Race,5/28/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+28,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+31,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+31,Male,Unknown,6/3/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+31,Female,Other Race,5/8/20,COVID IGG,LAB19414,N
+33,Female,Asian,5/28/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+30,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/11/20,COVID-19 PCR,LAB12019,N
+31,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,3/18/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+49,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+19,Female,Other Race,5/19/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+65,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+37,Male,Asian,5/22/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/12/20,COVID-19 PCR,LAB12019,N
+43,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+57,Female,Asian,5/18/20,COVID IGG,LAB19414,N
+24,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+43,Female,Asian,6/5/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+43,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+53,Male,Black or African American,5/12/20,COVID-19 PCR,LAB12019,N
+53,Male,Black or African American,5/12/20,COVID IGG,LAB19414,N
+68,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,5/5/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+38,Male,Black or African American,5/1/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+47,Male,American Indian or Alaska Native,5/21/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,3/27/20,COVID-19 PCR,LAB12019,N
+37,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+28,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+31,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+63,Male,Unknown,5/28/20,COVID IGG,LAB19414,N
+69,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+82,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+27,Male,Black or African American,6/2/20,COVID IGG,LAB19414,N
+47,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+33,Female,Black or African American,4/28/20,COVID-19 PCR,LAB12019,N
+33,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+70,Male,Black or African American,6/3/20,COVID IGG,LAB19414,N
+63,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+50,Female,Other Race,3/24/20,COVID-19 PCR,LAB12019,N
+50,Female,Other Race,5/7/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+33,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+72,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+35,Female,Black or African American,6/18/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+38,Female,Unknown,6/3/20,COVID-19 PCR,LAB12019,N
+38,Female,Unknown,6/3/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+24,Female,Asian,5/18/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+29,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+44,Female,Other Race,5/15/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+69,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+39,Male,Unknown,5/4/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/18/20,COVID-19 PCR,LAB12019,N
+70,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,6/2/20,COVID-19 PCR,LAB12019,N
+42,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+79,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,6/1/20,COVID-19 PCR,LAB12019,N
+40,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,4/2/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+48,Female,White or Caucasian,4/9/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+48,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/15/20,COVID-19 PCR,LAB12019,N
+52,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+89,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,3/18/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+36,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+28,Male,Black or African American,6/5/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+34,Male,Unknown,5/22/20,COVID IGG,LAB19414,N
+19,Male,Black or African American,5/21/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+36,Male,Black or African American,5/26/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+67,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+68,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,4/28/20,COVID-19 PCR,LAB12019,N
+31,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+37,Female,Unknown,3/31/20,COVID-19 PCR,LAB12019,N
+37,Female,Unknown,5/11/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+32,Female,Black or African American,6/18/20,COVID-19 PCR,LAB12019,N
+32,Female,Black or African American,5/22/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+48,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+28,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+34,Female,Asian,6/5/20,COVID IGG,LAB19414,N
+52,Male,Other Race,5/7/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+46,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+39,Male,Black or African American,5/22/20,COVID IGG,LAB19414,N
+44,Female,Other Race,5/29/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+23,Female,Unknown,5/5/20,COVID IGG,LAB19414,N
+30,Female,Unknown,5/20/20,COVID IGG,LAB19414,N
+55,Male,Black or African American,6/12/20,COVID IGG,LAB19414,N
+19,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+84,Male,White or Caucasian,5/9/20,COVID-19 PCR,LAB12019,N
+84,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/19/20,COVID-19 PCR,LAB12019,N
+45,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+43,Female,Unknown,5/26/20,COVID IGG,LAB19414,N
+50,Female,Black or African American,4/27/20,COVID-19 PCR,LAB12019,N
+37,Female,Unknown,5/28/20,COVID-19 PCR,LAB12019,N
+37,Female,Unknown,5/1/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+85,Male,Unknown,5/21/20,COVID IGG,LAB19414,N
+58,Male,Black or African American,6/1/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/26/20,COVID-19 PCR,LAB12019,N
+32,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+78,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,3/31/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+21,Female,Unknown,5/28/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+22,Female,Unknown,5/28/20,COVID IGG,LAB19414,N
+50,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,Y
+22,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+28,Male,Other Race,6/12/20,COVID IGG,LAB19414,N
+32,Male,Unknown,4/29/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,6/4/20,COVID-19 PCR,LAB12019,N
+39,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+61,Female,Unknown,6/3/20,COVID IGG,LAB19414,N
+65,Female,Black or African American,6/8/20,COVID IGG,LAB19414,N
+77,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+53,Female,Unknown,5/11/20,COVID IGG,LAB19414,N
+19,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+19,Female,Unknown,5/11/20,COVID IGG,LAB19414,N
+39,Male,Black or African American,5/12/20,COVID IGG,LAB19414,N
+60,Male,Black or African American,6/1/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,4/3/20,COVID-19 PCR,LAB12019,N
+54,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+38,Female,Unknown,5/6/20,COVID IGG,LAB19414,N
+54,Male,Black or African American,6/12/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+34,Male,Black or African American,6/10/20,COVID IGG,LAB19414,N
+34,Male,Black or African American,6/10/20,COVID-19 PCR,LAB12019,N
+59,Male,Native Hawaiian or Other Pacific Islander,5/21/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+35,Female,American Indian or Alaska Native,5/11/20,COVID IGG,LAB19414,N
+43,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+26,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+78,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+29,Female,Black or African American,5/4/20,COVID IGG,LAB19414,N
+71,Male,Black or African American,6/16/20,COVID IGG,LAB19414,N
+28,Male,Unknown,5/5/20,COVID IGG,LAB19414,N
+22,Male,Other Race,5/12/20,COVID IGG,LAB19414,N
+26,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+69,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+48,Female,Black or African American,6/16/20,COVID-19 PCR,LAB12019,N
+48,Female,Black or African American,6/16/20,COVID IGG,LAB19414,N
+92,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+22,Female,Unknown,5/15/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+53,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+29,Male,Unknown,6/2/20,COVID IGG,LAB19414,N
+19,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+30,Female,Unknown,4/29/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,4/2/20,COVID-19 PCR,LAB12019,N
+30,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+29,Female,Unknown,3/23/20,COVID-19 PCR,LAB12019,N
+29,Female,Unknown,5/1/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,6/5/20,COVID-19 PCR,LAB12019,N
+52,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+52,Male,White or Caucasian,5/22/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+34,Female,Asian,5/26/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,3/18/20,COVID-19 PCR,LAB12019,N
+36,Male,White or Caucasian,4/3/20,COVID-19 PCR,LAB12019,N
+36,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+55,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,6/18/20,COVID-19 PCR,LAB12019,N
+69,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+52,Female,Unknown,5/5/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,4/3/20,COVID-19 PCR,LAB12019,N
+40,Female,White or Caucasian,4/20/20,COVID-19 PCR,LAB12019,N
+40,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,4/15/20,COVID-19 PCR,LAB12019,N
+39,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+76,Male,Black or African American,6/17/20,COVID IGG,LAB19414,N
+47,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/11/20,COVID-19 PCR,LAB12019,N
+33,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+28,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+32,Male,Unknown,6/17/20,COVID IGG,LAB19414,N
+32,Male,Unknown,4/13/20,COVID-19 PCR,LAB12019,N
+32,Male,Unknown,3/31/20,COVID-19 PCR,LAB12019,N
+29,Male,Unknown,6/17/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+57,Male,Black or African American,5/18/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+82,Male,White or Caucasian,6/15/20,COVID-19 PCR,LAB12019,N
+22,Male,White or Caucasian,6/11/20,COVID-19 PCR,LAB12019,N
+24,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+37,Female,Asian,5/14/20,COVID IGG,LAB19414,N
+27,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,Y
+35,Female,White or Caucasian,5/5/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,Y
+44,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+75,Male,Other Race,5/4/20,COVID-19 PCR,LAB12019,N
+75,Male,Other Race,5/6/20,COVID-19 PCR,LAB12019,N
+75,Male,Other Race,5/19/20,COVID IGG,LAB19414,N
+33,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,6/10/20,COVID-19 PCR,LAB12019,N
+51,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+67,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/27/20,COVID-19 PCR,LAB12019,N
+38,Female,White or Caucasian,3/30/20,COVID-19 PCR,LAB12019,N
+39,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+41,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+33,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+64,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+38,Female,Asian,6/10/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+57,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,Y
+65,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+79,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+76,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,Y
+26,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+62,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+46,Female,Unknown,5/21/20,COVID IGG,LAB19414,N
+34,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,2/28/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+58,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,4/7/20,COVID-19 PCR,LAB12019,N
+50,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,4/21/20,COVID-19 PCR,LAB12019,N
+57,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+22,Female,Unknown,5/29/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+30,Female,Black or African American,5/26/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+62,Female,Other Race,5/27/20,COVID IGG,LAB19414,N
+48,Male,Black or African American,6/10/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+42,Male,Other Race,5/7/20,COVID IGG,LAB19414,N
+32,Female,Unknown,5/6/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,6/3/20,COVID-19 PCR,LAB12019,N
+64,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+43,Female,Unknown,5/15/20,COVID IGG,LAB19414,N
+29,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+23,Female,Other Race,5/20/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+53,Male,Unknown,5/26/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+28,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+44,Female,Asian,5/27/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,6/18/20,COVID-19 PCR,LAB12019,N
+21,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+22,Female,Other Race,5/27/20,COVID IGG,LAB19414,N
+64,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+36,Female,Asian,5/22/20,COVID IGG,LAB19414,N
+46,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+40,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+37,Female,Unknown,6/16/20,COVID IGG,LAB19414,N
+24,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+83,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+47,Female,Unknown,6/9/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+82,Male,Unknown,5/8/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+38,Female,Unknown,5/14/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+27,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+36,Male,Black or African American,5/6/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+81,Male,White or Caucasian,5/5/20,COVID-19 PCR,LAB12019,N
+24,Female,Unknown,5/20/20,COVID IGG,LAB19414,N
+22,Male,Unknown,5/28/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,6/14/20,COVID-19 PCR,LAB12019,N
+77,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+32,Female,Black or African American,6/17/20,COVID IGG,LAB19414,N
+78,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+80,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+20,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,6/10/20,COVID-19 PCR,LAB12019,N
+41,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+64,Female,Unknown,5/18/20,COVID IGG,LAB19414,N
+41,Female,Asian,5/16/20,COVID-19 PCR,LAB12019,N
+41,Female,Asian,5/19/20,COVID-19 PCR,LAB12019,N
+41,Female,Asian,5/30/20,COVID-19 PCR,LAB12019,N
+41,Female,Asian,6/17/20,COVID-19 PCR,LAB12019,N
+41,Female,Asian,5/22/20,COVID IGG,LAB19414,N
+43,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+77,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+69,Male,Black or African American,6/1/20,COVID IGG,LAB19414,N
+30,Male,Unknown,6/12/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+80,Male,Black or African American,5/11/20,COVID IGG,LAB19414,N
+24,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+24,Female,Black or African American,5/12/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+74,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+73,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+54,Female,Unknown,6/1/20,COVID IGG,LAB19414,N
+54,Female,Unknown,5/1/20,COVID-19 PCR,LAB12019,N
+31,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+41,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+60,Female,Black or African American,5/29/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+60,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+65,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+25,Female,Other Race,5/15/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,5/20/20,COVID IGG,LAB19414,N
+46,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+79,Female,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+51,Male,Unknown,5/1/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+61,Female,Black or African American,6/5/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+57,Male,Black or African American,5/12/20,COVID IGG,LAB19414,N
+57,Male,Black or African American,5/19/20,COVID-19 PCR,LAB12019,N
+57,Male,Black or African American,5/28/20,COVID-19 PCR,LAB12019,N
+57,Male,Black or African American,6/18/20,COVID-19 PCR,LAB12019,N
+19,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+34,Male,Unknown,6/3/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+46,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+25,Female,Black or African American,6/12/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,3/24/20,COVID-19 PCR,LAB12019,N
+61,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+70,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,3/19/20,COVID-19 PCR,LAB12019,N
+56,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+31,Male,Other Race,6/18/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+50,Male,Other Race,5/6/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,6/9/20,COVID-19 PCR,LAB12019,N
+35,Female,White or Caucasian,6/5/20,COVID-19 PCR,LAB12019,N
+33,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+61,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+29,Female,Unknown,6/3/20,COVID IGG,LAB19414,N
+51,Female,Black or African American,6/2/20,COVID-19 PCR,LAB12019,N
+51,Female,Black or African American,4/9/20,COVID-19 PCR,LAB12019,N
+46,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+40,Female,Unknown,6/9/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+71,Female,Black or African American,5/28/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,5/30/20,COVID-19 PCR,LAB12019,N
+50,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+36,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,4/8/20,COVID-19 PCR,LAB12019,N
+25,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,Y
+33,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+48,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+80,Female,Black or African American,5/14/20,COVID-19 PCR,LAB12019,N
+80,Female,Black or African American,5/29/20,COVID IGG,LAB19414,N
+81,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+73,Male,Black or African American,6/5/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+71,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+38,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+65,Male,Black or African American,6/2/20,COVID IGG,LAB19414,N
+63,Female,Black or African American,6/8/20,COVID IGG,LAB19414,N
+81,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+52,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+67,Male,American Indian or Alaska Native,6/1/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,5/27/20,COVID IGG,LAB19414,N
+47,Male,White or Caucasian,6/17/20,COVID-19 PCR,LAB12019,N
+47,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+40,Male,Black or African American,5/8/20,COVID IGG,LAB19414,N
+73,Female,Black or African American,6/2/20,COVID IGG,LAB19414,N
+66,Male,Black or African American,5/28/20,COVID IGG,LAB19414,N
+64,Male,White or Caucasian,4/19/20,COVID-19 PCR,LAB12019,N
+64,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+65,Female,Black or African American,6/11/20,COVID IGG,LAB19414,N
+56,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+70,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+58,Male,Black or African American,6/10/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,6/5/20,COVID-19 PCR,LAB12019,N
+21,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+52,Male,Black or African American,6/11/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+71,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+33,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,6/9/20,COVID-19 PCR,LAB12019,N
+38,Male,White or Caucasian,6/15/20,COVID-19 PCR,LAB12019,N
+38,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+32,Female,Asian,5/5/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+73,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+60,Male,Unknown,5/6/20,COVID IGG,LAB19414,N
+26,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+26,Male,White or Caucasian,4/8/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+20,Male,Asian,5/14/20,COVID IGG,LAB19414,N
+36,Female,White or Caucasian,6/12/20,COVID-19 PCR,LAB12019,N
+36,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+27,Female,Other Race,5/21/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+39,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+68,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+33,Female,Other Race,5/12/20,COVID IGG,LAB19414,N
+35,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+56,Male,Unknown,5/18/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+39,Female,Other Race,5/18/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+23,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+25,Female,Unknown,5/22/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+37,Male,Black or African American,6/4/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+28,Female,Unknown,5/18/20,COVID IGG,LAB19414,N
+65,Female,Black or African American,6/8/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+63,Male,Black or African American,6/5/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,4/1/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,NULL
+40,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+73,Male,Other Race,5/26/20,COVID IGG,LAB19414,N
+48,Female,Unknown,5/27/20,COVID IGG,LAB19414,N
+32,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+34,Male,Asian,5/28/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+79,Female,Black or African American,6/10/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/19/20,COVID IGG,LAB19414,N
+45,Female,Black or African American,5/26/20,COVID IGG,LAB19414,N
+19,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+34,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+24,Female,Asian,5/18/20,COVID IGG,LAB19414,N
+51,Female,White or Caucasian,4/13/20,COVID-19 PCR,LAB12019,N
+51,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+36,Female,Unknown,6/10/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+23,Male,Black or African American,5/20/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+63,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+47,Male,Unknown,5/4/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+85,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+63,Male,Other Race,6/12/20,COVID IGG,LAB19414,N
+70,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+31,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/26/20,COVID-19 PCR,LAB12019,N
+57,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+23,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+22,Female,Unknown,5/29/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+63,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+40,Female,Black or African American,6/3/20,COVID IGG,LAB19414,N
+45,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,6/2/20,COVID-19 PCR,LAB12019,N
+54,Male,White or Caucasian,6/4/20,COVID-19 PCR,LAB12019,N
+54,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+52,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+26,Female,Asian,6/15/20,COVID IGG,LAB19414,N
+54,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/19/20,COVID-19 PCR,LAB12019,N
+42,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+43,Male,White or Caucasian,5/8/20,COVID-19 PCR,LAB12019,N
+43,Male,White or Caucasian,5/11/20,COVID-19 PCR,LAB12019,N
+21,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+70,Male,Black or African American,6/18/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+38,Female,Black or African American,5/21/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+37,Male,White or Caucasian,5/12/20,COVID-19 PCR,LAB12019,N
+37,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,6/12/20,COVID-19 PCR,LAB12019,N
+50,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+28,Female,Unknown,5/22/20,COVID IGG,LAB19414,N
+27,Female,Unknown,5/20/20,COVID IGG,LAB19414,N
+26,Male,Unknown,5/11/20,COVID IGG,LAB19414,N
+25,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,Y
+25,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+28,Male,White or Caucasian,6/10/20,COVID-19 PCR,LAB12019,N
+28,Male,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+26,Female,Unknown,6/10/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+55,Male,American Indian or Alaska Native,6/2/20,COVID-19 PCR,LAB12019,N
+55,Male,American Indian or Alaska Native,6/2/20,COVID IGG,LAB19414,N
+74,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,4/29/20,COVID-19 PCR,LAB12019,N
+69,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+25,Female,Unknown,5/22/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,6/17/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+27,Female,Black or African American,5/12/20,COVID-19 PCR,LAB12019,N
+27,Female,Black or African American,5/1/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/11/20,COVID-19 PCR,LAB12019,N
+31,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+68,Male,Unknown,5/12/20,COVID IGG,LAB19414,N
+30,Female,Unknown,5/12/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+30,Female,Other Race,6/15/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+23,Female,Unknown,5/28/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+26,Female,Black or African American,5/11/20,COVID IGG,LAB19414,Y
+66,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+66,Male,White or Caucasian,6/4/20,COVID-19 PCR,LAB12019,N
+29,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+43,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+30,Male,Other Race,6/12/20,COVID IGG,LAB19414,N
+20,Female,Unknown,6/2/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+34,Male,White or Caucasian,6/8/20,COVID IGG,LAB19414,N
+23,Female,Unknown,5/1/20,COVID IGG,LAB19414,N
+23,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+75,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,5/20/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+54,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+62,Male,Unknown,5/19/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/12/20,COVID-19 PCR,LAB12019,Y
+31,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+30,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+64,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+34,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,6/18/20,COVID-19 PCR,LAB12019,N
+29,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+48,Female,Unknown,6/11/20,COVID IGG,LAB19414,N
+48,Male,Unknown,5/4/20,COVID IGG,LAB19414,N
+46,Female,White or Caucasian,5/26/20,COVID-19 PCR,LAB12019,N
+46,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+78,Male,Unknown,4/30/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+40,Female,Asian,5/6/20,COVID-19 PCR,LAB12019,N
+34,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,5/1/20,COVID IGG,LAB19414,N
+37,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+23,Male,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+71,Female,Black or African American,5/29/20,COVID IGG,LAB19414,N
+24,Female,Unknown,5/15/20,COVID IGG,LAB19414,N
+47,Female,Unknown,5/22/20,COVID IGG,LAB19414,N
+20,Female,Black or African American,6/12/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+40,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+58,Female,White or Caucasian,6/16/20,COVID-19 PCR,LAB12019,N
+58,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+31,Male,Other Race,5/29/20,COVID IGG,LAB19414,N
+32,Female,Black or African American,5/7/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,6/9/20,COVID IGG,LAB19414,N
+74,Female,White or Caucasian,4/30/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/2/20,COVID-19 PCR,LAB12019,N
+56,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+46,Female,Other Race,6/4/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,4/28/20,COVID-19 PCR,LAB12019,N
+30,Female,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+53,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+45,Female,Other Race,6/4/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+61,Male,Black or African American,5/29/20,COVID IGG,LAB19414,N
+21,Male,Unknown,5/28/20,COVID IGG,LAB19414,N
+23,Female,Unknown,6/12/20,COVID IGG,LAB19414,N
+32,Female,Black or African American,5/29/20,COVID IGG,LAB19414,N
+68,Female,Black or African American,5/15/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/19/20,"NOVEL CORONAVIRUS (COVID-19), NAA",LAB12019EX,Y
+47,Male,Unknown,4/30/20,COVID-19 PCR,LAB12019,N
+47,Male,Unknown,5/4/20,COVID IGG,LAB19414,N
+25,Female,Black or African American,5/14/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/4/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+46,Female,Other Race,4/13/20,COVID-19 PCR,LAB12019,N
+46,Female,Other Race,5/5/20,COVID IGG,LAB19414,N
+86,Female,White or Caucasian,3/28/20,COVID-19 PCR,LAB12019,N
+86,Female,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+71,Male,Black or African American,6/8/20,COVID IGG,LAB19414,N
+27,Female,Unknown,5/26/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/6/20,COVID-19 PCR,LAB12019,N
+33,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+30,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+42,Female,Unknown,5/29/20,COVID IGG,LAB19414,N
+45,Female,Unknown,6/12/20,COVID IGG,LAB19414,N
+41,Female,Black or African American,5/18/20,COVID IGG,LAB19414,N
+41,Male,Unknown,5/4/20,COVID IGG,LAB19414,N
+47,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+19,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+44,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/19/20,COVID-19 PCR,LAB12019,N
+31,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+35,Male,Black or African American,6/3/20,COVID-19 PCR,LAB12019,N
+35,Male,Black or African American,6/3/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+46,Female,Other Race,5/14/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+69,Male,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+65,Male,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+57,Male,White or Caucasian,5/11/20,COVID-19 PCR,LAB12019,N
+57,Male,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+22,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+21,Male,Other Race,3/31/20,COVID-19 PCR,LAB12019,N
+21,Male,Other Race,5/1/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,6/9/20,COVID IGG,LAB19414,N
+38,Female,White or Caucasian,5/12/20,COVID-19 PCR,LAB12019,N
+38,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+57,Male,Unknown,5/28/20,COVID IGG,LAB19414,N
+53,Female,White or Caucasian,5/13/20,COVID-19 PCR,LAB12019,N
+53,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+72,Male,White or Caucasian,6/10/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/15/20,COVID IGG,LAB19414,N
+38,Female,Other Race,6/2/20,COVID IGG,LAB19414,N
+55,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+50,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+21,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+49,Female,White or Caucasian,6/1/20,COVID IGG,LAB19414,N
+32,Female,Unknown,5/13/20,COVID IGG,LAB19414,N
+22,Male,Other Race,5/27/20,COVID IGG,LAB19414,N
+73,Female,Unknown,5/11/20,COVID IGG,LAB19414,N
+61,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+24,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+36,Male,White or Caucasian,6/12/20,COVID-19 PCR,LAB12019,N
+36,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+39,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+49,Male,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+71,Male,Unknown,5/12/20,COVID IGG,LAB19414,N
+34,Male,White or Caucasian,6/5/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,3/30/20,COVID-19 PCR,LAB12019,N
+32,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+23,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+29,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+37,Female,Native Hawaiian or Other Pacific Islander,5/21/20,COVID IGG,LAB19414,N
+35,Female,Unknown,5/22/20,COVID IGG,LAB19414,N
+36,Female,Unknown,5/14/20,COVID IGG,LAB19414,N
+38,Female,Other Race,5/7/20,COVID IGG,LAB19414,N
+22,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,4/20/20,COVID-19 PCR,LAB12019,N
+27,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+56,Female,Black or African American,5/13/20,COVID IGG,LAB19414,N
+20,Female,Black or African American,5/12/20,COVID IGG,LAB19414,N
+18,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+62,Male,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+26,Female,White or Caucasian,5/6/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,6/16/20,COVID IGG,LAB19414,N
+20,Female,Other Race,5/11/20,COVID IGG,LAB19414,N
+40,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+28,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/15/20,COVID-19 PCR,LAB12019,N
+66,Female,White or Caucasian,6/2/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+27,Female,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+28,Female,Other Race,6/15/20,COVID IGG,LAB19414,N
+25,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+42,Male,White or Caucasian,5/5/20,COVID IGG,LAB19414,N
+20,Male,Other Race,5/6/20,COVID-19 PCR,LAB12019,N
+50,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+24,Female,Black or African American,5/6/20,COVID IGG,LAB19414,N
+75,Female,White or Caucasian,5/6/20,COVID-19 PCR,LAB12019,N
+75,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+58,Male,White or Caucasian,5/7/20,COVID IGG,LAB19414,N
+45,Male,American Indian or Alaska Native,5/7/20,COVID IGG,LAB19414,N
+51,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+45,Female,Other Race,5/8/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+69,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+31,Female,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+31,Male,White or Caucasian,5/8/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,5/12/20,COVID IGG,LAB19414,N
+25,Male,White or Caucasian,5/11/20,COVID IGG,LAB19414,N
+56,Male,Black or African American,5/26/20,COVID IGG,LAB19414,N
+47,Female,Unknown,5/12/20,COVID IGG,LAB19414,N
+40,Male,Unknown,5/12/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+35,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+61,Male,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+76,Female,White or Caucasian,5/13/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+42,Female,Unknown,5/14/20,COVID IGG,LAB19414,N
+55,Female,Unknown,5/14/20,COVID IGG,LAB19414,N
+37,Female,Unknown,5/14/20,COVID IGG,LAB19414,N
+39,Female,Unknown,5/14/20,COVID IGG,LAB19414,N
+63,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+42,Female,White or Caucasian,5/14/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,6/4/20,COVID IGG,LAB19414,N
+57,Male,Unknown,5/14/20,COVID IGG,LAB19414,N
+30,Female,Other Race,5/15/20,COVID IGG,LAB19414,N
+62,Male,Other Race,5/15/20,COVID IGG,LAB19414,N
+48,Female,Black or African American,5/15/20,COVID IGG,LAB19414,N
+45,Male,White or Caucasian,5/22/20,COVID IGG,LAB19414,N
+38,Male,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/26/20,COVID IGG,LAB19414,N
+57,Female,White or Caucasian,5/18/20,COVID IGG,LAB19414,N
+30,Female,American Indian or Alaska Native,5/18/20,COVID IGG,LAB19414,N
+71,Female,White or Caucasian,5/27/20,COVID IGG,LAB19414,N
+60,Male,White or Caucasian,5/19/20,COVID-19 PCR,LAB12019,N
+60,Male,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+67,Male,Unknown,5/19/20,COVID IGG,LAB19414,N
+48,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+51,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+35,Female,White or Caucasian,5/19/20,COVID IGG,LAB19414,N
+59,Female,Unknown,5/19/20,COVID IGG,LAB19414,N
+67,Female,White or Caucasian,5/20/20,COVID-19 PCR,LAB12019,N
+67,Female,White or Caucasian,5/28/20,COVID IGG,LAB19414,N
+18,Female,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+66,Female,White or Caucasian,5/20/20,COVID IGG,LAB19414,N
+33,Female,White or Caucasian,5/21/20,COVID IGG,LAB19414,N
+30,Male,Unknown,6/17/20,COVID-19 PCR,LAB12019,Y
+30,Male,Unknown,5/21/20,COVID IGG,LAB19414,N
+26,Male,Black or African American,5/26/20,COVID-19 PCR,LAB12019,N
+26,Male,Black or African American,5/26/20,COVID IGG,LAB19414,N
+22,Male,Black or African American,5/27/20,COVID IGG,LAB19414,N
+22,Male,Black or African American,5/27/20,COVID IGG,LAB19414,N
+55,Male,Black or African American,5/28/20,COVID IGG,LAB19414,N
+33,Male,Black or African American,5/28/20,COVID IGG,LAB19414,N
+83,Male,White or Caucasian,6/3/20,COVID IGG,LAB19414,N
+20,Female,White or Caucasian,5/29/20,COVID IGG,LAB19414,N
+37,Female,Black or African American,5/29/20,COVID IGG,LAB19414,Y
+31,Male,Other Race,5/29/20,COVID-19 PCR,LAB12019,N
+31,Male,Other Race,5/29/20,COVID IGG,LAB19414,N
+32,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+32,Male,Other Race,6/1/20,COVID IGG,LAB19414,N
+59,Male,Black or African American,6/1/20,COVID IGG,LAB19414,N
+43,Female,Black or African American,6/1/20,COVID-19 PCR,LAB12019,N
+43,Female,Black or African American,6/1/20,COVID IGG,LAB19414,N
+44,Female,White or Caucasian,6/4/20,COVID IGG,LAB19414,N
+56,Male,Black or African American,6/5/20,COVID IGG,LAB19414,N
+56,Male,Black or African American,6/5/20,COVID-19 PCR,LAB12019,N
+25,Female,Asian,6/7/20,COVID-19 PCR,LAB12019,N
+25,Female,Asian,6/7/20,COVID IGG,LAB19414,N
+29,Male,White or Caucasian,6/11/20,COVID IGG,LAB19414,N
+59,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+56,Female,White or Caucasian,6/12/20,COVID-19 PCR,LAB12019,N
+56,Female,White or Caucasian,6/12/20,COVID IGG,LAB19414,N
+26,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+55,Male,White or Caucasian,6/15/20,COVID IGG,LAB19414,N
+74,Male,Other Race,6/17/20,COVID IGG,LAB19414,N
+21,Male,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
+43,Female,White or Caucasian,6/18/20,COVID IGG,LAB19414,N
