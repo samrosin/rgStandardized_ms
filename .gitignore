@@ -43,3 +43,5 @@ extra_estimation_fns.R
 sims/figs/bias/old/
 sims/figs/var/old/
 editing_var_srgm.R
+data_analyses/screenNC/serology_raw.csv
+data_analyses/screenNC/strataprops_nc_raw.csv
