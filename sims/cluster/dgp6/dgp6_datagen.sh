@@ -12,4 +12,4 @@ module load r/4.0.1
 #define variables
 N_SIMS=1000
 
-sbatch --output=/dev/null --error=/dev/null --time=0:30:00 --mem=200m --array=1-$N_SIMS --job-name=datasets_gen_dgp3 --wait R CMD BATCH --no-save --no-restore dgp3_datagen.R dgp3_datagen.Rout
+sbatch --output=/dev/null --error=/dev/null --time=0:30:00 --mem=200m --array=1-$N_SIMS --job-name=datasets_gen_dgp6 --wait R CMD BATCH --no-save --no-restore dgp6_datagen.R dgp6_datagen.Rout

@@ -1,5 +1,4 @@
-
-# Generate a single results dataset for DGP4.
+# Generate a single results dataset for dgp5.
 # Relies on a SLURM-managed cluster.
 
 # these two directories must be specified by the user 
@@ -8,10 +7,10 @@ user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directo
 
 # specify number of simulations and number of strata
 n_sims <- 1000
-n_strata <- 80
+n_strata <- 40
 
-setwd(paste(user_home_dir, "dgp4_results/", sep = ""))
-outfile <- paste(user_home_dir, "dgp4_results.csv", sep = "")
+setwd(paste(user_home_dir, "dgp5_results/", sep = ""))
+outfile <- paste(user_home_dir, "dgp5_var_results.csv", sep = "")
 library(tidyverse)
 
 list_of_all_results <- vector(mode = "list", length = n_sims)
@@ -19,8 +18,8 @@ list_of_all_results <- vector(mode = "list", length = n_sims)
 # read in all results from results directory
 for(i in 1:n_sims){
   list_of_all_results[[i]] <- read_csv(file = paste("results_", i, ".csv", sep = ""),
-                                       col_types = cols(positivity = col_logical(),
-                                                        .default = col_double()))
+                  col_types = cols(positivity = col_logical(),
+                                     .default = col_double()))
 }
 
 # stack all results into one dataframe
@@ -46,9 +45,9 @@ sim_results <- all_results %>%
             ESE_hat_pi_SRG = sd(hat_pi_SRG, na.rm = T),
             ASE_hat_pi_SRG = mean(sqrt(hat_var_pi_SRG), na.rm = T),
             coverage_pi_SRG = mean(covers_pi_SRG, na.rm = T),
-            #   ESE_hat_pi_SRG_restriction = sd(hat_pi_SRG[!positivity], na.rm = T),
-            # ASE_hat_pi_SRG_restriction = mean(sqrt(hat_var_pi_SRG[!positivity]), na.rm = T),
-            # coverage_pi_SRG_restriction = mean(covers_pi_SRG[!positivity], na.rm = T),
+         #   ESE_hat_pi_SRG_restriction = sd(hat_pi_SRG[!positivity], na.rm = T),
+           # ASE_hat_pi_SRG_restriction = mean(sqrt(hat_var_pi_SRG[!positivity]), na.rm = T),
+           # coverage_pi_SRG_restriction = mean(covers_pi_SRG[!positivity], na.rm = T),
             ESE_hat_pi_SRGM = sd(hat_pi_SRGM, na.rm = T),
             ASE_hat_pi_SRGM = mean(sqrt(hat_var_pi_SRGM), na.rm = T),
             coverage_pi_SRGM = mean(covers_pi_SRGM, na.rm = T),
@@ -58,7 +57,7 @@ sim_results <- all_results %>%
             n_strata_obs_full = sum(strata_obs == 40),
             hat_pi_RG = mean(relbias_RG, na.rm = TRUE),
             hat_pi_SRG = mean(relbias_SRG, na.rm = TRUE),
-            #  hat_pi_SRG_restriction = mean(relbias_SRG_restriction, na.rm = T),
+          #  hat_pi_SRG_restriction = mean(relbias_SRG_restriction, na.rm = T),
             hat_pi_SRGM = mean(relbias_SRGM, na.rm = TRUE),
             .groups = "drop")
 

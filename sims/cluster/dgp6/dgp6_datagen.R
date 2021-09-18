@@ -1,5 +1,5 @@
 ##########
-# Generates data for simulation DGP 3.
+# Generates data for simulation DGP 6.
 # Relies on a SLURM-managed cluster and uses array method for speed of computation
 
 # these two directories must be specified by the user 
@@ -11,7 +11,7 @@ sim <- Sys.getenv("SLURM_ARRAY_TASK_ID") # get the array ID to use as the random
 set.seed(sim)
 n_strata <- 80 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3", "z4")
-prevs <- seq(.01, .2, by = .01)
+prevs <- seq(.005, .2, by = .005)
 
 setwd(user_home_dir)
 library(tidyverse)
@@ -24,7 +24,7 @@ source("param_values_var.R")
 
 # The known stratum proportions (the gamma_{zj}s) must be prespecified,
 # and they are loaded here
-gammas <- read_csv("dgp3_stratum_props.csv",
+gammas <- read_csv("dgp4_stratum_props.csv",
                    col_types = cols(
                      z1 = col_character(), 
                      z2 = col_character(), 
@@ -40,9 +40,10 @@ gammas <- read_csv("dgp3_stratum_props.csv",
 stratum_props <- vector(mode = "list", length = length(prevs)) # create list of stratum proportion dataframes
 for(p in 1:length(prevs)){
   s <- gammas %>% dplyr::mutate(
-    prev = inv.logit(alpha_0[p]+alpha_1*(gammas$z1=="z11")+
-                       alpha_2*(gammas$z2=="z20")+alpha_3*(gammas$z2=="z21") +
-                       alpha_4*(gammas$z3=="z30")+alpha_5*(gammas$z3=="z31"))
+    prev = inv.logit(nu_0[p]+nu_1*(gammas$z1=="z11")+
+                       nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21") +
+                       nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31") + 
+                       nu_6*(gammas$z4=="z41"))
   )
   stratum_props[[p]] <- s
 }
@@ -67,19 +68,19 @@ sim_conditions <- tidyr::crossing(
   )
 
 sample_list <- vector(mode = "list", length = nrow(sim_conditions)) # empty list to store each sample
-
-# simulate the data, iterating through the subscenarios
+  
+  # simulate the data, iterating through the subscenarios
 for(i in 1:nrow(sim_conditions)){
   row <- sim_conditions[i,]
-  dat <- gen_data_dgp3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
-                       row$n_3, as.data.frame(row$stratum_props), vars_std)
+  dat <- gen_data_dgp5(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
+                            row$n_3, as.data.frame(row$stratum_props), vars_std)
   sim_conditions[i,"sigma_e_hat"] <- dat$sigma_e_hat
   sim_conditions[i,"sigma_p_hat"] <- dat$sigma_p_hat
   sim_conditions[i,"rho_hat"] <- dat$rho_hat
   sample_list[[i]] <- dat$sample # store the entire sample 
 }
-# store data in an .RData file. This data format is used because 
-# sim_conditions is a dataframe, itself containing a dataframe as a column (stratum_props)
-output_filename <- paste("dgp3_datasets/sim_",sim,".RData",sep="")
-save(sim_conditions,sample_list, file = output_filename)
+  # store data in an .RData file. This data format is used because 
+  # sim_conditions is a dataframe, itself containing a dataframe as a column (stratum_props)
+  output_filename <- paste("dgp6_datasets/sim_",sim,".RData",sep="")
+  save(sim_conditions,sample_list, file = output_filename)
 

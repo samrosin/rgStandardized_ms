@@ -1,5 +1,5 @@
 ##########
-# Generates data for simulation DGP 3.
+# Generates data for simulation DGP 5.
 # Relies on a SLURM-managed cluster.
 t1 <- Sys.time()
 
@@ -18,7 +18,7 @@ source("param_values_var.R")
 
 # Read in simulation data
 sim <- Sys.getenv("SLURM_ARRAY_TASK_ID") # get the number of the simulation
-load((paste("dgp3_datasets/sim_", sim, ".RData", sep=""))) # load .RData file
+load((paste("dgp5_datasets/sim_", sim, ".RData", sep=""))) # load .RData file
 
 # sim parameter values
 n_strata <- 40 # number of strata for this scenario
@@ -110,6 +110,6 @@ for(i in 1:nrow(sim_conditions)){
 t2 <- Sys.time()
 print(t2 - t1)
 sim_results <- sim_conditions %>% select(-c(stratum_props))
-output_filename <- paste("dgp3_results/results_", sim, ".csv", sep="")
+output_filename <- paste("dgp5_results/results_", sim, ".csv", sep="")
 write_csv(sim_results, output_filename)
 

@@ -21,9 +21,9 @@ results_2 <- read_csv(here("sims/results_final/dgp2_var_results.csv"),
                       col_types = cols(.default = col_double())
 )
 
-results_3 <- read_csv(here("sims/results_final/dgp3_var_results.csv"),
-                      col_types = cols(.default = col_double())
-)
+# results_3 <- read_csv(here("sims/results_final/dgp3_var_results.csv"),
+#                       col_types = cols(.default = col_double())
+# )
 gammas_3 <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
                      col_types = cols(
                        z1 = col_character(),
@@ -33,9 +33,9 @@ gammas_3 <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
                        sampling_prob = col_double()
                      ))
 
-results_4 <- read_csv(here("sims/results_final/dgp4_var_results.csv"),
-                      col_types = cols(.default = col_double())
-)
+# results_4 <- read_csv(here("sims/results_final/dgp4_var_results.csv"),
+#                       col_types = cols(.default = col_double())
+# )
 
 gammas_4 <- read_csv(here("sims/inputs/dgp4_stratum_props.csv"),
                      col_types = cols(
@@ -47,6 +47,17 @@ gammas_4 <- read_csv(here("sims/inputs/dgp4_stratum_props.csv"),
                        sampling_prob = col_double()
                      ))
 
+results_5 <- read_csv(here("sims/results_final/dgp5_var_results.csv"),
+                      col_types = cols(.default = col_double())
+)
+
+gammas_5 <- gammas_3
+
+results_6 <- read_csv(here("sims/results_final/dgp6_var_results.csv"),
+                      col_types = cols(.default = col_double())
+)
+
+gammas_6 <- gammas_4
 
 # DGP 1 Plots --------------------------------------------------------------
 res1_gg <- results_1 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
@@ -129,11 +140,19 @@ pdf(here("sims/figs/var/DGP2_coverage.pdf"),
 print(res2_cov)
 dev.off()
 
-# DGP 3 Plots -------------------------------------------------------------
 
-# plot DGP3 for n_1 = 40
+# dgp 3 -------------------------------------------------------------------
 
-res3_gg <- results_3 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
+
+# dgp 4 -------------------------------------------------------------------
+
+
+
+# dgp 5 -------------------------------------------------------------
+
+# plot DGP5 for n_1 = 40
+
+res5_gg <- results_5 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = covers,
         coverage_pi_RG, 
@@ -142,7 +161,7 @@ res3_gg <- results_3 %>% filter(n_1 == 40 & sigma_e != .6) %>%
   mutate(covers = 100 * covers, 
          Method = factor(Method, levels = unique(Method)))
 
-res3_cov <- ggplot(data = res3_gg, 
+res5_cov <- ggplot(data = res5_gg, 
                    mapping = aes(x = prev, y = covers,
                                  linetype = Method, color = Method)) +
   geom_line(size = 2) + 
@@ -170,18 +189,18 @@ res3_cov <- ggplot(data = res3_gg,
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
   geom_hline(aes(yintercept = 95), linetype = "dashed") 
-res3_cov
+res5_cov
 
 #send plot to pdf
-pdf(here("sims/figs/var/DGP3_coverage.pdf"),
+pdf(here("sims/figs/var/DGP5_coverage.pdf"),
     paper = "USr",width = 8.5, height = 11)
-print(res3_cov)
+print(res5_cov)
 dev.off()
 
-# DGP 4 Plots -------------------------------------------------------------
+# DGP 6 plots -------------------------------------------------------------
 
 # plot for n_1 == 40
-res4_gg <- results_4 %>% filter(n_1 == 40 & sigma_e != .6 ) %>% 
+res6_gg <- results_6 %>% filter(n_1 == 40 & sigma_e != .6 ) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = covers,
          coverage_pi_RG,
@@ -191,7 +210,7 @@ res4_gg <- results_4 %>% filter(n_1 == 40 & sigma_e != .6 ) %>%
   mutate(covers = 100 * covers, 
          Method = factor(Method, levels = unique(Method)))
 
-res4_cov <- ggplot(data = res4_gg, 
+res6_cov <- ggplot(data = res6_gg, 
                    mapping = aes(x = prev, y = covers,
                                  linetype = Method, color = Method)) +
   geom_line(size = 2) + 
@@ -219,10 +238,10 @@ res4_cov <- ggplot(data = res4_gg,
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
   geom_hline(aes(yintercept = 95), linetype = "dashed") 
-res4_cov
+res6_cov
 
 #send plot to pdf
-pdf(here("sims/figs/var/DGP4_coverage.pdf"),
+pdf(here("sims/figs/var/DGP6_coverage.pdf"),
     paper = "USr",width = 8.5, height = 11)
-print(res4_cov)
+print(res6_cov)
 dev.off()

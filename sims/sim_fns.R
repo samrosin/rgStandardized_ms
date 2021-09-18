@@ -63,8 +63,8 @@ gen_data_dgp2 <- function(n_1, sigma_e, n_2, sigma_p, n_3, stratum_props){
 inv.logit <- function(x){1/(1 + exp(-x))} 
 
 # based on true parameters, generates data and returns data needed for analysis.
-# relevant for both DGPs 3 and 4. 
-gen_data_dgp3 <- function(n_1, sigma_e, n_2, sigma_p, 
+# relevant for both DGPs 5 and 6. 
+gen_data_dgp5 <- function(n_1, sigma_e, n_2, sigma_p, 
             n_3, stratum_props, vars_std){
   
   # (1) Run the two validation studies

@@ -10,6 +10,6 @@
 module load r/4.0.1  
 
 #define variables
-N_SIMS=1000
+N_SIMS=2500
 
-sbatch --output=/dev/null --error=/dev/null --time=1:30:00 --mem=350m --array=1-$N_SIMS --job-name=results_dgp3 --wait R CMD BATCH --no-save --no-restore dgp3_results.R dgp3_results.Rout
+sbatch --output=/dev/null --error=/dev/null --time=4:00:00 --mem=500m --array=1-$N_SIMS --job-name=results_dgp4 --wait R CMD BATCH --no-save --no-restore dgp4_results_test.R dgp4_results_test.Rout

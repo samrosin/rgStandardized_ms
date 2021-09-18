@@ -1,5 +1,5 @@
 ##########
-# Conducts simulation dgp 3
+# Conducts simulation dgp 5
 time1 <- Sys.time() 
 
 # sim parameter values
@@ -19,10 +19,11 @@ source(here("sims/sim_fns.R"))
 # Note that the final simulation results are placed in the 
 # results_final subdirectory, but as the simulations are conducted
 # results are placed in the results_draft subdirectory
-output_file <- here("sims/results_draft/dgp3_var_results.csv")
+output_file <- here("sims/results_draft/dgp5_var_results.csv")
 
-#### The known stratum proportions (the gamma_{zj}s) must be prespecified,
-#### and they are loaded here
+# The known stratum proportions (the gamma_{zj}s) must be prespecified,
+# and they are loaded here
+# note dgp3 and dgp5 use same stratum_props
 gammas <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
                    col_types = cols(
                      z1 = col_character(), 
@@ -113,7 +114,7 @@ for(i in 1:nrow(sim_conditions)){
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
     print(paste("sim number:", j))
-    dat <- gen_data_dgp3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
+    dat <- gen_data_dgp5(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
                               row$n_3, as.data.frame(row$stratum_props), vars_std)
     hat_pi_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
                           row$n_1, row$n_2, row$n_3, variance = TRUE)

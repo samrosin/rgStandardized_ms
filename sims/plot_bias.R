@@ -21,9 +21,6 @@ results_2 <- read_csv(here("sims/results_final/dgp2_results.csv"),
                       col_types = cols(.default = col_double())
 )
 
-results_3 <- read_csv(here("sims/results_final/dgp3_var_results.csv"),
-                      col_types = cols(.default = col_double())
-)
 gammas_3 <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
                      col_types = cols(
                        z1 = col_character(), 
@@ -32,10 +29,6 @@ gammas_3 <- read_csv(here("sims/inputs/dgp3_stratum_props.csv"),
                        stratum_prop = col_double(),
                        sampling_prob = col_double()
                      ))
-
-results_4 <- read_csv(here("sims/results_final/dgp4_var_results.csv"),
-                      col_types = cols(.default = col_double())
-)
 
 gammas_4 <- read_csv(here("sims/inputs/dgp4_stratum_props.csv"),
                      col_types = cols(
@@ -47,7 +40,19 @@ gammas_4 <- read_csv(here("sims/inputs/dgp4_stratum_props.csv"),
                        sampling_prob = col_double()
                      ))
 
-# DGP 1 Plots --------------------------------------------------------------
+results_5 <- read_csv(here("sims/results_final/dgp5_var_results.csv"),
+                      col_types = cols(.default = col_double())
+)
+
+gammas_5 <- gammas_3 
+
+results_6 <- read_csv(here("sims/results_final/dgp6_var_results.csv"),
+                      col_types = cols(.default = col_double())
+)
+
+gammas_6 <- gammas_4
+
+# DGP 1 plots --------------------------------------------------------------
 
 # plot where n_1 == 40
 
@@ -91,7 +96,7 @@ print(res1_bias)
 dev.off()
 
 
-# DGP 2 Plots --------------------------------------------------------
+# DGP 2 plots --------------------------------------------------------
 res2_gg <- results_2 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = rel_bias,
@@ -130,7 +135,8 @@ pdf(here("sims/figs/bias/DGP2.pdf"),
 print(res2_facet)
 dev.off()
 
-# DGP 3 Plots --------------------------------------------------------
+
+# DGP 3 plots -------------------------------------------------------------
 
 # plot the gamma_js vs sampling probs s_js to understand 
 # the amount of sampling bias in each 
@@ -162,58 +168,7 @@ scenario3_selectionbias_plot <- ggplot(data = sp3_05, aes(x=stratum_prop, y = sa
         legend.text = element_text(size = 16))# + 
 scenario3_selectionbias_plot
 
-# plot bias from DGP 4 from variance results 
-# note this is **truncated** inside [-100%, 100%]
-res3_bias <- results_3 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
-  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
-  gather(key = Method, value = relbias,
-         hat_pi_RG, 
-         hat_pi_SRG, 
-         hat_pi_SRGM) %>% 
-  mutate(
-    Method = factor(Method, levels = unique(Method))) %>% 
-  mutate(relbias = ifelse(relbias > 99.9, 
-                          100, relbias)) %>%
-  mutate(relbias = ifelse(relbias < -99.9, 
-                          -100, relbias))
-
-res3_bias_plot <- ggplot(data = res3_bias, 
-                         mapping = aes(x = prev, y = relbias,
-                                       linetype = Method, color = Method)) +
-  geom_line(size = 2) + 
-  facet_grid(Sens ~ Spec, 
-             labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme_bw() + 
-  theme(axis.text.y = element_text(size = 16),
-        axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 20),
-        legend.position = c(.91,0.89),
-        legend.title = element_blank(),
-        legend.text = element_text(size = 20),
-        #                    legend.background = element_rect(fill=alpha('white', 0)),
-        panel.spacing.y = unit(1.25, "lines"),
-        strip.text = element_text(size = 18)) + 
-  labs(x = "Prevalence", y = "Relative Bias") + 
-  scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  #                   limits = c(-50, 200)) + 
-  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
-                        labels = c(expression(hat(pi)[RG]), 
-                                   expression(hat(pi)[SRG]),
-                                   expression(hat(pi)[SRGM]))) + 
-  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
-                     labels = c(expression(hat(pi)[RG]), 
-                                expression(hat(pi)[SRG]),
-                                expression(hat(pi)[SRGM]))) + 
-  geom_hline(aes(yintercept = 0), linetype = "dashed")
-res3_bias_plot
-
-#send plot to pdf
-pdf(here("sims/figs/bias/DGP3.pdf"),
-    paper = "USr", width = 8.5, height = 11)
-print(res3_bias_plot)
-dev.off()
-
-# DGP 4 Plots --------------------------------------------------------
+# DGP 4 plots -------------------------------------------------------------
 
 # plot the gamma_js vs sampling probs s_js to understand 
 # the amount of sampling bias in each 
@@ -255,15 +210,19 @@ plot_grid(scenario3_selectionbias_plot,
           labels = c("A.", "B."),
           label_size = 18,
           hjust = 0
-          )
+)
 # grid.arrange(scenario3_selectionbias_plot,
 #              scenario4_selectionbias_plot,
 #              ncol = 1)
 dev.off()
 
 
-# plot bias from DGP 4 from variance results 
-res4_bias <- results_4 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
+# DGP 5 plots --------------------------------------------------------
+
+
+# plot bias from DGP 5 from variance results 
+# note this is **truncated** inside [-100%, 100%]
+res5_bias <- results_5 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = relbias,
          hat_pi_RG, 
@@ -276,7 +235,59 @@ res4_bias <- results_4 %>% filter(n_1 == 40 & sigma_e != .6) %>%
   mutate(relbias = ifelse(relbias < -99.9, 
                           -100, relbias))
 
-res4_bias_plot <- ggplot(data = res4_bias, 
+res5_bias_plot <- ggplot(data = res5_bias, 
+                         mapping = aes(x = prev, y = relbias,
+                                       linetype = Method, color = Method)) +
+  geom_line(size = 2) + 
+  facet_grid(Sens ~ Spec, 
+             labeller = labeller(.rows = label_both, .cols = label_both)) + 
+  theme_bw() + 
+  theme(axis.text.y = element_text(size = 16),
+        axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
+        axis.title = element_text(size = 20),
+        legend.position = c(.91,0.89),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 20),
+        #                    legend.background = element_rect(fill=alpha('white', 0)),
+        panel.spacing.y = unit(1.25, "lines"),
+        strip.text = element_text(size = 18)) + 
+  labs(x = "Prevalence", y = "Relative Bias") + 
+  scale_y_continuous(labels = function(x) paste0(x, "%")) + 
+  #                   limits = c(-50, 200)) + 
+  scale_linetype_manual(name = "Method", values = c(2, 1, 3),
+                        labels = c(expression(hat(pi)[RG]), 
+                                   expression(hat(pi)[SRG]),
+                                   expression(hat(pi)[SRGM]))) + 
+  scale_color_manual(name = "Method", values = scales::hue_pal()(3),
+                     labels = c(expression(hat(pi)[RG]), 
+                                expression(hat(pi)[SRG]),
+                                expression(hat(pi)[SRGM]))) + 
+  geom_hline(aes(yintercept = 0), linetype = "dashed")
+res5_bias_plot
+
+#send plot to pdf
+pdf(here("sims/figs/bias/DGP5.pdf"),
+    paper = "USr", width = 8.5, height = 11)
+print(res5_bias_plot)
+dev.off()
+
+# DGP 6 plots --------------------------------------------------------
+
+# plot bias from DGP 6 from variance results 
+res6_bias <- results_6 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
+  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
+  gather(key = Method, value = relbias,
+         hat_pi_RG, 
+         hat_pi_SRG, 
+         hat_pi_SRGM) %>% 
+  mutate(
+    Method = factor(Method, levels = unique(Method))) %>% 
+  mutate(relbias = ifelse(relbias > 99.9, 
+                          100, relbias)) %>%
+  mutate(relbias = ifelse(relbias < -99.9, 
+                          -100, relbias))
+
+res6_bias_plot <- ggplot(data = res6_bias, 
                      mapping = aes(x = prev, y = relbias,
                                    linetype = Method, color = Method)) +
   geom_line(size = 2) + 
@@ -304,11 +315,11 @@ res4_bias_plot <- ggplot(data = res4_bias,
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
   geom_hline(aes(yintercept = 0), linetype = "dashed")
-res4_bias_plot
+res6_bias_plot
 
-pdf(here("sims/figs/bias/DGP4.pdf"),
+pdf(here("sims/figs/bias/DGP6.pdf"),
     paper = "USr",width = 8.5, height = 11)
-print(res4_bias_plot)
+print(res6_bias_plot)
 dev.off()
 
 

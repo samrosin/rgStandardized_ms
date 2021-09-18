@@ -20,7 +20,7 @@ library(tidyverse)
 # all of which are in the top-level user_home_dir
 source("estimation_fns.R")
 source("sim_fns.R")
-source("param_values_var.R")
+source("param_values_var_varysp.R")
 
 # The known stratum proportions (the gamma_{zj}s) must be prespecified,
 # and they are loaded here
@@ -68,19 +68,19 @@ sim_conditions <- tidyr::crossing(
   )
 
 sample_list <- vector(mode = "list", length = nrow(sim_conditions)) # empty list to store each sample
-  
-  # simulate the data, iterating through the subscenarios
+
+# simulate the data, iterating through the subscenarios
 for(i in 1:nrow(sim_conditions)){
   row <- sim_conditions[i,]
   dat <- gen_data_dgp3(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
-                            row$n_3, as.data.frame(row$stratum_props), vars_std)
+                       row$n_3, as.data.frame(row$stratum_props), vars_std)
   sim_conditions[i,"sigma_e_hat"] <- dat$sigma_e_hat
   sim_conditions[i,"sigma_p_hat"] <- dat$sigma_p_hat
   sim_conditions[i,"rho_hat"] <- dat$rho_hat
   sample_list[[i]] <- dat$sample # store the entire sample 
 }
-  # store data in an .RData file. This data format is used because 
-  # sim_conditions is a dataframe, itself containing a dataframe as a column (stratum_props)
-  output_filename <- paste("dgp4_datasets/sim_",sim,".RData",sep="")
-  save(sim_conditions,sample_list, file = output_filename)
+# store data in an .RData file. This data format is used because 
+# sim_conditions is a dataframe, itself containing a dataframe as a column (stratum_props)
+output_filename <- paste("dgp4_datasets_varysp/sim_",sim,".RData",sep="")
+save(sim_conditions,sample_list, file = output_filename)
 
