@@ -114,7 +114,7 @@ for(i in 1:nrow(sim_conditions)){
   # iterate through each of the n_sims simulations per sub-scenario
   for(j in 1:n_sims){
     print(paste("sim number:", j))
-    dat <- gen_data_dgp5(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
+    dat <- gen_data_dgp5_6(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
                               row$n_3, as.data.frame(row$stratum_props), vars_std)
     hat_pi_vec <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat, 
                           row$n_1, row$n_2, row$n_3, variance = TRUE)
