@@ -9,8 +9,8 @@ user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directo
 # sim parameter values
 sim <- Sys.getenv("SLURM_ARRAY_TASK_ID") # get the array ID to use as the random seed
 set.seed(sim)
-n_strata <- 80 # number of strata for this scenario
-vars_std <- c("z1", "z2", "z3", "z4")
+n_strata <- 40 # number of strata for this scenario
+vars_std <- c("z1", "z2", "z3")
 prevs <- seq(.01, .20, by = .01)
 
 setwd(user_home_dir)
