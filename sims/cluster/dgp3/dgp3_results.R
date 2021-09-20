@@ -1,5 +1,5 @@
 ##########
-# Generates data for simulation DGP 5.
+# Generates data for simulation DGP 3.
 # Relies on a SLURM-managed cluster.
 t1 <- Sys.time()
 
