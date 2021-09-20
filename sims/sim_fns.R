@@ -62,9 +62,30 @@ gen_data_dgp2 <- function(n_1, sigma_e, n_2, sigma_p, n_3, stratum_props){
 # The inverse logit function 
 inv.logit <- function(x){1/(1 + exp(-x))} 
 
+gen_data_dgp3_4 <- function(n_1, sigma_e, n_2, sigma_p, 
+                          n_3, stratum_props, vars_std){
+  # (1) Run the two validation studies
+  sigma_e_hat <- rbinom(1 , n_1, sigma_e) / n_1 #estimated sensitivity
+  sigma_p_hat <- 1 - rbinom(1, n_2, 1 - sigma_p) / n_2 #estimated specificity
+  
+  # (2) Create main study sample based on sampling probs s_js 
+  sample <- stratum_props[sample(nrow(stratum_props), n_3, 
+                                 replace = T, prob = stratum_props$sampling_prob),]
+  
+  # (3) Each person's test result is distributed Bernoulli
+  #     with a stratum-specific mean P(X = 1 | Z) 
+  sample$x <- rbinom(n = n_3, size = 1, prob = sample$prev_x_z)
+  
+  # (4) Return sample and sample estimates
+  rho_hat <- mean(sample$x) 
+  data <- list(sigma_e_hat = sigma_e_hat, sigma_p_hat = sigma_p_hat, 
+               rho_hat = rho_hat, sample = sample)
+  data
+}
+
 # based on true parameters, generates data and returns data needed for analysis.
 # relevant for both DGPs 5 and 6. 
-gen_data_dgp5 <- function(n_1, sigma_e, n_2, sigma_p, 
+gen_data_dgp5_6 <- function(n_1, sigma_e, n_2, sigma_p, 
             n_3, stratum_props, vars_std){
   
   # (1) Run the two validation studies
@@ -97,3 +118,6 @@ gen_data_dgp5 <- function(n_1, sigma_e, n_2, sigma_p,
 
 # truncate a number into the range [0, 1]
 truncate_01 <- function(x) {min(1, max(0, x))}
+
+
+
