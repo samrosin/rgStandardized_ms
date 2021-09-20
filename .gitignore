@@ -48,3 +48,6 @@ data_analyses/screenNC/strataprops_nc_raw.csv
 sims/test_plotbias.R
 sims/test_plotvar.R
 sims/testfigs/
+sims/cluster/dgp5/old/
+sims/cluster/dgp6/old/
+sims/cluster/dgp6_varysp/
