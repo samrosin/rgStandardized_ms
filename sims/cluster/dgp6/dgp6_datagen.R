@@ -72,7 +72,7 @@ sample_list <- vector(mode = "list", length = nrow(sim_conditions)) # empty list
   # simulate the data, iterating through the subscenarios
 for(i in 1:nrow(sim_conditions)){
   row <- sim_conditions[i,]
-  dat <- gen_data_dgp5(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
+  dat <- gen_data_dgp5_6(row$n_1, row$sigma_e, row$n_2, row$sigma_p, 
                             row$n_3, as.data.frame(row$stratum_props), vars_std)
   sim_conditions[i,"sigma_e_hat"] <- dat$sigma_e_hat
   sim_conditions[i,"sigma_p_hat"] <- dat$sigma_p_hat
