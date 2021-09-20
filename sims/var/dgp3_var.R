@@ -7,7 +7,7 @@ set.seed(2021)
 n_sims <- 2 # number of simulations
 n_strata <- 40 # number of strata for this dgp
 vars_std <- c("z1", "z2", "z3")
-prevs <- seq(.01, .05, by = .01)
+prevs <- seq(.01, .20, by = .01)
 
 library(tidyverse)
 library(here)
