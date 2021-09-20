@@ -2,7 +2,9 @@
 # Generates data for simulation DGP 6.
 # Relies on a SLURM-managed cluster and uses array method for speed of computation
 
+# *** MUST READ ***
 # these two directories must be specified by the user 
+# the user_home_dir *must* initially contain two empty sub-directories titled dgp6_datasets/ and dgp6_results/
 libs <- "/nas/longleaf/home/srosin/RLibs/" # directory containing R packages
 user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directory for the project
 

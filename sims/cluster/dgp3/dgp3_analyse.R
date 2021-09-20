@@ -1,7 +1,9 @@
 # Generate a single results dataset for dgp3.
 # Relies on a SLURM-managed cluster.
 
+# *** MUST READ ***
 # these two directories must be specified by the user 
+# the user_home_dir *must* initially contain two empty sub-directories titled dgp3_datasets/ and dgp3_results/
 libs <- "/nas/longleaf/home/srosin/RLibs/" # directory containing R packages
 user_home_dir <- "/nas/longleaf/home/srosin/rgStandardized/" # top-level directory for the project
 
