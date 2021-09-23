@@ -51,3 +51,5 @@ sims/testfigs/
 sims/cluster/dgp5/old/
 sims/cluster/dgp6/old/
 sims/cluster/dgp6_varysp/
+sims/debug/
+sims/figs/relbias/old/
