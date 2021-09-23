@@ -67,18 +67,18 @@ gen_data_dgp3_4 <- function(n_1, sigma_e, n_2, sigma_p,
   # (1) Run the two validation studies
   sigma_e_hat <- rbinom(1 , n_1, sigma_e) / n_1 #estimated sensitivity
   sigma_p_hat <- 1 - rbinom(1, n_2, 1 - sigma_p) / n_2 #estimated specificity
-  
-  # (2) Create main study sample based on sampling probs s_js 
-  sample <- stratum_props[sample(nrow(stratum_props), n_3, 
+
+  # (2) Create main study sample based on sampling probs s_js
+  sample <- stratum_props[sample(nrow(stratum_props), n_3,
                                  replace = T, prob = stratum_props$sampling_prob),]
-  
+
   # (3) Each person's test result is distributed Bernoulli
-  #     with a stratum-specific mean P(X = 1 | Z) 
+  #     with a stratum-specific mean P(X = 1 | Z)
   sample$x <- rbinom(n = n_3, size = 1, prob = sample$prev_x_z)
-  
+
   # (4) Return sample and sample estimates
-  rho_hat <- mean(sample$x) 
-  data <- list(sigma_e_hat = sigma_e_hat, sigma_p_hat = sigma_p_hat, 
+  rho_hat <- mean(sample$x)
+  data <- list(sigma_e_hat = sigma_e_hat, sigma_p_hat = sigma_p_hat,
                rho_hat = rho_hat, sample = sample)
   data
 }
