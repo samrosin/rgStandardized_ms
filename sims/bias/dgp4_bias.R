@@ -1,0 +1,129 @@
+##########
+# Conducts simulation for DGP 3 
+time1 <- Sys.time() 
+library(tidyverse)
+library(here)
+
+# sim parameter values
+set.seed(2021)
+n_sims <- 50 # number of simulations
+n_strata <- 80 # number of strata for this scenario
+vars_std <- c("z1", "z2", "z3", "z4")
+prevs <- seq(.01, .2, by = .01)
+
+source(here("estimation_fns.R"))
+source(here("sims/inputs/param_values_dgp4.R")) #load sim parameter values for dgp4
+source(here("sims/sim_fns.R"))
+n_conds <- length(prevs) * length(sigma_e) * length(sigma_p) # number of sim conditions
+
+
+# Note that the final simulation results are placed in the 
+# results_final subdirectory, but as the simulations are conducted
+# results are placed in the results_draft subdirectory 
+output_file <- here("sims/results_draft/dgp4_results.csv")
+
+# The known stratum proportions (the gamma_{zj}s) must be prespecified,
+# and they are loaded here
+gammas <- read_csv(here("sims/inputs/dgp4_stratum_props.csv"),
+                   col_types = cols(
+                     z1 = col_character(), 
+                     z2 = col_character(), 
+                     z3 = col_character(), 
+                     z4 = col_character(), 
+                     stratum_prop = col_double(),
+                     sampling_prob = col_double()
+                   ))
+
+# Create copies of the gamma (stratum_prop) dataframe,
+# with stratum-specific prevalence created from a true logistic model. 
+# The intercept of the logistic model varies to vary the marginal prevalence
+stratum_props <- vector(mode = "list", length = n_conds) # create list of stratum proportion dataframes
+for(p in 1:n_conds){
+  s <- gammas %>% dplyr::mutate(
+    prev_x_z = inv.logit(nu_0[p]+nu_1*(gammas$z1=="z11")+
+                           nu_2*(gammas$z2=="z20")+nu_3*(gammas$z2=="z21") +
+                           nu_4*(gammas$z3=="z30")+nu_5*(gammas$z3=="z31") + 
+                           nu_6*(gammas$z4=="z41"))
+  ) 
+  stratum_props[[p]] <- s
+}
+
+# fully factorial combination of sample sizes and parameters, where each row is a sub-scenario
+sim_conditions <- tidyr::crossing(
+  sigma_e, sigma_p, prevs, n_1, n_2, n_3) %>% 
+  mutate(stratum_props = stratum_props) %>% # add stratum_props df inside a column
+  rowwise() %>% 
+  mutate(prev_x = sum(stratum_props$stratum_prop * stratum_props$prev_x_z),
+         prev = (prev_x - (1 - sigma_p)) / (sigma_e - (1 - sigma_p)), # marginal prev P(Y = 1)
+         hat_pi_RG = NA_real_,
+         hat_pi_SRG = NA_real_,
+         hat_pi_SRGM = NA_real_,
+         num_infinite_pi_RG = NA_real_, # number of infinite estimates \hat \pi_RG
+         num_infinite_pi_SRG = NA_real_, # number of infinite estimates \hat \pi_SRG
+         num_infinite_pi_SRGM = NA_real_, # number of infinite estimates \hat \pi_SRGM
+         sims_w_positivity = NA_real_ # number of simulations with positivity (all strata observed)
+  ) 
+
+# print the marginal prevalences. E.g., if prevs = seq(.01, .05, by = .01), 
+# this should return rep(seq(.01, .05, by = .01), n_conds / length(prevs)), with each number correct to 4 significant digits
+print(round(sim_conditions$prev, 4))
+
+# conduct the simulation, iterating through the subscenarios
+for(i in 1:nrow(sim_conditions)){
+  print(paste("sim condition: ",i))
+  row <- sim_conditions[i,]
+  hat_pi_RG <- rep(NA, n_sims)
+  hat_pi_SRG <- rep(NA, n_sims)
+  hat_pi_SRGM <- rep(NA, n_sims)
+  strata_obs <- rep(NA, n_sims) # number of observed strata in a sim
+  positivity <- rep(NA, n_sims) # is there positivity? True/False
+
+  # iterate through each of the n_sims simulations per sub-scenario
+  for(j in 1:n_sims){
+    dat <- gen_data_dgp3_4(row$n_1, row$sigma_e, row$n_2, row$sigma_p,
+                         row$n_3, as.data.frame(row$stratum_props), vars_std)
+    hat_pi_RG[j] <- ests_rg(dat$rho_hat, dat$sigma_e_hat, dat$sigma_p_hat,
+                            row$n_1, row$n_2, row$n_3, variance = FALSE)
+    hat_pi_SRG_vec <- ests_std(dat$sample, dat$sigma_e_hat, dat$sigma_p_hat,
+                               row$n_1, row$n_2, row$n_3, vars_std, variance = FALSE)
+    hat_pi_SRG[j] <- hat_pi_SRG_vec[1]
+
+    strata_obs[j] <- hat_pi_SRG_vec[2] # Note we can get this info from either standardization estimator, hat_pi_SRG or hat_pi_SRGM; here I take it from hat_pi_SRG
+    positivity[j] <- ifelse(hat_pi_SRG_vec[2] < n_strata, FALSE, TRUE)
+
+    hat_pi_SRGM[j] <- ests_std_model(
+      dat$sample, as.data.frame(row$stratum_props), dat$sigma_e_hat,
+      dat$sigma_p_hat, row$n_1, row$n_2, row$n_3,
+      vars_std = c("z1", "z2", "z3", "z4"),
+      mod_formula = formula("x ~ z1 + z2 + z3 + z4"),
+      variance = FALSE
+    )
+  }
+
+  # compute mean relative bias of the finite estimates for the sub-scenario, and compute the other results of interest
+  sim_conditions[i,"hat_pi_RG"] <- 100 * (
+    mean(hat_pi_RG[is.finite(hat_pi_RG)]) - row$prev ) / row$prev
+  sim_conditions[i,"num_infinite_pi_RG"] <- sum(!is.finite(hat_pi_RG))
+
+  sim_conditions[i,"hat_pi_SRG"] <- 100 * (
+    mean(hat_pi_SRG, na.rm = TRUE) - row$prev) / row$prev
+  sim_conditions[i,"num_infinite_pi_SRG"] <- sum(!is.finite(hat_pi_SRG))
+
+  sim_conditions[i,"hat_pi_SRGM"] <- 100 * (
+    mean(hat_pi_SRGM[is.finite(hat_pi_SRGM)]) - row$prev) / row$prev
+  sim_conditions[i,"num_infinite_pi_SRGM"] <- sum(!is.finite(hat_pi_SRGM))
+
+  sim_conditions[i,"sims_w_positivity"] <- sum(positivity)
+}
+
+# since the above simulation can take some time, write results to an output file to analyse in a separate script
+sim_results <- sim_conditions %>% dplyr::select(-c(stratum_props)) %>%
+  dplyr::rename(pi = prev)
+sim_results$n_sims <- NA_real_
+sim_results[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, but it is useful to store this value somewhere)
+write_csv(sim_results, output_file)
+
+time2 <- Sys.time()
+print(time2 - time1)
+writeLines("NOTE: glm(), used for hat-pi-SRGM, may return a warning that fitted probabilities numerically 0 or 1 occurred.
+           This is expected behavior, often due to the low numbers of positive tests in a dataset, such that there exist many strata with zero positive tests.")
