@@ -6,7 +6,7 @@ library(here)
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 50 # number of simulations
+n_sims <- 10 # number of simulations
 n_strata <- 80 # number of strata for this scenario
 vars_std <- c("z1", "z2", "z3", "z4")
 prevs <- seq(.01, .2, by = .01)
@@ -121,7 +121,7 @@ sim_results <- sim_conditions %>% dplyr::select(-c(stratum_props)) %>%
   dplyr::rename(pi = prev)
 sim_results$n_sims <- NA_real_
 sim_results[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, but it is useful to store this value somewhere)
-write_csv(sim_results, output_file)
+#write_csv(sim_results, output_file)
 
 time2 <- Sys.time()
 print(time2 - time1)
