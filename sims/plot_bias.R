@@ -84,7 +84,7 @@ res1_relbias <- ggplot(data = res1_gg,
         axis.title = element_text(size = 20),
         legend.position = c(.93,0.94),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
@@ -119,9 +119,10 @@ res1_bias <- ggplot(data = res1_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.93,0.94),
+        legend.position = c(.74, 0.45),
+        #legend.position = c(.93,0.94),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
@@ -157,9 +158,10 @@ res2_facet <- ggplot(data = res2_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.92,0.92),
+        legend.position = c(.93,0.94),
+        #legend.position = c(.92,0.92),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Relative Bias") + 
@@ -196,9 +198,9 @@ res2_bias <- ggplot(data = res2_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.92,0.8),
+        legend.position = c(.74, 0.08),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Bias") + 
@@ -226,7 +228,7 @@ dev.off()
 # the amount of sampling bias in each 
 sp3 <- gammas_3
 
-# Under pi \a pprox .01, assign the stratum-specific prevalences
+# Under pi \approx .01, assign the stratum-specific prevalences
 # and then plot them. 
 # Note that this plot will look the same under *any* of the marginal 
 # prevalences, because of the way that we are varying marginal prevalence 
@@ -234,17 +236,17 @@ sp3 <- gammas_3
 # we pick beta_0[1] and use the corresponding sigma_e, sigma_p values of .8 and .8, 
 # but could use different beta_0[j] and different sigma_e, sigma_p to generate the identical plot
 sp3_05 <- sp3 %>% dplyr::mutate(
-  prev_x = inv.logit(beta_0[18]+beta_1*(gammas_3$z1=="z11")+
+  prev_x = inv.logit(beta_0[1]+beta_1*(gammas_3$z1=="z11")+
                    beta_2*(gammas_3$z2=="z20")+beta_3*(gammas_3$z2=="z21")+
-                   beta_4*(gammas_3$z3=="z30")+beta_5*(gammas_3$z3=="z31")),
-  pi = (prev_x - (1 - .8)) / (.8 - (1 - .8))
+                   beta_4*(gammas_3$z3=="z30")+beta_5*(gammas_3$z3=="z31"))
+  #pi = (prev_x - (1 - .8)) / (.8 - (1 - .8))
 )
 
 # plot gamma_j vs s_j
-scenario3_selectionrelbias_plot <- ggplot(data = sp3_05, aes(x=stratum_prop, y = sampling_prob)) + 
-  geom_jitter(aes(size=pi), alpha = .6, 
-              color = "black", width = .001,
-              show.legend = FALSE)  + 
+scenario3_selectionbias_plot <- ggplot(data = sp3_05, aes(x=stratum_prop, y = sampling_prob)) + 
+  geom_jitter(aes(size=prev_x), alpha = .6,
+              color = "black", width = 0.001,
+              show.legend = FALSE)  +
   geom_abline(colour = "grey50", size = 2) + 
   xlab(expression(gamma[j])) + 
   ylab(expression(s[j])) + 
@@ -253,7 +255,7 @@ scenario3_selectionrelbias_plot <- ggplot(data = sp3_05, aes(x=stratum_prop, y =
         legend.position = c(.17,0.79),
         legend.title = element_text(size = 18),
         legend.text = element_text(size = 16))# + 
-scenario3_selectionrelbias_plot
+scenario3_selectionbias_plot
 
 # plot bias from dgp 3 from variance results 
 # note this is **truncated** inside [-100%, 100%]
@@ -282,7 +284,7 @@ res3_relbias_plot <- ggplot(data = res3_relbias,
         axis.title = element_text(size = 20),
         legend.position = c(.91,0.89),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Relative Bias") + 
@@ -323,9 +325,10 @@ res3_bias <- ggplot(data = res3_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.85,0.65),
+        #legend.position = c(.75,0.12),
+        legend.position = c(.74, 0.1),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Bias") + 
@@ -362,15 +365,15 @@ sp4 <- gammas_4
 # prevalences, because of the way that we are varying marginal prevalence 
 # by only varying the intercept of the logistic model .
 sp4_05 <- sp4 %>% dplyr::mutate(
-  pi = inv.logit(nu_0[5] + nu_1*(gammas_4$z1 == "z11") +
+  prev_x = inv.logit(nu_0[1] + nu_1*(gammas_4$z1 == "z11") +
                    nu_2 * (gammas_4$z2 == "z20") + nu_3 * (gammas_4$z2 == "z21") +
                    nu_4 * (gammas_4$z3 == "z30") + nu_5 * (gammas_4$z3 == "z31") +
                    nu_6 * (gammas_4$z4 == "z41"))
 )
 
 # plot gamma_j vs s_j
-scenario4_selectionrelbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sampling_prob)) + 
-  geom_jitter(aes(size=pi), alpha = .6, 
+scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sampling_prob)) + 
+  geom_jitter(aes(size=prev_x), alpha = .6, 
               color = "black", width = .001, 
               show.legend = FALSE) + 
   geom_abline(colour = "grey50", size = 2) + 
@@ -386,8 +389,8 @@ scenario4_selectionrelbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y =
 
 pdf(here("sims/figs/relbias/selbias.pdf"),
     paper = "USr", width = 8.5, height = 11)
-plot_grid(scenario3_selectionrelbias_plot, 
-          scenario4_selectionrelbias_plot,
+plot_grid(scenario3_selectionbias_plot, 
+          scenario4_selectionbias_plot,
           ncol = 1,
           labels = c("A.", "B."),
           label_size = 18,
@@ -425,7 +428,7 @@ res4_relbias_plot <- ggplot(data = res4_relbias,
         axis.title = element_text(size = 20),
         legend.position = c(.91,0.89),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Relative Bias (%)") + 
@@ -465,9 +468,9 @@ res4_bias <- ggplot(data = res4_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.75,0.65),
+        legend.position = c(.74, 0.1),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Bias") + 
@@ -491,8 +494,6 @@ pdf(here("sims/figs/bias/dgp4.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res4_bias)
 dev.off()
-
-
 
 # dgp 5 plots --------------------------------------------------------
 
@@ -524,7 +525,7 @@ res5_relbias_plot <- ggplot(data = res5_relbias,
         axis.title = element_text(size = 20),
         legend.position = c(.91,0.89),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Relative Bias") + 
@@ -565,9 +566,10 @@ res5_bias <- ggplot(data = res5_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.75,0.6),
+        legend.position = c(.74, 0.1),
+        #legend.position = c(.75,0.6),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18), # or size=20
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Bias") + 
@@ -620,7 +622,7 @@ res6_relbias_plot <- ggplot(data = res6_relbias,
         axis.title = element_text(size = 20),
         legend.position = c(.91,0.89),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
@@ -662,9 +664,10 @@ res6_bias <- ggplot(data = res6_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.75,0.6),
+        legend.position = c(.74, 0.1),
+        #legend.position = c(.75,0.6),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "Bias") + 

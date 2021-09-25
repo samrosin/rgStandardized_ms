@@ -1,6 +1,6 @@
-# Plot variance/coverage results from each scenario 
+# plot variance/coverage results from each scenario 
 
-# Setup -------------------------------------------------------------------
+# setup -------------------------------------------------------------------
 
 library(tidyverse)
 library(here)
@@ -59,7 +59,7 @@ results_6 <- read_csv(here("sims/results_final/dgp6_var_results.csv"),
 
 gammas_6 <- gammas_4
 
-# dgp 1 Plots --------------------------------------------------------------
+# dgp 1 --------------------------------------------------------------
 res1_gg <- results_1 %>% filter(n_1 == 40 & sigma_e != .6) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = covers,
@@ -76,14 +76,14 @@ res1_cov <- ggplot(data = res1_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.93,0.58),
+        legend.position = c(.07,0.65),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "95% CI Coverage") + 
   scale_y_continuous(labels = function(x) paste0(x, "%"),
-                     limits = c(80, 100)) + 
+                     limits = c(0, 100)) + 
   scale_linetype_manual(name = "Method", values = c("dashed"),
                         labels = c(expression(hat(pi)[RG]))) + 
   scale_color_manual(name = "Method", values = c("black"),
@@ -100,12 +100,17 @@ pdf(here("sims/figs/var/dgp1_coverage.pdf"),
 print(res1_cov)
 dev.off()
 
-# dgp 2 Plots -------------------------------------------------------------
+# dgp 2 -------------------------------------------------------------
+is_in_subset <- function(x){round((100*x) %% 1.0, 5) == 0} # some extra sims were run but we use this to subset to {.01, .02, ..., .20}
+
 res2_gg <- results_2 %>% 
+  filter(is_in_subset(prev)) %>% 
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = covers,
          covers_pi_RG, covers_pi_SRG) %>% 
   mutate(covers = 100 * covers)
+
+# note dim(results_2 %>% filter(is_in_subset(prev))) is half of dim(results_2)
 
 res2_cov <- ggplot(data = res2_gg, 
                      mapping = aes(x = prev, y = covers,
@@ -117,14 +122,14 @@ res2_cov <- ggplot(data = res2_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.92,0.6),
+        legend.position = c(.09,0.65),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "95% CI Coverage") + 
   scale_y_continuous(labels = function(x) paste0(x, "%"),
-                     limits = c(80, 100)) + 
+                     limits = c(0, 100)) + 
   scale_linetype_manual(name = "Method", values = c("dashed", "solid"),
                         labels = c(expression(hat(pi)[RG]), 
                                    expression(hat(pi)[SRG]))) + 
@@ -165,9 +170,9 @@ res3_cov <- ggplot(data = res3_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.91,0.75),
+        legend.position = c(.91, 0.2),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "95% CI Coverage") + 
   scale_y_continuous(labels = function(x) paste0(x, "%"),
@@ -214,9 +219,9 @@ res4_cov <- ggplot(data = res4_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.1,0.65),
+        legend.position = c(.09, 0.65),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "95% CI Coverage") + 
   scale_y_continuous(labels = function(x) paste0(x, "%"),
@@ -267,9 +272,9 @@ res5_cov <- ggplot(data = res5_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.91,0.63),
+        legend.position = c(.09, 0.65),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         strip.text = element_text(size = 18)) + 
   labs(x = "Prevalence", y = "95% CI Coverage") + 
   scale_y_continuous(labels = function(x) paste0(x, "%"),
@@ -295,7 +300,7 @@ pdf(here("sims/figs/var/dgp5_coverage.pdf"),
 print(res5_cov)
 dev.off()
 
-# dgp 6 plots -------------------------------------------------------------
+# dgp 6 -------------------------------------------------------------
 
 # plot for n_1 == 40
 res6_gg <- results_6 %>% 
@@ -318,9 +323,10 @@ res6_cov <- ggplot(data = res6_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.09,0.63),
+        #legend.position = c(.1,0.65),
+        legend.position = c(.09, 0.63),
         legend.title = element_blank(),
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 18),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
         panel.spacing.y = unit(1.25, "lines"),
         strip.text = element_text(size = 18)) + 
