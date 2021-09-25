@@ -4,7 +4,7 @@ time1 <- Sys.time()
 
 # sim parameter values
 set.seed(2021)
-n_sims <- 1000 # number of simulations
+n_sims <- 50 # number of simulations
 n_strata <- 2 # number of strata for this scenario
 prevs <- seq(.01, .20, by = .01) 
 
