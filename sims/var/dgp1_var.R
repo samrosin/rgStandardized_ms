@@ -5,7 +5,7 @@ time1 <- Sys.time()
 # sim parameter values
 set.seed(2021)
 n_sims <- 1000 #number of simulations
-prev <- seq(.005, .20, by = .005) #true prevalence 
+prev <- seq(.01, .20, by = .01) #true prevalence 
 
 library(tidyverse)
 library(here)
@@ -69,9 +69,8 @@ for(i in 1:nrow(sim_conditions)){
 sim_conditions <- sim_conditions %>% dplyr::rename(pi = prev)
 sim_conditions$n_sims <- NA_real_
 sim_conditions[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, but it is useful to store this value somewhere)
-#write_csv(sim_conditions, output_file)
+write_csv(sim_conditions, output_file)
 
 time2 <- Sys.time()
 print(time2 - time1)
 
-print(sim_conditions$covers_pi_RG)
