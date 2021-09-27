@@ -136,7 +136,7 @@ res2_cov <- ggplot(data = res2_gg,
   scale_color_manual(name = "Method", values = c("black", "gray"),
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]))) + 
-  scale_size_manual(name = "Method", values = c(0.5, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 1.5),
                     labels = c(expression(hat(pi)[RG]), 
                                expression(hat(pi)[SRG]))) + 
   geom_hline(aes(yintercept = 95), size = 0.5, linetype = "dotted", color = "gray") 
@@ -185,7 +185,7 @@ res3_cov <- ggplot(data = res3_gg,
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
-  scale_size_manual(name = "Method", values = c(0.5, 1.5, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 2, 0.5),
                     labels = c(expression(hat(pi)[RG]), 
                                expression(hat(pi)[SRG]),
                                expression(hat(pi)[SRGM]))) + 
@@ -234,7 +234,7 @@ res4_cov <- ggplot(data = res4_gg,
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
-  scale_size_manual(name = "Method", values = c(0.5, 0.5, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 2, 0.5),
                     labels = c(expression(hat(pi)[RG]), 
                                expression(hat(pi)[SRG]),
                                expression(hat(pi)[SRGM]))) + 
@@ -287,7 +287,7 @@ res5_cov <- ggplot(data = res5_gg,
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
-  scale_size_manual(name = "Method", values = c(0.5, 0.5, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 2, 0.5),
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
@@ -341,7 +341,7 @@ res6_cov <- ggplot(data = res6_gg,
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
-  scale_size_manual(name = "Method", values = c(0.5, 0.5, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 2, 0.5),
                     labels = c(expression(hat(pi)[RG]), 
                                expression(hat(pi)[SRG]),
                                expression(hat(pi)[SRGM]))) + 

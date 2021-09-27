@@ -212,7 +212,7 @@ res2_bias <- ggplot(data = res2_gg,
   scale_color_manual(name = "Method", values = c("black", "gray"),
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]))) + 
-  scale_size_manual(name = "Method", values = c(0.5, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 1.5),
                     labels = c(expression(hat(pi)[RG]), 
                                expression(hat(pi)[SRG]))) + 
   geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
@@ -342,11 +342,12 @@ res3_bias <- ggplot(data = res3_gg,
                      labels = c(expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
-  scale_size_manual(name = "Method", values = c(0.5, 2, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 2.5, 0.5),
                     labels = c(expression(hat(pi)[RG]), 
                                expression(hat(pi)[SRG]),
                                expression(hat(pi)[SRGM]))) + 
   geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
+res3_bias
 
 pdf(here("sims/figs/bias/dgp3.pdf"),
     paper = "USr",width = 8.5, height = 11)
