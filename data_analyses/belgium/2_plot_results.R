@@ -13,14 +13,14 @@ belg <- read_csv(here("ests.csv")) %>%
 cr <- factor(rep(c("30 Mar - 5 Apr", "20 - 26 Apr", "18 - 25 May", "8 - 13 Jun", 
         "29 Jun - 4 Jul", "9 - 12 Sept", "12 - 17 Aug"), each = 4),
         levels = c("30 Mar - 5 Apr", "20 - 26 Apr", "18 - 25 May", "8 - 13 Jun", 
-                   "29 Jun - 4 Jul", "9 - 12 Sept", "12 - 17 Aug"))
+                   "29 Jun - 4 Jul", "12 - 17 Aug", "9 - 12 Sept"))
 belg$cr <- cr
 
 p <-  ggplot(data = belg,
            aes(x = method,y = mean, ymin = lower, ymax = upper ))+
   geom_pointrange(aes(col = method, shape = method)) +
   #geom_hline(aes(fill=method),yintercept =1, linetype=2)+
-  xlab('Collection period') + ylab("Seroprevalence estimate")+
+  xlab('Collection period') + ylab("Seroprevalence")+
   geom_errorbar(aes(ymin=lower, ymax=upper, col=method), width=0.2, cex=1)+ 
   scale_color_manual(name = "Method", values = c("gray25", "gray50", "black", "gray75"),
                      labels = c(expression(hat(rho)),
