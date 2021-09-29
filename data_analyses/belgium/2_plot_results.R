@@ -18,15 +18,20 @@ belg$cr <- cr
 
 p <-  ggplot(data = belg,
            aes(x = method,y = mean, ymin = lower, ymax = upper ))+
-  geom_pointrange(aes(col = method, shape = method))+
+  geom_pointrange(aes(col = method, shape = method)) +
   #geom_hline(aes(fill=method),yintercept =1, linetype=2)+
   xlab('Collection period') + ylab("Seroprevalence estimate")+
   geom_errorbar(aes(ymin=lower, ymax=upper, col=method), width=0.2, cex=1)+ 
-  scale_color_manual(name = "Method", values = c(hue_pal()(4)[4], hue_pal()(3)),
+  scale_color_manual(name = "Method", values = c("gray25", "gray50", "black", "gray75"),
                      labels = c(expression(hat(rho)),
                                 expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
                                 expression(hat(pi)[SRGM]))) + 
+  # scale_linetype_manual(name = "Method", values = c("dashed", "dashed", "solid", "solid"),
+  #                    labels = c(expression(hat(rho)),
+  #                               expression(hat(pi)[RG]),
+  #                               expression(hat(pi)[SRG]),
+  #                               expression(hat(pi)[SRGM]))) +
   scale_shape_manual(name = "Method", values = 15:18,
                         labels = c(expression(hat(rho)),
                                    expression(hat(pi)[RG]), 
@@ -38,13 +43,12 @@ p <-  ggplot(data = belg,
         axis.text.x = element_blank(),
         axis.text.y = element_text(size = 18),
         axis.ticks.x = element_blank(),
-        #axis.title.x = element_blank(),
         legend.position = c(.935,0.89),
         legend.title = element_blank(),
         legend.text = element_text(size = 16),
         axis.title = element_text(size=20),
         strip.text = element_text(size = 13)) 
-#p
+p
 
 pdf(here("forest.pdf"),
     paper = "USr",width = 11, height = 8.5)
