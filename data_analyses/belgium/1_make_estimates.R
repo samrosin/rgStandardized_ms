@@ -10,7 +10,7 @@ source(here("estimation_fns.R"))
 
 vars_std <- c("age_cat", "province", "sex")
 methods <- c("raw", "herzog", "rg", "srg", "srgm")
-srgm_formula <- formula("x ~ sex + age_cat + province")
+srgm_formula <- formula("x ~ sex + age_cat + province + sex*age_cat")
 
 # read data
 strata_props <- read_csv(here("strataprops_clean.csv"))
@@ -55,11 +55,11 @@ for(cr in collection_rounds){
   sum_x_delta3 <- nrow(belg_cr[belg_cr$igg_cat == "positive",])
   rho_hat <- sum_x_delta3 / n_3
   
-  # validation data - using >= 1.1 EI cutoff for positive, cf Table S1.1 
+  # validation data - using >= 1.1 EI cutoff for positive, see Table S1.1 
   n_1 <- 181
   sigma_e_hat <- 154/181
   n_2 <- 326
-  sigma_p_hat <- 314/326
+  sigma_p_hat <- 322/326
   
   # add to results df 
   res[(res$cr == cr) & (res$method == "raw"),]$mean <- rho_hat
