@@ -82,7 +82,8 @@ res1_relbias <- ggplot(data = res1_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.93,0.94),
+       legend.position = "none",
+        # legend.position = c(.93,0.94),
         legend.title = element_blank(),
         legend.text = element_text(size = 18),
         #                    legend.background = element_rect(fill=alpha('white', 0)),
@@ -99,7 +100,7 @@ res1_relbias <- ggplot(data = res1_gg,
                     labels = c(expression(hat(pi)[RG]))) + 
   geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
 
-#res1_bias
+#res1_relbias
 
 pdf(here("sims/figs/relbias/dgp1.pdf"),
     paper = "USr",width = 8.5, height = 11)
@@ -119,7 +120,8 @@ res1_bias <- ggplot(data = res1_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = c(.74, 0.45),
+        legend.position = "none",
+        # legend.position = c(.74, 0.45),
         #legend.position = c(.93,0.94),
         legend.title = element_blank(),
         legend.text = element_text(size = 18),
