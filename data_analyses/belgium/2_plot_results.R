@@ -22,7 +22,9 @@ p <-  ggplot(data = belg,
   #geom_hline(aes(fill=method),yintercept =1, linetype=2)+
   xlab('Collection period') + ylab("Seroprevalence")+
   geom_errorbar(aes(ymin=lower, ymax=upper, col=method), width=0.2, cex=1)+ 
-  scale_color_manual(name = "Method", values = c("gray25", "gray50", "black", "gray75"),
+  scale_color_manual(name = "Method", values = scales::hue_pal()(4),
+                     
+  #scale_color_manual(name = "Method", values = c("gray25", "gray50", "black", "gray75"),
                      labels = c(expression(hat(rho)),
                                 expression(hat(pi)[RG]), 
                                 expression(hat(pi)[SRG]),
@@ -50,7 +52,7 @@ p <-  ggplot(data = belg,
         strip.text = element_text(size = 13)) 
 p
 
-pdf(here("forest.pdf"),
+pdf(here("forest_color.pdf"),
     paper = "USr",width = 11, height = 8.5)
 print(p)
 dev.off()
