@@ -54,3 +54,4 @@ sims/cluster/dgp6_varysp/
 sims/debug/
 sims/figs/relbias/old/
 sims/plot_var_extra.R
+sims/test_scripts
