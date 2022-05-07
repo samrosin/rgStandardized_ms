@@ -250,8 +250,9 @@ scenario3_selectionbias_plot <- ggplot(data = sp3_05, aes(x=stratum_prop, y = sa
               color = "black", width = 0.001,
               show.legend = FALSE)  +
   geom_abline(colour = "grey50", size = 2) + 
-  xlab(expression(gamma[j])) + 
-  ylab(expression(s[j])) + 
+ xlab("Stratum proportion in target pop.") + ylab("Sampling probability") + 
+   #xlab(expression(gamma[j])) + 
+  #ylab(expression(s[j])) + 
   theme_bw() + 
   theme(text = element_text(size=20),
         legend.position = c(.17,0.79),
@@ -380,8 +381,9 @@ scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sa
               color = "black", width = .001, 
               show.legend = FALSE) + 
   geom_abline(colour = "grey50", size = 2) + 
-  xlab(expression(gamma[j])) + 
-  ylab(expression(s[j])) + 
+  xlab("Stratum proportion in target pop.") + ylab("Sampling probability") + 
+# xlab(expression(gamma[j])) + 
+  #ylab(expression(s[j])) + 
   theme_bw() + 
   theme(text = element_text(size=20),
         legend.position = c(.8375,0.78),
@@ -390,7 +392,7 @@ scenario4_selectionbias_plot <- ggplot(data = sp4_05, aes(x=stratum_prop, y = sa
 
 #scenario4_selectionrelbias_plot
 
-pdf(here("sims/figs/relbias/selbias.pdf"),
+pdf(here("sims/figs/relbias/selbias_labels.pdf"),
     paper = "USr", width = 8.5, height = 11)
 plot_grid(scenario3_selectionbias_plot, 
           scenario4_selectionbias_plot,
