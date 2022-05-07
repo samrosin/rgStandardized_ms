@@ -25,7 +25,7 @@ sim_conditions <- crossing(n_1, n_2, n_3, sigma_e, sigma_p, prev) %>%
   mutate(hat_pi_RG = NA_real_,
          ESE_hat_pi_RG = NA_real_, # empirical SE of hat_var_pi_RG
          ASE_hat_pi_RG = NA_real_, # mean asymptotic SE; mean of sqrt(hat_var_pi_RG)
-         covers_pi_RG = NA_real_, # coverage proportion using hat_var_pi_RG
+         covers_pi_RG = NA_real_ # coverage proportion using hat_var_pi_RG
   )
 
 # conduct the simulation, iterating through the subscenarios
@@ -69,7 +69,7 @@ for(i in 1:nrow(sim_conditions)){
 sim_conditions <- sim_conditions %>% dplyr::rename(pi = prev)
 sim_conditions$n_sims <- NA_real_
 sim_conditions[1,"n_sims"] <- n_sims # store number of simulations (in a non-tidy format, but it is useful to store this value somewhere)
-write_csv(sim_conditions, output_file)
+#write_csv(sim_conditions, output_file)
 
 time2 <- Sys.time()
 print(time2 - time1)
