@@ -5,4 +5,4 @@ This code in this repository is currently in draft form and there may be errors 
 
 See the sims and data_analyses subdirectories for relevant materials; separate READMEs exist for each directory. 
 
-Package author: Sam Rosin, srosin 'at' live 'dot' unc 'dot' edu
+Author and maintainer: Sam Rosin, srosin 'at' live 'dot' unc 'dot' edu
