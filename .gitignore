@@ -1,4 +1,7 @@
 pkg/
+pkg/NAMESPACE
+pkg/R/
+pkg/R/estimation_fns.R
 .Rproj.user
 .Rhistory
 .RData
