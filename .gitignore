@@ -62,4 +62,4 @@ sims/test_scripts
 data_analyses/nyc/strata_props_raw 2.csv
 data_analyses/nyc/race_categories.txt
 data_analyses/nyc/2022-09-16 Seropositivity by specialty until 07-15-2020.csv
-data_analyses/nyc/2022-09-16 Serosurvey demographic data and titers until 07-05-2020.csv
+data_analyses/nyc/2022-09-16 Serosurvey demographic data and titers until 07-05-20.csv
