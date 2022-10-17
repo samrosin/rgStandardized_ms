@@ -214,3 +214,18 @@ ests_std_model <- function(sample, stratum_props, sigma_e_hat,
     c(pi_hat_mst, var_hat_pi_mst)
   }
 }
+
+# rogan-gladen estimation without truncations
+ests_rg_no_trunc <- function(rho_hat, sigma_e_hat, sigma_p_hat, n_1, n_2, n_3, variance = FALSE){
+  pi_hat <- (rho_hat + sigma_p_hat - 1) / (sigma_e_hat + sigma_p_hat - 1) ###Rogan and Gladen formula
+  if (variance == FALSE) {
+    return((pi_hat))
+  } else {
+    # compute variance estimator
+    a <- pi_hat^2 * sigma_e_hat * (1 - sigma_e_hat) / n_1
+    b <- (1 - pi_hat)^2 * sigma_p_hat * (1 - sigma_p_hat) / n_2
+    c <- rho_hat * (1 - rho_hat) / n_3
+    var_pi_hat <- (a + b + c) * (sigma_e_hat + sigma_p_hat - 1)^(-2)
+    return(c(pi_hat, var_pi_hat))
+  }
+}
