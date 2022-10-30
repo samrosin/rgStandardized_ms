@@ -61,6 +61,19 @@ results_6 <- read_csv(here("sims/results_final/dgp6_var_results.csv"),
 
 gammas_6 <- gammas_4
 
+
+results_8 <- read_csv(here("sims/results_final/dgp8_results.csv"),
+                      col_types = cols(.default = col_double())
+)
+
+results_9 <- read_csv(here("sims/results_final/dgp9_results.csv"),
+                      col_types = cols(.default = col_double())
+)
+
+results_10 <- read_csv(here("sims/results_final/dgp10_results.csv"),
+                       col_types = cols(.default = col_double())
+)
+
 # dgp 1 plots --------------------------------------------------------------
 
 # plot where n_1 == 40
@@ -699,5 +712,83 @@ res6_bias <- ggplot(data = res6_gg,
 pdf(here("sims/figs/bias/dgp6.pdf"),
     paper = "USr",width = 8.5, height = 11)
 print(res6_bias)
+dev.off()
+
+# dgp 8 9 10 plot ---------------------------------------------------------
+
+
+results_8 <- results_8 %>% 
+  select(sigma_e, sigma_p, prev, hat_pi_RG, hat_pi_SRG, hat_pi_SRGM) %>%
+  rename(SRGM_omit_Z2 = hat_pi_SRGM)
+
+results_9 <- results_9 %>% 
+  select(sigma_e, sigma_p, prev, hat_pi_RG, hat_pi_SRG, hat_pi_SRGM) %>%
+  rename(SRGM_omit_Z3 = hat_pi_SRGM)
+
+results_10 <- results_10 %>% 
+  select(sigma_e, sigma_p, prev, hat_pi_RG, hat_pi_SRG, hat_pi_SRGM) %>%
+  rename(SRGM_omit_Z1 = hat_pi_SRGM)
+
+results_8_9_10 <- results_8 %>%
+  left_join(results_9) %>%
+  left_join(results_10)
+
+res8_9_10_bias <- results_8_9_10 %>% 
+  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
+  gather(key = Method, value = bias,
+         #hat_pi_RG, 
+         hat_pi_SRG, 
+         SRGM_omit_Z1, 
+         SRGM_omit_Z2, 
+         SRGM_omit_Z3) %>% 
+  mutate(bias = bias * prev / 100)
+
+res8_9_10_bias_plot <- ggplot(data = res8_9_10_bias, 
+                              mapping = aes(x = prev, y = bias,
+                                            linetype = Method, color = Method, size = Method)) +
+  geom_line() + 
+  facet_grid(Sens ~ Spec, 
+             labeller = labeller(.rows = label_both, .cols = label_both)) + 
+  theme_classic() + 
+  theme(axis.text.y = element_text(size = 18),
+        axis.text.x = element_text(size = 18, angle = 90, hjust = 1, vjust = .5),
+        axis.title = element_text(size = 20),
+        legend.position = c(.81,0.59),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 18),
+        #                    legend.background = element_rect(fill=alpha('white', 0)),
+        panel.spacing.y = unit(1.25, "lines"),
+        strip.text = element_text(size = 18)) + 
+  labs(x = "Prevalence", y = "Bias") + 
+  # scale_y_continuous(labels = function(x) paste0(x, "%"),
+  #                    limits = c(-100, 100)) + 
+  scale_linetype_manual(name = "Method", values = c("solid", "dashed", "solid", "dashed"),
+                        labels = c( 
+                          expression(hat(pi)[SRG]),
+                          expression(hat(pi)[SRGM_omit_Z1]),
+                          expression(hat(pi)[SRGM_omit_Z2]),
+                          expression(hat(pi)[SRGM_omit_Z3])
+                        )) + 
+  scale_color_manual(name = "Method", values = c("gray", "gray", "black", "black"),
+                     labels = c(
+                       expression(hat(pi)[SRG]),
+                       expression(hat(pi)[SRGM_omit_Z1]),
+                       expression(hat(pi)[SRGM_omit_Z2]),
+                       expression(hat(pi)[SRGM_omit_Z3])
+                     )) + 
+  scale_size_manual(name = "Method", values = c(2, 1, 2, 0.5),
+                    labels = c( 
+                      expression(hat(pi)[SRG]),
+                      expression(hat(pi)[SRGM_omit_Z1]),
+                      expression(hat(pi)[SRGM_omit_Z2]),
+                      expression(hat(pi)[SRGM_omit_Z3])
+                    )) + 
+  geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
+
+#res8_9_10_bias_plot
+
+pdf(here("sims/figs/bias/dgp8_9_10.pdf"),
+    paper = "USr",width = 8.5, height = 11)
+print(res8_9_10_bias_plot)
 dev.off()
 
