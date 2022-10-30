@@ -67,45 +67,46 @@ gammas_6 <- gammas_4
 
 # subset results 
 res1_gg <- results_1 %>% 
-  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
+  dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>%
+  rename(tilde_pi_RG = hat_pi_RG_notrunc) %>%
   gather(key = Method, value = rel_bias,
-         hat_pi_RG)
+         hat_pi_RG, tilde_pi_RG) 
 
 # construct ggplot
-res1_relbias <- ggplot(data = res1_gg, 
-       mapping = aes(x = pi, y = rel_bias,
-                     linetype = Method, color = Method, size = Method)) +
-  geom_line() + 
-  facet_grid(Sens ~ Spec, 
-             labeller = labeller(.rows = label_both, .cols = label_both)) + 
-  theme_classic() + 
-  theme(axis.text.y = element_text(size = 16),
-        axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
-        axis.title = element_text(size = 20),
-       legend.position = "none",
-        # legend.position = c(.93,0.94),
-        legend.title = element_blank(),
-        legend.text = element_text(size = 18),
-        #                    legend.background = element_rect(fill=alpha('white', 0)),
-        panel.spacing.y = unit(1.25, "lines"),
-        strip.text = element_text(size = 18)) + 
-  labs(x = "Prevalence", y = "Relative Bias") + 
-  scale_y_continuous(labels = function(x) paste0(x, "%")) + 
-  #                   limits = c(-50, 200)) + 
-  scale_linetype_manual(name = "Method", values = c("dashed"),
-                        labels = c(expression(hat(pi)[RG]))) + 
-  scale_color_manual(name = "Method", values = c("black"),
-                     labels = c(expression(hat(pi)[RG]))) + 
-  scale_size_manual(name = "Method", values = c(0.5),
-                    labels = c(expression(hat(pi)[RG]))) + 
-  geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
-
-#res1_relbias
-
-pdf(here("sims/figs/relbias/dgp1.pdf"),
-    paper = "USr",width = 8.5, height = 11)
-print(res1_relbias)
-dev.off()
+# res1_relbias <- ggplot(data = res1_gg, 
+#        mapping = aes(x = pi, y = rel_bias,
+#                      linetype = Method, color = Method, size = Method)) +
+#   geom_line() + 
+#   facet_grid(Sens ~ Spec, 
+#              labeller = labeller(.rows = label_both, .cols = label_both)) + 
+#   theme_classic() + 
+#   theme(axis.text.y = element_text(size = 16),
+#         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
+#         axis.title = element_text(size = 20),
+#        legend.position = "none",
+#         # legend.position = c(.93,0.94),
+#         legend.title = element_blank(),
+#         legend.text = element_text(size = 18),
+#         #                    legend.background = element_rect(fill=alpha('white', 0)),
+#         panel.spacing.y = unit(1.25, "lines"),
+#         strip.text = element_text(size = 18)) + 
+#   labs(x = "Prevalence", y = "Relative Bias") + 
+#   scale_y_continuous(labels = function(x) paste0(x, "%")) + 
+#   #                   limits = c(-50, 200)) + 
+#   scale_linetype_manual(name = "Method", values = c("dashed"),
+#                         labels = c(expression(hat(pi)[RG]))) + 
+#   scale_color_manual(name = "Method", values = c("black"),
+#                      labels = c(expression(hat(pi)[RG]))) + 
+#   scale_size_manual(name = "Method", values = c(0.5),
+#                     labels = c(expression(hat(pi)[RG]))) + 
+#   geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
+# 
+# #res1_relbias
+# 
+# pdf(here("sims/figs/relbias/dgp1.pdf"),
+#     paper = "USr",width = 8.5, height = 11)
+# print(res1_relbias)
+# dev.off()
 
 # non-relative bias plot 
 res1_gg <- res1_gg %>% mutate(bias = rel_bias * pi / 100)
@@ -120,8 +121,8 @@ res1_bias <- ggplot(data = res1_gg,
   theme(axis.text.y = element_text(size = 16),
         axis.text.x = element_text(size = 16, angle = 90, hjust = 1, vjust = .5),
         axis.title = element_text(size = 20),
-        legend.position = "none",
-        # legend.position = c(.74, 0.45),
+       # legend.position = "none",
+         legend.position = c(.74, 0.45),
         #legend.position = c(.93,0.94),
         legend.title = element_blank(),
         legend.text = element_text(size = 18),
@@ -131,12 +132,15 @@ res1_bias <- ggplot(data = res1_gg,
   labs(x = "Prevalence", y = "Bias") + 
   #scale_y_continuous(labels = function(x) paste0(x, "%")) + 
   #                   limits = c(-50, 200)) + 
-  scale_linetype_manual(name = "Method", values = c("dashed"),
-                        labels = c(expression(hat(pi)[RG]))) + 
-  scale_color_manual(name = "Method", values = c("black"),
-                     labels = c(expression(hat(pi)[RG]))) + 
-  scale_size_manual(name = "Method", values = c(0.5),
-                    labels = c(expression(hat(pi)[RG]))) + 
+  scale_linetype_manual(name = "Method", values = c("dashed", "solid"),
+                        labels = c(expression(hat(pi)[RG]),
+                        expression(tilde(pi)[RG]))) + 
+  scale_color_manual(name = "Method", values = c("black", "gray"),
+                     labels = c(expression(hat(pi)[RG]),
+                     expression(tilde(pi)[RG]))) + 
+  scale_size_manual(name = "Method", values = c(0.5, 0.5),
+                    labels = c(expression(hat(pi)[RG]),
+                    expression(tilde(pi)[RG]))) + 
   geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
 
 pdf(here("sims/figs/bias/dgp1.pdf"),
