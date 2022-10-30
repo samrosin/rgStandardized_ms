@@ -14,7 +14,7 @@ color_scheme <- "Set2"
 # not the results_draft subdirectory. 
 # Results are manually moved into results_final 
 # (after they are finalized, of course).
-results_1 <- read_csv(here("sims/results_final/dgp1_var_results.csv"),
+results_1 <- read_csv(here("sims/results_final/dgp1_notrunc_results.csv"),
                       col_types = cols(.default = col_double())
 ) 
 results_2 <- read_csv(here("sims/results_final/dgp2_var_results.csv"),
@@ -93,7 +93,7 @@ res1_cov <- ggplot(data = res1_gg,
                     labels = c(expression(hat(pi)[RG]))) + 
   geom_hline(aes(yintercept = 95), size = 0.5, linetype = "dotted", color = "gray") 
 
-#res1_cov
+res1_cov
 
 #send plot to pdf
 pdf(here("sims/figs/var/dgp1_coverage.pdf"),

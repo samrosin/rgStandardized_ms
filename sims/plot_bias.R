@@ -15,7 +15,7 @@ color_scheme <- "Set2"
 # not the results_draft subdirectory. 
 # Results are manually moved into results_final 
 # (after they are finalized, of course).
-results_1 <- read_csv(here("sims/results_final/dgp1_results.csv"),
+results_1 <- read_csv(here("sims/results_final/dgp1_notrunc_results.csv"),
                       col_types = cols(.default = col_double())
 )
 results_2 <- read_csv(here("sims/results_final/dgp2_results.csv"),
