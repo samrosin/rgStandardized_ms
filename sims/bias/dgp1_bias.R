@@ -17,7 +17,7 @@ source(here("sims/sim_fns.R"))
 # Note that the final simulation results are placed in the 
 # 'results_final' subdirectory, but as the simulations are conducted
 # results are placed in the results_draft subdirectory
-output_file <- here("sims/results_draft/dgp1_notrunc_results.csv")
+output_file <- here("sims/results_draft/dgp1_results.csv")
 
 # fully factorial combination of sample sizes and parameters
 # each row is a sub-scenario
