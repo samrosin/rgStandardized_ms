@@ -737,7 +737,7 @@ res8_9_10_bias <- results_8_9_10 %>%
   dplyr::rename(Spec = sigma_p, Sens = sigma_e) %>% 
   gather(key = Method, value = bias,
          #hat_pi_RG, 
-         hat_pi_SRG, 
+       #  hat_pi_SRG, 
          SRGM_omit_Z1, 
          SRGM_omit_Z2, 
          SRGM_omit_Z3) %>% 
@@ -762,30 +762,30 @@ res8_9_10_bias_plot <- ggplot(data = res8_9_10_bias,
   labs(x = "Prevalence", y = "Bias") + 
   # scale_y_continuous(labels = function(x) paste0(x, "%"),
   #                    limits = c(-100, 100)) + 
-  scale_linetype_manual(name = "Method", values = c("solid", "dashed", "solid", "dashed"),
+  scale_linetype_manual(name = "Method", values = c("solid", "dashed", "solid"),
                         labels = c( 
-                          expression(hat(pi)[SRG]),
+                         # expression(hat(pi)[SRG]),
                           expression(hat(pi)[SRGM_omit_Z1]),
                           expression(hat(pi)[SRGM_omit_Z2]),
                           expression(hat(pi)[SRGM_omit_Z3])
                         )) + 
-  scale_color_manual(name = "Method", values = c("gray", "gray", "black", "black"),
+  scale_color_manual(name = "Method", values = c("black", "black", "gray"),
                      labels = c(
-                       expression(hat(pi)[SRG]),
+                      # expression(hat(pi)[SRG]),
                        expression(hat(pi)[SRGM_omit_Z1]),
                        expression(hat(pi)[SRGM_omit_Z2]),
                        expression(hat(pi)[SRGM_omit_Z3])
                      )) + 
-  scale_size_manual(name = "Method", values = c(2, 1, 2, 0.5),
+  scale_size_manual(name = "Method", values = c(0.5, 0.5, 2),
                     labels = c( 
-                      expression(hat(pi)[SRG]),
+                     # expression(hat(pi)[SRG]),
                       expression(hat(pi)[SRGM_omit_Z1]),
                       expression(hat(pi)[SRGM_omit_Z2]),
                       expression(hat(pi)[SRGM_omit_Z3])
                     )) + 
   geom_hline(aes(yintercept = 0), size = 0.5, linetype = "dotted", color = "gray") 
 
-#res8_9_10_bias_plot
+res8_9_10_bias_plot
 
 pdf(here("sims/figs/bias/dgp8_9_10.pdf"),
     paper = "USr",width = 8.5, height = 11)
