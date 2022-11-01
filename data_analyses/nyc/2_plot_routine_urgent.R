@@ -1,5 +1,5 @@
 # first run nyc_routine.R and nyc_urgent.R
-# then run this file
+# then, without clearing R environment, run this file
 
 library(cowplot)
 library(ggplot2)
